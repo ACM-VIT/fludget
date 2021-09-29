@@ -1,3 +1,4 @@
+import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:flutter/material.dart';
 
@@ -56,9 +57,19 @@ class HomePageState extends State<HomePage> {
         ListTile(
           leading: arrow,
           title: Text(
-            "Widget 2",
+            "Icon Widget",
             style: titleStyle,
           ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return IconSample();
+                },
+              ),
+            );
+          },
         ),
         ListTile(
           leading: arrow,
