@@ -1,3 +1,4 @@
+import 'package:fludget/routes/text.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -38,9 +39,19 @@ class HomePageState extends State<HomePage> {
         ListTile(
           leading: arrow,
           title: Text(
-            "Widget 1",
+            "Text Widget",
             style: titleStyle,
           ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return TextSample();
+                },
+              ),
+            );
+          },
         ),
         ListTile(
           leading: arrow,
