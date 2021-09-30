@@ -170,13 +170,6 @@ class HomePageState extends State<HomePage> {
             );
           },
         ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Widget 5",
-            style: titleStyle,
-          ),
-        ),
       ],
     );
   }
