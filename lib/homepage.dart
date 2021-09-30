@@ -1,3 +1,4 @@
+import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/text.dart';
@@ -96,9 +97,23 @@ class HomePageState extends State<HomePage> {
         ListTile(
           leading: arrow,
           title: Text(
-            "Widget 4",
+            "Button Widget",
             style: titleStyle,
           ),
+          subtitle: Text(
+            "Elevated Button, Text Button, Floating Action Button",
+            style: subtitleStyle,
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return ButtonSample();
+                },
+              ),
+            );
+          },
         ),
         ListTile(
           leading: arrow,
