@@ -1,4 +1,5 @@
 import 'package:fludget/routes/button.dart';
+import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/text.dart';
@@ -39,6 +40,23 @@ class HomePageState extends State<HomePage> {
     return ListView(
       padding: EdgeInsets.symmetric(vertical: 10.0),
       children: [
+        ListTile(
+          leading: arrow,
+          title: Text(
+            "Column Widget",
+            style: titleStyle,
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return ColumnSample();
+                },
+              ),
+            );
+          },
+        ),
         ListTile(
           leading: arrow,
           title: Text(
