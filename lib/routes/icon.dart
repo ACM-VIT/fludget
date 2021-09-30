@@ -15,17 +15,17 @@ class IconSample extends StatelessWidget {
           Icon(
             Icons.ac_unit,
             color: Colors.blue[100],
-            size: 30.0,
+            size: 50.0,
           ),
           Icon(
             Icons.wb_sunny,
             color: Colors.yellow,
-            size: 60.0,
+            size: 100.0,
           ),
           Icon(
             Icons.cloud,
             color: Colors.white,
-            size: 45.0,
+            size: 75.0,
           )
         ]),
       ),
