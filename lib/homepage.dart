@@ -2,6 +2,7 @@ import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +37,7 @@ class HomePageState extends State<HomePage> {
       ),
       backgroundColor: Colors.orange[900],
     );
+
     TextStyle subtitleStyle = TextStyle(color: Colors.white70);
     return ListView(
       padding: EdgeInsets.symmetric(vertical: 10.0),
@@ -52,6 +54,23 @@ class HomePageState extends State<HomePage> {
               MaterialPageRoute(
                 builder: (context) {
                   return ColumnSample();
+                },
+              ),
+            );
+          },
+        ),
+        ListTile(
+          leading: arrow,
+          title: Text(
+            "Row Widget",
+            style: titleStyle,
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return RowSample();
                 },
               ),
             );
