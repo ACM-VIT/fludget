@@ -20,6 +20,13 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Widget Catalog"),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search),
+          )
+        ],
+        centerTitle: true,
       ),
       backgroundColor: Colors.grey[900],
       body: getWidgetList(),
