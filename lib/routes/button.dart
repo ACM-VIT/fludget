@@ -7,7 +7,9 @@ class ButtonSample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buttons"),
+        title: Text("Buttons",
+          style: TextStyle(color: Colors.amberAccent[400]),),
+        centerTitle: true,
       ),
       backgroundColor: Colors.grey[900],
       body: Padding(

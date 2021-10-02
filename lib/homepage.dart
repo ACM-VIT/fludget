@@ -16,6 +16,15 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  Icon myIcon = Icon(Icons.search);
+  Widget mySearchBar = Text(
+    "Widget Catalog",
+    style: TextStyle(
+        color: Colors.limeAccent,
+        backgroundColor: Colors.black,
+        fontWeight: FontWeight.bold),
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +32,32 @@ class HomePageState extends State<HomePage> {
         title: Text("Widget Catalog"),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              setState(() {
+                if (this.myIcon.icon == Icons.search) {
+                  this.myIcon = Icon(Icons.cancel);
+                  this.mySearchBar = TextField(
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Search here",
+                        hintStyle: TextStyle(color: Colors.yellowAccent)),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.0,
+                    ),
+                  );
+                } else {
+                  this.myIcon = Icon(Icons.search);
+                  this.mySearchBar = Text(
+                    "Widget Catalog",
+                    style: TextStyle(
+                        color: Colors.limeAccent,
+                        backgroundColor: Colors.black,
+                        fontWeight: FontWeight.bold),
+                  );
+                }
+              });
+            },
             icon: const Icon(Icons.search),
           )
         ],
@@ -36,7 +70,7 @@ class HomePageState extends State<HomePage> {
 
   ListView getWidgetList() {
     TextStyle titleStyle = TextStyle(
-      color: Colors.white,
+      color: Colors.amber[400], backgroundColor: Colors.black
     );
 
     CircleAvatar arrow = CircleAvatar(
@@ -44,7 +78,7 @@ class HomePageState extends State<HomePage> {
         Icons.keyboard_arrow_right,
         color: Colors.white,
       ),
-      backgroundColor: Colors.orange[900],
+      backgroundColor: Colors.limeAccent[400],
     );
 
     TextStyle subtitleStyle = TextStyle(color: Colors.white70);
@@ -163,9 +197,12 @@ class HomePageState extends State<HomePage> {
             "Button Widget",
             style: titleStyle,
           ),
-          subtitle: Text(
-            "Elevated Button, Text Button, Floating Action Button",
-            style: subtitleStyle,
+          subtitle: Padding(
+            padding: const EdgeInsets.fromLTRB(0.00, 3.0, 0.00, 0.0),
+            child: Text(
+              "Elevated Button, Text Button, Floating Action Button",
+              style: subtitleStyle,
+            ),
           ),
           onTap: () {
             Navigator.push(
