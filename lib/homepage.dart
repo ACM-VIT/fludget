@@ -34,6 +34,16 @@ class HomePageState extends State<HomePage> {
   }
 
   ListView getWidgetList() {
+    final itemMap = {
+      'Column Widget': ColumnSample(),
+      'Row Widget': RowSample(),
+      'Stack Widget': StackSample(),
+      'Text Widget': TextSample(),
+      'Icon Widget': IconSample(),
+      'Image Widget': ImageSample(),
+      'Button Widget': ButtonSample(),
+    };
+
     TextStyle titleStyle = TextStyle(
       color: Colors.white,
     );
@@ -47,137 +57,26 @@ class HomePageState extends State<HomePage> {
     );
 
     TextStyle subtitleStyle = TextStyle(color: Colors.white70);
-    return ListView(
+    return ListView.builder(
       padding: EdgeInsets.symmetric(vertical: 10.0),
-      children: [
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Column Widget",
-            style: titleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return ColumnSample();
-                },
-              ),
-            );
-          },
+      itemCount: itemMap.length,
+      itemBuilder: (ctx, index) => ListTile(
+        leading: arrow,
+        title: Text(
+          itemMap.keys.toList()[index],
+          style: titleStyle,
         ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Row Widget",
-            style: titleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return RowSample();
-                },
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Stack Widget",
-            style: titleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return StackSample();
-                },
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Text Widget",
-            style: titleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return TextSample();
-                },
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Icon Widget",
-            style: titleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return IconSample();
-                },
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Image Widget",
-            style: titleStyle,
-          ),
-          subtitle: Text(
-            "Asset Image, Network Image",
-            style: subtitleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return ImageSample();
-                },
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Button Widget",
-            style: titleStyle,
-          ),
-          subtitle: Text(
-            "Elevated Button, Text Button, Floating Action Button",
-            style: subtitleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return ButtonSample();
-                },
-              ),
-            );
-          },
-        ),
-      ],
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return itemMap.values.toList()[index];
+              },
+            ),
+          );
+        },
+      ),
     );
   }
 }
