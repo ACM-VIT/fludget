@@ -1,6 +1,6 @@
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
-import 'package:fludget/routes/gridList.dart';
+import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/row.dart';
@@ -181,15 +181,20 @@ class HomePageState extends State<HomePage> {
         ListTile(
           leading: arrow,
           title: Text(
-            "GridList Widget",
+            "Dialog Widget",
             style: titleStyle,
           ),
+          subtitle: Text(
+            "shows Dialog",
+            style: subtitleStyle,
+          ),
+
           onTap: () {
             Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return GridListSample();
+                  return DialogBox();
                 },
               ),
             );
