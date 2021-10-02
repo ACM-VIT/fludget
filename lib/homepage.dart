@@ -1,12 +1,14 @@
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
-import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/text.dart';
+import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
+import 'package:fludget/routes/dialogBox.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -35,6 +37,21 @@ class HomePageState extends State<HomePage> {
   }
 
   ListView getWidgetList() {
+    final itemMap = {
+      'Column Widget': {ColumnSample(): ''},
+      'Row Widget': {RowSample(): ''},
+      'Stack Widget': {StackSample(): ''},
+      'Text Widget': {TextSample(): ''},
+      'Icon Widget': {IconSample(): ''},
+      'Image Widget': {ImageSample(): 'Asset Image, Network Image'},
+      'Button Widget': {
+        ButtonSample(): 'Elevated Button, Text Button, Floating Action Button'
+      },
+      'GridList Widget': {GridListSample(): ''},
+      //Make Sure to add new Widgets to the ListView like:
+//       'Widget Title' : { WidgetClass(): 'Widget Subtitle' }
+    };
+
     TextStyle titleStyle = TextStyle(
       color: Colors.white,
     );
@@ -48,159 +65,30 @@ class HomePageState extends State<HomePage> {
     );
 
     TextStyle subtitleStyle = TextStyle(color: Colors.white70);
-    return ListView(
+    return ListView.builder(
       padding: EdgeInsets.symmetric(vertical: 10.0),
-      children: [
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Column Widget",
-            style: titleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return ColumnSample();
-                },
-              ),
-            );
-          },
+      itemCount: itemMap.length,
+      itemBuilder: (ctx, index) => ListTile(
+        leading: arrow,
+        title: Text(
+          itemMap.keys.toList()[index],
+          style: titleStyle,
         ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Row Widget",
-            style: titleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return RowSample();
-                },
-              ),
-            );
-          },
+        subtitle: Text(
+          itemMap.values.toList()[index].values.toList()[0],
+          style: subtitleStyle,
         ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Stack Widget",
-            style: titleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return StackSample();
-                },
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Text Widget",
-            style: titleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return TextSample();
-                },
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Icon Widget",
-            style: titleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return IconSample();
-                },
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Image Widget",
-            style: titleStyle,
-          ),
-          subtitle: Text(
-            "Asset Image, Network Image",
-            style: subtitleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return ImageSample();
-                },
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Button Widget",
-            style: titleStyle,
-          ),
-          subtitle: Text(
-            "Elevated Button, Text Button, Floating Action Button",
-            style: subtitleStyle,
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return ButtonSample();
-                },
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: arrow,
-          title: Text(
-            "Dialog Widget",
-            style: titleStyle,
-          ),
-          subtitle: Text(
-            "shows Dialog",
-            style: subtitleStyle,
-          ),
-
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return DialogBox();
-                },
-              ),
-            );
-          },
-        ),
-      ],
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return itemMap.values.toList()[index].keys.toList()[0];
+              },
+            ),
+          );
+        },
+      ),
     );
   }
 }
