@@ -5,7 +5,12 @@ class DialogBox extends StatelessWidget {
   Widget _buildDelDialog(BuildContext context) {
     return new AlertDialog(
       title: const Text('This is title'),
+
+      ///title
+      ///we can add Content to the AlertDialog widget
+      ///content: Widget,
       actions: <Widget>[
+        /// Widgets placed in a row manner
         new FlatButton(
           onPressed: () {
             Navigator.of(context).pop();
@@ -49,6 +54,7 @@ class DialogBox extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
+                  ///showDialog is used to paint the AlertDialog into the current Context
                   showDialog(
                       context: context,
                       builder: (BuildContext context) =>
