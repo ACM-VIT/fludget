@@ -48,6 +48,8 @@ class HomePageState extends State<HomePage> {
         ButtonSample(): 'Elevated Button, Text Button, Floating Action Button'
       },
       'GridList Widget': {GridListSample(): ''},
+      //Make Sure to add new Widgets to the ListView like:
+//       'Widget Title' : { WidgetClass(): 'Widget Subtitle' }
     };
 
     TextStyle titleStyle = TextStyle(
