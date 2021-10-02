@@ -1,4 +1,5 @@
 import 'package:fludget/routes/button.dart';
+import 'package:fludget/routes/card.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
@@ -172,6 +173,23 @@ class HomePageState extends State<HomePage> {
               MaterialPageRoute(
                 builder: (context) {
                   return ButtonSample();
+                },
+              ),
+            );
+          },
+        ),
+        ListTile(
+          leading: arrow,
+          title: Text(
+            "Card  Widget",
+            style: titleStyle,
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return CardSample();
                 },
               ),
             );
