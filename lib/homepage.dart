@@ -7,6 +7,8 @@ import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
+import 'package:fludget/routes/dialogBox.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -36,14 +38,16 @@ class HomePageState extends State<HomePage> {
 
   ListView getWidgetList() {
     final itemMap = {
-      'Column Widget': ColumnSample(),
-      'Row Widget': RowSample(),
-      'Stack Widget': StackSample(),
-      'Text Widget': TextSample(),
-      'Icon Widget': IconSample(),
-      'Image Widget': ImageSample(),
-      'Button Widget': ButtonSample(),
-      'GridList Widget': GridListSample(),
+      'Column Widget': {ColumnSample(): ''},
+      'Row Widget': {RowSample(): ''},
+      'Stack Widget': {StackSample(): ''},
+      'Text Widget': {TextSample(): ''},
+      'Icon Widget': {IconSample(): ''},
+      'Image Widget': {ImageSample(): 'Asset Image, Network Image'},
+      'Button Widget': {
+        ButtonSample(): 'Elevated Button, Text Button, Floating Action Button'
+      },
+      'GridList Widget': {GridListSample(): ''},
     };
 
     TextStyle titleStyle = TextStyle(
@@ -68,12 +72,16 @@ class HomePageState extends State<HomePage> {
           itemMap.keys.toList()[index],
           style: titleStyle,
         ),
+        subtitle: Text(
+          itemMap.values.toList()[index].values.toList()[0],
+          style: subtitleStyle,
+        ),
         onTap: () {
           Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) {
-                return itemMap.values.toList()[index];
+                return itemMap.values.toList()[index].keys.toList()[0];
               },
             ),
           );
