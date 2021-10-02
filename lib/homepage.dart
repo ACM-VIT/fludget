@@ -5,6 +5,7 @@ import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/text.dart';
+import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -42,6 +43,7 @@ class HomePageState extends State<HomePage> {
       'Icon Widget': IconSample(),
       'Image Widget': ImageSample(),
       'Button Widget': ButtonSample(),
+      'GridList Widget': GridListSample(),
     };
 
     TextStyle titleStyle = TextStyle(
