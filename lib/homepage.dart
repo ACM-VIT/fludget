@@ -188,6 +188,7 @@ class HomePageState extends State<HomePage> {
             "shows Dialog",
             style: subtitleStyle,
           ),
+
           onTap: () {
             Navigator.push(
               context,
