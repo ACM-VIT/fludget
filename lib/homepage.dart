@@ -9,7 +9,6 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
 import 'package:fludget/routes/dialogBox.dart';
 
-
 class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -48,6 +47,7 @@ class HomePageState extends State<HomePage> {
         ButtonSample(): 'Elevated Button, Text Button, Floating Action Button'
       },
       'GridList Widget': {GridListSample(): ''},
+      'DialogBox Widget': {DialogBox(): ''},
       //Make Sure to add new Widgets to the ListView like:
 //       'Widget Title' : { WidgetClass(): 'Widget Subtitle' }
     };
