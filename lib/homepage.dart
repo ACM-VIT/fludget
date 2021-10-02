@@ -10,7 +10,6 @@ import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
 
-
 class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
