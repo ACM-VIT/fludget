@@ -7,7 +7,9 @@ import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/text.dart';
+import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -105,6 +107,11 @@ class HomePageState extends State<HomePage> {
         name: "Dialog",
         subtitle: "shows Dialog",
         sample: DialogBox(),
+      ),
+      WidgetModel(
+        name: "GridList",
+        subtitle: "shows Dialog",
+        sample: GridListSample(),
       ),
     ];
 
