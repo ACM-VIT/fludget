@@ -103,7 +103,7 @@ class HomePageState extends State<HomePage> {
         sample: ButtonSample(),
       ),
       WidgetModel(
-        name: "Dialog",
+        name: "DialogBox",
         subtitle: "shows Dialog",
         sample: DialogBox(),
       ),
