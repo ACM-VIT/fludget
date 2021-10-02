@@ -1,5 +1,6 @@
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
+import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/row.dart';
@@ -172,6 +173,23 @@ class HomePageState extends State<HomePage> {
               MaterialPageRoute(
                 builder: (context) {
                   return ButtonSample();
+                },
+              ),
+            );
+          },
+        ),
+        ListTile(
+          leading: arrow,
+          title: Text(
+            "GridList Widget",
+            style: titleStyle,
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return GridListSample();
                 },
               ),
             );
