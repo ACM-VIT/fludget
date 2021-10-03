@@ -11,6 +11,7 @@ class _CardSampleState extends State<CardSample> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.orange[900],
           title: Text(" Card "),
         ),
         backgroundColor: Colors.grey[900],
