@@ -3,6 +3,7 @@ import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/row.dart';
+import 'package:fludget/routes/settings.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/gridList.dart';
@@ -48,6 +49,7 @@ class HomePageState extends State<HomePage> {
       },
       'GridList Widget': {GridListSample(): ''},
       'DialogBox Widget': {DialogBox(): ''},
+      'Settings Widget': {SettingSample(): 'Account and Notification Settings'}
       //Make Sure to add new Widgets to the ListView like:
 //       'Widget Title' : { WidgetClass(): 'Widget Subtitle' }
     };
