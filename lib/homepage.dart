@@ -1,4 +1,5 @@
 import 'package:fludget/Models/widgetModel.dart';
+import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/column.dart';
@@ -67,6 +68,7 @@ class HomePageState extends State<HomePage> {
       appBar: searching
           ? showSearchBar()
           : AppBar(
+              backgroundColor: Colors.orange[900],
               title: Text("Widget Catalog"),
               actions: [
                 IconButton(
@@ -87,30 +89,46 @@ class HomePageState extends State<HomePage> {
 
   ListView getWidgetList(String filter) {
     const List<WidgetModel> widgets = [
-      WidgetModel(name: "Column", sample: ColumnSample()),
-      WidgetModel(name: "Row", sample: RowSample()),
-      WidgetModel(name: "Stack", sample: StackSample()),
-      WidgetModel(name: "Text", sample: TextSample()),
-      WidgetModel(name: "Icon", sample: IconSample()),
       WidgetModel(
-        name: "Image",
-        subtitle: "Asset Image, Network Image",
-        sample: ImageSample(),
-      ),
+          name: "Column",
+          sample: ColumnSample(),
+          sampleDescription: ColumnDescription()),
       WidgetModel(
-        name: "Button",
-        subtitle: "Elevated Button, Text Button, Floating Action Button",
-        sample: ButtonSample(),
-      ),
+          name: "Row",
+          sample: RowSample(),
+          sampleDescription: RowWidgetDescription()),
       WidgetModel(
-        name: "DialogBox",
-        subtitle: "shows Dialog",
-        sample: DialogBox(),
-      ),
+          name: "Stack",
+          sample: StackSample(),
+          sampleDescription: StackWidgetDescription()),
+      WidgetModel(
+          name: "Text",
+          sample: TextSample(),
+          sampleDescription: TextWidgetDescription()),
+      WidgetModel(
+          name: "Icon",
+          sample: IconSample(),
+          sampleDescription: IconWidgetDescription()),
+      WidgetModel(
+          name: "Image",
+          subtitle: "Asset Image, Network Image",
+          sample: ImageSample(),
+          sampleDescription: ImageWidgetDescription()),
+      WidgetModel(
+          name: "Button",
+          subtitle: "Elevated Button, Text Button, Floating Action Button",
+          sample: ButtonSample(),
+          sampleDescription: ButtonDescription()),
+      WidgetModel(
+          name: "DialogBox",
+          subtitle: "shows Dialog",
+          sample: DialogBox(),
+          sampleDescription: DialogBoxDescription()),
       WidgetModel(
         name: "GridList",
         subtitle: "shows Dialog",
         sample: GridListSample(),
+        sampleDescription: GridListDescription(),
       ),
     ];
 
@@ -184,7 +202,11 @@ class HomePageState extends State<HomePage> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (_) => item.sample,
+            builder: (_) => RootScreen(
+              widgetImplementation: item.sample,
+              widgetName: item.name,
+              widgetDescription: item.sampleDescription,
+            ),
           ),
         );
       },

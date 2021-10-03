@@ -6,9 +6,9 @@ class ColumnSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Column"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Column"),
+      // ),
       backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -43,6 +43,20 @@ class ColumnSample extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ColumnDescription extends StatelessWidget {
+  const ColumnDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        'Column Description Here',
+        style: TextStyle(color: Colors.white),
       ),
     );
   }

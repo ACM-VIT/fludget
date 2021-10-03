@@ -30,9 +30,9 @@ class DialogBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Dialog Widget"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Dialog Widget"),
+      // ),
       backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -60,6 +60,20 @@ class DialogBox extends StatelessWidget {
                 child: Text("Elevated Button")),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class DialogBoxDescription extends StatelessWidget {
+  const DialogBoxDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        'Dialog Box Description Here',
+        style: TextStyle(color: Colors.white),
       ),
     );
   }
