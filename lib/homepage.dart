@@ -68,6 +68,7 @@ class HomePageState extends State<HomePage> {
       appBar: searching
           ? showSearchBar()
           : AppBar(
+              backgroundColor: Colors.orange[900],
               title: Text("Widget Catalog"),
               actions: [
                 IconButton(

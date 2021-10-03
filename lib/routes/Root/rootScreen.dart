@@ -23,6 +23,7 @@ class _RootScreenState extends State<RootScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.orange[900],
           title: Text(widget.widgetName),
           bottom: TabBar(
             tabs: [
