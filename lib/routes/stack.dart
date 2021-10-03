@@ -6,9 +6,9 @@ class StackSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Stack"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Stack"),
+      // ),
       backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(10.0),

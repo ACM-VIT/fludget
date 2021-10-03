@@ -30,9 +30,9 @@ class DialogBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Dialog Widget"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Dialog Widget"),
+      // ),
       backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(15.0),

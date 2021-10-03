@@ -1,4 +1,5 @@
 import 'package:fludget/Models/widgetModel.dart';
+import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/column.dart';
@@ -184,7 +185,10 @@ class HomePageState extends State<HomePage> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (_) => item.sample,
+            builder: (_) => RootScreen(
+              widgetImplementation: item.sample,
+              widgetName: item.name,
+            ),
           ),
         );
       },

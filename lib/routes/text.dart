@@ -6,9 +6,9 @@ class TextSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Text"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Text"),
+      // ),
       backgroundColor: Colors.grey[900],
       body: Center(
         heightFactor: 15,

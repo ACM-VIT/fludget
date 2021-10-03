@@ -6,9 +6,9 @@ class GridListSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("GridList"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("GridList"),
+      // ),
       backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(15.0),

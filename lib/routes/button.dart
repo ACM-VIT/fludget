@@ -6,9 +6,9 @@ class ButtonSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Buttons"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Buttons"),
+      // ),
       backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(15.0),
