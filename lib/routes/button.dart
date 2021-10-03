@@ -72,3 +72,20 @@ void _message(BuildContext context) =>
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text("Button was pressed"),
     ));
+
+class ButtonDescription extends StatelessWidget {
+  const ButtonDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: Center(
+        child: Text(
+          'Button Description Here',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}

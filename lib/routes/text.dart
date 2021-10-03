@@ -21,3 +21,20 @@ class TextSample extends StatelessWidget {
     );
   }
 }
+
+class TextWidgetDescription extends StatelessWidget {
+  const TextWidgetDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: Center(
+        child: Text(
+          'Text Description Here',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}

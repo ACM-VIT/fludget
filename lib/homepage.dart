@@ -88,30 +88,46 @@ class HomePageState extends State<HomePage> {
 
   ListView getWidgetList(String filter) {
     const List<WidgetModel> widgets = [
-      WidgetModel(name: "Column", sample: ColumnSample()),
-      WidgetModel(name: "Row", sample: RowSample()),
-      WidgetModel(name: "Stack", sample: StackSample()),
-      WidgetModel(name: "Text", sample: TextSample()),
-      WidgetModel(name: "Icon", sample: IconSample()),
       WidgetModel(
-        name: "Image",
-        subtitle: "Asset Image, Network Image",
-        sample: ImageSample(),
-      ),
+          name: "Column",
+          sample: ColumnSample(),
+          sampleDescription: ColumnDescription()),
       WidgetModel(
-        name: "Button",
-        subtitle: "Elevated Button, Text Button, Floating Action Button",
-        sample: ButtonSample(),
-      ),
+          name: "Row",
+          sample: RowSample(),
+          sampleDescription: RowWidgetDescription()),
       WidgetModel(
-        name: "DialogBox",
-        subtitle: "shows Dialog",
-        sample: DialogBox(),
-      ),
+          name: "Stack",
+          sample: StackSample(),
+          sampleDescription: StackWidgetDescription()),
+      WidgetModel(
+          name: "Text",
+          sample: TextSample(),
+          sampleDescription: TextWidgetDescription()),
+      WidgetModel(
+          name: "Icon",
+          sample: IconSample(),
+          sampleDescription: IconWidgetDescription()),
+      WidgetModel(
+          name: "Image",
+          subtitle: "Asset Image, Network Image",
+          sample: ImageSample(),
+          sampleDescription: ImageWidgetDescription()),
+      WidgetModel(
+          name: "Button",
+          subtitle: "Elevated Button, Text Button, Floating Action Button",
+          sample: ButtonSample(),
+          sampleDescription: ButtonDescription()),
+      WidgetModel(
+          name: "DialogBox",
+          subtitle: "shows Dialog",
+          sample: DialogBox(),
+          sampleDescription: DialogBoxDescription()),
       WidgetModel(
         name: "GridList",
         subtitle: "shows Dialog",
         sample: GridListSample(),
+        sampleDescription: GridListDescription(),
       ),
     ];
 
@@ -188,6 +204,7 @@ class HomePageState extends State<HomePage> {
             builder: (_) => RootScreen(
               widgetImplementation: item.sample,
               widgetName: item.name,
+              widgetDescription: item.sampleDescription,
             ),
           ),
         );

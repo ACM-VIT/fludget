@@ -42,3 +42,20 @@ class ImageSample extends StatelessWidget {
     );
   }
 }
+
+class ImageWidgetDescription extends StatelessWidget {
+  const ImageWidgetDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: Center(
+        child: Text(
+          'Image Description Here',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}

@@ -32,3 +32,20 @@ class IconSample extends StatelessWidget {
     );
   }
 }
+
+class IconWidgetDescription extends StatelessWidget {
+  const IconWidgetDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: Center(
+        child: Text(
+          'Icon Description Here',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}

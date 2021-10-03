@@ -47,3 +47,20 @@ class RowSample extends StatelessWidget {
     );
   }
 }
+
+class RowWidgetDescription extends StatelessWidget {
+  const RowWidgetDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: Center(
+        child: Text(
+          'Row Description Here',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}

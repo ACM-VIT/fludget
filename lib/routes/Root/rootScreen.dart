@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class RootScreen extends StatefulWidget {
-  Widget widgetImplementation;
+  final Widget widgetImplementation;
+  final Widget widgetDescription;
   final String widgetName;
 
   RootScreen({
     Key? key,
     required this.widgetImplementation,
     required this.widgetName,
+    required this.widgetDescription,
   }) : super(key: key);
 
   @override
@@ -29,12 +31,12 @@ class _RootScreenState extends State<RootScreen> {
             ],
           ),
         ),
-        body: TabBarView(children: [
-          widget.widgetImplementation,
-          Center(
-            child: Text('${widget.widgetName} Implementation'),
-          )
-        ]),
+        body: TabBarView(
+          children: [
+            widget.widgetImplementation,
+            widget.widgetDescription,
+          ],
+        ),
       ),
     );
   }

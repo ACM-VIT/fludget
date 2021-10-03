@@ -64,3 +64,20 @@ class DialogBox extends StatelessWidget {
     );
   }
 }
+
+class DialogBoxDescription extends StatelessWidget {
+  const DialogBoxDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: Center(
+        child: Text(
+          'Dialog Box Description Here',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}

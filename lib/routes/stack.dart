@@ -46,3 +46,20 @@ class StackSample extends StatelessWidget {
     );
   }
 }
+
+class StackWidgetDescription extends StatelessWidget {
+  const StackWidgetDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: Center(
+        child: Text(
+          'Stack Description Here',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}

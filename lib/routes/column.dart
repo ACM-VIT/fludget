@@ -47,3 +47,20 @@ class ColumnSample extends StatelessWidget {
     );
   }
 }
+
+class ColumnDescription extends StatelessWidget {
+  const ColumnDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: Center(
+        child: Text(
+          'Column Description Here',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}

@@ -52,3 +52,20 @@ class GridListSample extends StatelessWidget {
     );
   }
 }
+
+class GridListDescription extends StatelessWidget {
+  const GridListDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: Center(
+        child: Text(
+          'Grid List Description Here',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}
