@@ -20,9 +20,6 @@ class _SettingSampleState extends State<SettingSample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Settings'),
-      ),
       body: Container(
         padding: const EdgeInsets.all(10),
         child: ListView(
@@ -139,6 +136,20 @@ class _SettingSampleState extends State<SettingSample> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class SettingsDescription extends StatelessWidget {
+  const SettingsDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        'Settings Description Here',
+        style: TextStyle(color: Colors.white),
       ),
     );
   }

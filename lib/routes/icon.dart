@@ -6,9 +6,9 @@ class IconSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Icon"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Icon"),
+      // ),
       backgroundColor: Colors.grey[900],
       body: Center(
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
@@ -28,6 +28,20 @@ class IconSample extends StatelessWidget {
             size: 75.0,
           )
         ]),
+      ),
+    );
+  }
+}
+
+class IconWidgetDescription extends StatelessWidget {
+  const IconWidgetDescription({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        'Icon Description Here',
+        style: TextStyle(color: Colors.white),
       ),
     );
   }

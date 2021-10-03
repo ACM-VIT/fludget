@@ -1,4 +1,7 @@
+import 'package:fludget/Models/widgetModel.dart';
+import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
+import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
@@ -8,7 +11,6 @@ import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
-import 'package:fludget/routes/dialogBox.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -18,46 +20,165 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Widget Catalog"),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.search),
-          )
-        ],
-        centerTitle: true,
-      ),
+  bool searching = false;
+  String searchString = '';
+
+  AppBar showSearchBar() {
+    return AppBar(
       backgroundColor: Colors.grey[900],
-      body: getWidgetList(),
+      title: TextField(
+        keyboardType: TextInputType.text,
+        cursorColor: Colors.white,
+        autofocus: true,
+        decoration: InputDecoration(
+          hintStyle: TextStyle(color: Colors.grey),
+          prefixIcon: IconButton(
+            icon: Icon(Icons.arrow_back),
+            color: Colors.white,
+            onPressed: () {
+              setState(() {
+                searching = false;
+                searchString = '';
+              });
+            },
+          ),
+          hintText: 'Search....',
+          border: UnderlineInputBorder(borderSide: BorderSide.none),
+        ),
+        style: TextStyle(
+          color: Colors.white,
+          decorationColor: Colors.white,
+        ),
+        onSubmitted: (String text) {
+          setState(() {
+            searchString = text;
+          });
+        },
+        onChanged: (String text) {
+          setState(() {
+            searchString = text;
+          });
+        },
+      ),
     );
   }
 
-  ListView getWidgetList() {
-    final itemMap = {
-      'Column Widget': {ColumnSample(): ''},
-      'Row Widget': {RowSample(): ''},
-      'Stack Widget': {StackSample(): ''},
-      'Text Widget': {TextSample(): ''},
-      'Icon Widget': {IconSample(): ''},
-      'Image Widget': {ImageSample(): 'Asset Image, Network Image'},
-      'Button Widget': {
-        ButtonSample(): 'Elevated Button, Text Button, Floating Action Button'
-      },
-      'GridList Widget': {GridListSample(): ''},
-      'DialogBox Widget': {DialogBox(): ''},
-      'Settings Widget': {SettingSample(): 'Account and Notification Settings'}
-      //Make Sure to add new Widgets to the ListView like:
-//       'Widget Title' : { WidgetClass(): 'Widget Subtitle' }
-    };
-
-    TextStyle titleStyle = TextStyle(
-      color: Colors.white,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: searching
+          ? showSearchBar()
+          : AppBar(
+              backgroundColor: Colors.orange[900],
+              title: Text("Widget Catalog"),
+              actions: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      searching = true;
+                    });
+                  },
+                  icon: const Icon(Icons.search),
+                )
+              ],
+              centerTitle: true,
+            ),
+      backgroundColor: Colors.grey[900],
+      body: getWidgetList(searchString),
     );
+  }
 
+  ListView getWidgetList(String filter) {
+    const List<WidgetModel> widgets = [
+      WidgetModel(
+          name: "Column",
+          sample: ColumnSample(),
+          sampleDescription: ColumnDescription()),
+      WidgetModel(
+          name: "Row",
+          sample: RowSample(),
+          sampleDescription: RowWidgetDescription()),
+      WidgetModel(
+          name: "Stack",
+          sample: StackSample(),
+          sampleDescription: StackWidgetDescription()),
+      WidgetModel(
+          name: "Text",
+          sample: TextSample(),
+          sampleDescription: TextWidgetDescription()),
+      WidgetModel(
+          name: "Icon",
+          sample: IconSample(),
+          sampleDescription: IconWidgetDescription()),
+      WidgetModel(
+          name: "Image",
+          subtitle: "Asset Image, Network Image",
+          sample: ImageSample(),
+          sampleDescription: ImageWidgetDescription()),
+      WidgetModel(
+          name: "Button",
+          subtitle: "Elevated Button, Text Button, Floating Action Button",
+          sample: ButtonSample(),
+          sampleDescription: ButtonDescription()),
+      WidgetModel(
+          name: "DialogBox",
+          subtitle: "shows Dialog",
+          sample: DialogBox(),
+          sampleDescription: DialogBoxDescription()),
+      WidgetModel(
+        name: "GridList",
+        subtitle: "shows Dialog",
+        sample: GridListSample(),
+        sampleDescription: GridListDescription(),
+      ),
+      WidgetModel(
+        name: "Settings",
+        subtitle: "Account and Notification Settings",
+        sample: SettingSample(),
+        sampleDescription: SettingsDescription(),
+      ),
+    ];
+
+    return ListView(
+      padding: EdgeInsets.symmetric(vertical: 10.0),
+      children: filterWidgets(widgets, filter),
+    );
+  }
+
+  List<Widget> filterWidgets(List<WidgetModel> widgets, String filter) {
+    List<WidgetModel> filtered = [];
+
+    widgets.forEach((item) {
+      String itemName = item.name.toLowerCase();
+      String subtitle = item.subtitle.toLowerCase();
+      if (itemName.contains(filter.toLowerCase()))
+        filtered.add(item);
+      else if (subtitle.contains(filter.toLowerCase())) filtered.add(item);
+    });
+
+    if (filtered.isEmpty) {
+      return [
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 15,
+              horizontal: 15,
+            ),
+            child: Text('No widget found with name:\n' + filter,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                )),
+          ),
+        ),
+      ];
+    }
+
+    return filtered.map((item) => buildListItem(item)).toList();
+  }
+
+  ListTile buildListItem(WidgetModel item) {
     CircleAvatar arrow = CircleAvatar(
       child: Icon(
         Icons.keyboard_arrow_right,
@@ -66,31 +187,36 @@ class HomePageState extends State<HomePage> {
       backgroundColor: Colors.orange[900],
     );
 
+    TextStyle titleStyle = TextStyle(
+      color: Colors.white,
+    );
+
     TextStyle subtitleStyle = TextStyle(color: Colors.white70);
-    return ListView.builder(
-      padding: EdgeInsets.symmetric(vertical: 10.0),
-      itemCount: itemMap.length,
-      itemBuilder: (ctx, index) => ListTile(
-        leading: arrow,
-        title: Text(
-          itemMap.keys.toList()[index],
-          style: titleStyle,
-        ),
-        subtitle: Text(
-          itemMap.values.toList()[index].values.toList()[0],
-          style: subtitleStyle,
-        ),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return itemMap.values.toList()[index].keys.toList()[0];
-              },
-            ),
-          );
-        },
+
+    return ListTile(
+      leading: arrow,
+      title: Text(
+        item.name + " Widget",
+        style: titleStyle,
       ),
+      subtitle: item.subtitle.isEmpty
+          ? null
+          : Text(
+              item.subtitle,
+              style: subtitleStyle,
+            ),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => RootScreen(
+              widgetImplementation: item.sample,
+              widgetName: item.name,
+              widgetDescription: item.sampleDescription,
+            ),
+          ),
+        );
+      },
     );
   }
 }
