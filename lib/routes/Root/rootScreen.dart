@@ -34,10 +34,17 @@ class _RootScreenState extends State<RootScreen> {
         body: TabBarView(
           children: [
             widget.widgetImplementation,
-            widget.widgetDescription,
+            buildWidgetDescription(widget.widgetDescription),
           ],
         ),
       ),
     );
   }
+}
+
+Widget buildWidgetDescription(Widget widgetDescription) {
+  return Scaffold(
+    backgroundColor: Colors.grey[900],
+    body: widgetDescription,
+  );
 }

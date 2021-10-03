@@ -53,13 +53,10 @@ class ColumnDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[900],
-      body: Center(
-        child: Text(
-          'Column Description Here',
-          style: TextStyle(color: Colors.white),
-        ),
+    return Center(
+      child: Text(
+        'Column Description Here',
+        style: TextStyle(color: Colors.white),
       ),
     );
   }

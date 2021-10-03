@@ -38,13 +38,10 @@ class IconWidgetDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[900],
-      body: Center(
-        child: Text(
-          'Icon Description Here',
-          style: TextStyle(color: Colors.white),
-        ),
+    return Center(
+      child: Text(
+        'Icon Description Here',
+        style: TextStyle(color: Colors.white),
       ),
     );
   }
