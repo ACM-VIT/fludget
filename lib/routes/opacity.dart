@@ -10,99 +10,147 @@ class opacitysample extends StatefulWidget {
 class _opacitysampleState extends State<opacitysample> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Opacity(
-                opacity: 1,
-                child: Container(
-                  child: Text(""),
-                  height: 200,
-                  width: 200,
-                  color: Colors.red,
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Stack(
+                  children: [
+                    Opacity(
+                      opacity: 0.5,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                                'https://www.cnet.com/a/img/-qQkzFVyOPEoBRS7K5kKS0GFDvk=/940x0/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg'),
+                            fit: BoxFit.fill,
+                          ),
+                          // shape: BoxShape.circle,
+                        ),
+                        child: Text(""),
+                        height: 200,
+                        width: 200,
+                        // color: Colors.red,
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage(
+                              'https://www.cnet.com/a/img/-qQkzFVyOPEoBRS7K5kKS0GFDvk=/940x0/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                        // shape: BoxShape.circle,
+                      ),
+                      child: Text(""),
+                      height: 200,
+                      width: 200,
+                      // color: Colors.red,
+                    ),
+                  ],
                 ),
-              ),
-              Text("1 opacity")
-            ],
+                Text(
+                    "2 images overlapped one has opacity of 0.5 and other opacity of 1")
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Opacity(
-                opacity: 0.75,
-                child: Container(
-                  child: Text(""),
-                  height: 200,
-                  width: 200,
-                  color: Colors.red,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Opacity(
+                  opacity: 1,
+                  child: Container(
+                    child: Text(""),
+                    height: 200,
+                    width: 200,
+                    color: Colors.red,
+                  ),
                 ),
-              ),
-              Text("0.75 opacity")
-            ],
+                Text("1 opacity")
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Opacity(
-                opacity: 0.5,
-                child: Container(
-                  child: Text(""),
-                  height: 200,
-                  width: 200,
-                  color: Colors.red,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Opacity(
+                  opacity: 0.75,
+                  child: Container(
+                    child: Text(""),
+                    height: 200,
+                    width: 200,
+                    color: Colors.red,
+                  ),
                 ),
-              ),
-              Text("0.5 opacity")
-            ],
+                Text("0.75 opacity")
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Opacity(
-                opacity: 0.25,
-                child: Container(
-                  child: Text(""),
-                  height: 200,
-                  width: 200,
-                  color: Colors.red,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Opacity(
+                  opacity: 0.5,
+                  child: Container(
+                    child: Text(""),
+                    height: 200,
+                    width: 200,
+                    color: Colors.red,
+                  ),
                 ),
-              ),
-              Text("0.25 opacity")
-            ],
+                Text("0.5 opacity")
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Opacity(
-                opacity: 0,
-                child: Container(
-                  child: Text(""),
-                  height: 200,
-                  width: 200,
-                  color: Colors.red,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Opacity(
+                  opacity: 0.25,
+                  child: Container(
+                    child: Text(""),
+                    height: 200,
+                    width: 200,
+                    color: Colors.red,
+                  ),
                 ),
-              ),
-              Text("0 opacity")
-            ],
+                Text("0.25 opacity")
+              ],
+            ),
           ),
-        ),
-      ],
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Opacity(
+                  opacity: 0,
+                  child: Container(
+                    child: Text(""),
+                    height: 200,
+                    width: 200,
+                    color: Colors.red,
+                  ),
+                ),
+                Text("0 opacity")
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -119,7 +167,8 @@ class _opacitydescriptionState extends State<opacitydescription> {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        child: Text("This is a Opacity widget",
+        child: Text(
+            "This is a Opacity widgetA widget that makes its child partially transparent.This class paints its child into an intermediate buffer and then blends the child back into the scene partially transparent.",
             style: TextStyle(color: Colors.white)),
       ),
     );
