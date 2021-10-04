@@ -2,6 +2,7 @@ import 'package:fludget/Models/widgetModel.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
+import 'package:fludget/routes/dataTable.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/expanded.dart';
@@ -149,6 +150,10 @@ class HomePageState extends State<HomePage> {
           name: "Expanded",
           sample: ExpandedSample(),
           sampleDescription: ExpandedWidgetDescription()),
+      WidgetModel(
+          name: "DataTable",
+          sample: Datatable(),
+          sampleDescription: DataTableDescription()),
     ];
 
     return ListView(
