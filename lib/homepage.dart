@@ -4,19 +4,19 @@ import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/dialogBox.dart';
-import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
+import 'package:fludget/routes/gridList.dart';
+import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/opacity.dart';
+import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/text.dart';
-import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/textfield.dart';
-import 'package:fludget/routes/reorderableListView.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -97,77 +97,85 @@ class HomePageState extends State<HomePage> {
   }
 
   ListView getWidgetList(String filter) {
-    const List<WidgetModel> widgets = [
-      WidgetModel(
+    List<WidgetModel> widgets = [
+      const WidgetModel(
           name: "Column",
           sample: ColumnSample(),
           sampleDescription: ColumnDescription()),
-      WidgetModel(
+      const WidgetModel(
           name: "Row",
           sample: RowSample(),
           sampleDescription: RowWidgetDescription()),
-      WidgetModel(
+      const WidgetModel(
           name: "Stack",
           sample: StackSample(),
           sampleDescription: StackWidgetDescription()),
-      WidgetModel(
+      const WidgetModel(
           name: "Text",
           sample: TextSample(),
           sampleDescription: TextWidgetDescription()),
-      WidgetModel(
+      const WidgetModel(
           name: "Icon",
           sample: IconSample(),
           sampleDescription: IconWidgetDescription()),
-      WidgetModel(
+      const WidgetModel(
           name: "Image",
           subtitle: "Asset Image, Network Image",
           sample: ImageSample(),
           sampleDescription: ImageWidgetDescription()),
-      WidgetModel(
+      const WidgetModel(
           name: "Button",
           subtitle: "Elevated Button, Text Button, Floating Action Button",
           sample: ButtonSample(),
           sampleDescription: ButtonDescription()),
-      WidgetModel(
+      const WidgetModel(
           name: "DialogBox",
           subtitle: "shows Dialog",
           sample: DialogBox(),
           sampleDescription: DialogBoxDescription()),
-      WidgetModel(
+      const WidgetModel(
         name: "GridList",
         subtitle: "shows Dialog",
         sample: GridListSample(),
         sampleDescription: GridListDescription(),
       ),
-      WidgetModel(
+      const WidgetModel(
         name: "Switch",
         subtitle: "Toggle Switch",
         sample: SwitchSample(),
         sampleDescription: SwitchDescription(),
       ),
-      WidgetModel(
+      const WidgetModel(
         name: "TextField",
         subtitle: "Input field for username and password",
         sample: TextFieldSample(),
         sampleDescription: TextFielDescription(),
       ),
-      WidgetModel(
+      const WidgetModel(
           name: "Card",
           sample: CardSample(),
           sampleDescription: CardDescription()),
-      WidgetModel(
+      const WidgetModel(
           name: "Opacity",
           sample: opacitysample(),
           sampleDescription: opacitydescription()),
-      WidgetModel(
+      const WidgetModel(
           name: "Expanded",
           sample: ExpandedSample(),
           sampleDescription: ExpandedWidgetDescription()),
-      WidgetModel(
+      const WidgetModel(
         name: "ReOrderableListView",
         subtitle: "A Reorderable List",
         sample: ReOrderableListViewSample(),
         sampleDescription: ReOrderableListViewDescription(),
+      ),
+      WidgetModel(
+        name: "Hero Widget",
+        subtitle: "Hero Animation between widgets",
+        sample: HeroWidget(
+          tag: hashCode,
+        ),
+        sampleDescription: HeroWidgetDescription(),
       ),
     ];
 
