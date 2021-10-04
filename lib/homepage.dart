@@ -16,6 +16,7 @@ import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
+import 'package:fludget/routes/slider.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/switch.dart';
@@ -236,6 +237,11 @@ class HomePageState extends State<HomePage> {
         description: DataTableWidgetDescription(),
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
       ),
+      WidgetModel(
+        name: "Slider",
+        sample: SliderSample(),
+        sampleDescription: SliderDescription(),
+      )
     ];
 
     return ListView(
