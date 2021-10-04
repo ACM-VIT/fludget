@@ -1,4 +1,5 @@
 import 'package:fludget/Models/widgetModel.dart';
+import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/dialogBox.dart';
@@ -132,11 +133,17 @@ class HomePageState extends State<HomePage> {
         sampleDescription: GridListDescription(),
       ),
       WidgetModel(
+<<<<<<< HEAD
         name: "TextField",
         subtitle: "Input field for username and password",
         sample: TextFieldSample(),
         sampleDescription: TextFielDescription(),
       ),
+=======
+          name: "card",
+          sample: CardSample(),
+          sampleDescription: CardDescription()),
+>>>>>>> 224995732bf5ea01114475ea6f69e7dc2b2bbd5f
     ];
 
     return ListView(
@@ -219,4 +226,6 @@ class HomePageState extends State<HomePage> {
       },
     );
   }
+
+  constCardSample() {}
 }
