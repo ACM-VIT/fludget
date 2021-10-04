@@ -2,16 +2,21 @@ import 'package:fludget/Models/widgetModel.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
-import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/column.dart';
+import 'package:fludget/routes/dialogBox.dart';
+import 'package:fludget/routes/gridList.dart';
+import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/row.dart';
+import 'package:fludget/routes/settings.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/table.dart';
+import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/text.dart';
-import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/textfield.dart';
+import 'package:fludget/routes/reorderableListView.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -86,6 +91,7 @@ class HomePageState extends State<HomePage> {
               centerTitle: true,
             ),
       backgroundColor: Colors.grey[900],
+      drawer: SettingsWidget(),
       body: getWidgetList(searchString),
     );
   }
@@ -134,6 +140,12 @@ class HomePageState extends State<HomePage> {
         sampleDescription: GridListDescription(),
       ),
       WidgetModel(
+        name: "Switch",
+        subtitle: "Toggle Switch",
+        sample: SwitchSample(),
+        sampleDescription: SwitchDescription(),
+      ),
+      WidgetModel(
         name: "TextField",
         subtitle: "Input field for username and password",
         sample: TextFieldSample(),
@@ -147,6 +159,20 @@ class HomePageState extends State<HomePage> {
           name: "Table",
           sample: TableSample(),
           sampleDescription: TableDescription()),
+      WidgetModel(
+          name: "Opacity",
+          sample: opacitysample(),
+          sampleDescription: opacitydescription()),
+      WidgetModel(
+          name: "Expanded",
+          sample: ExpandedSample(),
+          sampleDescription: ExpandedWidgetDescription()),
+      WidgetModel(
+        name: "ReOrderableListView",
+        subtitle: "A Reorderable List",
+        sample: ReOrderableListViewSample(),
+        sampleDescription: ReOrderableListViewDescription(),
+      ),
     ];
 
     return ListView(
