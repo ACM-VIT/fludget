@@ -128,15 +128,66 @@ class ExpandedSample extends StatelessWidget {
   }
 }
 
-class ExpandedWidgetDiscription extends StatelessWidget {
-  const ExpandedWidgetDiscription({Key? key}) : super(key: key);
+class ExpandedWidgetDescription extends StatelessWidget {
+  const ExpandedWidgetDescription({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Expanded Widget Description Here',
-        style: TextStyle(color: Colors.white),
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Expanded Widget \n',
+              style: TextStyle(
+                fontSize: 26.0,
+                color: Colors.white,
+              ),
+            ),
+            RichText(
+              text: new TextSpan(
+                // Note: Styles for TextSpans must be explicitly defined.
+                // Child text spans will inherit styles from parent
+                style: new TextStyle(
+                    fontSize: 14.0, color: Colors.white, height: 1.2),
+                children: <TextSpan>[
+                  TextSpan(
+                    text: 'A widget that expands a child of a Row,'
+                        'Column, or Flex so that the child fills the available space.\n'
+                        'Using an Expanded widget makes a child of a Row, Column, or Flex expand to fill the'
+                        ' available space along the main axis '
+                        '(e.g., horizontally for a Row or vertically for a Column). '
+                        'If multiple children are expanded, the available space is '
+                        'divided among them according to the flex factor. '
+                        'An Expanded widget must be a descendant of a Row, Column, or Flex, and the path from the Expanded widget to its enclosing Row, Column, or Flex must contain only StatelessWidgets or StatefulWidgets (not other kinds of widgets, like RenderObjectWidgets).',
+                  ),
+                  TextSpan(
+                      text: '\n\nExample \n\n',
+                      style: TextStyle(
+                        fontSize: 22.0,
+                        color: Colors.white,
+                      )),
+                  TextSpan(
+                      text: 'Row(\n'
+                          '     children: [\n'
+                          '         Container(),\n'
+                          '         Expanded(\n'
+                          '             flex:2\n'
+                          '             child: MyWidget(),\n'
+                          '         ),\n'
+                          '         Container(),\n'
+                          '      ],\n'
+                          '  ),\n\n'),
+                  TextSpan(
+                      text:
+                          'An Expanded widget is exactly the same thing as a Flexible widget with the fit set to FlexFit.tight. This means that the size is tightly constrained. That is, it must fill the available space. Using Flexible with FlexFit.loose would allow the children to choose their size.')
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

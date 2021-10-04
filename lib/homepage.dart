@@ -139,7 +139,7 @@ class HomePageState extends State<HomePage> {
       WidgetModel(
           name: "Expanded",
           sample: ExpandedSample(),
-          sampleDescription: ExpandedWidgetDiscription()),
+          sampleDescription: ExpandedWidgetDescription()),
     ];
 
     return ListView(
