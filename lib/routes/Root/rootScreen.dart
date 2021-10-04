@@ -17,10 +17,6 @@ class _RootScreenState extends State<RootScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => _launchURL(widget.item.link),
-          child: Icon(Icons.link),
-        ),
         appBar: AppBar(
           backgroundColor: Colors.orange[900],
           title: Text(widget.item.name),
@@ -34,7 +30,7 @@ class _RootScreenState extends State<RootScreen> {
         body: TabBarView(
           children: [
             widget.item.implementation,
-            buildDescription(widget.item.description),
+            buildDescription(widget.item.description, widget.item.link),
           ],
         ),
       ),
@@ -50,9 +46,14 @@ _launchURL(String url) async {
   }
 }
 
-Widget buildDescription(Widget widgetDescription) {
+Widget buildDescription(Widget widgetDescription, String link) {
   return Scaffold(
     backgroundColor: Colors.grey[900],
     body: widgetDescription,
+    floatingActionButton: FloatingActionButton(
+      onPressed: () => _launchURL(link),
+      child: Icon(Icons.link),
+      backgroundColor: Colors.orange[900],
+    ),
   );
 }
