@@ -1,4 +1,5 @@
 import 'package:fludget/Models/widgetModel.dart';
+import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/dialogBox.dart';
@@ -130,6 +131,10 @@ class HomePageState extends State<HomePage> {
         sample: GridListSample(),
         sampleDescription: GridListDescription(),
       ),
+      WidgetModel(
+          name: "card",
+          sample: CardSample(),
+          sampleDescription: CardDescription()),
     ];
 
     return ListView(
@@ -212,4 +217,6 @@ class HomePageState extends State<HomePage> {
       },
     );
   }
+
+  constCardSample() {}
 }
