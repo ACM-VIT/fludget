@@ -55,7 +55,8 @@ class _opacitysampleState extends State<opacitysample> {
                   ],
                 ),
                 Text(
-                    "2 images overlapped one has opacity of 0.5 and other opacity of 1")
+                    "2 images overlapped one has opacity of 0.5 and other opacity of 1, Both the images have been center aligned",
+                    style: TextStyle(color: Colors.white))
               ],
             ),
           ),
@@ -73,7 +74,7 @@ class _opacitysampleState extends State<opacitysample> {
                     color: Colors.red,
                   ),
                 ),
-                Text("1 opacity")
+                Text("1 opacity", style: TextStyle(color: Colors.white))
               ],
             ),
           ),
@@ -91,7 +92,10 @@ class _opacitysampleState extends State<opacitysample> {
                     color: Colors.red,
                   ),
                 ),
-                Text("0.75 opacity")
+                Text(
+                  "0.75 opacity",
+                  style: TextStyle(color: Colors.white),
+                )
               ],
             ),
           ),
@@ -109,7 +113,7 @@ class _opacitysampleState extends State<opacitysample> {
                     color: Colors.red,
                   ),
                 ),
-                Text("0.5 opacity")
+                Text("0.5 opacity", style: TextStyle(color: Colors.white))
               ],
             ),
           ),
@@ -127,7 +131,7 @@ class _opacitysampleState extends State<opacitysample> {
                     color: Colors.red,
                   ),
                 ),
-                Text("0.25 opacity")
+                Text("0.25 opacity", style: TextStyle(color: Colors.white))
               ],
             ),
           ),
@@ -145,7 +149,7 @@ class _opacitysampleState extends State<opacitysample> {
                     color: Colors.red,
                   ),
                 ),
-                Text("0 opacity")
+                Text("0 opacity", style: TextStyle(color: Colors.white))
               ],
             ),
           ),
