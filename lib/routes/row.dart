@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RowSample extends StatelessWidget {
-  const RowSample({Key? key}) : super(key: key);
+class RowImplementation extends StatelessWidget {
+  const RowImplementation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,8 +48,8 @@ class RowSample extends StatelessWidget {
   }
 }
 
-class RowWidgetDescription extends StatelessWidget {
-  const RowWidgetDescription({Key? key}) : super(key: key);
+class RowDescription extends StatelessWidget {
+  const RowDescription({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

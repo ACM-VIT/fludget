@@ -1,8 +1,8 @@
 import 'package:fludget/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class ExpandedSample extends StatelessWidget {
-  const ExpandedSample({Key? key}) : super(key: key);
+class ExpandedImplementation extends StatelessWidget {
+  const ExpandedImplementation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -128,8 +128,8 @@ class ExpandedSample extends StatelessWidget {
   }
 }
 
-class ExpandedWidgetDescription extends StatelessWidget {
-  const ExpandedWidgetDescription({Key? key}) : super(key: key);
+class ExpandedDescription extends StatelessWidget {
+  const ExpandedDescription({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

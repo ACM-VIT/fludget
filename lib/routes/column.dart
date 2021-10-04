@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ColumnSample extends StatelessWidget {
-  const ColumnSample({Key? key}) : super(key: key);
+class ColumnImplementation extends StatelessWidget {
+  const ColumnImplementation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

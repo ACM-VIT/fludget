@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class opacitysample extends StatefulWidget {
-  const opacitysample({Key? key}) : super(key: key);
+class OpacityImplementation extends StatefulWidget {
+  const OpacityImplementation({Key? key}) : super(key: key);
 
   @override
-  _opacitysampleState createState() => _opacitysampleState();
+  _OpacityImplementationState createState() => _OpacityImplementationState();
 }
 
-class _opacitysampleState extends State<opacitysample> {
+class _OpacityImplementationState extends State<OpacityImplementation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -159,14 +159,14 @@ class _opacitysampleState extends State<opacitysample> {
   }
 }
 
-class opacitydescription extends StatefulWidget {
-  const opacitydescription({Key? key}) : super(key: key);
+class OpacityDescription extends StatefulWidget {
+  const OpacityDescription({Key? key}) : super(key: key);
 
   @override
-  _opacitydescriptionState createState() => _opacitydescriptionState();
+  _OpacityDescriptionState createState() => _OpacityDescriptionState();
 }
 
-class _opacitydescriptionState extends State<opacitydescription> {
+class _OpacityDescriptionState extends State<OpacityDescription> {
   @override
   Widget build(BuildContext context) {
     return Center(

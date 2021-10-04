@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SwitchSample extends StatefulWidget {
-  const SwitchSample({Key? key}) : super(key: key);
+class SwitchImplementation extends StatefulWidget {
+  const SwitchImplementation({Key? key}) : super(key: key);
   @override
-  _SwitchSampleState createState() => _SwitchSampleState();
+  _SwitchImplementationState createState() => _SwitchImplementationState();
 }
 
-class _SwitchSampleState extends State<SwitchSample> {
+class _SwitchImplementationState extends State<SwitchImplementation> {
   bool _isOn = false;
   void _toggleSwitch(bool newValue) {
     setState(() {
