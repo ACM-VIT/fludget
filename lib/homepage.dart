@@ -11,6 +11,7 @@ import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/gridList.dart';
+import 'package:fludget/routes/textfield.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -131,6 +132,13 @@ class HomePageState extends State<HomePage> {
         subtitle: "shows Dialog",
         sample: GridListSample(),
         sampleDescription: GridListDescription(),
+      ),
+      WidgetModel(
+
+        name: "TextField",
+        subtitle: "Input field for username and password",
+        sample: TextFieldSample(),
+        sampleDescription: TextFielDescription(),
       ),
       WidgetModel(
           name: "card",
