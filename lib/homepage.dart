@@ -12,6 +12,7 @@ import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/textfield.dart';
+import 'package:fludget/routes/reorderableListView.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -134,7 +135,6 @@ class HomePageState extends State<HomePage> {
         sampleDescription: GridListDescription(),
       ),
       WidgetModel(
-
         name: "TextField",
         subtitle: "Input field for username and password",
         sample: TextFieldSample(),
@@ -148,6 +148,12 @@ class HomePageState extends State<HomePage> {
           name: "Expanded",
           sample: ExpandedSample(),
           sampleDescription: ExpandedWidgetDescription()),
+      WidgetModel(
+        name: "ReOrderableListView",
+        subtitle: "A Reorderable List",
+        sample: ReOrderableListViewSample(),
+        sampleDescription: ReOrderableListViewDescription(),
+      ),
     ];
 
     return ListView(
