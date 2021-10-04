@@ -16,6 +16,7 @@ import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/textfield.dart';
+import 'package:fludget/routes/reorderableListView.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -186,6 +187,14 @@ class HomePageState extends State<HomePage> {
         implementation: ExpandedImplementation(),
         description: ExpandedDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Expanded-class.html",
+      ),
+      WidgetModel(
+        name: "ReOrderableListView",
+        subtitle: "A Reorderable List",
+        implementation: ReOrderableListViewImplementation(),
+        description: ReOrderableListViewDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/ReorderableListView-class.html",
       ),
     ];
 
