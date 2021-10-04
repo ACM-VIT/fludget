@@ -8,6 +8,7 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
 import 'package:fludget/routes/stack.dart';
@@ -149,9 +150,13 @@ class HomePageState extends State<HomePage> {
         sampleDescription: TextFielDescription(),
       ),
       WidgetModel(
-          name: "card",
+          name: "Card",
           sample: CardSample(),
           sampleDescription: CardDescription()),
+      WidgetModel(
+          name: "Opacity",
+          sample: opacitysample(),
+          sampleDescription: opacitydescription()),
       WidgetModel(
           name: "Expanded",
           sample: ExpandedSample(),
