@@ -10,6 +10,7 @@ import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/gridList.dart';
+import 'package:fludget/routes/textfield.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -135,6 +136,10 @@ class HomePageState extends State<HomePage> {
           name: "card",
           sample: CardSample(),
           sampleDescription: CardDescription()),
+      WidgetModel(
+          name: "TextField",
+          sample: textfieldsample(),
+          sampleDescription: textfielddescription()),
     ];
 
     return ListView(
