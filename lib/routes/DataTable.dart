@@ -16,7 +16,11 @@ class DatatableState extends State<Datatable> {
       sortAscending: true,
       columns: <DataColumn>[
         DataColumn(
-          label: Text("First Name"),
+          label: Text(
+            "First Name",
+            style:
+                new TextStyle(fontSize: 14.0, color: Colors.white, height: 1.2),
+          ),
           numeric: false,
           onSort: (i, b) {
             print("$i $b");
@@ -27,7 +31,11 @@ class DatatableState extends State<Datatable> {
           tooltip: "To display first name of the Name",
         ),
         DataColumn(
-          label: Text("Last Name"),
+          label: Text(
+            "Last Name",
+            style:
+                new TextStyle(fontSize: 14.0, color: Colors.white, height: 1.2),
+          ),
           numeric: false,
           onSort: (i, b) {
             print("$i $b");
@@ -43,12 +51,20 @@ class DatatableState extends State<Datatable> {
             (name) => DataRow(
               cells: [
                 DataCell(
-                  Text(name.firstName),
+                  Text(
+                    name.firstName,
+                    style: new TextStyle(
+                        fontSize: 14.0, color: Colors.white, height: 1.2),
+                  ),
                   showEditIcon: false,
                   placeholder: false,
                 ),
                 DataCell(
-                  Text(name.lastName),
+                  Text(
+                    name.lastName,
+                    style: new TextStyle(
+                        fontSize: 14.0, color: Colors.white, height: 1.2),
+                  ),
                   showEditIcon: false,
                   placeholder: false,
                 )
@@ -60,6 +76,7 @@ class DatatableState extends State<Datatable> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       body: Container(
         child: bodyData(),
       ),
