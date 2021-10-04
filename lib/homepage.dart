@@ -4,6 +4,7 @@ import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/column.dart';
+import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/row.dart';
@@ -143,6 +144,10 @@ class HomePageState extends State<HomePage> {
           name: "card",
           sample: CardSample(),
           sampleDescription: CardDescription()),
+      WidgetModel(
+          name: "Expanded",
+          sample: ExpandedSample(),
+          sampleDescription: ExpandedWidgetDescription()),
     ];
 
     return ListView(
