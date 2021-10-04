@@ -12,9 +12,9 @@ import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
 import 'package:fludget/routes/stack.dart';
+import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/text.dart';
-import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:flutter/material.dart';
@@ -181,6 +181,12 @@ class HomePageState extends State<HomePage> {
         implementation: OpacityImplementation(),
         description: OpacityDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Opacity-class.html",
+      ),
+      WidgetModel(
+        name: "Table",
+        implementation: TableImplementation(),
+        description: TableDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Table-class.html",
       ),
       WidgetModel(
         name: "Expanded",
