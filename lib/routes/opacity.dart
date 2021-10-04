@@ -55,7 +55,7 @@ class _opacitysampleState extends State<opacitysample> {
                   ],
                 ),
                 Text(
-                    "2 images overlapped one has opacity of 0.5 and other opacity of 1, Both the images have been center aligned",
+                    "Opacity can also be used to blend pictures. Here, two images are stacked together where one has opacity of 0.5 and other opacity of 1",
                     style: TextStyle(color: Colors.white))
               ],
             ),
