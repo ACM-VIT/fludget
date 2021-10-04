@@ -97,73 +97,73 @@ class HomePageState extends State<HomePage> {
   }
 
   ListView getWidgetList(String filter) {
-    List<WidgetModel> widgets = [
-      const WidgetModel(
+    const List<WidgetModel> widgets = [
+      WidgetModel(
           name: "Column",
           sample: ColumnSample(),
           sampleDescription: ColumnDescription()),
-      const WidgetModel(
+      WidgetModel(
           name: "Row",
           sample: RowSample(),
           sampleDescription: RowWidgetDescription()),
-      const WidgetModel(
+      WidgetModel(
           name: "Stack",
           sample: StackSample(),
           sampleDescription: StackWidgetDescription()),
-      const WidgetModel(
+      WidgetModel(
           name: "Text",
           sample: TextSample(),
           sampleDescription: TextWidgetDescription()),
-      const WidgetModel(
+      WidgetModel(
           name: "Icon",
           sample: IconSample(),
           sampleDescription: IconWidgetDescription()),
-      const WidgetModel(
+      WidgetModel(
           name: "Image",
           subtitle: "Asset Image, Network Image",
           sample: ImageSample(),
           sampleDescription: ImageWidgetDescription()),
-      const WidgetModel(
+      WidgetModel(
           name: "Button",
           subtitle: "Elevated Button, Text Button, Floating Action Button",
           sample: ButtonSample(),
           sampleDescription: ButtonDescription()),
-      const WidgetModel(
+      WidgetModel(
           name: "DialogBox",
           subtitle: "shows Dialog",
           sample: DialogBox(),
           sampleDescription: DialogBoxDescription()),
-      const WidgetModel(
+      WidgetModel(
         name: "GridList",
         subtitle: "shows Dialog",
         sample: GridListSample(),
         sampleDescription: GridListDescription(),
       ),
-      const WidgetModel(
+      WidgetModel(
         name: "Switch",
         subtitle: "Toggle Switch",
         sample: SwitchSample(),
         sampleDescription: SwitchDescription(),
       ),
-      const WidgetModel(
+      WidgetModel(
         name: "TextField",
         subtitle: "Input field for username and password",
         sample: TextFieldSample(),
         sampleDescription: TextFielDescription(),
       ),
-      const WidgetModel(
+      WidgetModel(
           name: "Card",
           sample: CardSample(),
           sampleDescription: CardDescription()),
-      const WidgetModel(
+      WidgetModel(
           name: "Opacity",
           sample: opacitysample(),
           sampleDescription: opacitydescription()),
-      const WidgetModel(
+      WidgetModel(
           name: "Expanded",
           sample: ExpandedSample(),
           sampleDescription: ExpandedWidgetDescription()),
-      const WidgetModel(
+      WidgetModel(
         name: "ReOrderableListView",
         subtitle: "A Reorderable List",
         sample: ReOrderableListViewSample(),
@@ -172,9 +172,7 @@ class HomePageState extends State<HomePage> {
       WidgetModel(
         name: "Hero Widget",
         subtitle: "Hero Animation between widgets",
-        sample: HeroWidget(
-          tag: hashCode,
-        ),
+        sample: HeroWidget(),
         sampleDescription: HeroWidgetDescription(),
       ),
     ];

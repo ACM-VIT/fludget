@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HeroWidget extends StatelessWidget {
-  final int tag;
-  const HeroWidget({Key? key, required this.tag}) : super(key: key);
+  const HeroWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
