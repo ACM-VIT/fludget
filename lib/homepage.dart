@@ -133,17 +133,16 @@ class HomePageState extends State<HomePage> {
         sampleDescription: GridListDescription(),
       ),
       WidgetModel(
-<<<<<<< HEAD
+
         name: "TextField",
         subtitle: "Input field for username and password",
         sample: TextFieldSample(),
         sampleDescription: TextFielDescription(),
       ),
-=======
+      WidgetModel(
           name: "card",
           sample: CardSample(),
           sampleDescription: CardDescription()),
->>>>>>> 224995732bf5ea01114475ea6f69e7dc2b2bbd5f
     ];
 
     return ListView(
