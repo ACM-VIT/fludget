@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class TextFieldSample extends StatelessWidget {
-  const TextFieldSample({Key? key}) : super(key: key);
+class TextFieldImplementation extends StatelessWidget {
+  const TextFieldImplementation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

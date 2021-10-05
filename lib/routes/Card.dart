@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CardSample extends StatefulWidget {
-  const CardSample({Key? key}) : super(key: key);
+class CardImplementation extends StatefulWidget {
+  const CardImplementation({Key? key}) : super(key: key);
 
   @override
-  _CardSampleState createState() => _CardSampleState();
+  _CardImplementationState createState() => _CardImplementationState();
 }
 
-class _CardSampleState extends State<CardSample> {
+class _CardImplementationState extends State<CardImplementation> {
   @override
   Widget build(BuildContext context) => Scaffold(
         // appBar: AppBar(

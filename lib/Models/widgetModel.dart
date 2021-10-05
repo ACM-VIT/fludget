@@ -1,13 +1,14 @@
 import 'package:flutter/widgets.dart';
 
 class WidgetModel {
-  final String name, subtitle;
-  final Widget sample;
-  final Widget sampleDescription;
+  final String name, subtitle, link;
+  final Widget implementation;
+  final Widget description;
   const WidgetModel({
     required this.name,
     this.subtitle = '',
-    required this.sample,
-    required this.sampleDescription,
+    required this.link,
+    required this.implementation,
+    required this.description,
   });
 }

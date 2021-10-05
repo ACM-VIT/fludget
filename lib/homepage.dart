@@ -4,6 +4,8 @@ import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/dialogBox.dart';
+import 'package:fludget/routes/dropDownButton.dart';
+import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
@@ -14,9 +16,12 @@ import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
 import 'package:fludget/routes/stack.dart';
+import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textfield.dart';
+import 'package:fludget/routes/reorderableListView.dart';
+import 'package:fludget/routes/wrap.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -99,75 +104,122 @@ class HomePageState extends State<HomePage> {
   ListView getWidgetList(String filter) {
     const List<WidgetModel> widgets = [
       WidgetModel(
-          name: "Column",
-          sample: ColumnSample(),
-          sampleDescription: ColumnDescription()),
+        name: "Column",
+        implementation: ColumnImplementation(),
+        description: ColumnDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Column-class.html",
+      ),
       WidgetModel(
-          name: "Row",
-          sample: RowSample(),
-          sampleDescription: RowWidgetDescription()),
+        name: "Row",
+        implementation: RowImplementation(),
+        description: RowDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Row-class.html",
+      ),
       WidgetModel(
-          name: "Stack",
-          sample: StackSample(),
-          sampleDescription: StackWidgetDescription()),
+        name: "Stack",
+        implementation: StackImplementation(),
+        description: StackDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Stack-class.html",
+      ),
       WidgetModel(
-          name: "Text",
-          sample: TextSample(),
-          sampleDescription: TextWidgetDescription()),
+        name: "Text",
+        implementation: TextImplementation(),
+        description: TextDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Text-class.html",
+      ),
       WidgetModel(
-          name: "Icon",
-          sample: IconSample(),
-          sampleDescription: IconWidgetDescription()),
+        name: "Icon",
+        implementation: IconImplementation(),
+        description: IconDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Icon-class.html",
+      ),
       WidgetModel(
-          name: "Image",
-          subtitle: "Asset Image, Network Image",
-          sample: ImageSample(),
-          sampleDescription: ImageWidgetDescription()),
+        name: "Image",
+        subtitle: "Asset Image, Network Image",
+        implementation: ImageImplementation(),
+        description: ImageDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
+      ),
       WidgetModel(
-          name: "Button",
-          subtitle: "Elevated Button, Text Button, Floating Action Button",
-          sample: ButtonSample(),
-          sampleDescription: ButtonDescription()),
+        name: "Button",
+        subtitle: "Elevated Button, Text Button, Floating Action Button",
+        implementation: ButtonImplementation(),
+        description: ButtonDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
+      ),
       WidgetModel(
-          name: "DialogBox",
-          subtitle: "shows Dialog",
-          sample: DialogBox(),
-          sampleDescription: DialogBoxDescription()),
+        name: "DialogBox",
+        subtitle: "shows Dialog",
+        implementation: DialogBoxImplementation(),
+        description: DialogBoxDescription(),
+        link: "https://api.flutter.dev/flutter/material/AlertDialog-class.html",
+      ),
       WidgetModel(
         name: "GridList",
-        subtitle: "shows Dialog",
-        sample: GridListSample(),
-        sampleDescription: GridListDescription(),
+        implementation: GridListImplementation(),
+        description: GridListDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/GridView-class.html",
       ),
       WidgetModel(
         name: "Switch",
         subtitle: "Toggle Switch",
-        sample: SwitchSample(),
-        sampleDescription: SwitchDescription(),
+        implementation: SwitchImplementation(),
+        description: SwitchDescription(),
+        link: "https://api.flutter.dev/flutter/material/Switch-class.html",
       ),
       WidgetModel(
         name: "TextField",
         subtitle: "Input field for username and password",
-        sample: TextFieldSample(),
-        sampleDescription: TextFielDescription(),
+        implementation: TextFieldImplementation(),
+        description: TextFielDescription(),
+        link: "https://api.flutter.dev/flutter/material/TextField-class.html",
       ),
       WidgetModel(
-          name: "Card",
-          sample: CardSample(),
-          sampleDescription: CardDescription()),
+        name: "Card",
+        implementation: CardImplementation(),
+        description: CardDescription(),
+        link: "https://api.flutter.dev/flutter/material/Card-class.html",
+      ),
       WidgetModel(
-          name: "Opacity",
-          sample: opacitysample(),
-          sampleDescription: opacitydescription()),
+        name: "Opacity",
+        implementation: OpacityImplementation(),
+        description: OpacityDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Opacity-class.html",
+      ),
       WidgetModel(
-          name: "Expanded",
-          sample: ExpandedSample(),
-          sampleDescription: ExpandedWidgetDescription()),
+        name: "Table",
+        implementation: TableImplementation(),
+        description: TableDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Table-class.html",
+      ),
+      WidgetModel(
+        name: "Expanded",
+        implementation: ExpandedImplementation(),
+        description: ExpandedDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Expanded-class.html",
+      ),
       WidgetModel(
         name: "ReOrderableListView",
         subtitle: "A Reorderable List",
-        sample: ReOrderableListViewSample(),
-        sampleDescription: ReOrderableListViewDescription(),
+        implementation: ReOrderableListViewImplementation(),
+        description: ReOrderableListViewDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/ReorderableListView-class.html",
+      ),
+      WidgetModel(
+        name: "DropDownButton",
+        implementation: DropDownButtonSample(),
+        description: DropDownButtonDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/DropdownButton -class.html",
+      ),
+      WidgetModel(
+        name: "Wrap",
+        subtitle: "Wrap Widget",
+        implementation: WrapWidget(),
+        description: WrapWidgetDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Wrap-class.html",
       ),
       WidgetModel(
         name: "Hero",
@@ -247,16 +299,10 @@ class HomePageState extends State<HomePage> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (_) => RootScreen(
-              widgetImplementation: item.sample,
-              widgetName: item.name,
-              widgetDescription: item.sampleDescription,
-            ),
+            builder: (_) => RootScreen(item),
           ),
         );
       },
     );
   }
-
-  constCardSample() {}
 }

@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class DialogBox extends StatelessWidget {
-  const DialogBox({Key? key}) : super(key: key);
+class DialogBoxImplementation extends StatelessWidget {
+  const DialogBoxImplementation({Key? key}) : super(key: key);
   Widget _buildDelDialog(BuildContext context) {
     return new AlertDialog(
       title: const Text('This is title'),
