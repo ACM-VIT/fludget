@@ -1,4 +1,5 @@
 import 'package:fludget/Models/widgetModel.dart';
+import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
@@ -259,6 +260,13 @@ class HomePageState extends State<HomePage> {
         implementation: SliderSample(),
         description: SliderDescription(),
         link: "https://api.flutter.dev/flutter/material/Slider-class.html",
+      ),
+       WidgetModel(
+        name: "AnimatedBuilder Widget",
+        subtitle: "Implement Animations",
+        implementation: AnimatedBuilderWidget(),
+        description: AnimatedBuilderDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/AnimatedBuilder-class.html",
       ),
     ];
 
