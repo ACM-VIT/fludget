@@ -174,6 +174,12 @@ class HomePageState extends State<HomePage> {
         sample: ReOrderableListViewSample(),
         sampleDescription: ReOrderableListViewDescription(),
       ),
+      WidgetModel(
+        name: "SnackBar",
+        subtitle: "A Snackbar",
+        sample: SnackbarSample(),
+        sampleDescription: SnackBarDescription()
+      ),
     ];
 
     return ListView(
