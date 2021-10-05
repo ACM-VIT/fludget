@@ -14,6 +14,7 @@ import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/reorderableListView.dart';
+import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
 import 'package:fludget/routes/slider.dart';
@@ -238,10 +239,18 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
       ),
       WidgetModel(
+          name: "RichText",
+          subtitle: "Rich Text widget",
+          implementation: RichTextWidget(),
+          description: RichTextWidgetDescription(),
+          link: "https://api.flutter.dev/flutter/widgets/RichText-class.html",
+      ),
+      WidgetModel(
         name: "Slider",
-        sample: SliderSample(),
-        sampleDescription: SliderDescription(),
-      )
+        implementation: SliderSample(),
+        description: SliderDescription(),
+        link: "https://api.flutter.dev/flutter/material/Slider-class.html",
+      ),
     ];
 
     return ListView(
