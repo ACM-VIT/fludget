@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TableSample extends StatelessWidget {
-  const TableSample({Key? key}) : super(key: key);
+class TableImplementation extends StatelessWidget {
+  const TableImplementation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +102,6 @@ class MyTable extends StatelessWidget {
       border: TableBorder.all(
         color: borderColor,
         width: borderWidth,
-        borderRadius: radius,
       ),
       children: [
         TableRow(children: [

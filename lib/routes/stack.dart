@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class StackSample extends StatelessWidget {
-  const StackSample({Key? key}) : super(key: key);
+class StackImplementation extends StatelessWidget {
+  const StackImplementation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,8 +47,8 @@ class StackSample extends StatelessWidget {
   }
 }
 
-class StackWidgetDescription extends StatelessWidget {
-  const StackWidgetDescription({Key? key}) : super(key: key);
+class StackDescription extends StatelessWidget {
+  const StackDescription({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
