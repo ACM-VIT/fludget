@@ -17,6 +17,7 @@ import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
+import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/slider.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/table.dart';
@@ -25,6 +26,7 @@ import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/wrap.dart';
+import 'package:fludget/routes/snackbar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -230,6 +232,13 @@ class HomePageState extends State<HomePage> {
         implementation: HeroWidget(),
         description: HeroWidgetDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Hero-class.html",
+      ),
+      WidgetModel(
+        name: "SnackBar",
+        subtitle: "SnackBar Widget",
+        implementation: SnackBarImplementation() ,
+        description: SnackBarDescription(),
+        link: "https://api.flutter.dev/flutter/material/SnackBar-class.html",
       ),
       WidgetModel(
         name: "DataTable",
