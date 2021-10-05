@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: SnackbarWidget(),
+      home: SnackbarSample(),
     ),
   );
 }
 
-class SnackbarWidget extends StatelessWidget {
+class SnackbarSample extends StatelessWidget {
   
   final snackBarDemo = SnackBar(
     content:  const Text("This is a SnackBar Demo !"),
