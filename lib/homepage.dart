@@ -224,8 +224,9 @@ class HomePageState extends State<HomePage> {
       WidgetModel(
         name: "Hero",
         subtitle: "Hero Animation between widgets",
-        sample: HeroWidget(),
-        sampleDescription: HeroWidgetDescription(),
+        implementation: HeroWidget(),
+        description: HeroWidgetDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Hero-class.html",
       ),
     ];
 
