@@ -206,14 +206,18 @@ class HomePageState extends State<HomePage> {
       ),
       WidgetModel(
         name: "DropDownButton",
-        sample: DropDownButtonSample(),
-        sampleDescription: DropDownButtonDescription(),
+        implementation: DropDownButtonSample(),
+        description: DropDownButtonDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/DropdownButton -class.html",
       ),
       WidgetModel(
-          name: "Wrap",
-          subtitle: "Wrap Widget",
-          sample: WrapWidget(),
-          sampleDescription: WrapWidgetDescription(),),
+        name: "Wrap",
+        subtitle: "Wrap Widget",
+        implementation: WrapWidget(),
+        description: WrapWidgetDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Wrap-class.html",
+      ),
     ];
 
     return ListView(
