@@ -18,6 +18,7 @@ import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/reorderableListView.dart';
+import 'package:fludget/routes/wrap.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -179,6 +180,11 @@ class HomePageState extends State<HomePage> {
         sample: DropDownButtonSample(),
         sampleDescription: DropDownButtonDescription(),
       ),
+      WidgetModel(
+          name: "Wrap",
+          subtitle: "Wrap Widget",
+          sample: WrapWidget(),
+          sampleDescription: WrapWidgetDescription(),),
     ];
 
     return ListView(
