@@ -54,7 +54,7 @@ class SnackBarDescription extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Expanded Widget \n',
+              'SnackBar Widget \n',
               style: TextStyle(
                 fontSize: 26.0,
                 color: Colors.white,
