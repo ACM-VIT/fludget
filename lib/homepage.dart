@@ -1,5 +1,6 @@
 import 'package:fludget/Models/widgetModel.dart';
 import 'package:fludget/routes/Card.dart';
+import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
@@ -13,9 +14,11 @@ import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/reorderableListView.dart';
+import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
 import 'package:fludget/routes/snackbar.dart';
+import 'package:fludget/routes/slider.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/switch.dart';
@@ -236,6 +239,26 @@ class HomePageState extends State<HomePage> {
         implementation: SnackBarImplementation() ,
         description: SnackBarDescription(),
         link: "https://api.flutter.dev/flutter/material/SnackBar-class.html",
+      ),
+      WidgetModel(
+        name: "DataTable",
+        subtitle: "Data Table  widgets",
+        implementation: DatatableWidget(),
+        description: DataTableWidgetDescription(),
+        link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
+      ),
+      WidgetModel(
+          name: "RichText",
+          subtitle: "Rich Text widget",
+          implementation: RichTextWidget(),
+          description: RichTextWidgetDescription(),
+          link: "https://api.flutter.dev/flutter/widgets/RichText-class.html",
+      ),
+      WidgetModel(
+        name: "Slider",
+        implementation: SliderSample(),
+        description: SliderDescription(),
+        link: "https://api.flutter.dev/flutter/material/Slider-class.html",
       ),
     ];
 
