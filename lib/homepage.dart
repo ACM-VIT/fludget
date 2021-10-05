@@ -4,6 +4,7 @@ import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/dialogBox.dart';
+import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/icon.dart';
@@ -172,6 +173,11 @@ class HomePageState extends State<HomePage> {
         subtitle: "A Reorderable List",
         sample: ReOrderableListViewSample(),
         sampleDescription: ReOrderableListViewDescription(),
+      ),
+      WidgetModel(
+        name: "DropDownButton",
+        sample: DropDownButtonSample(),
+        sampleDescription: DropDownButtonDescription(),
       ),
     ];
 
