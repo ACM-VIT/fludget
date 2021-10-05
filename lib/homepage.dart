@@ -1,5 +1,6 @@
 import 'package:fludget/Models/widgetModel.dart';
 import 'package:fludget/routes/Card.dart';
+import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
@@ -227,6 +228,13 @@ class HomePageState extends State<HomePage> {
         implementation: HeroWidget(),
         description: HeroWidgetDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Hero-class.html",
+      ),
+      WidgetModel(
+        name: "DataTable",
+        subtitle: "Data Table  widgets",
+        implementation: DatatableWidget(),
+        description: DataTableWidgetDescription(),
+        link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
       ),
     ];
 
