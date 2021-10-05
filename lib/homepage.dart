@@ -12,6 +12,7 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/row.dart';
@@ -235,6 +236,12 @@ class HomePageState extends State<HomePage> {
         implementation: DatatableWidget(),
         description: DataTableWidgetDescription(),
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
+      ),
+      WidgetModel(
+        name: "List Tile",
+        implementation: ListTileSample(),
+        description: ListTileDescription(),
+        link: "https://api.flutter.dev/flutter/material/ListTile-class.html",
       ),
     ];
 
