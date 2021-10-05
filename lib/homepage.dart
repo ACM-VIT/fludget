@@ -7,9 +7,12 @@ import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
+import 'package:fludget/routes/gridList.dart';
+import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/opacity.dart';
+import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
 import 'package:fludget/routes/stack.dart';
@@ -217,6 +220,13 @@ class HomePageState extends State<HomePage> {
         implementation: WrapWidget(),
         description: WrapWidgetDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Wrap-class.html",
+      ),
+      WidgetModel(
+        name: "Hero",
+        subtitle: "Hero Animation between widgets",
+        implementation: HeroWidget(),
+        description: HeroWidgetDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Hero-class.html",
       ),
     ];
 
