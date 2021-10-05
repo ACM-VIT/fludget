@@ -170,7 +170,7 @@ class HomePageState extends State<HomePage> {
         sampleDescription: ReOrderableListViewDescription(),
       ),
       WidgetModel(
-        name: "Hero Widget",
+        name: "Hero",
         subtitle: "Hero Animation between widgets",
         sample: HeroWidget(),
         sampleDescription: HeroWidgetDescription(),

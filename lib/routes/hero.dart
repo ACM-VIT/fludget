@@ -64,10 +64,24 @@ class HeroWidgetDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Hero animation between to screen demo',
-        style: TextStyle(color: Colors.white),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: RichText(
+        text: TextSpan(children: [
+          TextSpan(
+            text: 'What is Hero Widget ?\n',
+            style: TextStyle(
+                color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          TextSpan(
+            text:
+                '\n- The hero refers to the widget that flies between screens.'
+                '\n- Create a hero animation using Flutter’s Hero widget.'
+                '\n- The Hero widget in Flutter implements a style of animation commonly'
+                ' known as shared element transitions or shared element animations.',
+            style: TextStyle(color: Colors.white),
+          )
+        ]),
       ),
     );
   }
