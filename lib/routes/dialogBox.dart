@@ -73,9 +73,12 @@ class DialogBoxDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        'Dialog Box Description Here',
-        style: TextStyle(color: Colors.white),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Text(
+          'Creates an alert dialog.Typically used in conjunction with [showDialog].The [contentPadding] must not be null. The [titlePadding] defaults to null, which implies a default that depends on the values of the other properties. See the documentation of [titlePadding] for details.',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
     );
   }

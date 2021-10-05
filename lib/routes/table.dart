@@ -102,7 +102,7 @@ class MyTable extends StatelessWidget {
       border: TableBorder.all(
         color: borderColor,
         width: borderWidth,
-        borderRadius: radius,
+        // borderRadius: radius,
       ),
       children: [
         TableRow(children: [

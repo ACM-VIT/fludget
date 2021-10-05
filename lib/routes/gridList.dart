@@ -59,9 +59,12 @@ class GridListDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        'Grid List Description Here',
-        style: TextStyle(color: Colors.white),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Text(
+          'A scrollable, 2D array of widgets. The main axis direction of a grid is the direction in which it scrolls (the scrollDirection). The most commonly used grid layouts are GridView.count, which creates a layout with a fixed number of tiles in the cross axis, and GridView.extent, which creates a layout with tiles that have a maximum cross-axis extent. A custom SliverGridDelegate can produce an arbitrary 2D arrangement of children, including arrangements that are unaligned or overlapping.',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
     );
   }

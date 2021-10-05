@@ -78,10 +78,53 @@ class ButtonDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Button Description Here',
-        style: TextStyle(color: Colors.white),
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Elevated Button:",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              'A Material Design "elevated button". Use elevated buttons to add dimension to otherwise mostly flat layouts, e.g. in long busy lists of content, or in wide spaces. Avoid using elevated buttons on already-elevated content such as dialogs or cards.',
+              style: TextStyle(color: Colors.white),
+            ),
+            SizedBox(height: 20.0),
+            Text(
+              "Text Button:",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              'A Material Design "Text Button". Use text buttons on toolbars, in dialogs, or inline with other content but offset from that content with padding so that the button\'s presence is obvious. Text buttons do not have visible borders and must therefore rely on their position relative to other content for context. Avoid using text buttons where they would blend in with other content, for example in the middle of lists',
+              style: TextStyle(color: Colors.white),
+            ),
+            SizedBox(height: 20.0),
+            Text(
+              "Floating Action Button:",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              'A material design floating action button. A floating action button is a circular icon button that hovers over content to promote a primary action in the application. Floating action buttons are most commonly used in the Scaffold.floatingActionButton field.',
+              style: TextStyle(color: Colors.white),
+            ),
+        
+          ],
+        ),
       ),
     );
   }
