@@ -3,6 +3,7 @@ import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
+import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dropDownButton.dart';
@@ -235,6 +236,13 @@ class HomePageState extends State<HomePage> {
         implementation: DatatableWidget(),
         description: DataTableWidgetDescription(),
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
+      ),
+      WidgetModel(
+        name: "CheckboxListTile",
+        subtitle: "A ListTile with a Checkbox",
+        implementation: CheckboxListTileWidget(),
+        description: CheckboxListTileWidgetDescription(),
+        link: "https://api.flutter.dev/flutter/material/CheckboxListTile-class.html",
       ),
     ];
 
