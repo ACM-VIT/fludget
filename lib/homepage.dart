@@ -16,6 +16,7 @@ import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
+import 'package:fludget/routes/pageview.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
@@ -292,6 +293,12 @@ class HomePageState extends State<HomePage> {
         implementation: DismissibleSample(),
         description: DismissibleDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Dismissible-class.html",
+      ),
+      WidgetModel(
+        name: "Page View",
+        implementation: pageViewSample(),
+        description: PageViewDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/PageView-class.html",
       ),
     ];
 
