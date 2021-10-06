@@ -285,8 +285,8 @@ class HomePageState extends State<HomePage> {
         description: DraggableScrollSheetDesc(),
         link:
             "https://api.flutter.dev/flutter/widgets/DraggableScrollableSheet-class.html",
-       ),
-       WidgetModel(
+      ),
+      WidgetModel(
         name: "Dismissible",
         subtitle: "Remove any List Item",
         implementation: DismissibleSample(),
