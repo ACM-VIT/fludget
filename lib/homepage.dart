@@ -144,7 +144,7 @@ class HomePageState extends State<HomePage> {
       ),
       WidgetModel(
         name: "Image",
-        subtitle: "Asset Image, Network Image",
+        subtitle: "Asset Image, Network Image, File Image and Memory Image",
         implementation: ImageImplementation(),
         description: ImageDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
