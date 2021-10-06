@@ -13,6 +13,7 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
@@ -249,11 +250,17 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
       ),
       WidgetModel(
-          name: "RichText",
-          subtitle: "Rich Text widget",
-          implementation: RichTextWidget(),
-          description: RichTextWidgetDescription(),
-          link: "https://api.flutter.dev/flutter/widgets/RichText-class.html",
+        name: "List Tile",
+        implementation: ListTileSample(),
+        description: ListTileDescription(),
+        link: "https://api.flutter.dev/flutter/material/ListTile-class.html",
+      ),
+      WidgetModel(
+        name: "RichText",
+        subtitle: "Rich Text widget",
+        implementation: RichTextWidget(),
+        description: RichTextWidgetDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/RichText-class.html",
       ),
       WidgetModel(
         name: "Slider",
