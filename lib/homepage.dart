@@ -29,6 +29,7 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/snackbar.dart';
+import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -238,7 +239,7 @@ class HomePageState extends State<HomePage> {
       WidgetModel(
         name: "SnackBar",
         subtitle: "SnackBar Widget",
-        implementation: SnackBarImplementation() ,
+        implementation: SnackBarImplementation(),
         description: SnackBarDescription(),
         link: "https://api.flutter.dev/flutter/material/SnackBar-class.html",
       ),
@@ -268,12 +269,20 @@ class HomePageState extends State<HomePage> {
         description: SliderDescription(),
         link: "https://api.flutter.dev/flutter/material/Slider-class.html",
       ),
-       WidgetModel(
+      WidgetModel(
         name: "AnimatedBuilder Widget",
         subtitle: "Implement Animations",
         implementation: AnimatedBuilderWidget(),
         description: AnimatedBuilderDescription(),
-        link: "https://api.flutter.dev/flutter/widgets/AnimatedBuilder-class.html",
+        link:
+            "https://api.flutter.dev/flutter/widgets/AnimatedBuilder-class.html",
+      ),
+      WidgetModel(
+        name: "Dismissible",
+        subtitle: "Remove any List Item",
+        implementation: DismissibleSample(),
+        description: DismissibleDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Dismissible-class.html",
       ),
     ];
 
