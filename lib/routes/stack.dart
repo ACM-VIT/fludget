@@ -53,9 +53,13 @@ class StackWidgetDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        'Stack Description Here',
-        style: TextStyle(color: Colors.white),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Text(
+          'A widget that displays its children in a horizontal array.\n\n'
+          'To cause a child to expand to fill the available horizontal space, wrap the child in an Expanded widget.',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
     );
   }

@@ -38,9 +38,10 @@ class IconWidgetDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
       child: Text(
-        'Icon Description Here',
+        'A graphical icon widget drawn with a glyph from a font described in an IconData such as material\'s predefined IconDatas in Icons.',
         style: TextStyle(color: Colors.white),
       ),
     );

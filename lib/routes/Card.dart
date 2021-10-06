@@ -211,9 +211,10 @@ class CardDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
       child: Text(
-        ' Card Description Here',
+        'A material design card: a panel with slightly rounded corners and an elevation shadow. A card is a sheet of Material used to represent some related information, for example an album, a geographical location, a meal, contact details, etc.',
         style: TextStyle(color: Colors.white),
       ),
     );

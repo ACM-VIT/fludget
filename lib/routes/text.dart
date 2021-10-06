@@ -28,9 +28,14 @@ class TextWidgetDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        'Text Description Here',
-        style: TextStyle(color: Colors.white),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Text(
+          'A run of text with a single style.\n\n'
+'The Text widget displays a string of text with single style.'
+' The string might break across multiple lines or might all be displayed on the same line depending on the layout constraints.',
+          style: TextStyle(color: Colors.white,fontSize: 20),
+        ),
       ),
     );
   }

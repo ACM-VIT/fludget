@@ -169,12 +169,11 @@ class opacitydescription extends StatefulWidget {
 class _opacitydescriptionState extends State<opacitydescription> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: Text(
-            "This is a Opacity widgetA widget that makes its child partially transparent.This class paints its child into an intermediate buffer and then blends the child back into the scene partially transparent.",
-            style: TextStyle(color: Colors.white)),
-      ),
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Text(
+          "A widget that makes its child partially transparent.This class paints its child into an intermediate buffer and then blends the child back into the scene partially transparent.",
+          style: TextStyle(color: Colors.white)),
     );
   }
 }

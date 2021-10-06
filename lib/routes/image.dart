@@ -50,9 +50,16 @@ class ImageWidgetDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
       child: Text(
-        'Image Description Here',
+        'A widget that displays an image.\n\n'
+        'Several constructors are provided for the various ways that an image can be specified:\n\n'
+        '• \tnew Image, for obtaining an image from an ImageProvider.\n\n'
+'• \tnew Image.asset, for obtaining an image from an AssetBundle using a key.\n\n'
+'• \tnew Image.network, for obtaining an image from a URL.\n\n'
+'• \tnew Image.file, for obtaining an image from a File.\n\n'
+'• \tnew Image.memory, for obtaining an image from a Uint8List.\n',
         style: TextStyle(color: Colors.white),
       ),
     );
