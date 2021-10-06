@@ -10,12 +10,13 @@ import 'package:fludget/routes/draggable_scrollable_sheet.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
-import 'package:fludget/routes/gridList.dart';
+
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
+import 'package:fludget/routes/pageview.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
@@ -27,10 +28,9 @@ import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textfield.dart';
-import 'package:fludget/routes/reorderableListView.dart';
-import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/togglebutton.dart';
-import 'package:fludget/routes/snackbar.dart';
+import 'package:fludget/routes/wrap.dart';
+
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -145,7 +145,7 @@ class HomePageState extends State<HomePage> {
       ),
       WidgetModel(
         name: "Image",
-        subtitle: "Asset Image, Network Image",
+        subtitle: "Asset Image, Network Image, File Image and Memory Image",
         implementation: ImageImplementation(),
         description: ImageDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
@@ -158,7 +158,7 @@ class HomePageState extends State<HomePage> {
         link:
             "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
       ),
-      WidgetModel(
+       WidgetModel(
         name: "Toggle Button",
         implementation: ToggleButtonImplementation(),
         description: ToggleButtonDescription(),
@@ -293,13 +293,19 @@ class HomePageState extends State<HomePage> {
         description: DraggableScrollSheetDesc(),
         link:
             "https://api.flutter.dev/flutter/widgets/DraggableScrollableSheet-class.html",
-       ),
-       WidgetModel(
+      ),
+      WidgetModel(
         name: "Dismissible",
         subtitle: "Remove any List Item",
         implementation: DismissibleSample(),
         description: DismissibleDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Dismissible-class.html",
+      ),
+      WidgetModel(
+        name: "Page View",
+        implementation: pageViewSample(),
+        description: PageViewDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/PageView-class.html",
       ),
     ];
 
