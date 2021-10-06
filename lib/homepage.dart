@@ -6,6 +6,7 @@ import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/dialogBox.dart';
+import 'package:fludget/routes/draggable_scrollable_sheet.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
@@ -278,6 +279,14 @@ class HomePageState extends State<HomePage> {
             "https://api.flutter.dev/flutter/widgets/AnimatedBuilder-class.html",
       ),
       WidgetModel(
+        name: "DraggableScrollableSheet Widget",
+        subtitle: "Implementation for DraggableScrollableSheet in flutter",
+        implementation: DraggableScrollSheet(),
+        description: DraggableScrollSheetDesc(),
+        link:
+            "https://api.flutter.dev/flutter/widgets/DraggableScrollableSheet-class.html",
+       ),
+       WidgetModel(
         name: "Dismissible",
         subtitle: "Remove any List Item",
         implementation: DismissibleSample(),
