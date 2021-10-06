@@ -29,6 +29,7 @@ import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/wrap.dart';
+import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:flutter/material.dart';
@@ -156,6 +157,13 @@ class HomePageState extends State<HomePage> {
         description: ButtonDescription(),
         link:
             "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
+      ),
+      WidgetModel(
+        name: "Toggle Button",
+        implementation: ToggleButtonImplementation(),
+        description: ToggleButtonDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/ToggleButtons-class.html",
       ),
       WidgetModel(
         name: "DialogBox",
