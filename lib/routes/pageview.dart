@@ -41,168 +41,20 @@ class _pageViewSampleState extends State<pageViewSample> {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       body: PageView(
-        scrollDirection: Axis.horizontal,
+        scrollDirection: Axis.vertical,
         controller: controller,
         children: <Widget>[
-          ListView(
-            children: [
-              Center(
-                child: Text(
-                    "This is the First Screen Please Swipe Right to See More Screens",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                    textAlign: TextAlign.center),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Opacity(
-                      opacity: 1,
-                      child: Container(
-                        child: Text(""),
-                        height: 200,
-                        width: 200,
-                        color: Colors.red,
-                      ),
-                    ),
-                    Text("1 opacity", style: TextStyle(color: Colors.white))
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Opacity(
-                      opacity: 0.75,
-                      child: Container(
-                        child: Text(""),
-                        height: 200,
-                        width: 200,
-                        color: Colors.red,
-                      ),
-                    ),
-                    Text(
-                      "0.75 opacity",
-                      style: TextStyle(color: Colors.white),
-                    )
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Opacity(
-                      opacity: 0.5,
-                      child: Container(
-                        child: Text(""),
-                        height: 200,
-                        width: 200,
-                        color: Colors.red,
-                      ),
-                    ),
-                    Text("0.5 opacity", style: TextStyle(color: Colors.white))
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Opacity(
-                      opacity: 0.25,
-                      child: Container(
-                        child: Text(""),
-                        height: 200,
-                        width: 200,
-                        color: Colors.red,
-                      ),
-                    ),
-                    Text("0.25 opacity", style: TextStyle(color: Colors.white))
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Opacity(
-                      opacity: 0,
-                      child: Container(
-                        child: Text(""),
-                        height: 200,
-                        width: 200,
-                        color: Colors.red,
-                      ),
-                    ),
-                    Text("0 opacity", style: TextStyle(color: Colors.white))
-                  ],
-                ),
-              ),
-            ],
+          Center(
+            child: Text(
+                "This is the First Screen Please Swipe UP to See More Screens",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+                textAlign: TextAlign.center),
           ),
-          ListView(
-            children: [
-              Center(
-                child: Text(
-                    "This is the Second Screen Please Swipe Right to See More Screens",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                    textAlign: TextAlign.center),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 100,
-                  width: 200,
-                  color: Colors.white,
-                  child: ListTile(
-                    enabled: true,
-                    onTap: () {
-                      showAlertDialog(context, "You have tapped the list Tile");
-                    },
-                    onLongPress: () {
-                      showAlertDialog(
-                          context, "You have Long Pressed the list Tile");
-                    },
-                    trailing: Icon(Icons.drag_indicator_sharp),
-                    subtitle: Text("this is the subtitle"),
-                    title: Text("This is the title"),
-                    focusColor: Colors.white,
-                    tileColor: Colors.white,
-                    leading: Icon(Icons.supervised_user_circle),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 100,
-                  width: 200,
-                  color: Colors.white,
-                  child: InkWell(
-                    onTap: () {},
-                    onLongPress: () {},
-                    child: ListTile(
-                      enabled: false,
-                      onTap: () {},
-                      onLongPress: () {},
-                      trailing: Icon(Icons.drag_indicator_sharp),
-                      subtitle: Text("this is the subtitle"),
-                      title: Text("This list tile is disabled"),
-                      focusColor: Colors.white,
-                      tileColor: Colors.white,
-                      leading: Icon(Icons.supervised_user_circle),
-                    ),
-                  ),
-                ),
-              ),
-            ],
+          Center(
+            child: Text(
+                "This is the Second Screen Please Swipe UP to See More Screens",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+                textAlign: TextAlign.center),
           ),
           Center(
             child: Text("This is the Third Screen ",
