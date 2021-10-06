@@ -14,6 +14,7 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
@@ -29,6 +30,7 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/snackbar.dart';
+import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -250,6 +252,12 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
       ),
       WidgetModel(
+        name: "List Tile",
+        implementation: ListTileSample(),
+        description: ListTileDescription(),
+        link: "https://api.flutter.dev/flutter/material/ListTile-class.html",
+      ),
+      WidgetModel(
         name: "RichText",
         subtitle: "Rich Text widget",
         implementation: RichTextWidget(),
@@ -277,6 +285,13 @@ class HomePageState extends State<HomePage> {
         description: DraggableScrollSheetDesc(),
         link:
             "https://api.flutter.dev/flutter/widgets/DraggableScrollableSheet-class.html",
+       ),
+       WidgetModel(
+        name: "Dismissible",
+        subtitle: "Remove any List Item",
+        implementation: DismissibleSample(),
+        description: DismissibleDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Dismissible-class.html",
       ),
     ];
 
