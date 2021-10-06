@@ -46,18 +46,18 @@ class _pageViewSampleState extends State<pageViewSample> {
         children: <Widget>[
           Center(
             child: Text(
-                "This is the First Screen Please Swipe UP to See More Screens",
+                "This is the First Page. Please Swipe UP to see more pages",
                 style: TextStyle(color: Colors.white, fontSize: 20),
                 textAlign: TextAlign.center),
           ),
           Center(
             child: Text(
-                "This is the Second Screen Please Swipe UP to See More Screens",
+                "This is the Second Page. Please Swipe UP to see more pages",
                 style: TextStyle(color: Colors.white, fontSize: 20),
                 textAlign: TextAlign.center),
           ),
           Center(
-            child: Text("This is the Third Screen ",
+            child: Text("This is the Third Page",
                 style: TextStyle(color: Colors.white, fontSize: 20),
                 textAlign: TextAlign.center),
           ),
