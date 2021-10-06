@@ -17,6 +17,20 @@ class ButtonImplementation extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
+              "Outlined Button:",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            OutlinedButton(
+                onPressed: () => _message(context),
+                style: OutlinedButton.styleFrom(
+                  primary: Colors.orange[900],
+                ),
+                child: Text("Outlined Button")),
+            SizedBox(height: 20.0),
+            Text(
               "Elevated Button:",
               style: TextStyle(
                 color: Colors.white,
