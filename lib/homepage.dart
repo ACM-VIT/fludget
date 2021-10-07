@@ -9,7 +9,6 @@ import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
-import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
@@ -25,9 +24,8 @@ import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textfield.dart';
-import 'package:fludget/routes/reorderableListView.dart';
+import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/wrap.dart';
-import 'package:fludget/routes/snackbar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -237,7 +235,7 @@ class HomePageState extends State<HomePage> {
       WidgetModel(
         name: "SnackBar",
         subtitle: "SnackBar Widget",
-        implementation: SnackBarImplementation() ,
+        implementation: SnackBarImplementation(),
         description: SnackBarDescription(),
         link: "https://api.flutter.dev/flutter/material/SnackBar-class.html",
       ),
@@ -249,11 +247,11 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
       ),
       WidgetModel(
-          name: "RichText",
-          subtitle: "Rich Text widget",
-          implementation: RichTextWidget(),
-          description: RichTextWidgetDescription(),
-          link: "https://api.flutter.dev/flutter/widgets/RichText-class.html",
+        name: "RichText",
+        subtitle: "Rich Text widget",
+        implementation: RichTextWidget(),
+        description: RichTextWidgetDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/RichText-class.html",
       ),
       WidgetModel(
         name: "Slider",
@@ -261,13 +259,20 @@ class HomePageState extends State<HomePage> {
         description: SliderDescription(),
         link: "https://api.flutter.dev/flutter/material/Slider-class.html",
       ),
-       WidgetModel(
+      WidgetModel(
         name: "AnimatedBuilder Widget",
         subtitle: "Implement Animations",
         implementation: AnimatedBuilderWidget(),
         description: AnimatedBuilderDescription(),
-        link: "https://api.flutter.dev/flutter/widgets/AnimatedBuilder-class.html",
+        link:
+            "https://api.flutter.dev/flutter/widgets/AnimatedBuilder-class.html",
       ),
+      WidgetModel(
+        name: "Transform",
+        link: "https://api.flutter.dev/flutter/widgets/Transform-class.html",
+        implementation: TransformImplementation(),
+        description: TransformDescription(),
+      )
     ];
 
     return ListView(
