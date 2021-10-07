@@ -1,4 +1,5 @@
 import 'package:fludget/Models/widgetModel.dart';
+import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
@@ -33,6 +34,7 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
+import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -262,7 +264,6 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
       ),
       WidgetModel(
-
         name: "CheckboxListTile",
         subtitle: "A ListTile with a Checkbox",
         implementation: CheckboxListTileWidget(),
@@ -331,11 +332,18 @@ class HomePageState extends State<HomePage> {
           implementation: LinearProgressIndicatorSample(),
           description: LinearProgressIndicatorDescription()),
       WidgetModel(
-          name: "Circular Progress Indicator",
-          link:
-              "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
-          implementation: CircularProgressIndicatorSample(),
-          description: CircularProgressIndicatorDescription(),
+        name: "Circular Progress Indicator",
+        link:
+            "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+        implementation: CircularProgressIndicatorSample(),
+        description: CircularProgressIndicatorDescription(),
+      ),
+      WidgetModel(
+        name: "Flexible",
+        link:
+            "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+        implementation: FlexibleWidget(),
+        description: CircularProgressIndicatorDescription(),
       ),
     ];
 
