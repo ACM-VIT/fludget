@@ -68,7 +68,7 @@ class _TransformImplementationState extends State<TransformImplementation> {
   Widget scale() {
     return Center(
       child: Transform.scale(
-        scale: sliderVal == 0 ? 1 : sliderVal / 50,
+        scale: sliderVal == 0 ? 1 : sliderVal / 75,
         origin: const Offset(0, 0),
         child: Container(
           height: 75,
@@ -120,7 +120,7 @@ class _TransformImplementationState extends State<TransformImplementation> {
             child: rotate(),
           ),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.fromLTRB(16, 32, 16, 32),
             child: scale(),
           ),
           Padding(
