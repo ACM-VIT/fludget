@@ -4,13 +4,14 @@ import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
+import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/dialogBox.dart';
+import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggable_scrollable_sheet.dart';
 import 'package:fludget/routes/dropDownButton.dart';
-import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
-
+import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
@@ -21,18 +22,15 @@ import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
-import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/slider.dart';
+import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/stack.dart';
-import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/switch.dart';
+import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textfield.dart';
-
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
-
-import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -159,7 +157,7 @@ class HomePageState extends State<HomePage> {
         link:
             "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
       ),
-       WidgetModel(
+      WidgetModel(
         name: "Toggle Button",
         implementation: ToggleButtonImplementation(),
         description: ToggleButtonDescription(),
@@ -259,6 +257,14 @@ class HomePageState extends State<HomePage> {
         implementation: DatatableWidget(),
         description: DataTableWidgetDescription(),
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
+      ),
+      WidgetModel(
+        name: "CheckboxListTile",
+        subtitle: "A ListTile with a Checkbox",
+        implementation: CheckboxListTileWidget(),
+        description: CheckboxListTileWidgetDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/CheckboxListTile-class.html",
       ),
       WidgetModel(
         name: "List Tile",
