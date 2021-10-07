@@ -4,27 +4,34 @@ import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
+import 'package:fludget/routes/checkboxListTile.dart';
+import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/dialogBox.dart';
+import 'package:fludget/routes/dismissible_widget.dart';
+import 'package:fludget/routes/draggable_scrollable_sheet.dart';
 import 'package:fludget/routes/dropDownButton.dart';
-import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/linearProgressIndicator.dart';
+import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
+import 'package:fludget/routes/pageview.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
-import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/slider.dart';
+import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/stack.dart';
-import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/switch.dart';
+import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/transform.dart';
+import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:flutter/material.dart';
 
@@ -139,18 +146,26 @@ class HomePageState extends State<HomePage> {
       ),
       WidgetModel(
         name: "Image",
-        subtitle: "Asset Image, Network Image",
+        subtitle: "Asset Image, Network Image, File Image and Memory Image",
         implementation: ImageImplementation(),
         description: ImageDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
       ),
       WidgetModel(
         name: "Button",
-        subtitle: "Elevated Button, Text Button, Floating Action Button",
+        subtitle:
+            "Outlined Button, Elevated Button, Text Button, Floating Action Button",
         implementation: ButtonImplementation(),
         description: ButtonDescription(),
         link:
             "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
+      ),
+      WidgetModel(
+        name: "Toggle Button",
+        implementation: ToggleButtonImplementation(),
+        description: ToggleButtonDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/ToggleButtons-class.html",
       ),
       WidgetModel(
         name: "DialogBox",
@@ -247,6 +262,21 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
       ),
       WidgetModel(
+
+        name: "CheckboxListTile",
+        subtitle: "A ListTile with a Checkbox",
+        implementation: CheckboxListTileWidget(),
+        description: CheckboxListTileWidgetDescription(),
+        link:
+            "https://api.flutter.dev/flutter/material/CheckboxListTile-class.html",
+      ),
+      WidgetModel(
+        name: "List Tile",
+        implementation: ListTileSample(),
+        description: ListTileDescription(),
+        link: "https://api.flutter.dev/flutter/material/ListTile-class.html",
+      ),
+      WidgetModel(
         name: "RichText",
         subtitle: "Rich Text widget",
         implementation: RichTextWidget(),
@@ -272,7 +302,41 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/widgets/Transform-class.html",
         implementation: TransformImplementation(),
         description: TransformDescription(),
-      )
+      ),
+      WidgetModel(
+        name: "DraggableScrollableSheet Widget",
+        subtitle: "Implementation for DraggableScrollableSheet in flutter",
+        implementation: DraggableScrollSheet(),
+        description: DraggableScrollSheetDesc(),
+        link:
+            "https://api.flutter.dev/flutter/widgets/DraggableScrollableSheet-class.html",
+      ),
+      WidgetModel(
+        name: "Dismissible",
+        subtitle: "Remove any List Item",
+        implementation: DismissibleSample(),
+        description: DismissibleDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Dismissible-class.html",
+      ),
+      WidgetModel(
+        name: "Page View",
+        implementation: pageViewSample(),
+        description: PageViewDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/PageView-class.html",
+      ),
+      WidgetModel(
+          name: "Linear Progress Indicator",
+          link:
+              "https://api.flutter.dev/flutter/material/LinearProgressIndicator-class.html",
+          implementation: LinearProgressIndicatorSample(),
+          description: LinearProgressIndicatorDescription()),
+      WidgetModel(
+          name: "Circular Progress Indicator",
+          link:
+              "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+          implementation: CircularProgressIndicatorSample(),
+          description: CircularProgressIndicatorDescription(),
+      ),
     ];
 
     return ListView(
