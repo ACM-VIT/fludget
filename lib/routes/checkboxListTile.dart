@@ -13,27 +13,48 @@ class _CheckboxListTileWidgetState extends State<CheckboxListTileWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[900],
-      body: Container(
-          child: CheckboxListTile(
-        activeColor: Colors.grey,
-        checkColor: Colors.black,
-        tileColor: Colors.grey[800],
-        title: const Text(
-          'Flutter Awesome',
-          style: TextStyle(color: Colors.white),
+      body: Column(children: [
+        CheckboxListTile(
+          activeColor: Colors.blue,
+          checkColor: Colors.white,
+          tileColor: Colors.grey[700],
+          title: const Text(
+            'Flutter Awesome',
+            style: TextStyle(color: Colors.white),
+          ),
+          onChanged: (bool? newValue) {
+            setState(() {
+              _isSelected = newValue;
+            });
+          },
+          secondary: const FlutterLogo(),
+          value: _isSelected,
+          subtitle: Text(
+            "I Love Flutter",
+            style: TextStyle(color: Colors.white),
+          ),
         ),
-        onChanged: (bool? newValue) {
-          setState(() {
-            _isSelected = newValue;
-          });
-        },
-        secondary: const FlutterLogo(),
-        value: _isSelected,
-        subtitle: Text(
-          "I Love Flutter",
-          style: TextStyle(color: Colors.white),
-        ),
-      )),
+        CheckboxListTile(
+          activeColor: Colors.grey,
+          checkColor: Colors.black,
+          tileColor: Colors.grey[800],
+          title: const Text(
+            'Flutter Awesome',
+            style: TextStyle(color: Colors.white),
+          ),
+          onChanged: (bool? newValue) {
+            setState(() {
+              _isSelected = newValue;
+            });
+          },
+          secondary: const FlutterLogo(),
+          value: _isSelected,
+          subtitle: Text(
+            "I Love Flutter",
+            style: TextStyle(color: Colors.white),
+          ),
+        )
+      ]),
     );
   }
 }
