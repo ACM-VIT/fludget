@@ -172,7 +172,7 @@ class _OpacityDescriptionState extends State<OpacityDescription> {
     return Center(
       child: Container(
         child: Text(
-            "This is a Opacity widgetA widget that makes its child partially transparent.This class paints its child into an intermediate buffer and then blends the child back into the scene partially transparent.",
+            "This is a Opacity widget. A widget that makes its child partially transparent.This class paints its child into an intermediate buffer and then blends the child back into the scene partially transparent.",
             style: TextStyle(color: Colors.white)),
       ),
     );

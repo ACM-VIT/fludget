@@ -60,7 +60,7 @@ class GridListDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Grid List Description Here',
+        'Grid List or GridView is a widget in Flutter that displays the items in a 2-D array (two-dimensional rows and columns). As the name suggests, it will be used when we want to show items in a Grid. We can select the desired item from the grid list by tapping on them.',
         style: TextStyle(color: Colors.white),
       ),
     );

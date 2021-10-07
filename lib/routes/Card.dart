@@ -213,7 +213,7 @@ class CardDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        ' Card Description Here',
+        'A card is a sheet used to represent the information related to each other, such as an album, a geographical location, contact details, etc. A card in Flutter is in rounded corner shape and has a shadow. In this article, we are going to learn how to create a card widget in Flutter.',
         style: TextStyle(color: Colors.white),
       ),
     );

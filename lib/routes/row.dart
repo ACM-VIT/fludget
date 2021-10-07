@@ -55,7 +55,7 @@ class RowDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Row Description Here',
+        'A widget that displays its children in a horizontal array. To cause a child to expand to fill the available horizontal space, wrap the child in an Expanded widget. The Row widget does not scroll (and in general it is considered an error to have more children in a Row than will fit in the available room).',
         style: TextStyle(color: Colors.white),
       ),
     );

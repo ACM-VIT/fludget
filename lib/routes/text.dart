@@ -29,7 +29,7 @@ class TextDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Text Description Here',
+        'A Text is a widget in Flutter that allows us to display a string of text with a single line in our application.',
         style: TextStyle(color: Colors.white),
       ),
     );

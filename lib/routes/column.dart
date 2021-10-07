@@ -55,7 +55,7 @@ class ColumnDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Column Description Here',
+        'Column is a widget that displays its children in a vertical array. If you want to define several widgets rendered in a vertical column according to their order, the Column widget is suitable for that purpose.',
         style: TextStyle(color: Colors.white),
       ),
     );

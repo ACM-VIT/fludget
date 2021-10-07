@@ -40,7 +40,7 @@ class IconDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Icon Description Here',
+        'It is used to specify the icon name to display in the application. Generally, Flutter uses material design icons that are symbols for common actions and items. It is used to specify the color of the icon.',
         style: TextStyle(color: Colors.white),
       ),
     );

@@ -111,7 +111,7 @@ class ButtonDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Button Description Here',
+        'Buttons are the graphical control element that provides a user to trigger an event such as taking actions, making choices, searching things, and many more. They can be placed anywhere in our UI like dialogs, forms, cards, toolbars, etc. Buttons are the Flutter widgets, which is a part of the material design library.',
         style: TextStyle(color: Colors.white),
       ),
     );

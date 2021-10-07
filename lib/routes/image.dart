@@ -175,7 +175,7 @@ class ImageDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Image Description Here',
+        'A widget that is used to Manage assets, display images, and show icons.',
         style: TextStyle(color: Colors.white),
       ),
     );

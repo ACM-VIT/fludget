@@ -74,7 +74,7 @@ class DialogBoxDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Dialog Box Description Here',
+        'The dialog is a type of widget which comes on the window or the screen which contains any critical information or can ask for any decision. When a dialog box is popped up the all the other functions get disabled until you close the dialog box or provide an answer.',
         style: TextStyle(color: Colors.white),
       ),
     );

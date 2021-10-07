@@ -54,7 +54,7 @@ class StackDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Stack Description Here',
+        'The stack is a widget in Flutter that contains a list of widgets and positions them on top of the other. In other words, the stack allows developers to overlap multiple widgets into a single screen and renders them from bottom to top.',
         style: TextStyle(color: Colors.white),
       ),
     );
