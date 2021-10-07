@@ -5,6 +5,7 @@ import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
+import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
@@ -321,7 +322,13 @@ class HomePageState extends State<HomePage> {
           link:
               "https://api.flutter.dev/flutter/material/LinearProgressIndicator-class.html",
           implementation: LinearProgressIndicatorSample(),
-          description: LinearProgressIndicatorDescription())
+          description: LinearProgressIndicatorDescription()),
+      WidgetModel(
+          name: "Circular Progress Indicator",
+          link:
+              "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+          implementation: CircularProgressIndicatorSample(),
+          description: CircularProgressIndicatorDescription())
     ];
 
     return ListView(
