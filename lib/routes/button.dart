@@ -31,6 +31,9 @@ class ButtonImplementation extends StatelessWidget {
                   onPressed: () => _message(context),
                   style: OutlinedButton.styleFrom(
                     primary: Colors.orange[900],
+                    side: BorderSide(
+                      color: Colors.orange[900]!,
+                    ),
                   ),
                   child: Text("Outlined Button")),
               SizedBox(height: 50.0),
