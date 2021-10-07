@@ -15,6 +15,7 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/pageview.dart';
@@ -315,6 +316,12 @@ class HomePageState extends State<HomePage> {
         description: PageViewDescription(),
         link: "https://api.flutter.dev/flutter/widgets/PageView-class.html",
       ),
+      WidgetModel(
+          name: "Linear Progress Indicator",
+          link:
+              "https://api.flutter.dev/flutter/material/LinearProgressIndicator-class.html",
+          implementation: LinearProgressIndicatorSample(),
+          description: LinearProgressIndicatorDescription())
     ];
 
     return ListView(
