@@ -151,7 +151,8 @@ class HomePageState extends State<HomePage> {
       ),
       WidgetModel(
         name: "Button",
-        subtitle: "Elevated Button, Text Button, Floating Action Button",
+        subtitle:
+            "Outlined Button, Elevated Button, Text Button, Floating Action Button",
         implementation: ButtonImplementation(),
         description: ButtonDescription(),
         link:
