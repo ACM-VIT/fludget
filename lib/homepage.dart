@@ -7,11 +7,13 @@ import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/column.dart';
+import 'package:fludget/routes/container.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggable_scrollable_sheet.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/expanded.dart';
+import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
@@ -114,6 +116,12 @@ class HomePageState extends State<HomePage> {
 
   ListView getWidgetList(String filter) {
     const List<WidgetModel> widgets = [
+      WidgetModel(
+        name: "Container",
+        implementation: ContainerImplementation(),
+        description: ContainerDescription(),
+        link:"https://api.flutter.dev/flutter/widgets/Container-class.html",
+      ),
       WidgetModel(
         name: "Column",
         implementation: ColumnImplementation(),
