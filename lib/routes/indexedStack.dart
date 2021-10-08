@@ -131,16 +131,12 @@ class IndexedStackDescription extends StatelessWidget {
                     fontSize: 14.0, color: Colors.white, height: 1.2),
                 children: <TextSpan>[
                   TextSpan(
-                    text:
-                        'A Stack that shows a single child from a list of children.\n'
-                        'The displayed child is the one with the given index. The stack is always as big as the largest child.\n'
-                        'An IndexedStack is a stack where only one component is shown at one time by its index.'
-                        ' The stack is consistently just about as large as the biggest child. '
-                        'On the off chance that the value is null, nothing is shown. '
-                        'If multiple children are expanded, the available space is '
-                        'divided among them according to the flex factor. '
-                        'An Expanded widget must be a descendant of a Row, Column, or Flex, and the path from the Expanded widget to its enclosing Row, Column, or Flex must contain only StatelessWidgets or StatefulWidgets (not other kinds of widgets, like RenderObjectWidgets).',
-                  ),
+                      text:
+                          'A Stack that shows a single child from a list of children.\n'
+                          'The displayed child is the one with the given index. The stack is always as big as the largest child.\n'
+                          'An IndexedStack is a stack where only one component is shown at one time by its index.'
+                          ' The stack is consistently just about as large as the biggest child. '
+                          'On the off chance that the value is null, nothing is shown. '),
                   TextSpan(
                       text: '\n\nPropertise \n\n',
                       style: TextStyle(
