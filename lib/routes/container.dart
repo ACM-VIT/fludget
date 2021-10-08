@@ -20,7 +20,7 @@ class ContainerImplementation extends StatelessWidget {
               Container(
                 width: 100.0,
                 height: 100.0,
-                color: Colors.blue,
+                color: Colors.orange[900],
               ),
               Text("Container with border radius of 12.0 ",style: TextStyle(
                 color: Colors.white,
@@ -31,7 +31,7 @@ class ContainerImplementation extends StatelessWidget {
                 width: 100.0,
                 height: 100.0,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.orange[900],
                   borderRadius: BorderRadius.all(Radius.circular(12.0))
                 ),
               ),
@@ -44,7 +44,7 @@ class ContainerImplementation extends StatelessWidget {
                 height: 100.0,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.blue
+                  color: Colors.orange[900],
                 ),
               ),
             ],
