@@ -19,6 +19,7 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
@@ -37,7 +38,6 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
-import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -123,7 +123,7 @@ class HomePageState extends State<HomePage> {
         name: "Container",
         implementation: ContainerImplementation(),
         description: ContainerDescription(),
-        link:"https://api.flutter.dev/flutter/widgets/Container-class.html",
+        link: "https://api.flutter.dev/flutter/widgets/Container-class.html",
       ),
       WidgetModel(
         name: "Column",
@@ -358,7 +358,13 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/widgets/Flexible-class.html",
         implementation: FlexibleWidget(),
         description: FlexibleDescription(),
-        ),
+      ),
+      WidgetModel(
+        name: "IndexedStack",
+        link: "https://api.flutter.dev/flutter/widgets/IndexedStack-class.html",
+        implementation: IndexedStackImplemention(),
+        description: IndexedStackDescription(),
+      ),
     ];
 
     return ListView(
