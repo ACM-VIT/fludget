@@ -340,10 +340,9 @@ class HomePageState extends State<HomePage> {
       ),
       WidgetModel(
         name: "Flexible",
-        link:
-            "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+        link: "https://api.flutter.dev/flutter/widgets/Flexible-class.html",
         implementation: FlexibleWidget(),
-        description: CircularProgressIndicatorDescription(),
+        description: FlexibleDescription(),
       ),
     ];
 
