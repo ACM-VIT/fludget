@@ -361,7 +361,7 @@ class HomePageState extends State<HomePage> {
         description: FlexibleDescription(),
       ),
       WidgetModel(
-        name: "ColouredFilteredWidget",
+        name: "ColorFiltered",
         link:
             "https://api.flutter.dev/flutter/widgets/ColorFiltered-class.html",
         implementation: ColourFilteredWidget(),
