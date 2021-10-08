@@ -10,9 +10,11 @@ import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
+import 'package:fludget/routes/draggableWidget.dart';
 import 'package:fludget/routes/draggable_scrollable_sheet.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/expanded.dart';
+import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
@@ -339,11 +341,17 @@ class HomePageState extends State<HomePage> {
         description: CircularProgressIndicatorDescription(),
       ),
       WidgetModel(
+        name: "Draggable Widget",
+        link: "https://api.flutter.dev/flutter/widgets/Draggable-class.html",
+        implementation: DraggableSample(),
+        description: DraggableDescription(),
+      ),
+      WidgetModel(
         name: "Flexible",
         link: "https://api.flutter.dev/flutter/widgets/Flexible-class.html",
         implementation: FlexibleWidget(),
         description: FlexibleDescription(),
-      ),
+        ),
     ];
 
     return ListView(
