@@ -1,4 +1,5 @@
 import 'package:fludget/Models/widgetModel.dart';
+import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
@@ -35,6 +36,7 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
+import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -344,6 +346,12 @@ class HomePageState extends State<HomePage> {
         implementation: DraggableSample(),
         description: DraggableDescription(),
       ),
+      WidgetModel(
+        name: "Flexible",
+        link: "https://api.flutter.dev/flutter/widgets/Flexible-class.html",
+        implementation: FlexibleWidget(),
+        description: FlexibleDescription(),
+        ),
     ];
 
     return ListView(
