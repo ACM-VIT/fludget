@@ -61,7 +61,7 @@ class _ColourFilteredWidgetState extends State<ColourFilteredWidget> {
               child: Transform.rotate(
                 angle: -pi / 0.55,
                 child: Image.asset(
-                  "assets/images/product.png",
+                  "assets/images/_product.png",
                   fit: BoxFit.contain,
                 ),
               ),
@@ -72,7 +72,6 @@ class _ColourFilteredWidgetState extends State<ColourFilteredWidget> {
 
   Widget buildColorIcons(String text) => Positioned(
         bottom: 35,
-        right: 10,
         child: Column(
           children: [
             Card(
@@ -84,8 +83,11 @@ class _ColourFilteredWidgetState extends State<ColourFilteredWidget> {
                 ),
               ),
             ),
-            Row(
-              children: [for (var i = 0; i < 6; i++) buildIconBtn(myColors[i])],
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 70),
+              child: Row(
+                children: [for (var i = 0; i < 6; i++) buildIconBtn(myColors[i])],
+              ),
             )
           ],
         ),
