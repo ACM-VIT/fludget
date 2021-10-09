@@ -4,6 +4,7 @@ import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
+import 'package:fludget/routes/animatedIcon.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
@@ -364,6 +365,12 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/widgets/IndexedStack-class.html",
         implementation: IndexedStackImplemention(),
         description: IndexedStackDescription(),
+      ),
+      WidgetModel(
+        name: "AnimatedIcon", 
+        link: "https://api.flutter.dev/flutter/material/AnimatedIcon-class.html", 
+        implementation: AnimatedIconSample(), 
+        description: AnimatedIconDescription()
       ),
     ];
 
