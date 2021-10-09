@@ -42,6 +42,7 @@ import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:flutter/material.dart';
+import 'package:fludget/routes/passwordValidate.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -387,6 +388,13 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/material/AboutDialog-class.html",
         implementation: AboutDialogImp(),
         description: AboutDialogDesc(),
+      ),
+      WidgetModel(
+        name: "password validation",
+        subtitle: "Implementation password validation",
+        link: "#",
+        implementation: password(),
+        description: passwordDescription(),
       ),
     ];
 
