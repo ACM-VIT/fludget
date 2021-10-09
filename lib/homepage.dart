@@ -9,6 +9,7 @@ import 'package:fludget/routes/animatedIcon.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
+import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/container.dart';
 import 'package:fludget/routes/dialogBox.dart';
@@ -360,6 +361,13 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/widgets/Flexible-class.html",
         implementation: FlexibleWidget(),
         description: FlexibleDescription(),
+      ),
+      WidgetModel(
+        name: "ColorFiltered",
+        link:
+            "https://api.flutter.dev/flutter/widgets/ColorFiltered-class.html",
+        implementation: ColourFilteredWidget(),
+        description: ColourFilteredWidgetDescription(),
       ),
       WidgetModel(
         name: "IndexedStack",
