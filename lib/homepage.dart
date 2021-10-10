@@ -8,7 +8,6 @@ import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
 import 'package:fludget/routes/animatedIcon.dart';
-import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
@@ -19,7 +18,9 @@ import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggableWidget.dart';
 import 'package:fludget/routes/draggable_scrollable_sheet.dart';
 import 'package:fludget/routes/dropDownButton.dart';
+import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/expanded.dart';
+import 'package:fludget/routes/floatingActionButton.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
@@ -28,6 +29,7 @@ import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
+import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/pageview.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
@@ -40,6 +42,7 @@ import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
+import 'package:fludget/routes/textButton.dart';
 import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
@@ -264,14 +267,30 @@ class HomePageState extends State<HomePage> {
           description: ImageDescription(),
           link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
           category: [WidgetCategoy.Assets, WidgetCategoy.Basics]),
+        WidgetModel(
+        name: "Outlined Button",
+        implementation: OutlinedButtonImplimentation(),
+        description: OutlinedButtonDescription(),
+        link: "https://api.flutter.dev/flutter/material/OutlinedButton-class.html",
+        category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
+       WidgetModel(
+        name: "Elevated Button",
+        implementation: ElevatedButtonImplimentation(),
+        description: ElevatedButtonDescription(),
+        link: "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
+        category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
       WidgetModel(
-          name: "Button",
-          subtitle:
-              "Outlined Button, Elevated Button, Text Button, Floating Action Button",
-          implementation: ButtonImplementation(),
-          description: ButtonDescription(),
-          link: "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
-          category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
+        name: "Text Button",
+        implementation: TextButtonImplimentation(),
+        description: TextButtonDescription(),
+        link: "https://api.flutter.dev/flutter/material/TextButton-class.html",
+        category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
+       WidgetModel(
+        name: "Floating Action Button",
+        implementation: FloatingActionButtonImplimentation(),
+        description: FloatingActionButtonDescription(),
+        link: "https://api.flutter.dev/flutter/material/FloatingActionButton-class.html",
+        category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
       WidgetModel(
           name: "Toggle Button",
           implementation: ToggleButtonImplementation(),
