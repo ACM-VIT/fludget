@@ -33,6 +33,7 @@ import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/settings.dart';
+import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
 import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/stack.dart';
@@ -245,6 +246,12 @@ class HomePageState extends State<HomePage> {
           link: "https://api.flutter.dev/flutter/widgets/Text-class.html",
           category: [WidgetCategoy.Text, WidgetCategoy.Basics]),
       WidgetModel(
+          name: "Sized Box",
+          implementation: SizedboxImplementation(),
+          description: SizedboxDescription(),
+          link: "https://api.flutter.dev/flutter/widgets/SizedBox-class.html",
+          category: [WidgetCategoy.Layout, WidgetCategoy.Basics]),
+      WidgetModel(
           name: "Icon",
           implementation: IconImplementation(),
           description: IconDescription(),
@@ -272,7 +279,6 @@ class HomePageState extends State<HomePage> {
           link:
               "https://api.flutter.dev/flutter/material/ToggleButtons-class.html",
           category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
-      
       WidgetModel(
           name: "DialogBox",
           subtitle: "shows Dialog",
@@ -458,13 +464,12 @@ class HomePageState extends State<HomePage> {
           description: FlexibleDescription(),
           category: [WidgetCategoy.Layout]),
       WidgetModel(
-        name: "ColorFiltered",
-        link:
-            "https://api.flutter.dev/flutter/widgets/ColorFiltered-class.html",
-        implementation: ColourFilteredWidget(),
-        description: ColourFilteredWidgetDescription(),
-        category: [WidgetCategoy.Effects , WidgetCategoy.Painting]
-      ),
+          name: "ColorFiltered",
+          link:
+              "https://api.flutter.dev/flutter/widgets/ColorFiltered-class.html",
+          implementation: ColourFilteredWidget(),
+          description: ColourFilteredWidgetDescription(),
+          category: [WidgetCategoy.Effects, WidgetCategoy.Painting]),
       WidgetModel(
         name: "IndexedStack",
         link: "https://api.flutter.dev/flutter/widgets/IndexedStack-class.html",
@@ -473,12 +478,12 @@ class HomePageState extends State<HomePage> {
         category: [WidgetCategoy.Layout],
       ),
       WidgetModel(
-          name: "AnimatedIcon",
-          link:
-              "https://api.flutter.dev/flutter/material/AnimatedIcon-class.html",
-          implementation: AnimatedIconSample(),
-          description: AnimatedIconDescription(),
-          category: [WidgetCategoy.Animation],
+        name: "AnimatedIcon",
+        link:
+            "https://api.flutter.dev/flutter/material/AnimatedIcon-class.html",
+        implementation: AnimatedIconSample(),
+        description: AnimatedIconDescription(),
+        category: [WidgetCategoy.Animation],
       ),
       WidgetModel(
         name: "About Dialog",
@@ -489,14 +494,13 @@ class HomePageState extends State<HomePage> {
         category: [WidgetCategoy.Basics],
       ),
       WidgetModel(
-        name: "AbsorbPointer",
-        subtitle: "Implementation of AbsorbPointer Widget",
-        link: "https://api.flutter.dev/flutter/widgets/AbsorbPointer-class.html",
-        implementation: AbsorbPointerWidget(),
-        description:AbsorbPointerWidgetDescription(),
-        category: [WidgetCategoy.Interaction]
-      ),
-
+          name: "AbsorbPointer",
+          subtitle: "Implementation of AbsorbPointer Widget",
+          link:
+              "https://api.flutter.dev/flutter/widgets/AbsorbPointer-class.html",
+          implementation: AbsorbPointerWidget(),
+          description: AbsorbPointerWidgetDescription(),
+          category: [WidgetCategoy.Interaction]),
     ];
 
     return ListView(
