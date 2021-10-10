@@ -5,9 +5,12 @@ import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
+import 'package:fludget/routes/about_dialog.dart';
+import 'package:fludget/routes/animatedIcon.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
+import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/container.dart';
 import 'package:fludget/routes/dialogBox.dart';
@@ -20,6 +23,7 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
@@ -38,7 +42,6 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
-import 'package:fludget/routes/gridList.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -268,6 +271,7 @@ class HomePageState extends State<HomePage> {
           link:
               "https://api.flutter.dev/flutter/material/ToggleButtons-class.html",
           category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
+      
       WidgetModel(
           name: "DialogBox",
           subtitle: "shows Dialog",
@@ -452,6 +456,38 @@ class HomePageState extends State<HomePage> {
           implementation: FlexibleWidget(),
           description: FlexibleDescription(),
           category: [WidgetCategoy.Layout]),
+      WidgetModel(
+        name: "ColorFiltered",
+        link:
+            "https://api.flutter.dev/flutter/widgets/ColorFiltered-class.html",
+        implementation: ColourFilteredWidget(),
+        description: ColourFilteredWidgetDescription(),
+        category: [WidgetCategoy.Effects , WidgetCategoy.Painting]
+      ),
+      WidgetModel(
+        name: "IndexedStack",
+        link: "https://api.flutter.dev/flutter/widgets/IndexedStack-class.html",
+        implementation: IndexedStackImplemention(),
+        description: IndexedStackDescription(),
+        category: [WidgetCategoy.Layout],
+      ),
+      WidgetModel(
+          name: "AnimatedIcon",
+          link:
+              "https://api.flutter.dev/flutter/material/AnimatedIcon-class.html",
+          implementation: AnimatedIconSample(),
+          description: AnimatedIconDescription(),
+          category: [WidgetCategoy.Animation],
+      ),
+      WidgetModel(
+        name: "About Dialog",
+        subtitle: "Implementation of aboutDialog()",
+        link: "https://api.flutter.dev/flutter/material/AboutDialog-class.html",
+        implementation: AboutDialogImp(),
+        description: AboutDialogDesc(),
+        category: [WidgetCategoy.Basics],
+      ),
+
     ];
 
     return ListView(
