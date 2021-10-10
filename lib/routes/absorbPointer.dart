@@ -150,6 +150,14 @@ class AbsorbPointerWidgetDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Container(
+        padding: EdgeInsets.all(16.0),
+        child: Text(
+          'AbsorbPointer is a built-in widget in flutter which absorbs pointer, in other words, it prevents its subtree from being clicked, tapped, scrolled, dragged, and respond to hover. ',
+          style: TextStyle(color: Colors.white, fontSize: 24),
+        ),
+      ),
+    );
   }
 }
