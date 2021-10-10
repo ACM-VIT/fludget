@@ -1,4 +1,5 @@
 import 'package:fludget/Models/widgetModel.dart';
+import 'package:fludget/constants/colors.dart';
 import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
@@ -51,6 +52,7 @@ class HomePageState extends State<HomePage> {
   bool searching = false;
   String searchString = '';
   WidgetCategoy? _selectedCategory = null;
+  bool _isExpanded = false;
 
   AppBar showSearchBar() {
     return AppBar(
@@ -118,33 +120,87 @@ class HomePageState extends State<HomePage> {
         children: [
           Padding(
             padding: const EdgeInsets.all(10),
-            child: Wrap(
+            child: ExpansionPanelList(
+                expansionCallback: (panelIndex, isExpanded) => setState(() {
+                      _isExpanded = !isExpanded;
+                    }),
+                elevation: 0,
+                expandedHeaderPadding: EdgeInsets.all(1),
+                dividerColor: Colors.white,
                 children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 5, vertical: 5),
-                        child: ChoiceChip(
-                          label: Text("All Widgets"),
-                          selected: _selectedCategory == null,
-                          onSelected: (value) => setState(() {
-                            _selectedCategory = null;
-                          }),
-                        ),
-                      )
-                    ] +
-                    WidgetCategoy.values
-                        .map((e) => Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 5, vertical: 5),
-                              child: ChoiceChip(
-                                label: Text(e.toString().split(".")[1]),
-                                selected: _selectedCategory == e,
-                                onSelected: (value) => setState(() {
-                                  _selectedCategory = e;
-                                }),
-                              ),
-                            ))
-                        .toList()),
+                  ExpansionPanel(
+                    backgroundColor: backroundColor,
+                    isExpanded: _isExpanded,
+                    headerBuilder: (context, isExpanded) {
+                      if (isExpanded)
+                        return Container();
+                      else
+                        return SizedBox(
+                          height: 50,
+                          child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              physics: const AlwaysScrollableScrollPhysics(),
+                              children: [
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 5, vertical: 5),
+                                      child: ChoiceChip(
+                                        label: Text("All Widgets"),
+                                        selected: _selectedCategory == null,
+                                        onSelected: (value) => setState(() {
+                                          _selectedCategory = null;
+                                        }),
+                                      ),
+                                    )
+                                  ] +
+                                  WidgetCategoy.values
+                                      .map((e) => Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 5, vertical: 5),
+                                            child: ChoiceChip(
+                                              key: UniqueKey(),
+                                              label: Text(
+                                                  e.toString().split(".")[1]),
+                                              selected: _selectedCategory == e,
+                                              onSelected: (value) =>
+                                                  setState(() {
+                                                _selectedCategory = e;
+                                              }),
+                                            ),
+                                          ))
+                                      .toList()),
+                        );
+                    },
+                    body: Wrap(
+                        runSpacing: -15,
+                        children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 5),
+                                child: ChoiceChip(
+                                  label: Text("All Widgets"),
+                                  selected: _selectedCategory == null,
+                                  onSelected: (value) => setState(() {
+                                    _selectedCategory = null;
+                                  }),
+                                ),
+                              )
+                            ] +
+                            WidgetCategoy.values
+                                .map((e) => Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 5, vertical: 5),
+                                      child: ChoiceChip(
+                                        label: Text(e.toString().split(".")[1]),
+                                        selected: _selectedCategory == e,
+                                        onSelected: (value) => setState(() {
+                                          _selectedCategory = e;
+                                        }),
+                                      ),
+                                    ))
+                                .toList()),
+                  ),
+                ]),
           ),
           Expanded(child: getWidgetList(searchString)),
         ],
