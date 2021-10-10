@@ -6,6 +6,7 @@ import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
 import 'package:fludget/routes/about_dialog.dart';
+import 'package:fludget/routes/absorbPointer.dart';
 import 'package:fludget/routes/animatedIcon.dart';
 import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
@@ -486,6 +487,14 @@ class HomePageState extends State<HomePage> {
         implementation: AboutDialogImp(),
         description: AboutDialogDesc(),
         category: [WidgetCategoy.Basics],
+      ),
+      WidgetModel(
+        name: "AbsorbPointer",
+        subtitle: "Implementation of AbsorbPointer Widget",
+        link: "https://api.flutter.dev/flutter/widgets/AbsorbPointer-class.html",
+        implementation: AbsorbPointerWidget(),
+        description:AbsorbPointerWidgetDescription(),
+        category: [WidgetCategoy.Interaction]
       ),
 
     ];
