@@ -11,7 +11,6 @@ class _OpacityImplementationState extends State<OpacityImplementation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: ListView(
         children: [
           Padding(
@@ -55,8 +54,7 @@ class _OpacityImplementationState extends State<OpacityImplementation> {
                   ],
                 ),
                 Text(
-                    "Opacity can also be used to blend pictures. Here, two images are stacked together where one has opacity of 0.5 and other opacity of 1",
-                    style: TextStyle(color: Colors.white))
+                    "Opacity can also be used to blend pictures. Here, two images are stacked together where one has opacity of 0.5 and other opacity of 1",)
               ],
             ),
           ),
@@ -74,7 +72,7 @@ class _OpacityImplementationState extends State<OpacityImplementation> {
                     color: Colors.red,
                   ),
                 ),
-                Text("1 opacity", style: TextStyle(color: Colors.white))
+                Text("1 opacity",)
               ],
             ),
           ),
@@ -94,7 +92,6 @@ class _OpacityImplementationState extends State<OpacityImplementation> {
                 ),
                 Text(
                   "0.75 opacity",
-                  style: TextStyle(color: Colors.white),
                 )
               ],
             ),
@@ -113,7 +110,7 @@ class _OpacityImplementationState extends State<OpacityImplementation> {
                     color: Colors.red,
                   ),
                 ),
-                Text("0.5 opacity", style: TextStyle(color: Colors.white))
+                Text("0.5 opacity")
               ],
             ),
           ),
@@ -131,7 +128,7 @@ class _OpacityImplementationState extends State<OpacityImplementation> {
                     color: Colors.red,
                   ),
                 ),
-                Text("0.25 opacity", style: TextStyle(color: Colors.white))
+                Text("0.25 opacity")
               ],
             ),
           ),
@@ -149,7 +146,7 @@ class _OpacityImplementationState extends State<OpacityImplementation> {
                     color: Colors.red,
                   ),
                 ),
-                Text("0 opacity", style: TextStyle(color: Colors.white))
+                Text("0 opacity")
               ],
             ),
           ),
@@ -173,7 +170,7 @@ class _OpacityDescriptionState extends State<OpacityDescription> {
       child: Container(
         child: Text(
             "This is a Opacity widgetA widget that makes its child partially transparent.This class paints its child into an intermediate buffer and then blends the child back into the scene partially transparent.",
-            style: TextStyle(color: Colors.white)),
+        ),
       ),
     );
   }

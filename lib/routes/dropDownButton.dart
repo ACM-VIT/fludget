@@ -31,7 +31,6 @@ class _DropDownButtonSampleState extends State<DropDownButtonSample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 36.0),
         children: [
@@ -186,7 +185,7 @@ class DropDownButtonDescription extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Text(
           'A dropdown button lets the user select from a number of items. The button shows the currently selected item as well as an arrow that opens a menu for selecting another item.',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );

@@ -13,16 +13,12 @@ class _MyRefreshIndicatorState extends State<MyRefreshIndicator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Container(
         child: Column(
           children: [
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Text("Dragdown to change the order of the list.",
-                  style: TextStyle(
-                    color: Colors.white,
-                  )),
+              child: Text("Dragdown to change the order of the list."),
             ),
             Expanded(
               child: RefreshIndicator(
@@ -69,7 +65,7 @@ class MyRefreshIndicatorDesc extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Text(
           "A widget that supports the Material 'swipe to refresh' idiom. When the child's Scrollable descendant overscrolls, an animated circular progress indicator is faded into view. When the scroll ends, if the indicator has been dragged far enough for it to become completely opaque, the onRefresh callback is called",
-          style: TextStyle(color: Colors.white, fontSize: 22),
+          style: TextStyle(fontSize: 22),
         ),
       ),
     );

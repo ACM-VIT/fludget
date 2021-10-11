@@ -1,4 +1,3 @@
-import 'package:fludget/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class LinearProgressIndicatorSample extends StatefulWidget {
@@ -34,14 +33,13 @@ class _LinearProgressIndicatorSampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: backroundColor,
         body: Padding(
           padding: EdgeInsets.all(20),
           child: ListView(
             children: [
               Text(
                 "Indeterminate progress indicator",
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                style: TextStyle(fontSize: 20),
               ),
               SizedBox(
                 height: 20,
@@ -55,7 +53,7 @@ class _LinearProgressIndicatorSampleState
               ),
               Text(
                 "Determinate progress indicator",
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                style: TextStyle(fontSize: 20),
               ),
               SizedBox(
                 height: 20,
@@ -84,7 +82,7 @@ class _LinearProgressIndicatorSampleState
               ),
               Text(
                 "Animated Color progress indicator",
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                style: TextStyle(fontSize: 20),
               ),
               SizedBox(
                 height: 20,
@@ -110,21 +108,21 @@ class LinearProgressIndicatorDescription extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Text(
             'A widget that shows progress along a line. There are two kinds of linear progress indicators:',
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            style: TextStyle(fontSize: 20),
           ),
         ),
         Padding(
           padding: const EdgeInsets.all(20),
           child: Text(
             'Determinate progress indicators have a specific value at each point in time, and the value should increase monotonically from 0.0 to 1.0, at which time the indicator is complete. To create a determinate progress indicator, use a non-null value between 0.0 and 1.0.',
-            style: TextStyle(color: Colors.white, fontSize: 15),
+            style: TextStyle(fontSize: 15),
           ),
         ),
         Padding(
           padding: const EdgeInsets.all(20),
           child: Text(
             'Indeterminate progress indicators do not have a specific value at each point in time and instead indicate that progress is being made without indicating how much progress remains. To create an indeterminate progress indicator, use a null value.',
-            style: TextStyle(color: Colors.white, fontSize: 15),
+            style: TextStyle(fontSize: 15),
           ),
         ),
       ],

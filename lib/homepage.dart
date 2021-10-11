@@ -1,5 +1,4 @@
 import 'package:fludget/Models/widgetModel.dart';
-import 'package:fludget/constants/colors.dart';
 import 'package:fludget/routes/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';
@@ -18,18 +17,17 @@ class HomePageState extends State<HomePage> {
   WidgetCategoy? _selectedCategory;
   bool _isExpanded = false;
 
-  AppBar showSearchBar() {
+  AppBar showSearchBar(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Theme.of(context).backgroundColor,
+      iconTheme: Theme.of(context).primaryIconTheme,
       title: TextField(
         keyboardType: TextInputType.text,
-        cursorColor: Colors.white,
         autofocus: true,
         decoration: InputDecoration(
           hintStyle: TextStyle(color: Colors.grey),
           prefixIcon: IconButton(
             icon: Icon(Icons.arrow_back),
-            color: Colors.white,
             onPressed: () {
               setState(() {
                 searching = false;
@@ -39,10 +37,6 @@ class HomePageState extends State<HomePage> {
           ),
           hintText: 'Search....',
           border: UnderlineInputBorder(borderSide: BorderSide.none),
-        ),
-        style: TextStyle(
-          color: Colors.white,
-          decorationColor: Colors.white,
         ),
         onSubmitted: (String text) {
           setState(() {
@@ -62,9 +56,9 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: searching
-          ? showSearchBar()
+          ? showSearchBar(context)
           : AppBar(
-              backgroundColor: Colors.orange[900],
+              backgroundColor: Theme.of(context).primaryColor,
               title: Text("Widget Catalog"),
               actions: [
                 IconButton(
@@ -78,7 +72,7 @@ class HomePageState extends State<HomePage> {
               ],
               centerTitle: true,
             ),
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Theme.of(context).backgroundColor,
       drawer: SettingsWidget(),
       body: Column(
         children: [
@@ -93,7 +87,7 @@ class HomePageState extends State<HomePage> {
                 dividerColor: Colors.white,
                 children: [
                   ExpansionPanel(
-                    backgroundColor: backroundColor,
+                    backgroundColor: Theme.of(context).backgroundColor,
                     isExpanded: _isExpanded,
                     headerBuilder: (context, isExpanded) {
                       if (isExpanded)
@@ -110,6 +104,7 @@ class HomePageState extends State<HomePage> {
                                           horizontal: 5, vertical: 5),
                                       child: ChoiceChip(
                                         label: Text("All Widgets"),
+                                        //selectedColor: Theme.of(context).primaryColor,
                                         selected: _selectedCategory == null,
                                         onSelected: (value) => setState(() {
                                           _selectedCategory = null;
@@ -125,6 +120,7 @@ class HomePageState extends State<HomePage> {
                                               key: UniqueKey(),
                                               label: Text(
                                                   e.toString().split(".")[1]),
+                                              //selectedColor: Theme.of(context).primaryColor,
                                               selected: _selectedCategory == e,
                                               onSelected: (value) =>
                                                   setState(() {
@@ -143,6 +139,7 @@ class HomePageState extends State<HomePage> {
                                     horizontal: 5, vertical: 5),
                                 child: ChoiceChip(
                                   label: Text("All Widgets"),
+                                  //selectedColor: Theme.of(context).primaryColor,
                                   selected: _selectedCategory == null,
                                   onSelected: (value) => setState(() {
                                     _selectedCategory = null;
@@ -156,6 +153,7 @@ class HomePageState extends State<HomePage> {
                                           horizontal: 5, vertical: 5),
                                       child: ChoiceChip(
                                         label: Text(e.toString().split(".")[1]),
+                                        //selectedColor: Theme.of(context).primaryColor,
                                         selected: _selectedCategory == e,
                                         onSelected: (value) => setState(() {
                                           _selectedCategory = e;
@@ -166,14 +164,13 @@ class HomePageState extends State<HomePage> {
                   ),
                 ]),
           ),
-          Expanded(child: getWidgetList(searchString)),
+          Expanded(child: getWidgetList(searchString, context)),
         ],
       ),
     );
   }
 
-  ListView getWidgetList(String filter) {
-    
+  ListView getWidgetList(String filter, BuildContext context) {
 
     return ListView(
       padding: EdgeInsets.symmetric(vertical: 10.0),
@@ -184,11 +181,12 @@ class HomePageState extends State<HomePage> {
                   .where(
                       (element) => element.category.contains(_selectedCategory))
                   .toList(),
-          filter),
+          filter,
+          context),
     );
   }
 
-  List<Widget> filterWidgets(List<WidgetModel> widgets, String filter) {
+  List<Widget> filterWidgets(List<WidgetModel> widgets, String filter, BuildContext context) {
     List<WidgetModel> filtered = [];
 
     widgets.forEach((item) {
@@ -211,42 +209,35 @@ class HomePageState extends State<HomePage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.white,
                 )),
           ),
         ),
       ];
     }
 
-    return filtered.map((item) => buildListItem(item)).toList();
+    return filtered.map((item) => buildListItem(item, context)).toList();
   }
 
-  ListTile buildListItem(WidgetModel item) {
+  ListTile buildListItem(WidgetModel item, BuildContext context) {
     CircleAvatar arrow = CircleAvatar(
       child: Icon(
         Icons.keyboard_arrow_right,
         color: Colors.white,
       ),
-      backgroundColor: Colors.orange[900],
+      backgroundColor: Theme.of(context).primaryColor,
     );
-
-    TextStyle titleStyle = TextStyle(
-      color: Colors.white,
-    );
-
-    TextStyle subtitleStyle = TextStyle(color: Colors.white70);
 
     return ListTile(
       leading: arrow,
       title: Text(
         item.name + " Widget",
-        style: titleStyle,
+        style: Theme.of(context).textTheme.headline1,
       ),
       subtitle: item.subtitle.isEmpty
           ? null
           : Text(
               item.subtitle,
-              style: subtitleStyle,
+              style: Theme.of(context).textTheme.subtitle1,
             ),
       onTap: () {
         Navigator.push(

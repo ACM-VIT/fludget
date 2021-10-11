@@ -1,4 +1,3 @@
-import 'package:fludget/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +9,6 @@ class DraggableScrollSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backroundColor,
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -26,7 +24,6 @@ class DraggableScrollSheet extends StatelessWidget {
                 "Example of how to use Draggable Scrollable Sheet in Flutter",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 ),
@@ -73,12 +70,11 @@ class DraggableScrollSheetDesc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: DefaultTextStyle(
-            style: TextStyle(
+            style: Theme.of(context).textTheme.bodyText1 ?? TextStyle(
               color: Colors.white,
               height: 1.3,
             ),
