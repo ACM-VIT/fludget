@@ -27,6 +27,7 @@ import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
+import 'package:fludget/routes/listWheelScrollView.dart';
 import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
@@ -518,13 +519,21 @@ class HomePageState extends State<HomePage> {
         category: [WidgetCategoy.Basics],
       ),
       WidgetModel(
-        name: "AbsorbPointer",
-        subtitle: "Implementation of AbsorbPointer Widget",
+          name: "AbsorbPointer",
+          subtitle: "Implementation of AbsorbPointer Widget",
+          link:
+              "https://api.flutter.dev/flutter/widgets/AbsorbPointer-class.html",
+          implementation: AbsorbPointerWidget(),
+          description: AbsorbPointerWidgetDescription(),
+          category: [WidgetCategoy.Interaction]),
+      WidgetModel(
+        name: "ListWheelScrollView",
+        subtitle: "Implementation of ListWheelScrollView Widget",
         link:
-            "https://api.flutter.dev/flutter/widgets/AbsorbPointer-class.html",
-        implementation: AbsorbPointerWidget(),
-        description: AbsorbPointerWidgetDescription(),
-        category: [WidgetCategoy.Interaction],
+            "https://api.flutter.dev/flutter/widgets/ListWheelScrollView-class.html",
+        implementation: ListWheelScrollViewWidget(),
+        description: ListWheelScrollViewDescription(),
+        category: [WidgetCategoy.Scrolling],
       ),
       WidgetModel(
         name: "RefreshIndicator",
