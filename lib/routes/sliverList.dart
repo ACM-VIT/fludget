@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class SliverListImp extends StatefulWidget {
@@ -14,24 +16,55 @@ class _SliverListImpState extends State<SliverListImp> {
       backgroundColor: Colors.grey[900],
       body: CustomScrollView(
         slivers: [
+          SliverAppBar(
+            title: Text("Sliver Appbar"),
+            flexibleSpace: FlutterLogo(
+              size: 500,
+            ),
+            expandedHeight: 300,
+            backgroundColor: Colors.orange[900],
+            automaticallyImplyLeading: false,
+            floating: true,
+          ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
-                  (BuildContext context, int index) {
+              (BuildContext context, int index) {
                 return Card(
                   child: Container(
-                    color: Colors.white,
-                    height: 80,
+                    color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+                    height: 50,
                     alignment: Alignment.center,
                     child: Text(
-                      "Item $index",
-                      style: const TextStyle(fontSize: 30, color: Colors.black),
+                      "Sliver List Item $index",
+                      style: const TextStyle(fontSize: 15, color: Colors.black),
                     ),
                   ),
                 );
               },
-              childCount: 1000, // 1000 list items
+              childCount: 10, // 1000 list items
             ),
           ),
+          SliverGrid(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                childAspectRatio: 1.5),
+            delegate:
+                SliverChildBuilderDelegate((BuildContext context, int index) {
+              return Container(
+                color:
+                    Colors.primaries[Random().nextInt(Colors.primaries.length)],
+                child: Center(
+                  child: Text(
+                    "Sliver Grid $index",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.black, fontSize: 15),
+                  ),
+                ),
+              );
+            }, childCount: 12),
+          )
         ],
       ),
     );
@@ -54,4 +87,3 @@ class SliverListDesc extends StatelessWidget {
     );
   }
 }
-
