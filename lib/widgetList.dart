@@ -37,6 +37,7 @@ import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
 import 'package:fludget/routes/snackbar.dart';
+import 'package:fludget/routes/spacer.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/table.dart';
@@ -366,5 +367,13 @@ const List<WidgetModel> widgets = [
     implementation: MyRefreshIndicator(),
     description: MyRefreshIndicatorDesc(),
     category: [WidgetCategoy.Effects],
+  ),
+  WidgetModel(
+    name: "Spacer",
+    subtitle: "Implementation of Spacer Widget",
+    link: "https://api.flutter.dev/flutter/widgets/Spacer-class.html",
+    implementation: SpacerImplementation(),
+    description: SpacerDescription(),
+    category: [WidgetCategoy.Layout],
   ),
 ];
