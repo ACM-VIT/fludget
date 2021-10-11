@@ -44,27 +44,6 @@ class _SliverListImpState extends State<SliverListImp> {
               childCount: 10, // 1000 list items
             ),
           ),
-          SliverGrid(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                childAspectRatio: 1.5),
-            delegate:
-                SliverChildBuilderDelegate((BuildContext context, int index) {
-              return Container(
-                color:
-                    Colors.primaries[Random().nextInt(Colors.primaries.length)],
-                child: Center(
-                  child: Text(
-                    "Sliver Grid $index",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.black, fontSize: 15),
-                  ),
-                ),
-              );
-            }, childCount: 12),
-          )
         ],
       ),
     );
