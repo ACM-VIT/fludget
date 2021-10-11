@@ -27,6 +27,7 @@ import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
+import 'package:fludget/routes/listWheelScrollView.dart';
 import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
@@ -520,6 +521,15 @@ class HomePageState extends State<HomePage> {
           implementation: AbsorbPointerWidget(),
           description: AbsorbPointerWidgetDescription(),
           category: [WidgetCategoy.Interaction]),
+      WidgetModel(
+        name: "ListWheelScrollView",
+        subtitle: "Implementation of ListWheelScrollView Widget",
+        link:
+            "https://api.flutter.dev/flutter/widgets/ListWheelScrollView-class.html",
+        implementation: ListWheelScrollViewWidget(),
+        description: ListWheelScrollViewDescription(),
+        category: [WidgetCategoy.Scrolling],
+      ),
     ];
 
     return ListView(
