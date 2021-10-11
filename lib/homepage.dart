@@ -49,6 +49,7 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
+import 'package:fludget/routes/sliverList.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -61,7 +62,7 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   bool searching = false;
   String searchString = '';
-  WidgetCategoy? _selectedCategory = null;
+  WidgetCategoy? _selectedCategory;
   bool _isExpanded = false;
 
   AppBar showSearchBar() {
@@ -509,6 +510,13 @@ class HomePageState extends State<HomePage> {
         implementation: AnimatedIconSample(),
         description: AnimatedIconDescription(),
         category: [WidgetCategoy.Animation],
+      ),
+      WidgetModel(
+        name: "SliverList",
+        link: "https://api.flutter.dev/flutter/widgets/SliverList-class.html",
+        implementation: SliverListImp(),
+        description: SliverListDesc(),
+        category: [WidgetCategoy.Basics, WidgetCategoy.Layout],
       ),
       WidgetModel(
         name: "About Dialog",
