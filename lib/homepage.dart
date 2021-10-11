@@ -32,6 +32,7 @@ import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/pageview.dart';
+import 'package:fludget/routes/refreshIndicator.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
@@ -49,6 +50,7 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
+import 'package:fludget/routes/sliverList.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -61,7 +63,7 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   bool searching = false;
   String searchString = '';
-  WidgetCategoy? _selectedCategory = null;
+  WidgetCategoy? _selectedCategory;
   bool _isExpanded = false;
 
   AppBar showSearchBar() {
@@ -269,30 +271,34 @@ class HomePageState extends State<HomePage> {
           description: ImageDescription(),
           link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
           category: [WidgetCategoy.Assets, WidgetCategoy.Basics]),
-        WidgetModel(
-        name: "Outlined Button",
-        implementation: OutlinedButtonImplimentation(),
-        description: OutlinedButtonDescription(),
-        link: "https://api.flutter.dev/flutter/material/OutlinedButton-class.html",
-        category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
-       WidgetModel(
-        name: "Elevated Button",
-        implementation: ElevatedButtonImplimentation(),
-        description: ElevatedButtonDescription(),
-        link: "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
-        category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
       WidgetModel(
-        name: "Text Button",
-        implementation: TextButtonImplimentation(),
-        description: TextButtonDescription(),
-        link: "https://api.flutter.dev/flutter/material/TextButton-class.html",
-        category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
-       WidgetModel(
-        name: "Floating Action Button",
-        implementation: FloatingActionButtonImplimentation(),
-        description: FloatingActionButtonDescription(),
-        link: "https://api.flutter.dev/flutter/material/FloatingActionButton-class.html",
-        category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
+          name: "Outlined Button",
+          implementation: OutlinedButtonImplimentation(),
+          description: OutlinedButtonDescription(),
+          link:
+              "https://api.flutter.dev/flutter/material/OutlinedButton-class.html",
+          category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
+      WidgetModel(
+          name: "Elevated Button",
+          implementation: ElevatedButtonImplimentation(),
+          description: ElevatedButtonDescription(),
+          link:
+              "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
+          category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
+      WidgetModel(
+          name: "Text Button",
+          implementation: TextButtonImplimentation(),
+          description: TextButtonDescription(),
+          link:
+              "https://api.flutter.dev/flutter/material/TextButton-class.html",
+          category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
+      WidgetModel(
+          name: "Floating Action Button",
+          implementation: FloatingActionButtonImplimentation(),
+          description: FloatingActionButtonDescription(),
+          link:
+              "https://api.flutter.dev/flutter/material/FloatingActionButton-class.html",
+          category: [WidgetCategoy.Input, WidgetCategoy.Basics]),
       WidgetModel(
           name: "Toggle Button",
           implementation: ToggleButtonImplementation(),
@@ -507,6 +513,13 @@ class HomePageState extends State<HomePage> {
         category: [WidgetCategoy.Animation],
       ),
       WidgetModel(
+        name: "SliverList",
+        link: "https://api.flutter.dev/flutter/widgets/SliverList-class.html",
+        implementation: SliverListImp(),
+        description: SliverListDesc(),
+        category: [WidgetCategoy.Basics, WidgetCategoy.Layout],
+      ),
+      WidgetModel(
         name: "About Dialog",
         subtitle: "Implementation of aboutDialog()",
         link: "https://api.flutter.dev/flutter/material/AboutDialog-class.html",
@@ -539,6 +552,15 @@ class HomePageState extends State<HomePage> {
         implementation: StreamBuilderWidget(),
         description: StreamBuilderDescription(),
         category: [WidgetCategoy.Async],
+      ),
+      WidgetModel(
+        name: "RefreshIndicator",
+        subtitle: "Implementation of RefreshIndicator Widget",
+        link:
+            "https://api.flutter.dev/flutter/material/RefreshIndicator-class.html",
+        implementation: MyRefreshIndicator(),
+        description: MyRefreshIndicatorDesc(),
+        category: [WidgetCategoy.Effects],
       ),
     ];
 
