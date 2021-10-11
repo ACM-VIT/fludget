@@ -63,10 +63,10 @@ class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
                     ),
                     Row(
                       children: [
-                        CircleAvatar(
-                          radius: 55,
-                          backgroundColor: Colors.white,
-                          child: Image.asset('assets/images/bitcoin.png'),
+                        Icon(
+                          Icons.attach_money,
+                          size: 50,
+                          color: Colors.blue,
                         ),
                         SizedBox(
                           width: 30,
@@ -116,10 +116,10 @@ class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
                     ),
                     Row(
                       children: [
-                        CircleAvatar(
-                          radius: 55,
-                          backgroundColor: Colors.white,
-                          child: Image.asset('assets/images/bitcoin.png'),
+                        Icon(
+                          Icons.attach_money,
+                          size: 50,
+                          color: Colors.blue,
                         ),
                         SizedBox(
                           width: 30,
@@ -170,7 +170,7 @@ class StreamBuilderDescription extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(16.0),
         child: Text(
-'StreamBuilder is a widget that builds itself based on the latest snapshot of interaction with a stream.The Stream is like a pipe. When you enter a value from one side and a listener from the other side, the listener will get that value.',
+          'StreamBuilder is a widget that builds itself based on the latest snapshot of interaction with a stream.The Stream is like a pipe. When you enter a value from one side and a listener from the other side, the listener will get that value.',
           style: TextStyle(color: Colors.white, fontSize: 24),
         ),
       ),
