@@ -10,7 +10,7 @@ class StreamBuilderWidget extends StatefulWidget {
 }
 
 class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
-  double bitcoinPrice = 300000;
+  double amountOfMoney = 300000;
   StreamController<double> _controller = StreamController<double>();
 
   @override
@@ -33,10 +33,10 @@ class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
   }
 
   StreamBuilder<double> buildFirstBuilder() => StreamBuilder<double>(
-        initialData: bitcoinPrice,
-        stream: getBitCoinPrice(),
+        initialData: amountOfMoney,
+        stream: getAmountOfMoney(),
         builder: (context, snapshot) {
-          final bitcoins = snapshot.data!.toStringAsFixed(2);
+          final money = snapshot.data!.toStringAsFixed(2);
           return Padding(
             padding: EdgeInsets.all(16),
             child: Card(
@@ -72,7 +72,7 @@ class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
                           width: 30,
                         ),
                         Text(
-                          '\$' + bitcoins,
+                          '\$' + money,
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.w600),
                         )
@@ -86,10 +86,10 @@ class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
         },
       );
   StreamBuilder<double> buildSecondBuilder() => StreamBuilder<double>(
-        initialData: bitcoinPrice,
+        initialData: amountOfMoney,
         stream: _controller.stream,
         builder: (context, snapshot) {
-          final bitcoins = snapshot.data!.toStringAsFixed(2);
+          final money = snapshot.data!.toStringAsFixed(2);
           return Padding(
             padding: EdgeInsets.all(16),
             child: Card(
@@ -125,7 +125,7 @@ class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
                           width: 30,
                         ),
                         Text(
-                          '\$' + bitcoins,
+                          '\$' + money,
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.w600),
                         )
@@ -133,8 +133,8 @@ class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
                     ),
                     ElevatedButton(
                       onPressed: () async {
-                        bitcoinPrice = bitcoinPrice + 50;
-                        _controller.sink.add(bitcoinPrice);
+                        amountOfMoney = amountOfMoney + 50;
+                        _controller.sink.add(amountOfMoney);
                       },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -142,7 +142,7 @@ class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
                         ),
                         primary: Colors.deepOrangeAccent,
                       ),
-                      child: Text('Increment BitCoins',
+                      child: Text('Increment Money',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
@@ -155,9 +155,9 @@ class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
           );
         },
       );
-  Stream<double> getBitCoinPrice() => Stream<double>.periodic(
+  Stream<double> getAmountOfMoney() => Stream<double>.periodic(
         Duration(seconds: 1),
-        (count) => (bitcoinPrice + count * 5),
+        (count) => (amountOfMoney + count * 5),
       );
 }
 
