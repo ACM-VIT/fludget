@@ -357,4 +357,13 @@ const List<WidgetModel> widgets = [
     description: ListWheelScrollViewDescription(),
     category: [WidgetCategoy.Scrolling],
   ),
+  WidgetModel(
+    name: "RefreshIndicator",
+    subtitle: "Implementation of RefreshIndicator Widget",
+    link:
+        "https://api.flutter.dev/flutter/material/RefreshIndicator-class.html",
+    implementation: MyRefreshIndicator(),
+    description: MyRefreshIndicatorDesc(),
+    category: [WidgetCategoy.Effects],
+  ),
 ];
