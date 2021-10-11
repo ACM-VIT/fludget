@@ -59,7 +59,7 @@ class SliverListDesc extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(16.0),
         child: Text(
-          'Sliver LIst is a built-in sliver widget in flutter that places multiple box children in a linear array along the main axis.',
+          'Sliver List is a built-in sliver widget in flutter that places multiple box children in a linear array along the main axis.',
           style: TextStyle(color: Colors.white, fontSize: 24),
         ),
       ),
