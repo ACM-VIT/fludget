@@ -40,6 +40,7 @@ import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
 import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/stack.dart';
+import 'package:fludget/routes/streamBuilder.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
@@ -529,6 +530,15 @@ class HomePageState extends State<HomePage> {
         implementation: ListWheelScrollViewWidget(),
         description: ListWheelScrollViewDescription(),
         category: [WidgetCategoy.Scrolling],
+      ),
+      WidgetModel(
+        name: "StreamBuilder",
+        subtitle: "Implementation of StreamBuilder Widget",
+        link:
+            "https://api.flutter.dev/flutter/widgets/ListWheelScrollView-class.html",
+        implementation: StreamBuilderWidget(),
+        description: StreamBuilderDescription(),
+        category: [WidgetCategoy.Async],
       ),
     ];
 
