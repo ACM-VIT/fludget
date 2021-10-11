@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   bool searching = false;
   String searchString = '';
-  WidgetCategoy? _selectedCategory = null;
+  WidgetCategoy? _selectedCategory;
   bool _isExpanded = false;
 
   AppBar showSearchBar() {
@@ -173,6 +173,7 @@ class HomePageState extends State<HomePage> {
   }
 
   ListView getWidgetList(String filter) {
+
     return ListView(
       padding: EdgeInsets.symmetric(vertical: 10.0),
       children: filterWidgets(
