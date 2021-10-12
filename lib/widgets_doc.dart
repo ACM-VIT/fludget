@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+//Documentaion of FLutter Widgets
 class WidgetsDoc extends StatefulWidget {
   const WidgetsDoc({Key? key}) : super(key: key);
 
