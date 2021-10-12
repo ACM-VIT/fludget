@@ -2,6 +2,7 @@ import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
 import 'package:fludget/routes/animatedIcon.dart';
@@ -375,5 +376,13 @@ const List<WidgetModel> widgets = [
     implementation: SpacerImplementation(),
     description: SpacerDescription(),
     category: [WidgetCategoy.Layout],
+  ),
+  WidgetModel(
+    name: "SliverAppBar",
+    subtitle: "Implementation of SliverAppBar Widget",
+    link: "https://api.flutter.dev/flutter/material/SliverAppBar-class.html",
+    implementation: MySliverAppBar(),
+    description: MySliverAppBarDescription(),
+    category: [WidgetCategoy.Scrolling, WidgetCategoy.Accessibility],
   ),
 ];
