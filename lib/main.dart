@@ -4,6 +4,8 @@ import 'package:fludget/themes/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'splash_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -37,7 +39,7 @@ class _MyAppState extends State<MyApp> {
             return MaterialApp(
               title: 'Fludget',
               theme: ThemeFactory.getTheme(themeChangeProvider.themeMode),
-              home: HomePage(),
+              home: SplashScreen(),
             );
           }
         ),
