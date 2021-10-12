@@ -19,7 +19,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
           label: Text(
             "First Name",
             style:
-                new TextStyle(fontSize: 14.0, color: Colors.white, height: 1.2),
+                new TextStyle(fontSize: 14.0, height: 1.2),
           ),
           numeric: false,
           onSort: (i, b) {
@@ -34,7 +34,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
           label: Text(
             "Last Name",
             style:
-                new TextStyle(fontSize: 14.0, color: Colors.white, height: 1.2),
+                new TextStyle(fontSize: 14.0, height: 1.2),
           ),
           numeric: false,
           onSort: (i, b) {
@@ -54,7 +54,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
                   Text(
                     name.firstName,
                     style: new TextStyle(
-                        fontSize: 14.0, color: Colors.white, height: 1.2),
+                        fontSize: 14.0, height: 1.2),
                   ),
                   showEditIcon: false,
                   placeholder: false,
@@ -63,7 +63,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
                   Text(
                     name.lastName,
                     style: new TextStyle(
-                        fontSize: 14.0, color: Colors.white, height: 1.2),
+                        fontSize: 14.0, height: 1.2),
                   ),
                   showEditIcon: false,
                   placeholder: false,
@@ -76,7 +76,6 @@ class DatatableWidgetState extends State<DatatableWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Container(
         child: bodyData(),
       ),
@@ -112,15 +111,13 @@ class DataTableWidgetDescription extends StatelessWidget {
               ' DataTable Widget \n',
               style: TextStyle(
                 fontSize: 26.0,
-                color: Colors.white,
               ),
             ),
             RichText(
               text: new TextSpan(
                 // Note: Styles for TextSpans must be explicitly defined.
                 // Child text spans will inherit styles from parent
-                style: new TextStyle(
-                    fontSize: 14.0, color: Colors.white, height: 1.2),
+                style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -131,7 +128,6 @@ class DataTableWidgetDescription extends StatelessWidget {
                       text: '\n\nSyntax\n\n',
                       style: TextStyle(
                         fontSize: 22.0,
-                        color: Colors.white,
                       )),
                   TextSpan(
                       text: "Add the DataTable() widget \n "

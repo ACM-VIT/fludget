@@ -6,12 +6,11 @@ class TextButtonImplimentation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Center(
         child: TextButton(
                 onPressed: () => _message(context),
                 style: TextButton.styleFrom(
-                  primary: Colors.orange[900],
+                  primary: Theme.of(context).primaryColor,
                   backgroundColor: Colors.white54
                 ),
                 child: Text("Text Button"),
@@ -34,7 +33,7 @@ class TextButtonDescription extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: Text(
           "A TextButton widget is just a text label displayed on a zero elevation Material widget. By default, it doesn’t have visible borders and reacts to touches by filling with a background color",
-          style: TextStyle(color: Colors.white,
+          style: TextStyle(
           fontSize: 20),
         ),
       ),

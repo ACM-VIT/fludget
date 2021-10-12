@@ -27,6 +27,8 @@ dependencies:
     sdk: flutter
   http: ^0.13.4
   url_launcher: ^6.0.10
+  shared_preferences: ^2.0.8
+  provider: ^6.0.0
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,3 @@
-import 'package:fludget/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class DraggableSample extends StatefulWidget {
@@ -24,7 +23,6 @@ class _DraggableSampleState extends State<DraggableSample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: backroundColor,
         body: Column(
           children: [
             SizedBox(
@@ -64,7 +62,6 @@ class _DraggableSampleState extends State<DraggableSample> {
                   child: Center(
                     child: Text(
                       "Drop Colors Here!!!",
-                      style: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),
@@ -89,21 +86,21 @@ class DraggableDescription extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Text(
             'A widget that can be dragged from to a DragTarget.',
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            style: TextStyle(fontSize: 20),
           ),
         ),
         Padding(
           padding: const EdgeInsets.all(20),
           child: Text(
             "When a draggable widget recognizes the start of a drag gesture, it displays a feedback widget that tracks the user's finger across the screen. If the user lifts their finger while on top of a DragTarget, that target is given the opportunity to accept the data carried by the draggable.",
-            style: TextStyle(color: Colors.white, fontSize: 15),
+            style: TextStyle(fontSize: 15),
           ),
         ),
         Padding(
           padding: const EdgeInsets.all(20),
           child: Text(
             'This widget displays child when zero drags are under way. If childWhenDragging is non-null, this widget instead displays childWhenDragging when one or more drags are underway. Otherwise, this widget always displays child.',
-            style: TextStyle(color: Colors.white, fontSize: 15),
+            style: TextStyle(fontSize: 15),
           ),
         ),
       ],

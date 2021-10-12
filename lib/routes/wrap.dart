@@ -6,14 +6,12 @@ class WrapWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: SingleChildScrollView(
         child: Column(
           children: [
             Text(
               'WITHOUT WRAP',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
@@ -32,7 +30,6 @@ class WrapWidget extends StatelessWidget {
             Text(
               'WITH WRAP',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
@@ -51,14 +48,12 @@ class WrapWidget extends StatelessWidget {
             Text(
               'WRAP ALIGNMENT',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
             Text(
               'WrapAlignment.center',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
             ),
@@ -78,14 +73,12 @@ class WrapWidget extends StatelessWidget {
             Text(
               'RUN ALIGNMENT',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
             Text(
               'WrapAlignment.end',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
             ),
@@ -105,14 +98,12 @@ class WrapWidget extends StatelessWidget {
             Text(
               'SPACING',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
             Text(
               'spacing: 20',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
             ),
@@ -132,14 +123,12 @@ class WrapWidget extends StatelessWidget {
             Text(
               'DIRECTION',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
             Text(
               'Axis.vertical',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
             ),
@@ -191,14 +180,12 @@ class WrapWidgetDescription extends StatelessWidget {
             Text(
               'WRAP',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
             Text(
               'A Wrap lays out each child and attempts to place the child adjacent to the previous child in the main axis(mainAxis), given by DIRECTION property, leaving SPACING(also a property) space in between. If there is not enough space to fit the child, Wrap creates a new run adjacent to the existing children in the cross axis.',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
             ),
@@ -208,14 +195,12 @@ class WrapWidgetDescription extends StatelessWidget {
             Text(
               'WRAP ALIGNMENT',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
             Text(
               'We can set the alignment property to align widgets. There are few Enums, start(which is default),center, end, spaceAround, spaceBetween etc',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
               textAlign: TextAlign.center,
@@ -226,14 +211,12 @@ class WrapWidgetDescription extends StatelessWidget {
             Text(
               'RUN ALIGNMENT',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
             Text(
               'The runAlignment argument whose type is also WrapAlignment can be used to set how the runs should be placed in the cross axis. The list of possible values is the same as alignment.',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
             ),
@@ -243,14 +226,12 @@ class WrapWidgetDescription extends StatelessWidget {
             Text(
               'SPACING',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
             Text(
               'SPACING gives space between the childrens',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
             ),
@@ -260,14 +241,12 @@ class WrapWidgetDescription extends StatelessWidget {
             Text(
               'DIRECTION',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 40),
             ),
             Text(
               'DIRECTION by default is horizontal, which is no doubt the direction of axis. if we set it to Axis.vertical, axis will be vertical',
               style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
             ),

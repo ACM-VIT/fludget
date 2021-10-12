@@ -12,7 +12,6 @@ class _CheckboxListTileWidgetState extends State<CheckboxListTileWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Column(children: [
         CheckboxListTile(
           activeColor: Colors.blue,
@@ -71,15 +70,11 @@ class CheckboxListTileWidgetDescription extends StatelessWidget {
           children: [
             Text(
               "CheckboxListTile Widget \n",
-              style: TextStyle(fontSize: 26, color: Colors.white),
+              style: TextStyle(fontSize: 26),
             ),
             RichText(
               text: TextSpan(
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.white,
-                    height: 1.2,
-                  ),
+                  style: Theme.of(context).textTheme.bodyText1,
                   children: [
                     TextSpan(
                       text:

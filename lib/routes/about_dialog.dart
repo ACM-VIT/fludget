@@ -1,4 +1,3 @@
-import 'package:fludget/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class AboutDialogImp extends StatelessWidget {
@@ -7,7 +6,6 @@ class AboutDialogImp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backroundColor,
       body: Center(
         child: ElevatedButton(
           onPressed: () {
@@ -47,10 +45,9 @@ class AboutDialogDesc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backroundColor,
       body: SingleChildScrollView(
         child: DefaultTextStyle(
-          style: const TextStyle(color: Colors.white, height: 1.5),
+          style: Theme.of(context).textTheme.bodyText1 ?? const TextStyle(height: 1.5),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(

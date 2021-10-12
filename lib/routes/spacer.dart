@@ -1,4 +1,5 @@
-import 'package:fludget/constants/colors.dart';
+import 'dart:js';
+
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,6 @@ class SpacerImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -16,7 +16,7 @@ class SpacerImplementation extends StatelessWidget {
             children: [
               Text(
                 "When you have align some widget to the corners:",
-                style: TextStyle(color: Colors.white, fontSize: 16),
+                style: TextStyle( fontSize: 16),
               ),
               const SizedBox(
                 height: 20,
@@ -44,7 +44,6 @@ class SpacerImplementation extends StatelessWidget {
               Text(
                 "Note: By default the flex property of spacer is one. This can be modified so that you can use spacer with particular aspect ratio",
                 style: TextStyle(
-                  color: Colors.white,
                   fontSize: 16,
                 ),
               ),
@@ -278,10 +277,9 @@ class SpacerDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backroundColor,
       body: SingleChildScrollView(
         child: DefaultTextStyle(
-          style: TextStyle(color: Colors.white, height: 1.5),
+          style: Theme.of(context).textTheme.bodyText1 ?? TextStyle(color: Colors.white, height: 1.5),
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(
