@@ -83,7 +83,7 @@ class _SplashScreenState extends State<SplashScreen>
                 child: Text(
                   'FLUDGET',
                   style: TextStyle(
-                    color: Colors.white,
+                    // color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: animation1!.value,
                   ),
