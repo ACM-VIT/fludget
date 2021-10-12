@@ -128,7 +128,7 @@ class DismissibleDescription extends StatelessWidget {
         Container(
           child: Text(
             "Ever wondered how flutter handles the call or message gesture animation you often see in Samsung phones? Say hi to the Dismissible Widget. This widget provides you beautiful swipe animations to remove any ListTile or list element from a List. Just Wrap the ListView widget in a Dismissible Widget and you are golden !",
-            style: TextStyle(fontSize: 18, color: Colors.white),
+            style: TextStyle(fontSize: 18),
           ),
         ),
         SizedBox(
@@ -136,7 +136,7 @@ class DismissibleDescription extends StatelessWidget {
         ),
         Container(
             child: Text("Example :",
-                style: TextStyle(fontSize: 18, color: Colors.white))),
+                style: TextStyle(fontSize: 18))),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.05,
         ),
@@ -160,7 +160,7 @@ class DismissibleDescription extends StatelessWidget {
                   Divider()
                 ],
               ),
-            ) ''', style: TextStyle(fontSize: 18, color: Colors.orange)),
+            ) ''', style: TextStyle(fontSize: 18)),
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.45,
@@ -168,7 +168,7 @@ class DismissibleDescription extends StatelessWidget {
         Container(
           child: Text(
               "It also has an \" onDismissed \" property which lets you call setState method inside it incase you want to edit any sort of collection or user inerfaces present in the code",
-              style: TextStyle(fontSize: 18, color: Colors.white)),
+              style: TextStyle(fontSize: 18)),
         ),
       ]),
     );

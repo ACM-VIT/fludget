@@ -14,7 +14,6 @@ class RichTextWidgetState extends State<RichTextWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[900],
         body:
         Container(
               child: Padding(
@@ -79,17 +78,14 @@ class RichTextWidgetDescription extends StatelessWidget {
             children: [
                       Text(
                       "RichText Widget \n",
-                      style: TextStyle(
-                        fontSize: 26.0,
-                        color: Colors.white,
-                      ),
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
               RichText(
                 text: new TextSpan(
                   // Note: Styles for TextSpans must be explicitly defined.
                   // Child text spans will inherit styles from parent
                   style: new TextStyle(
-                      fontSize: 14.0, color: Colors.white, height: 1.2),
+                      fontSize: 14.0, height: 1.2),
                   children: <TextSpan>[
                     TextSpan(
                       text:
@@ -99,7 +95,6 @@ class RichTextWidgetDescription extends StatelessWidget {
                         text: '\n\nSyntax\n\n',
                         style: TextStyle(
                           fontSize: 22.0,
-                          color: Colors.white,
                         )),
                     TextSpan(
                         text: "Add the RichText() widget \n "

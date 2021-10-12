@@ -23,7 +23,6 @@ class _ColourFilteredWidgetState extends State<ColourFilteredWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: ListView(
         children: [
           Stack(
@@ -55,7 +54,6 @@ class _ColourFilteredWidgetState extends State<ColourFilteredWidget> {
         child: ColorFiltered(
           colorFilter: ColorFilter.mode(primaryColor, mode),
           child: Container(
-            color: Colors.grey[900],
             child: Transform.translate(
               offset: Offset(35, -25),
               child: Transform.rotate(
@@ -131,7 +129,7 @@ class ColourFilteredWidgetDescription extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Text(
           'ColourFiltered widget applies a function independently to each pixel to the content of child according to the ColorFilter specified. Use the ColorFilter.mode constructor to apply a Color using a BlendMode.',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );

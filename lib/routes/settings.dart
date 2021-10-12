@@ -1,3 +1,6 @@
+import 'dart:js';
+
+import 'package:fludget/themes/theme_switch.dart';
 import 'package:flutter/material.dart';
 
 class SettingsWidget extends StatelessWidget {
@@ -6,14 +9,15 @@ class SettingsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Colors.grey[900],
+        color: Theme.of(context).backgroundColor,
         child: ListView(
           children: <Widget>[
             buildMenuItem(
               text: 'Settings',
               icon: Icons.settings,
             ),
-            Divider(color: Colors.orange[900])
+            Divider(color: Theme.of(context).primaryColor),
+            ThemeSwitch(),
           ],
         ),
       ),
@@ -24,13 +28,10 @@ class SettingsWidget extends StatelessWidget {
     required String text,
     required IconData icon,
   }) {
-    final colour = Colors.orange[900];
-    final hoverColour = Colors.white70;
 
     return ListTile(
-      leading: Icon(icon, color: colour),
-      title: Text(text, style: TextStyle(color: Colors.white, fontSize: 20)),
-      hoverColor: hoverColour,
+      leading: Icon(icon),
+      title: Text(text, style: TextStyle(fontSize: 20)),
       onTap: () {},
     );
   }

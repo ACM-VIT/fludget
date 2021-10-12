@@ -1,4 +1,3 @@
-import 'package:fludget/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,21 +15,19 @@ class SnackBarImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: backroundColor,
         body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
-                child: Text("This is the Snackbar Widget",style: TextStyle(color: Colors.white),),
+                child: Text("This is the Snackbar Widget"),
               ),
               SizedBox(height:20.0),
               ElevatedButton(
                   child: Text("Open Snackbar"),
                   onPressed:(){
                     final snackBarDemo = SnackBar(
-                        content:  Text("This is a SnackBar Demo !",style: TextStyle(color: Colors.black),),
+                        content:  Text("This is a SnackBar Demo !"),
                         duration: Duration(seconds:3),
-                        backgroundColor: Colors.white,
                         action: SnackBarAction(label:"CLOSE",onPressed:(){})
                     );
                     ScaffoldMessenger.of(context).showSnackBar(snackBarDemo);
@@ -57,15 +54,13 @@ class SnackBarDescription extends StatelessWidget {
               'SnackBar Widget \n',
               style: TextStyle(
                 fontSize: 26.0,
-                color: Colors.white,
               ),
             ),
             RichText(
               text: new TextSpan(
                 // Note: Styles for TextSpans must be explicitly defined.
                 // Child text spans will inherit styles from parent
-                style: new TextStyle(
-                    fontSize: 14.0, color: Colors.white, height: 1.2),
+                style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
                   TextSpan(
                     text: 'Snackbar in Flutter is a widget showing the lightweight message that briefly '

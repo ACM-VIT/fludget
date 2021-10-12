@@ -98,7 +98,6 @@ class _TransformImplementationState extends State<TransformImplementation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
       body: Column(
         children: [
           Padding(
@@ -111,7 +110,6 @@ class _TransformImplementationState extends State<TransformImplementation> {
               "Slide the slider to test the transforms below",
               style: TextStyle(
                 fontSize: 15,
-                color: Colors.white,
               ),
             ),
           ),
@@ -153,7 +151,6 @@ class TransformDescription extends StatelessWidget {
         4. Transform.translate [Moves the object according to the co-ordinates specified]
         """,
         style: TextStyle(
-          color: Colors.white,
           fontSize: 15,
         ),
       )),

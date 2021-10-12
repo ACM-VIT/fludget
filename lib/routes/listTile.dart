@@ -38,7 +38,6 @@ class _ListTileSampleState extends State<ListTileSample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: ListView(
         children: [
           Padding(
@@ -108,7 +107,7 @@ class _ListTileDescriptionState extends State<ListTileDescription> {
       child: Container(
         child: Text(
             "A list tile contains one to three lines of text optionally flanked by icons or other widgets, such as check boxes. The icons (or other widgets) for the tile are defined with the leading and trailing parameters. The first line of text is not optional and is specified with title. The value of subtitle, which is optional, will occupy the space allocated for an additional line of text, or two lines if isThreeLine is true",
-            style: TextStyle(color: Colors.white)),
+        ),
       ),
     );
   }

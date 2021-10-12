@@ -6,12 +6,11 @@ class ElevatedButtonImplimentation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Center(
         child: ElevatedButton(
                   onPressed: () => _message(context),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.orange[900],
+                    primary: Theme.of(context).primaryColor,
                   ),
                   child: Text("Elevated Button")),
         
@@ -33,7 +32,7 @@ class ElevatedButtonDescription extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: Text(
           "Elevated Button is one of Material Design's buttons whose characteristic is the elevation increases when it's being pressed by the user",
-          style: TextStyle(color: Colors.white,
+          style: TextStyle(
           fontSize: 20),
         ),
       ),

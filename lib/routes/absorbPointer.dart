@@ -21,7 +21,6 @@ class _AbsorbPointerWidgetState extends State<AbsorbPointerWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
@@ -59,11 +58,9 @@ class _AbsorbPointerWidgetState extends State<AbsorbPointerWidget> {
                     _incrementCounter();
                     final snackbar = SnackBar(
                       content: Text(
-                        'Button is Pressed.',
-                        style: TextStyle(color: Colors.black),
+                        'Button is Pressed.'
                       ),
                       duration: Duration(seconds: 1),
-                      backgroundColor: Colors.white,
                       action: SnackBarAction(
                         label: "Close",
                         onPressed: () {},
@@ -155,7 +152,7 @@ class AbsorbPointerWidgetDescription extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Text(
           'AbsorbPointer is a built-in widget in flutter which absorbs pointer, in other words, it prevents its subtree from being clicked, tapped, scrolled, dragged, and respond to hover. ',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );

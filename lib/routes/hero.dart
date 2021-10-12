@@ -79,7 +79,7 @@ class HeroWidgetDescription extends StatelessWidget {
                 '\n- Create a hero animation using Flutter’s Hero widget.'
                 '\n- The Hero widget in Flutter implements a style of animation commonly'
                 ' known as shared element transitions or shared element animations.',
-            style: TextStyle(color: Colors.white),
+            style: Theme.of(context).textTheme.bodyText1,
           )
         ]),
       ),

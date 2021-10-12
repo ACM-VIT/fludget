@@ -14,7 +14,6 @@ class _ListWheelScrollViewWidgetState extends State<ListWheelScrollViewWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: ListWheelScrollView(
         offAxisFraction: -0.4,
         useMagnifier: true,
@@ -34,7 +33,7 @@ class _ListWheelScrollViewWidgetState extends State<ListWheelScrollViewWidget> {
               child: Text(
                 "Item $index",
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontSize: 50),
+                style: TextStyle(fontSize: 50),
               ),
             ),
           ),
@@ -56,15 +55,11 @@ class ListWheelScrollViewDescription extends StatelessWidget {
           children: [
             Text(
               "ListWheelScrollView Widget \n",
-              style: TextStyle(fontSize: 26, color: Colors.white),
+              style: TextStyle(fontSize: 26),
             ),
             RichText(
               text: TextSpan(
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.white,
-                    height: 1.2,
-                  ),
+                  style: Theme.of(context).textTheme.bodyText1,
                   children: [
                     TextSpan(
                       text:
