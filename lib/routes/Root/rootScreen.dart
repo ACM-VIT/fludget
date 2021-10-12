@@ -1,16 +1,11 @@
+import 'package:fludget/Models/widgetModel.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class RootScreen extends StatefulWidget {
-  final Widget widgetImplementation;
-  final Widget widgetDescription;
-  final String widgetName;
+  final WidgetModel item;
 
-  RootScreen({
-    Key? key,
-    required this.widgetImplementation,
-    required this.widgetName,
-    required this.widgetDescription,
-  }) : super(key: key);
+  RootScreen(this.item, {Key? key}) : super(key: key);
 
   @override
   _RootScreenState createState() => _RootScreenState();
@@ -24,7 +19,7 @@ class _RootScreenState extends State<RootScreen> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.orange[900],
-          title: Text(widget.widgetName),
+          title: Text(widget.item.name),
           bottom: TabBar(
             tabs: [
               Tab(text: 'Implementation'),
@@ -34,8 +29,8 @@ class _RootScreenState extends State<RootScreen> {
         ),
         body: TabBarView(
           children: [
-            widget.widgetImplementation,
-            buildWidgetDescription(widget.widgetDescription),
+            widget.item.implementation,
+            buildDescription(widget.item.description, widget.item.link),
           ],
         ),
       ),
@@ -43,9 +38,22 @@ class _RootScreenState extends State<RootScreen> {
   }
 }
 
-Widget buildWidgetDescription(Widget widgetDescription) {
+_launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+Widget buildDescription(Widget widgetDescription, String link) {
   return Scaffold(
     backgroundColor: Colors.grey[900],
     body: widgetDescription,
+    floatingActionButton: FloatingActionButton(
+      onPressed: () => _launchURL(link),
+      child: Icon(Icons.link),
+      backgroundColor: Colors.orange[900],
+    ),
   );
 }

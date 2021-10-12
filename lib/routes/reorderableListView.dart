@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ReOrderableListViewSample extends StatelessWidget {
-  const ReOrderableListViewSample({Key? key}) : super(key: key);
+class ReOrderableListViewImplementation extends StatelessWidget {
+  const ReOrderableListViewImplementation({Key? key}) : super(key: key);
 
   static const String _title = 'Flutter Code Sample';
 
