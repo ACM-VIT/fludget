@@ -18,7 +18,7 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            backgroundColor: Colors.grey[900],
+            backgroundColor: Theme.of(context).colorScheme.background,
             pinned: _pinned,
             snap: _snap,
             floating: _floating,
@@ -57,7 +57,7 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
       ),
       bottomNavigationBar: BottomAppBar(
         elevation: 5,
-        color: Colors.grey[900],
+        color: Theme.of(context).colorScheme.background,
         child: Padding(
           padding: const EdgeInsets.all(8),
           child: OverflowBar(
