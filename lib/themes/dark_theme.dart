@@ -10,4 +10,7 @@ class DarkTheme implements FludgetTheme {
 
   @override
   Color fontColor = Colors.white;
+
+  @override
+  Color secondaryColor = Colors.grey[800] ?? Colors.grey;
 }
