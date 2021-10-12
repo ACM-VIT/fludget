@@ -6,7 +6,7 @@ class LightTheme implements FludgetTheme {
   Color backgroundColor = Colors.white;
 
   @override
-  Color accentColor = Colors.blue;
+  Color accentColor = Color(0xFFBB7FF8);
 
   @override
   Color fontColor = Colors.black;
