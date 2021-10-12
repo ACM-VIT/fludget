@@ -172,12 +172,15 @@ class HomePageState extends State<HomePage> {
 
   ListView getWidgetList(String filter, BuildContext context) {
 
+    List<WidgetModel> widgetList = List.from(widgets);
+    widgetList.sort((a, b) => a.name.compareTo(b.name));
+
     return ListView(
       padding: EdgeInsets.symmetric(vertical: 10.0),
       children: filterWidgets(
           (_selectedCategory == null)
-              ? widgets
-              : widgets
+              ? widgetList
+              : widgetList
                   .where(
                       (element) => element.category.contains(_selectedCategory))
                   .toList(),
@@ -186,7 +189,8 @@ class HomePageState extends State<HomePage> {
     );
   }
 
-  List<Widget> filterWidgets(List<WidgetModel> widgets, String filter, BuildContext context) {
+  List<Widget> filterWidgets(
+      List<WidgetModel> widgets, String filter, BuildContext context) {
     List<WidgetModel> filtered = [];
 
     widgets.forEach((item) {
