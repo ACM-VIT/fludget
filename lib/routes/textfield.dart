@@ -8,7 +8,6 @@ class TextFieldImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: [
@@ -141,7 +140,7 @@ class TextFielDescription extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Text(
           'TextField is a widget  which we can use to validate user input in flutter and also acheive better user experience by providing input guidance. ',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );

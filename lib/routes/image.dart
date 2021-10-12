@@ -36,10 +36,6 @@ class _ImageImplementationState extends State<ImageImplementation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Image"),
-      // ),
-      backgroundColor: Colors.grey[900],
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -50,7 +46,6 @@ class _ImageImplementationState extends State<ImageImplementation> {
               Text(
                 "Image from assets:",
                 style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -59,7 +54,6 @@ class _ImageImplementationState extends State<ImageImplementation> {
               Text(
                 "Image from internet:",
                 style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -73,7 +67,6 @@ class _ImageImplementationState extends State<ImageImplementation> {
               Text(
                 "Image from file",
                 style: const TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -116,7 +109,6 @@ class _ImageImplementationState extends State<ImageImplementation> {
                             Text(
                               "Click here to pick a image",
                               style: const TextStyle(
-                                color: Colors.white,
                               ),
                             ),
                             const SizedBox(
@@ -137,7 +129,6 @@ class _ImageImplementationState extends State<ImageImplementation> {
               Text(
                 "Image from memory",
                 style: const TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -176,7 +167,6 @@ class ImageDescription extends StatelessWidget {
     return Center(
       child: Text(
         'Image Description Here',
-        style: TextStyle(color: Colors.white),
       ),
     );
   }

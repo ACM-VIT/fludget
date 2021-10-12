@@ -6,14 +6,13 @@ class OutlinedButtonImplimentation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Center(
         child: OutlinedButton(
                     onPressed: () => _message(context),
                     style: OutlinedButton.styleFrom(
-                      primary: Colors.orange[900],
+                      primary: Theme.of(context).primaryColor,
                       side: BorderSide(
-                        color: Colors.orange[900]!,
+                        color: Theme.of(context).primaryColor,
                       ),
                     ),
                     child: Text("Outlined Button")),
@@ -35,7 +34,7 @@ class OutlinedButtonDescription extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: Text(
           'Outlined Button essentially a TextButton with an outlined border.',
-          style: TextStyle(color: Colors.white,
+          style: TextStyle(
           fontSize: 20),
         ),
       ),

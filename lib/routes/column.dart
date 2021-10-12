@@ -13,10 +13,6 @@ class _ColumnImplementationState extends State<ColumnImplementation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Column"),
-      // ),
-      backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
@@ -43,7 +39,6 @@ class _ColumnImplementationState extends State<ColumnImplementation> {
                       },
                       hint: Text(
                         _mainAxisAlignment.toString(),
-                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ),
@@ -65,7 +60,6 @@ class _ColumnImplementationState extends State<ColumnImplementation> {
                       },
                       hint: Text(
                         _crossAxisAlignment.toString(),
-                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ),
@@ -123,7 +117,6 @@ class ColumnDescription extends StatelessWidget {
     return Center(
       child: Text(
         'Column Description Here',
-        style: TextStyle(color: Colors.white),
       ),
     );
   }

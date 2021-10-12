@@ -6,7 +6,6 @@ class FloatingActionButtonImplimentation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -16,14 +15,13 @@ class FloatingActionButtonImplimentation extends StatelessWidget {
                 child: Text(
                   "Floating Action Button:",
                   style: TextStyle(
-                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
               FloatingActionButton(
                 onPressed: () => _message(context),
-                backgroundColor: Colors.orange[900],
+                backgroundColor: Theme.of(context).primaryColor,
                 tooltip: ("Hold to show tooltip"),
                 child: Icon(
                   Icons.add,
@@ -51,7 +49,7 @@ class FloatingActionButtonDescription extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: Text(
           "A floating action button is a circular icon button that hovers over content to promote a primary action in the application.",
-          style: TextStyle(color: Colors.white,
+          style: TextStyle(
           fontSize: 20),
         ),
       ),

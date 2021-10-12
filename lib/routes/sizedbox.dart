@@ -13,7 +13,6 @@ class _SizedboxImplementationState extends State<SizedboxImplementation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -28,7 +27,6 @@ class _SizedboxImplementationState extends State<SizedboxImplementation> {
                       child: Text(
                         'Below Image is a child of Sized Box',
                         style: TextStyle(
-                          color: Colors.white,
                           fontSize: 20,
                         ),
                       ),
@@ -74,7 +72,6 @@ class _SizedboxImplementationState extends State<SizedboxImplementation> {
                 child: Text(
                   'Change Dimensions of Sized Box',
                   style: TextStyle(
-                    color: Colors.white,
                     fontSize: 20,
                   ),
                 )),
@@ -89,7 +86,6 @@ class _SizedboxImplementationState extends State<SizedboxImplementation> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 20,
-                    color: Colors.white,
                   ),
                 ),
               ),
@@ -104,7 +100,6 @@ class _SizedboxImplementationState extends State<SizedboxImplementation> {
                   child: Text(
                     'Box 1',
                     style: TextStyle(
-                      color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
@@ -125,7 +120,6 @@ class _SizedboxImplementationState extends State<SizedboxImplementation> {
                   child: Text(
                     'Box 2',
                     style: TextStyle(
-                      color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
@@ -149,7 +143,7 @@ class SizedboxDescription extends StatelessWidget {
       padding: const EdgeInsets.only(top: 22.0, left: 15, right: 15),
       child: Text(
         'SizedBox is a built-in widget in flutter SDK. It is a simple box with a specified size. It can be used to set size constraints to the child widget, put an empty SizedBox between the two widgets to get some space in between, or something else. It is somewhat similar to a Container widget with fewer properties.',
-        style: TextStyle(color: Colors.white, fontSize: 20),
+        style: TextStyle(fontSize: 20),
       ),
     );
   }

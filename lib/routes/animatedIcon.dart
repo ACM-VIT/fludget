@@ -18,7 +18,6 @@ class _AnimatedIconSampleState extends State<AnimatedIconSample> with TickerProv
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Center(
@@ -47,7 +46,6 @@ class _AnimatedIconSampleState extends State<AnimatedIconSample> with TickerProv
       child: AnimatedIcon(
         icon: icon,
         size: 75.0,
-        color: Colors.white,
         progress: controller,
       ),
     );
@@ -69,13 +67,11 @@ class AnimatedIconDescription extends StatelessWidget {
               'AnimatedIcon Widget \n',
               style: TextStyle(
                 fontSize: 26.0,
-                color: Colors.white,
               ),
             ),
             RichText(
               text: new TextSpan(
-                style: new TextStyle(
-                    fontSize: 14.0, color: Colors.white, height: 1.2),
+                style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
                   TextSpan(
                     text: 'An AnimatedIcon widget is an icon that can be animated using an AnimationController in response to '
@@ -91,7 +87,6 @@ class AnimatedIconDescription extends StatelessWidget {
                       text: '\n\nExample \n\n',
                       style: TextStyle(
                         fontSize: 22.0,
-                        color: Colors.white,
                       )),
                   TextSpan(
                       text: 'AnimationController controller = AnimationController(\n'

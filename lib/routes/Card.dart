@@ -10,11 +10,6 @@ class CardImplementation extends StatefulWidget {
 class _CardImplementationState extends State<CardImplementation> {
   @override
   Widget build(BuildContext context) => Scaffold(
-        // appBar: AppBar(
-        // backgroundColor: Colors.orange[900],
-        //title: Text(" Card "),
-        // ),
-        backgroundColor: Colors.grey[900],
         body: ListView(
           padding: EdgeInsets.all(16),
           children: [
@@ -96,7 +91,6 @@ class _CardImplementationState extends State<CardImplementation> {
                 'Colored card',
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -105,7 +99,6 @@ class _CardImplementationState extends State<CardImplementation> {
                 'This card is rounded and has a gradient',
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.white,
                 ),
               ),
             ],
@@ -142,7 +135,6 @@ class _CardImplementationState extends State<CardImplementation> {
               'Card With Splash',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
                 fontSize: 24,
               ),
             ),
@@ -174,7 +166,6 @@ class _CardImplementationState extends State<CardImplementation> {
                     'Cats rule the world!',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
                       fontSize: 24,
                     ),
                   ),
@@ -214,7 +205,6 @@ class CardDescription extends StatelessWidget {
     return Center(
       child: Text(
         ' Card Description Here',
-        style: TextStyle(color: Colors.white),
       ),
     );
   }
