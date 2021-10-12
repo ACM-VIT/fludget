@@ -18,6 +18,15 @@ class SettingsWidget extends StatelessWidget {
             ),
             Divider(color: Theme.of(context).primaryColor),
             ThemeSwitch(),
+            ListTile(
+              leading: FlutterLogo(size: 24.0,),
+              title: Text("Flutter Widgets"),
+              onTap: (){
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                WidgetsDoc()));
+              },
+            )
           ],
         ),
       ),
