@@ -12,6 +12,7 @@ import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
+import 'package:fludget/routes/cupertinoActionSheet.dart';
 import 'package:fludget/routes/container.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
@@ -337,6 +338,13 @@ const List<WidgetModel> widgets = [
     implementation: IndexedStackImplemention(),
     description: IndexedStackDescription(),
     category: [WidgetCategoy.Layout],
+  ),
+  WidgetModel(
+    name: "CupertinoActionSheet",
+    link: "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
+    implementation: CupertinoActionSheetImplementation(),
+    description: CupertinoActionSheetDescription(),
+    category: [WidgetCategoy.Cupertino,WidgetCategoy.Material]
   ),
   WidgetModel(
     name: "AnimatedIcon",
