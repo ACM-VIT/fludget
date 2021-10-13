@@ -6,6 +6,7 @@ import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
 import 'package:fludget/routes/animatedIcon.dart';
+import 'package:fludget/routes/animatedList.dart';
 import 'package:fludget/routes/appbar.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
@@ -393,5 +394,13 @@ const List<WidgetModel> widgets = [
     implementation: appbarsample(),
     description: appbardescription(),
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
+  ),
+  WidgetModel(
+    name: "Animated List",
+    subtitle: "Implementation of Animated List Widget",
+    link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
+    implementation: AnimatedListWidget(),
+    description: AnimatedListDescription(),
+    category: [WidgetCategoy.Animation],
   ),
 ];
