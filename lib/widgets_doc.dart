@@ -19,7 +19,7 @@ class _WidgetsDocState extends State<WidgetsDoc> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
-        title: Text("Flutter Widgets"),
+        title: Text("Widget Library"),
       ),
       body: Stack(
         children: [
