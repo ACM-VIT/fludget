@@ -10,4 +10,7 @@ class LightTheme implements FludgetTheme {
 
   @override
   Color fontColor = Colors.black;
+
+  @override
+  Color secondaryColor = Colors.grey[800] ?? Colors.grey;
 }

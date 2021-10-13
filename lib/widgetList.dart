@@ -35,6 +35,7 @@ import 'package:fludget/routes/refreshIndicator.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
+import 'package:fludget/routes/scrollbar.dart';
 
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
@@ -393,5 +394,13 @@ const List<WidgetModel> widgets = [
     implementation: appbarsample(),
     description: appbardescription(),
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
+  ),
+  WidgetModel(
+    name: "ScrollBar",
+    subtitle: "Implementation of ScrollBar Widget",
+    link: "https://api.flutter.dev/flutter/material/Scrollbar-class.html",
+    implementation: ScrollBarImplementation(),
+    description: ScrollBarDescription(),
+    category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
   ),
 ];

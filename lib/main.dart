@@ -1,4 +1,3 @@
-import 'package:fludget/homepage.dart';
 import 'package:fludget/themes/theme_factory.dart';
 import 'package:fludget/themes/theme_provider.dart';
 import 'package:flutter/material.dart';
@@ -25,24 +24,24 @@ class _MyAppState extends State<MyApp> {
   }
 
   void getCurrentAppTheme() async {
-    themeChangeProvider.theme = await themeChangeProvider.themePreference.getTheme();
+    themeChangeProvider.theme =
+        await themeChangeProvider.themePreference.getTheme();
   }
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-        create: (_) {
-          return themeChangeProvider;
-        },
-        child: Consumer<ThemeProvider>(
+      create: (_) {
+        return themeChangeProvider;
+      },
+      child: Consumer<ThemeProvider>(
           builder: (BuildContext context, value, Widget? child) {
-            return MaterialApp(
-              title: 'Fludget',
-              theme: ThemeFactory.getTheme(themeChangeProvider.themeMode),
-              home: SplashScreen(),
-            );
-          }
-        ),
+        return MaterialApp(
+          title: 'Fludget',
+          theme: ThemeFactory.getTheme(themeChangeProvider.themeMode),
+          home: SplashScreen(),
+        );
+      }),
     );
   }
 }
