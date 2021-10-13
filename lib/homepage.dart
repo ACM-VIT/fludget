@@ -7,6 +7,8 @@ import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/column.dart';
+import 'package:fludget/routes/cupertinoActionSheet.dart';
+import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggable_scrollable_sheet.dart';
@@ -132,6 +134,13 @@ class HomePageState extends State<HomePage> {
         description: StackDescription(),
         link: "https://api.flutter.dev/flutter/widgets/Stack-class.html",
       ),
+      WidgetModel(
+          name: "Cupertino Action Sheet",
+          link:
+              "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
+          implementation: CupertinoActionSheetImplementation(),
+          subtitle: "iOS Alert Dialog, Action Sheet, Action Modal Sheet",
+          description: CupertinoActionSheetDescription()),
       WidgetModel(
         name: "Text",
         implementation: TextImplementation(),
@@ -262,7 +271,6 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
       ),
       WidgetModel(
-
         name: "CheckboxListTile",
         subtitle: "A ListTile with a Checkbox",
         implementation: CheckboxListTileWidget(),
@@ -331,11 +339,11 @@ class HomePageState extends State<HomePage> {
           implementation: LinearProgressIndicatorSample(),
           description: LinearProgressIndicatorDescription()),
       WidgetModel(
-          name: "Circular Progress Indicator",
-          link:
-              "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
-          implementation: CircularProgressIndicatorSample(),
-          description: CircularProgressIndicatorDescription(),
+        name: "Circular Progress Indicator",
+        link:
+            "https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html",
+        implementation: CircularProgressIndicatorSample(),
+        description: CircularProgressIndicatorDescription(),
       ),
     ];
 
