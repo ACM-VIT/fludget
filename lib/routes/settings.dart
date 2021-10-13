@@ -20,7 +20,8 @@ class SettingsWidget extends StatelessWidget {
             ThemeSwitch(),
             ListTile(
               leading: FlutterLogo(size: 24.0,),
-              title: Text("Flutter Widgets"),
+              trailing: Icon(Icons.arrow_forward_ios_rounded),
+              title: Text("Official Documentation"),
               onTap: (){
                 Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context) =>
