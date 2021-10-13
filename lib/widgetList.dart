@@ -2,6 +2,7 @@ import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/FutureBuilder.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
@@ -90,6 +91,12 @@ const List<WidgetModel> widgets = [
       description: SizedboxDescription(),
       link: "https://api.flutter.dev/flutter/widgets/SizedBox-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics]),
+  WidgetModel(
+      name: "Future Builder",
+      implementation: FutureBuilderImplementation(),
+      description: FutureBuilderDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html",
+      category: [WidgetCategoy.Layout, WidgetCategoy.Async]),
   WidgetModel(
       name: "Icon",
       implementation: IconImplementation(),
