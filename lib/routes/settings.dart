@@ -1,5 +1,5 @@
 // import 'dart:js';
-import 'package:fludget/widget_doc.dart';
+import 'package:fludget/widgets_doc.dart';
 import 'package:fludget/themes/theme_switch.dart';
 import 'package:flutter/material.dart';
 
