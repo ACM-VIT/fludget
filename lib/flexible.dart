@@ -62,9 +62,7 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
                 margin: EdgeInsets.only(top: 30, bottom: 0),
                 child: Text(
                   "fit : Flexfit.loose",
-                  style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
               ),
               Container(
@@ -104,9 +102,7 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
                 child: ListTile(
                   title: Text(
                     "\'flex : 2\' of Blue box , fit : FlexFit.tight",
-                    style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                   subtitle: Text(
@@ -153,16 +149,11 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
                 child: ListTile(
                   title: Text(
                     "\'flex : 2\' of Blue box , fit : FlexFit.loose",
-                    style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                   subtitle: Text(
                     "Despite of giving flex as 2 to the blue box , it still dosen't grow in size because we have kept fit as FlexFit.loose",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -204,9 +195,7 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
                 child: ListTile(
                   title: Text(
                     "\'flex : 2\' of Blue box , fit : FlexFit.tight",
-                    style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                   subtitle: Text(
