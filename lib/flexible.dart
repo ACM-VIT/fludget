@@ -13,7 +13,7 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.grey[900],
+          color: Theme.of(context).backgroundColor,
           child: Column(
             children: [
               Container(
@@ -21,7 +21,6 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
                 child: Text(
                   "fit : Flexfit.tight",
                   style: TextStyle(
-                    color: Colors.white,
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                   ),
@@ -65,7 +64,6 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
                   "fit : Flexfit.loose",
                   style: TextStyle(
                       fontSize: 22,
-                      color: Colors.white,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -108,16 +106,12 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
                     "\'flex : 2\' of Blue box , fit : FlexFit.tight",
                     style: TextStyle(
                         fontSize: 22,
-                        color: Colors.white,
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                   subtitle: Text(
                     "In this Flexible box we have given flex as 2 and fit as Flexfit.tight . However if we had specified fit as Flexfit.loose or hadn't given the fit argument at all , the Blue box wouldn't have taken twice its minimum space.",
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
                   ),
                 ),
               ),
@@ -161,7 +155,6 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
                     "\'flex : 2\' of Blue box , fit : FlexFit.loose",
                     style: TextStyle(
                         fontSize: 22,
-                        color: Colors.white,
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
@@ -213,16 +206,12 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
                     "\'flex : 2\' of Blue box , fit : FlexFit.tight",
                     style: TextStyle(
                         fontSize: 22,
-                        color: Colors.white,
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                   subtitle: Text(
                     "Now if we give fit as 2 to two boxes , namely blue and green , instead of overflowing , the two boxes adjust themselves and the result is that their size is a bit less than twice the minimum length , in order to fit both of them inside the container.",
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
                   ),
                 ),
               ),
@@ -284,7 +273,6 @@ Using a Flexible widget gives a child of a Row, Column, or Flex the flexibility 
 A Flexible widget must be a descendant of a Row, Column, or Flex, and the path from the Flexible widget to its enclosing Row, Column, or Flex must contain only StatelessWidgets or StatefulWidgets (not other kinds of widgets, like RenderObjectWidgets).
         """,
         style: TextStyle(
-          color: Colors.white,
           fontSize: 15,
         ),
       )),

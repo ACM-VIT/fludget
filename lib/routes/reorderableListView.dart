@@ -28,9 +28,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     final Color oddItemColor =
-        Colors.orange[900]?.withOpacity(0.05) ?? Colors.orange;
+        Theme.of(context).primaryColor.withOpacity(0.05);
     final Color evenItemColor =
-        Colors.orange[900]?.withOpacity(0.15) ?? Colors.orange;
+        Theme.of(context).primaryColor.withOpacity(0.15);
 
     return ReorderableListView(
       children: <Widget>[
@@ -72,7 +72,7 @@ class ReOrderableListViewDescription extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Text(
           desc,
-          style: TextStyle(color: Colors.white, fontSize: 16),
+          style: TextStyle(fontSize: 16),
         ),
       ),
     );

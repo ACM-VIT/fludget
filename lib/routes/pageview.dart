@@ -39,7 +39,6 @@ class _pageViewSampleState extends State<pageViewSample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: PageView(
         scrollDirection: Axis.vertical,
         controller: controller,
@@ -47,18 +46,18 @@ class _pageViewSampleState extends State<pageViewSample> {
           Center(
             child: Text(
                 "This is the First Page. Please Swipe UP to see more pages",
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: TextStyle(fontSize: 20),
                 textAlign: TextAlign.center),
           ),
           Center(
             child: Text(
                 "This is the Second Page. Please Swipe UP to see more pages",
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: TextStyle(fontSize: 20),
                 textAlign: TextAlign.center),
           ),
           Center(
             child: Text("This is the Third Page",
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: TextStyle(fontSize: 20),
                 textAlign: TextAlign.center),
           ),
         ],
@@ -81,7 +80,6 @@ class _PageViewDescriptionState extends State<PageViewDescription> {
         child: Container(
             child: Text(
       "A scrollable list that works page by page.Each child of a page view is forced to be the same size as the viewport.",
-      style: TextStyle(color: Colors.white),
     )));
   }
 }

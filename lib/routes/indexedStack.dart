@@ -120,15 +120,13 @@ class IndexedStackDescription extends StatelessWidget {
               'IndexedStack Widget \n',
               style: TextStyle(
                 fontSize: 26.0,
-                color: Colors.white,
               ),
             ),
             RichText(
               text: new TextSpan(
                 // Note: Styles for TextSpans must be explicitly defined.
                 // Child text spans will inherit styles from parent
-                style: new TextStyle(
-                    fontSize: 14.0, color: Colors.white, height: 1.2),
+                style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
                   TextSpan(
                       text:
@@ -154,7 +152,6 @@ class IndexedStackDescription extends StatelessWidget {
                       text: '\n\nExample \n\n',
                       style: TextStyle(
                         fontSize: 22.0,
-                        color: Colors.white,
                       )),
                   TextSpan(
                       text: 'IndexedStack(\n'

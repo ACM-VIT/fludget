@@ -46,12 +46,10 @@ class _AnimatedBuilderWidgetState extends State<AnimatedBuilderWidget>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: [
           ListTile(
-            tileColor: Colors.white,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)),
             leading: Icon(Icons.fiber_manual_record),
@@ -66,7 +64,7 @@ class _AnimatedBuilderWidgetState extends State<AnimatedBuilderWidget>
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 120.0, vertical: 20.0),
               child: Container(
-                color: Colors.orange[900],
+                color: Theme.of(context).primaryColor,
                 width: 125,
                 height: 125,
                 alignment: Alignment.center,
@@ -79,7 +77,6 @@ class _AnimatedBuilderWidgetState extends State<AnimatedBuilderWidget>
           ),
           const SizedBox(height: 40),
           ListTile(
-            tileColor: Colors.white,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)),
             leading: Icon(Icons.fiber_manual_record),
@@ -93,7 +90,7 @@ class _AnimatedBuilderWidgetState extends State<AnimatedBuilderWidget>
               animation: rotateAnimation,
               child: Container(
                 decoration:
-                    BoxDecoration(shape: BoxShape.circle, color: Colors.orange[900]),
+                    BoxDecoration(shape: BoxShape.circle, color: Theme.of(context).primaryColor),
                 width: 150,
                 height: 150,
                 alignment: Alignment.center,
@@ -124,7 +121,7 @@ class AnimatedBuilderDescription extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Text(
           'A general-purpose widget for building animations. AnimatedBuilder is useful for more complex widgets that wish to include an animation as part of a larger build function. To use AnimatedBuilder, simply construct the widget and pass it a builder function.',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );

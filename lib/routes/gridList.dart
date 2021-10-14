@@ -6,10 +6,6 @@ class GridListImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("GridList"),
-      // ),
-      backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Center(
@@ -61,7 +57,6 @@ class GridListDescription extends StatelessWidget {
     return Center(
       child: Text(
         'Grid List Description Here',
-        style: TextStyle(color: Colors.white),
       ),
     );
   }
