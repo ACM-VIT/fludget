@@ -36,6 +36,9 @@ class ThemeFactory {
       primaryIconTheme: IconThemeData(color: theme.fontColor),
       iconTheme: IconThemeData(color: theme.fontColor),
       snackBarTheme: SnackBarThemeData(actionTextColor: theme.accentColor),
+      progressIndicatorTheme: ProgressIndicatorThemeData(
+          circularTrackColor: theme.fontColor,
+          linearTrackColor: theme.fontColor),
     );
   }
 }

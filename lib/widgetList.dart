@@ -14,6 +14,7 @@ import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
 import 'package:fludget/routes/container.dart';
+import 'package:fludget/routes/cupertino_activity_indicator.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggableWidget.dart';
@@ -342,10 +343,19 @@ const List<WidgetModel> widgets = [
   ),
   WidgetModel(
     name: "CupertinoActionSheet",
-    link: "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
     implementation: CupertinoActionSheetImplementation(),
     description: CupertinoActionSheetDescription(),
-    category: [WidgetCategoy.Cupertino,WidgetCategoy.Material]
+    category: [WidgetCategoy.Cupertino, WidgetCategoy.Material],
+  ),
+  WidgetModel(
+    name: "Cupertino Activity Indicator",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoActivityIndicator-class.html",
+    implementation: CupertinoActivityIndicatorSample(),
+    description: CupertinoActivityIndicatorDescription(),
+    category: [WidgetCategoy.Cupertino],
   ),
   WidgetModel(
     name: "AnimatedIcon",
@@ -412,7 +422,6 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
   ),
   WidgetModel(
-
     category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
     name: "Sliver Grid",
     link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
@@ -427,5 +436,4 @@ const List<WidgetModel> widgets = [
     description: ScrollBarDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
   ),
-
 ];
