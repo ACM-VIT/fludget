@@ -38,6 +38,7 @@ import 'package:fludget/routes/row.dart';
 
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
+import 'package:fludget/routes/sliver_grid.dart';
 import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/spacer.dart';
 import 'package:fludget/routes/stack.dart';
@@ -394,4 +395,11 @@ const List<WidgetModel> widgets = [
     description: appbardescription(),
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
   ),
+  WidgetModel(
+    category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
+    name: "Sliver Grid",
+    link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
+    implementation: SliverGridSample(),
+    description: SliverGridDescription(),
+  )
 ];
