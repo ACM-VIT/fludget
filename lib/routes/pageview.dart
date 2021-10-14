@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class pageViewSample extends StatefulWidget {
   const pageViewSample({Key? key}) : super(key: key);
 
@@ -7,6 +8,7 @@ class pageViewSample extends StatefulWidget {
   _pageViewSampleState createState() => _pageViewSampleState();
 }
 
+// ignore: camel_case_types
 class _pageViewSampleState extends State<pageViewSample> {
   showAlertDialog(BuildContext context, String str) {
     // set up the button

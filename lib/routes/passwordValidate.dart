@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+// ignore: camel_case_types
 class password extends StatefulWidget {
   const password({Key? key}) : super(key: key);
 
@@ -170,6 +171,7 @@ class _HomePageState extends State<password> {
   }
 }
 
+// ignore: camel_case_types
 class passwordDescription extends StatelessWidget {
   const passwordDescription({Key? key}) : super(key: key);
 

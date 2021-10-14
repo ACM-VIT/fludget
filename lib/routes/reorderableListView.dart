@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class ReOrderableListViewImplementation extends StatelessWidget {
   const ReOrderableListViewImplementation({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Code Sample';
 
   @override
   Widget build(BuildContext context) {
