@@ -9,15 +9,74 @@ class AnimatedListWidget extends StatefulWidget {
 
 class _AnimatedListWidgetState extends State<AnimatedListWidget> {
   final items = List.from(Data.shoppingList);
-  final key = GlobalKey<AnimatedListState>();
+  final key1 = GlobalKey<AnimatedListState>();
+  final key2 = GlobalKey<AnimatedListState>();
+  bool ans = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AnimatedList(
-        key: key,
-        initialItemCount: items.length,
-        itemBuilder: (context, index, animation) =>
-            buildShoppingItemWidget(items[index], index, animation),
+      body: Column(
+        children: [
+           Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  ans==false?'Switch to Size Animation.':'Switch to Scale Animation.',
+                  style: TextStyle(fontSize: 19),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Switch(
+                    value: ans,
+                    onChanged: (value) {
+                      setState(() {
+                        ans = value;
+                      });
+                    }),
+              ],
+            ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                color: Colors.grey,
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(8),
+                      child: Text(
+                        ans == true
+                            ? "SizeAnimation is shown."
+                            : "ScaleAnimation is shown.",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 25,
+                            color: Colors.black),
+                      ),
+                    ),
+                    Expanded(
+                      child: AnimatedList(
+                        key: ans == true ? key1 : key2,
+                        initialItemCount: items.length,
+                        itemBuilder: (context, index, animation) => ans == true
+                            ? buildSizeItemWidget(
+                                items[index], index, animation)
+                            : buildScaleItemWidget(
+                                items[index], index, animation),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: insertItem,
@@ -30,11 +89,48 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
     );
   }
 
-  Widget buildShoppingItemWidget(
-          item, int index, Animation<double> animation) =>
+  Widget buildSizeItemWidget(item, int index, Animation<double> animation) =>
       SizeTransition(
         key: ValueKey(item.urlImage.toString()),
         sizeFactor: animation,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+          child: Card(
+            color: Colors.white,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            child: ListTile(
+              contentPadding: EdgeInsets.all(8),
+              leading: CircleAvatar(
+                radius: 32,
+                backgroundImage: NetworkImage(item.urlImage.toString()),
+              ),
+              title: Center(
+                child: Text(
+                  item.title.toString(),
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20),
+                ),
+              ),
+              trailing: IconButton(
+                icon: Icon(
+                  Icons.delete,
+                  color: Colors.deepOrangeAccent,
+                  size: 35,
+                ),
+                onPressed: () => removeItem(index),
+              ),
+            ),
+          ),
+        ),
+      );
+  Widget buildScaleItemWidget(item, int index, Animation<double> animation) =>
+      ScaleTransition(
+        key: ValueKey(item.urlImage.toString()),
+        scale: animation,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
           child: Card(
@@ -73,8 +169,11 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
   int lastRemoved = 0;
   void removeItem(int index) {
     final item = items.removeAt(index);
-    key.currentState?.removeItem(index,
-        (context, animation) => buildShoppingItemWidget(item, index, animation),
+    key1.currentState?.removeItem(index,
+        (context, animation) => buildSizeItemWidget(item, index, animation),
+        duration: Duration(milliseconds: 600));
+    key2.currentState?.removeItem(index,
+        (context, animation) => buildScaleItemWidget(item, index, animation),
         duration: Duration(milliseconds: 600));
     lastRemoved = index;
   }
@@ -83,6 +182,8 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
     final newIndex = lastRemoved;
     final newItem = (List.of(items)..shuffle()).first;
     items.insert(newIndex, newItem);
+    GlobalKey<AnimatedListState> key;
+    ans == true ? key = key1 : key = key2;
     key.currentState!.insertItem(newIndex,
         duration: Duration(
           milliseconds: 800,
