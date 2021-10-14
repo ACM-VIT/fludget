@@ -18,14 +18,12 @@ class _ToggleButtonImplementationState extends State<ToggleButtonImplementation>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body:
          Column(
           children: [
             Padding(padding: const EdgeInsets.only(top: 50),
             child: Text('I am ToggleButton',
             style: TextStyle(
-              color: Colors.white,
               fontSize: 25),),),
              Padding(
         padding: const EdgeInsets.only(top: 20, left: 80),
@@ -52,7 +50,6 @@ class _ToggleButtonImplementationState extends State<ToggleButtonImplementation>
     padding: const EdgeInsets.only(top:25),
     child: Text('Disenabled button',
     style: TextStyle(
-      color: Colors.white,
       fontSize: 25),),
   ),
   Padding(
@@ -69,7 +66,6 @@ class _ToggleButtonImplementationState extends State<ToggleButtonImplementation>
   Padding(padding: const EdgeInsets.only(top: 25, left: 8),
     child: Text('I am of different border radius!',
     style: TextStyle(
-      color: Colors.white,
       fontSize: 25),),),
       Padding(
         padding: const EdgeInsets.only(top:8, left: 80),
@@ -112,7 +108,6 @@ String myStringWithLinebreaks = "ToggleButtons is a widget that creates multiple
     return ListTile(
                   title: Text("ToggleButton Widget",
                   style: TextStyle(
-                    color: Colors.white,
                     fontSize: 30),),
                   subtitle: 
                     Column(
@@ -124,14 +119,13 @@ String myStringWithLinebreaks = "ToggleButtons is a widget that creates multiple
                           padding: const EdgeInsets.only(top:10),
                           child: Text("• ",
                              style: TextStyle(
-                    color: Colors.white,),),
+                    ),),
                         ),
                         Expanded(
                           child: Padding(
                             padding: const EdgeInsets.only(top:10),
                             child: Text(o,
                              style: TextStyle(
-                    color: Colors.white,
                     ),),
                           ),),
                          ]   ); 

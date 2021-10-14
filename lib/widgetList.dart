@@ -2,13 +2,17 @@ import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
 import 'package:fludget/routes/animatedIcon.dart';
+import 'package:fludget/routes/appbar.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
+import 'package:fludget/routes/cupertinoActionSheet.dart';
 import 'package:fludget/routes/container.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
@@ -33,6 +37,7 @@ import 'package:fludget/routes/refreshIndicator.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
+import 'package:fludget/routes/scrollbar.dart';
 
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
@@ -88,6 +93,12 @@ const List<WidgetModel> widgets = [
       description: SizedboxDescription(),
       link: "https://api.flutter.dev/flutter/widgets/SizedBox-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics]),
+  WidgetModel(
+      name: "Future Builder",
+      implementation: FutureBuilderImplementation(),
+      description: FutureBuilderDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html",
+      category: [WidgetCategoy.Layout, WidgetCategoy.Async]),
   WidgetModel(
       name: "Icon",
       implementation: IconImplementation(),
@@ -330,6 +341,13 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
   ),
   WidgetModel(
+    name: "CupertinoActionSheet",
+    link: "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
+    implementation: CupertinoActionSheetImplementation(),
+    description: CupertinoActionSheetDescription(),
+    category: [WidgetCategoy.Cupertino,WidgetCategoy.Material]
+  ),
+  WidgetModel(
     name: "AnimatedIcon",
     link: "https://api.flutter.dev/flutter/material/AnimatedIcon-class.html",
     implementation: AnimatedIconSample(),
@@ -384,5 +402,29 @@ const List<WidgetModel> widgets = [
     implementation: CupertinoWidgets(),
     description: CupertinoWidgetsDescription(),
     category: [WidgetCategoy.Cupertino],
+  ),
+  WidgetModel(
+    name: "SliverAppBar",
+    subtitle: "Implementation of SliverAppBar Widget",
+    link: "https://api.flutter.dev/flutter/material/SliverAppBar-class.html",
+    implementation: MySliverAppBar(),
+    description: MySliverAppBarDescription(),
+    category: [WidgetCategoy.Scrolling, WidgetCategoy.Accessibility],
+  ),
+  WidgetModel(
+    name: "AppBar",
+    subtitle: "Implementation of AppBar Widget",
+    link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
+    implementation: appbarsample(),
+    description: appbardescription(),
+    category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
+  ),
+  WidgetModel(
+    name: "ScrollBar",
+    subtitle: "Implementation of ScrollBar Widget",
+    link: "https://api.flutter.dev/flutter/material/Scrollbar-class.html",
+    implementation: ScrollBarImplementation(),
+    description: ScrollBarDescription(),
+    category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
   ),
 ];

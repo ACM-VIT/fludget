@@ -27,7 +27,6 @@ class _SliderSampleState extends State<SliderSample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Center(
@@ -36,7 +35,6 @@ class _SliderSampleState extends State<SliderSample> {
               Text(
                 "Slider:",
                 style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -53,7 +51,6 @@ class _SliderSampleState extends State<SliderSample> {
               Text(
                 "Slider with divisions:",
                 style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -72,7 +69,6 @@ class _SliderSampleState extends State<SliderSample> {
               Text(
                 "Cupertino Slider:",
                 style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -89,7 +85,6 @@ class _SliderSampleState extends State<SliderSample> {
               Text(
                 "Cupertino Slider with divisions:",
                 style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -107,7 +102,6 @@ class _SliderSampleState extends State<SliderSample> {
               Text(
                 "Range Slider:",
                 style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -125,7 +119,6 @@ class _SliderSampleState extends State<SliderSample> {
               Text(
                 "Range Slider with divisions:",
                 style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -165,13 +158,11 @@ class SliderDescription extends StatelessWidget {
               'Slider Widget \n',
               style: TextStyle(
                 fontSize: 26.0,
-                color: Colors.white,
               ),
             ),
             RichText(
               text: new TextSpan(
-                style: new TextStyle(
-                    fontSize: 14.0, color: Colors.white, height: 1.2),
+                style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
                   TextSpan(
                     text: 'A slider is a stateful widget used to select a value from a range of possible values by dragging the "thumb" of the slider across the "track" of the slider. '
@@ -185,7 +176,6 @@ class SliderDescription extends StatelessWidget {
                       text: '\n\nExample \n\n',
                       style: TextStyle(
                         fontSize: 22.0,
-                        color: Colors.white,
                       )),
                   TextSpan(
                       text: 'Slider(\n'

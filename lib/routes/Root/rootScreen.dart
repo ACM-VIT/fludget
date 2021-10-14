@@ -1,3 +1,5 @@
+// import 'dart:js';
+
 import 'package:fludget/Models/widgetModel.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -18,7 +20,7 @@ class _RootScreenState extends State<RootScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.orange[900],
+          backgroundColor: Theme.of(context).primaryColor,
           title: Text(widget.item.name),
           bottom: TabBar(
             tabs: [
@@ -30,7 +32,7 @@ class _RootScreenState extends State<RootScreen> {
         body: TabBarView(
           children: [
             widget.item.implementation,
-            buildDescription(widget.item.description, widget.item.link),
+            buildDescription(widget.item.description, widget.item.link, context),
           ],
         ),
       ),
@@ -46,14 +48,14 @@ _launchURL(String url) async {
   }
 }
 
-Widget buildDescription(Widget widgetDescription, String link) {
+Widget buildDescription(Widget widgetDescription, String link, BuildContext context) {
   return Scaffold(
-    backgroundColor: Colors.grey[900],
+    backgroundColor: Theme.of(context).backgroundColor,
     body: widgetDescription,
     floatingActionButton: FloatingActionButton(
       onPressed: () => _launchURL(link),
-      child: Icon(Icons.link),
-      backgroundColor: Colors.orange[900],
+      child: Icon(Icons.link, color: Colors.white),
+      backgroundColor: Theme.of(context).primaryColor,
     ),
   );
 }

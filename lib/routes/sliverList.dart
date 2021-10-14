@@ -13,7 +13,6 @@ class _SliverListImpState extends State<SliverListImp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -22,7 +21,7 @@ class _SliverListImpState extends State<SliverListImp> {
               size: 500,
             ),
             expandedHeight: 300,
-            backgroundColor: Colors.orange[900],
+            backgroundColor: Theme.of(context).primaryColor,
             automaticallyImplyLeading: false,
             floating: true,
           ),
@@ -60,7 +59,7 @@ class SliverListDesc extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Text(
           'Sliver List is a built-in sliver widget in flutter that places multiple box children in a linear array along the main axis.',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );
