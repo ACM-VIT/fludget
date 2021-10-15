@@ -24,6 +24,7 @@ import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
+import 'package:fludget/routes/gestureDetector.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
@@ -447,6 +448,13 @@ const List<WidgetModel> widgets = [
     description: ScrollBarDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
   ),
+  WidgetModel(
+      name: "Gesture Detector",
+      link:
+          "https://api.flutter.dev/flutter/widgets/GestureDetector-class.html",
+      implementation: GestureDetectorSample(),
+      description: GestureDetectorDescription(),
+      category: [WidgetCategoy.Input, WidgetCategoy.Interaction])
   WidgetModel(
     name: "NestedScrollView",
     subtitle: "Implementation of NestedScrollView widget",
