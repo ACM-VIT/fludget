@@ -16,6 +16,7 @@ enum WidgetCategoy {
   Interaction,
   Painting,
   Effects,
+  Clippers
 }
 
 class WidgetModel {
