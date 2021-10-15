@@ -429,7 +429,7 @@ const List<WidgetModel> widgets = [
   WidgetModel(
     name: "Animated List",
     subtitle: "Implementation of Animated List Widget",
-    link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
+    link: "https://api.flutter.dev/flutter/widgets/AnimatedList-class.html",
     implementation: AnimatedListWidget(),
     description: AnimatedListDescription(),
     category: [WidgetCategoy.Animation],
