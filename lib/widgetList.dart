@@ -32,6 +32,7 @@ import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listWheelScrollView.dart';
 import 'package:fludget/routes/listtile.dart';
+import 'package:fludget/routes/nested_scroll_view.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/pageview.dart';
@@ -445,4 +446,12 @@ WidgetModel(
       implementation: GestureDetectorSample(),
       description: GestureDetectorDescription(),
       category: [WidgetCategoy.Input, WidgetCategoy.Interaction])
+  WidgetModel(
+    name: "NestedScrollView",
+    subtitle: "Implementation of NestedScrollView widget",
+    link: "https://api.flutter.dev/flutter/widgets/NestedScrollView-class.html",
+    implementation: NestedScrollViewImplementation(),
+    description: NestedScrollViewDescription(),
+    category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
+  ),
 ];
