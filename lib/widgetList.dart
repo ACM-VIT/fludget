@@ -48,6 +48,7 @@ import 'package:fludget/routes/sliver_grid.dart';
 import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/spacer.dart';
 import 'package:fludget/routes/stack.dart';
+import 'package:fludget/routes/streamBuilder.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
@@ -421,14 +422,13 @@ const List<WidgetModel> widgets = [
     implementation: AnimatedListWidget(),
     description: AnimatedListDescription(),
     category: [WidgetCategoy.Animation],
-    ),
-WidgetModel(
+  ),
+  WidgetModel(
     category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
     name: "Sliver Grid",
     link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
     implementation: SliverGridSample(),
     description: SliverGridDescription(),
-
   ),
   WidgetModel(
     name: "ScrollBar",
@@ -437,15 +437,14 @@ WidgetModel(
     implementation: ScrollBarImplementation(),
     description: ScrollBarDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
-
   ),
   WidgetModel(
-      name: "Gesture Detector",
-      link:
-          "https://api.flutter.dev/flutter/widgets/GestureDetector-class.html",
-      implementation: GestureDetectorSample(),
-      description: GestureDetectorDescription(),
-      category: [WidgetCategoy.Input, WidgetCategoy.Interaction])
+    name: "Gesture Detector",
+    link: "https://api.flutter.dev/flutter/widgets/GestureDetector-class.html",
+    implementation: GestureDetectorSample(),
+    description: GestureDetectorDescription(),
+    category: [WidgetCategoy.Input, WidgetCategoy.Interaction],
+  ),
   WidgetModel(
     name: "NestedScrollView",
     subtitle: "Implementation of NestedScrollView widget",
@@ -453,5 +452,13 @@ WidgetModel(
     implementation: NestedScrollViewImplementation(),
     description: NestedScrollViewDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
+  ),
+  WidgetModel(
+    name: "Stream Builder",
+    subtitle: "Implementation of StreamBuilder widget",
+    link: "https://api.flutter.dev/flutter/widgets/StreamBuilder-class.html",
+    implementation: StreamBuilderWidget(),
+    description: StreamBuilderDescription(),
+    category: [WidgetCategoy.Interaction, WidgetCategoy.Async],
   ),
 ];
