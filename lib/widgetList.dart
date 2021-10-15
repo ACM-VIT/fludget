@@ -7,6 +7,7 @@ import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
 import 'package:fludget/routes/animatedIcon.dart';
+import 'package:fludget/routes/animatedList.dart';
 import 'package:fludget/routes/appbar.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
@@ -42,6 +43,7 @@ import 'package:fludget/routes/scrollbar.dart';
 
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
+import 'package:fludget/routes/sliver_grid.dart';
 import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/spacer.dart';
 import 'package:fludget/routes/stack.dart';
@@ -412,12 +414,30 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
   ),
   WidgetModel(
+
+    name: "Animated List",
+    subtitle: "Implementation of Animated List Widget",
+    link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
+    implementation: AnimatedListWidget(),
+    description: AnimatedListDescription(),
+    category: [WidgetCategoy.Animation],
+    ),
+WidgetModel(
+    category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
+    name: "Sliver Grid",
+    link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
+    implementation: SliverGridSample(),
+    description: SliverGridDescription(),
+
+  ),
+  WidgetModel(
     name: "ScrollBar",
     subtitle: "Implementation of ScrollBar Widget",
     link: "https://api.flutter.dev/flutter/material/Scrollbar-class.html",
     implementation: ScrollBarImplementation(),
     description: ScrollBarDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
+
   ),
   WidgetModel(
     name: "NestedScrollView",
