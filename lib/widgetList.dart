@@ -2,6 +2,7 @@ import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
@@ -101,6 +102,16 @@ const List<WidgetModel> widgets = [
       description: FutureBuilderDescription(),
       link: "https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Async]),
+  WidgetModel(
+      name: "FormField",
+      implementation: FormFieldImplementation(),
+      description: FormFieldDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/FormField-class.html",
+      category: [
+        WidgetCategoy.Input,
+        WidgetCategoy.Interaction,
+        WidgetCategoy.Text
+      ]),
   WidgetModel(
       name: "Icon",
       implementation: IconImplementation(),
@@ -414,21 +425,19 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
   ),
   WidgetModel(
-
     name: "Animated List",
     subtitle: "Implementation of Animated List Widget",
     link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
     implementation: AnimatedListWidget(),
     description: AnimatedListDescription(),
     category: [WidgetCategoy.Animation],
-    ),
-WidgetModel(
+  ),
+  WidgetModel(
     category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
     name: "Sliver Grid",
     link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
     implementation: SliverGridSample(),
     description: SliverGridDescription(),
-
   ),
   WidgetModel(
     name: "ScrollBar",
@@ -437,7 +446,6 @@ WidgetModel(
     implementation: ScrollBarImplementation(),
     description: ScrollBarDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
-
   ),
   WidgetModel(
     name: "NestedScrollView",
