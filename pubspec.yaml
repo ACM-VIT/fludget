@@ -30,6 +30,7 @@ dependencies:
   shared_preferences: ^2.0.8
   provider: ^6.0.0
   webview_flutter: ^2.0.1
+  motion_toast: ^1.2.0
 
 dev_dependencies:
   flutter_test:

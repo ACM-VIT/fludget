@@ -4,6 +4,7 @@ import 'package:fludget/themes/theme_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// ignore: must_be_immutable
 class SettingsWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
   

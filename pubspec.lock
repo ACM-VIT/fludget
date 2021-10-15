@@ -135,6 +135,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
+  motion_toast:
+    dependency: "direct main"
+    description:
+      name: motion_toast
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.5.0"
   nested:
     dependency: transitive
     description:
@@ -343,7 +350,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
-
   webview_flutter:
     dependency: "direct main"
     description:
@@ -386,7 +392,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.0"
-
 sdks:
   dart: ">=2.14.0 <3.0.0"
   flutter: ">=2.5.0"

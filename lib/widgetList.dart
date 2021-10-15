@@ -50,10 +50,10 @@ import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textButton.dart';
 import 'package:fludget/routes/textfield.dart';
+import 'package:fludget/routes/tost.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
-import 'package:flutter/material.dart';
 import 'Models/widgetModel.dart';
 
 const List<WidgetModel> widgets = [
@@ -341,12 +341,12 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
   ),
   WidgetModel(
-    name: "CupertinoActionSheet",
-    link: "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
-    implementation: CupertinoActionSheetImplementation(),
-    description: CupertinoActionSheetDescription(),
-    category: [WidgetCategoy.Cupertino,WidgetCategoy.Material]
-  ),
+      name: "CupertinoActionSheet",
+      link:
+          "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
+      implementation: CupertinoActionSheetImplementation(),
+      description: CupertinoActionSheetDescription(),
+      category: [WidgetCategoy.Cupertino, WidgetCategoy.Material]),
   WidgetModel(
     name: "AnimatedIcon",
     link: "https://api.flutter.dev/flutter/material/AnimatedIcon-class.html",
@@ -412,7 +412,6 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
   ),
   WidgetModel(
-
     category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
     name: "Sliver Grid",
     link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
@@ -427,5 +426,12 @@ const List<WidgetModel> widgets = [
     description: ScrollBarDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
   ),
-
+  WidgetModel(
+    name: "Tost message",
+    subtitle: "Implementation of Tost meaasge  Widget",
+    link: "https://api.flutter.dev/flutter/material/Scrollbar-class.html",
+    implementation: TostImplementation(),
+    description: ScrollBarDescription(),
+    category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
+  ),
 ];
