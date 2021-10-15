@@ -11,6 +11,7 @@ import 'package:fludget/routes/animatedList.dart';
 import 'package:fludget/routes/appbar.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
+import 'package:fludget/routes/clipRect.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
@@ -445,7 +446,7 @@ WidgetModel(
           "https://api.flutter.dev/flutter/widgets/GestureDetector-class.html",
       implementation: GestureDetectorSample(),
       description: GestureDetectorDescription(),
-      category: [WidgetCategoy.Input, WidgetCategoy.Interaction])
+      category: [WidgetCategoy.Input, WidgetCategoy.Interaction]),
   WidgetModel(
     name: "NestedScrollView",
     subtitle: "Implementation of NestedScrollView widget",
@@ -454,4 +455,11 @@ WidgetModel(
     description: NestedScrollViewDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
   ),
+  WidgetModel(
+      name: "ClipRect",
+      link:
+      "https://api.flutter.dev/flutter/widgets/ClipRect-class.html",
+      implementation: ClipRectImplementation(),
+      description: ClipRectDescription(),
+      category: [WidgetCategoy.Input, WidgetCategoy.Interaction]),
 ];
