@@ -77,13 +77,15 @@ class _FormFieldImplementationState extends State<FormFieldImplementation> {
                             }
                           },
                           child: Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 10.0, bottom: 10, left: 38, right: 38),
-                              child: Text(
-                                'Login',
-                                style: TextStyle(
-                                    fontSize: 28, color: Colors.white),
-                              )),
+                            padding: const EdgeInsets.only(
+                                top: 10.0, bottom: 10, left: 38, right: 38),
+                            child: Text(
+                              'Login',
+                              style: TextStyle(
+                                fontSize: 28,
+                              ),
+                            ),
+                          ),
                           style: ElevatedButton.styleFrom(
                               primary: Theme.of(context).primaryColor,
                               shape: RoundedRectangleBorder(

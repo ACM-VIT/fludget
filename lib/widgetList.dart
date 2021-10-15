@@ -454,7 +454,7 @@ const List<WidgetModel> widgets = [
           "https://api.flutter.dev/flutter/widgets/GestureDetector-class.html",
       implementation: GestureDetectorSample(),
       description: GestureDetectorDescription(),
-      category: [WidgetCategoy.Input, WidgetCategoy.Interaction])
+      category: [WidgetCategoy.Input, WidgetCategoy.Interaction]),
   WidgetModel(
     name: "NestedScrollView",
     subtitle: "Implementation of NestedScrollView widget",
