@@ -135,6 +135,8 @@ class _SliderSampleState extends State<SliderSample> {
                   });
                 },
               ),
+
+              
             ],
           ),
         ),

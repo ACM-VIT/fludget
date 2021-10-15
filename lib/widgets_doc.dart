@@ -11,7 +11,6 @@ class WidgetsDoc extends StatefulWidget {
 
 class _WidgetsDocState extends State<WidgetsDoc> {
 
-  WebViewController? _controller;
   bool isLoading = true;
 
   @override
@@ -27,7 +26,6 @@ class _WidgetsDocState extends State<WidgetsDoc> {
         initialUrl: 'https://api.flutter.dev/flutter/widgets/widgets-library.html',
         javascriptMode: JavascriptMode.unrestricted,
         onWebViewCreated: (WebViewController webViewController) {
-          _controller = webViewController;
         },
         onPageFinished: (finish) {
           setState(() {
