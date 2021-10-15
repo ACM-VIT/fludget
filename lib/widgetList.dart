@@ -31,6 +31,7 @@ import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listWheelScrollView.dart';
 import 'package:fludget/routes/listtile.dart';
+import 'package:fludget/routes/nested_scroll_view.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/pageview.dart';
@@ -342,12 +343,12 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
   ),
   WidgetModel(
-    name: "CupertinoActionSheet",
-    link: "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
-    implementation: CupertinoActionSheetImplementation(),
-    description: CupertinoActionSheetDescription(),
-    category: [WidgetCategoy.Cupertino,WidgetCategoy.Material]
-  ),
+      name: "CupertinoActionSheet",
+      link:
+          "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
+      implementation: CupertinoActionSheetImplementation(),
+      description: CupertinoActionSheetDescription(),
+      category: [WidgetCategoy.Cupertino, WidgetCategoy.Material]),
   WidgetModel(
     name: "AnimatedIcon",
     link: "https://api.flutter.dev/flutter/material/AnimatedIcon-class.html",
@@ -438,5 +439,12 @@ WidgetModel(
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
 
   ),
-
+  WidgetModel(
+    name: "NestedScrollView",
+    subtitle: "Implementation of NestedScrollView widget",
+    link: "https://api.flutter.dev/flutter/widgets/NestedScrollView-class.html",
+    implementation: NestedScrollViewImplementation(),
+    description: NestedScrollViewDescription(),
+    category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
+  ),
 ];
