@@ -4,6 +4,7 @@ import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/IgnorePointer.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
@@ -113,6 +114,15 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Input,
         WidgetCategoy.Interaction,
         WidgetCategoy.Text
+      ]),
+  WidgetModel(
+      name: "IgnorePointer",
+      implementation: IgnorePointerImplementation(),
+      description: IgnorePointerDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/IgnorePointer-class.html",
+      category: [
+        WidgetCategoy.Input,
+        WidgetCategoy.Interaction,
       ]),
   WidgetModel(
       name: "Icon",
