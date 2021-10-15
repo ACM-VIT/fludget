@@ -12,6 +12,7 @@ import 'package:fludget/routes/animatedList.dart';
 import 'package:fludget/routes/appbar.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
+import 'package:fludget/routes/clipOval.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
@@ -471,5 +472,13 @@ const List<WidgetModel> widgets = [
     implementation: StreamBuilderWidget(),
     description: StreamBuilderDescription(),
     category: [WidgetCategoy.Interaction, WidgetCategoy.Async],
+  ),
+  WidgetModel(
+    name: "ClipOval",
+    subtitle: "Implementation of ClipOval widget",
+    link: "https://api.flutter.dev/flutter/widgets/ClipOval-class.html",
+    implementation: ClipOvalSample(),
+    description: ClipOvalDescription(),
+    category: [WidgetCategoy.Effects, WidgetCategoy.Painting],
   ),
 ];
