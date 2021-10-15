@@ -7,6 +7,7 @@ import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
 import 'package:fludget/routes/animatedIcon.dart';
+import 'package:fludget/routes/animatedList.dart';
 import 'package:fludget/routes/appbar.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
@@ -413,11 +414,20 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
   ),
   WidgetModel(
+    name: "Animated List",
+    subtitle: "Implementation of Animated List Widget",
+    link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
+    implementation: AnimatedListWidget(),
+    description: AnimatedListDescription(),
+    category: [WidgetCategoy.Animation],
+    ),
+WidgetModel(
     category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
     name: "Sliver Grid",
     link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
     implementation: SliverGridSample(),
     description: SliverGridDescription(),
+
   ),
   WidgetModel(
     name: "ScrollBar",
@@ -426,6 +436,7 @@ const List<WidgetModel> widgets = [
     implementation: ScrollBarImplementation(),
     description: ScrollBarDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
+
   ),
   WidgetModel(
       name: "Gesture Detector",
