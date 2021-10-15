@@ -85,7 +85,7 @@ class _FormFieldImplementationState extends State<FormFieldImplementation> {
                                     fontSize: 28, color: Colors.white),
                               )),
                           style: ElevatedButton.styleFrom(
-                              primary: Colors.red,
+                              primary: Theme.of(context).primaryColor,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               )),
