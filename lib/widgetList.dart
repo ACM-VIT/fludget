@@ -23,6 +23,7 @@ import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
+import 'package:fludget/routes/gestureDetector.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
@@ -414,7 +415,6 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
   ),
   WidgetModel(
-
     name: "Animated List",
     subtitle: "Implementation of Animated List Widget",
     link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
@@ -439,6 +439,13 @@ WidgetModel(
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
 
   ),
+  WidgetModel(
+      name: "Gesture Detector",
+      link:
+          "https://api.flutter.dev/flutter/widgets/GestureDetector-class.html",
+      implementation: GestureDetectorSample(),
+      description: GestureDetectorDescription(),
+      category: [WidgetCategoy.Input, WidgetCategoy.Interaction])
   WidgetModel(
     name: "NestedScrollView",
     subtitle: "Implementation of NestedScrollView widget",
