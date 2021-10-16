@@ -65,7 +65,7 @@ It can be any of any length and can be any number of scripts, just **add a folde
 
 ## Maintainer
 
-- sanyam jain
+
 
 ## Pull Request Reviewers
 
