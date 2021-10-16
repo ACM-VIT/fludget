@@ -64,6 +64,7 @@ import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:flutter/material.dart';
 import 'Models/widgetModel.dart';
+import 'routes/autoComplete.dart';
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -493,6 +494,14 @@ const List<WidgetModel> widgets = [
     implementation: StreamBuilderWidget(),
     description: StreamBuilderDescription(),
     category: [WidgetCategoy.Interaction, WidgetCategoy.Async],
+  ),
+  WidgetModel(
+    name: "AutoComplete",
+    subtitle: "Implementation of Autocomplete Widget",
+    link: "https://api.flutter.dev/flutter/material/Autocomplete-class.html",
+    implementation: AutoCompleteImplemention(),
+    description: AutoCompleteWidgetDescription(),
+    category: [WidgetCategoy.Input, WidgetCategoy.Interaction],
   ),
   WidgetModel(
     name: "ClipOval",
