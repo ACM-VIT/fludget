@@ -25,7 +25,6 @@ import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
-import 'package:fludget/routes/glassmorphism.dart';
 import 'package:fludget/routes/gestureDetector.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
@@ -459,13 +458,6 @@ const List<WidgetModel> widgets = [
     implementation: ScrollBarImplementation(),
     description: ScrollBarDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
-  ),
-  WidgetModel(
-    name: "Glassmorphism Effect",
-    link: "https://uxdesign.cc/glassmorphism-in-user-interfaces-1f39bb1308c9",
-    implementation: GlassmorphismImplementation(),
-    description: GlassmorphismDescription(),
-    category: [WidgetCategoy.Styling, WidgetCategoy.Effects],
   ),
   WidgetModel(
     name: "Gesture Detector",
