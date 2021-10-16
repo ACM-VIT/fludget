@@ -44,22 +44,14 @@ class _SizedboxImplementationState extends State<SizedboxImplementation> {
                             : (x == 1)
                                 ? 300
                                 : 200,
-                        child: Image.asset('assets/images/halloween.png')),
+                        child: Image.asset('assets/images/logo.png')),
                   ),
-                  // SizedBox(
-                  //   width: double.infinity,
-                  //   height: 5,
-                  //   child: DecoratedBox(
-                  //       decoration: BoxDecoration(
-                  //     color: Colors.lightBlue,
-                  //   )),
-                  // )
                 ],
               ),
             ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.red,
+                    primary: Theme.of(context).primaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     )),
@@ -95,7 +87,7 @@ class _SizedboxImplementationState extends State<SizedboxImplementation> {
               child: Container(
                 height: 200,
                 width: 300,
-                color: Colors.red,
+                color: Theme.of(context).primaryColor,
                 child: Center(
                   child: Text(
                     'Box 1',
@@ -115,7 +107,7 @@ class _SizedboxImplementationState extends State<SizedboxImplementation> {
               child: Container(
                 height: 200,
                 width: 300,
-                color: Colors.red,
+                color: Theme.of(context).primaryColor,
                 child: Center(
                   child: Text(
                     'Box 2',
