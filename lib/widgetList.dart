@@ -15,6 +15,7 @@ import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/clipOval.dart';
 import 'package:fludget/routes/clipRect.dart';
+import 'package:fludget/routes/clip_path.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
@@ -510,10 +511,21 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Painting],
   ),
   WidgetModel(
-    name: "DecoratedBox",
-    link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
-    implementation: DecoratedBoxImplementation(),
-    description: DecoratedBoxDescription(),
-    category: [WidgetCategoy.Painting]
+      name: "DecoratedBox",
+      link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
+      implementation: DecoratedBoxImplementation(),
+      description: DecoratedBoxDescription(),
+      category: [WidgetCategoy.Painting]),
+  WidgetModel(
+    name: "Clip Path",
+    link:
+        "https://api.flutter.dev/flutter/widgets/ClipPath-class.html#:~:text=ClipPath%20class%20Null%20safety,from%20painting%20outside%20the%20path.",
+    subtitle: "Implementation of Clip Path widget",
+    implementation: ClipPathImplementation(),
+    description: ClipPathDescription(),
+    category: [
+      WidgetCategoy.Painting,
+      WidgetCategoy.Styling,
+    ],
   )
 ];
