@@ -19,6 +19,7 @@ import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
 import 'package:fludget/routes/container.dart';
+import 'package:fludget/routes/decoratedBox.dart';
 import 'package:fludget/routes/cupertino_activity_indicator.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
@@ -508,4 +509,11 @@ const List<WidgetModel> widgets = [
     description: ClipRectDescription(),
     category: [WidgetCategoy.Painting],
   ),
+  WidgetModel(
+    name: "DecoratedBox",
+    link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
+    implementation: DecoratedBoxImplementation(),
+    description: DecoratedBoxDescription(),
+    category: [WidgetCategoy.Painting]
+  )
 ];
