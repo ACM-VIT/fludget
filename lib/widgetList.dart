@@ -13,6 +13,7 @@ import 'package:fludget/routes/appbar.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/clipOval.dart';
+import 'package:fludget/routes/clipRect.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
@@ -43,7 +44,6 @@ import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/scrollbar.dart';
-
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
 import 'package:fludget/routes/sliver_grid.dart';
@@ -430,7 +430,7 @@ const List<WidgetModel> widgets = [
   WidgetModel(
     name: "Animated List",
     subtitle: "Implementation of Animated List Widget",
-    link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
+    link: "https://api.flutter.dev/flutter/widgets/AnimatedList-class.html",
     implementation: AnimatedListWidget(),
     description: AnimatedListDescription(),
     category: [WidgetCategoy.Animation],
@@ -480,5 +480,12 @@ const List<WidgetModel> widgets = [
     implementation: ClipOvalSample(),
     description: ClipOvalDescription(),
     category: [WidgetCategoy.Effects, WidgetCategoy.Painting],
+  ),
+  WidgetModel(
+    name: "ClipRect",
+    link: "https://api.flutter.dev/flutter/widgets/ClipRect-class.html",
+    implementation: ClipRectImplementation(),
+    description: ClipRectDescription(),
+    category: [WidgetCategoy.Painting],
   ),
 ];
