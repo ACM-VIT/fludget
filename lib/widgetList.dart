@@ -19,6 +19,7 @@ import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
 import 'package:fludget/routes/container.dart';
+import 'package:fludget/routes/cupertino_activity_indicator.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggableWidget.dart';
@@ -367,12 +368,21 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
   ),
   WidgetModel(
-      name: "CupertinoActionSheet",
-      link:
-          "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
-      implementation: CupertinoActionSheetImplementation(),
-      description: CupertinoActionSheetDescription(),
-      category: [WidgetCategoy.Cupertino, WidgetCategoy.Material]),
+    name: "CupertinoActionSheet",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
+    implementation: CupertinoActionSheetImplementation(),
+    description: CupertinoActionSheetDescription(),
+    category: [WidgetCategoy.Cupertino, WidgetCategoy.Material],
+  ),
+  WidgetModel(
+    name: "Cupertino Activity Indicator",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoActivityIndicator-class.html",
+    implementation: CupertinoActivityIndicatorSample(),
+    description: CupertinoActivityIndicatorDescription(),
+    category: [WidgetCategoy.Cupertino],
+  ),
   WidgetModel(
     name: "AnimatedIcon",
     link: "https://api.flutter.dev/flutter/material/AnimatedIcon-class.html",
