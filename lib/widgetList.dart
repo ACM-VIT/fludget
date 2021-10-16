@@ -467,6 +467,6 @@ const List<WidgetModel> widgets = [
     link: "https://api.flutter.dev/flutter/widgets/ClipRect-class.html",
     implementation: ClipRectImplementation(),
     description: ClipRectDescription(),
-    category: [WidgetCategoy.Clippers],
+    category: [WidgetCategoy.Painting],
   )
 ];
