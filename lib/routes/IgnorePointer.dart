@@ -69,7 +69,11 @@ class _IgnorePointerImplementationState
                       child: Material(
                         child: InkWell(
                           onTap: () {
-                            print("tapped");
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text('Red Box Tapped',
+                                  style: TextStyle(fontSize: 20)),
+                            ));
                           },
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.8,
@@ -85,7 +89,13 @@ class _IgnorePointerImplementationState
                     child: Material(
                       child: InkWell(
                         onTap: () {
-                          print("tapped");
+                          ScaffoldMessenger.of(context)
+                              .showSnackBar(const SnackBar(
+                            content: Text(
+                              'Yellow Box Tapped',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ));
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width * 0.6,
@@ -102,7 +112,11 @@ class _IgnorePointerImplementationState
                       child: Material(
                         child: InkWell(
                           onTap: () {
-                            print("tapped");
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text('Blue Box Tapped',
+                                  style: TextStyle(fontSize: 20)),
+                            ));
                           },
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.4,
@@ -118,7 +132,11 @@ class _IgnorePointerImplementationState
                     child: Material(
                       child: InkWell(
                         onTap: () {
-                          print("tapped");
+                          ScaffoldMessenger.of(context)
+                              .showSnackBar(const SnackBar(
+                            content: Text('Green Box Tapped',
+                                style: TextStyle(fontSize: 20)),
+                          ));
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width * 0.2,
