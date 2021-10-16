@@ -484,6 +484,7 @@ const List<WidgetModel> widgets = [
     description: StreamBuilderDescription(),
     category: [WidgetCategoy.Interaction, WidgetCategoy.Async],
   ),
+  WidgetModel(
     name: "ClipOval",
     subtitle: "Implementation of ClipOval widget",
     link: "https://api.flutter.dev/flutter/widgets/ClipOval-class.html",
