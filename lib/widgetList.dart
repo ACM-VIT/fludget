@@ -12,6 +12,7 @@ import 'package:fludget/routes/animatedList.dart';
 import 'package:fludget/routes/appbar.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
+import 'package:fludget/routes/clipRect.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
@@ -472,4 +473,11 @@ const List<WidgetModel> widgets = [
     description: StreamBuilderDescription(),
     category: [WidgetCategoy.Interaction, WidgetCategoy.Async],
   ),
+  WidgetModel(
+    name: "ClipRect",
+    link: "https://api.flutter.dev/flutter/widgets/ClipRect-class.html",
+    implementation: ClipRectImplementation(),
+    description: ClipRectDescription(),
+    category: [WidgetCategoy.Painting],
+  )
 ];
