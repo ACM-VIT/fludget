@@ -63,7 +63,6 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
-import 'package:flutter/material.dart';
 import 'Models/widgetModel.dart';
 import 'routes/autoComplete.dart';
 
@@ -524,7 +523,8 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
       implementation: DecoratedBoxImplementation(),
       description: DecoratedBoxDescription(),
-      category: [WidgetCategoy.Painting]),
+      category: [WidgetCategoy.Painting]
+  ),
   WidgetModel(
     name: "Clip Path",
     link:

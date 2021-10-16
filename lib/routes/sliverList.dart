@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class SliverListImp extends StatefulWidget {
@@ -30,7 +29,8 @@ class _SliverListImpState extends State<SliverListImp> {
               (BuildContext context, int index) {
                 return Card(
                   child: Container(
-                    color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+                    color: Colors
+                        .primaries[Random().nextInt(Colors.primaries.length)],
                     height: 50,
                     alignment: Alignment.center,
                     child: Text(
