@@ -15,6 +15,7 @@ import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/clipOval.dart';
 import 'package:fludget/routes/clipRect.dart';
+import 'package:fludget/routes/clip_path.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
@@ -63,6 +64,7 @@ import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'Models/widgetModel.dart';
+import 'routes/autoComplete.dart';
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -494,6 +496,14 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Interaction, WidgetCategoy.Async],
   ),
   WidgetModel(
+    name: "AutoComplete",
+    subtitle: "Implementation of Autocomplete Widget",
+    link: "https://api.flutter.dev/flutter/material/Autocomplete-class.html",
+    implementation: AutoCompleteImplemention(),
+    description: AutoCompleteWidgetDescription(),
+    category: [WidgetCategoy.Input, WidgetCategoy.Interaction],
+  ),
+  WidgetModel(
     name: "ClipOval",
     subtitle: "Implementation of ClipOval widget",
     link: "https://api.flutter.dev/flutter/widgets/ClipOval-class.html",
@@ -513,5 +523,18 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
       implementation: DecoratedBoxImplementation(),
       description: DecoratedBoxDescription(),
-      category: [WidgetCategoy.Painting])
+      category: [WidgetCategoy.Painting]
+  ),
+  WidgetModel(
+    name: "Clip Path",
+    link:
+        "https://api.flutter.dev/flutter/widgets/ClipPath-class.html#:~:text=ClipPath%20class%20Null%20safety,from%20painting%20outside%20the%20path.",
+    subtitle: "Implementation of Clip Path widget",
+    implementation: ClipPathImplementation(),
+    description: ClipPathDescription(),
+    category: [
+      WidgetCategoy.Painting,
+      WidgetCategoy.Styling,
+    ],
+  )
 ];
