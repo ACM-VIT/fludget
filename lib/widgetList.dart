@@ -2,11 +2,13 @@ import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
 import 'package:fludget/routes/animatedIcon.dart';
+import 'package:fludget/routes/animatedList.dart';
 import 'package:fludget/routes/appbar.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
@@ -24,6 +26,7 @@ import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
 import 'package:fludget/routes/glassmorphism.dart';
+import 'package:fludget/routes/gestureDetector.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
@@ -32,6 +35,7 @@ import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listWheelScrollView.dart';
 import 'package:fludget/routes/listtile.dart';
+import 'package:fludget/routes/nested_scroll_view.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/pageview.dart';
@@ -47,6 +51,7 @@ import 'package:fludget/routes/sliver_grid.dart';
 import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/spacer.dart';
 import 'package:fludget/routes/stack.dart';
+import 'package:fludget/routes/streamBuilder.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
@@ -101,6 +106,16 @@ const List<WidgetModel> widgets = [
       description: FutureBuilderDescription(),
       link: "https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Async]),
+  WidgetModel(
+      name: "FormField",
+      implementation: FormFieldImplementation(),
+      description: FormFieldDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/FormField-class.html",
+      category: [
+        WidgetCategoy.Input,
+        WidgetCategoy.Interaction,
+        WidgetCategoy.Text
+      ]),
   WidgetModel(
       name: "Icon",
       implementation: IconImplementation(),
@@ -423,6 +438,14 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
   ),
   WidgetModel(
+    name: "Animated List",
+    subtitle: "Implementation of Animated List Widget",
+    link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
+    implementation: AnimatedListWidget(),
+    description: AnimatedListDescription(),
+    category: [WidgetCategoy.Animation],
+  ),
+  WidgetModel(
     category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
     name: "Sliver Grid",
     link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
@@ -443,5 +466,28 @@ const List<WidgetModel> widgets = [
     implementation: GlassmorphismImplementation(),
     description: GlassmorphismDescription(),
     category: [WidgetCategoy.Styling, WidgetCategoy.Effects],
+  ),
+  WidgetModel(
+    name: "Gesture Detector",
+    link: "https://api.flutter.dev/flutter/widgets/GestureDetector-class.html",
+    implementation: GestureDetectorSample(),
+    description: GestureDetectorDescription(),
+    category: [WidgetCategoy.Input, WidgetCategoy.Interaction],
+  ),
+  WidgetModel(
+    name: "NestedScrollView",
+    subtitle: "Implementation of NestedScrollView widget",
+    link: "https://api.flutter.dev/flutter/widgets/NestedScrollView-class.html",
+    implementation: NestedScrollViewImplementation(),
+    description: NestedScrollViewDescription(),
+    category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
+  ),
+  WidgetModel(
+    name: "Stream Builder",
+    subtitle: "Implementation of StreamBuilder widget",
+    link: "https://api.flutter.dev/flutter/widgets/StreamBuilder-class.html",
+    implementation: StreamBuilderWidget(),
+    description: StreamBuilderDescription(),
+    category: [WidgetCategoy.Interaction, WidgetCategoy.Async],
   ),
 ];
