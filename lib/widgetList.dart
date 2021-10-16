@@ -22,6 +22,7 @@ import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
+import 'package:fludget/routes/glassmorphism.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
@@ -341,12 +342,12 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
   ),
   WidgetModel(
-    name: "CupertinoActionSheet",
-    link: "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
-    implementation: CupertinoActionSheetImplementation(),
-    description: CupertinoActionSheetDescription(),
-    category: [WidgetCategoy.Cupertino,WidgetCategoy.Material]
-  ),
+      name: "CupertinoActionSheet",
+      link:
+          "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
+      implementation: CupertinoActionSheetImplementation(),
+      description: CupertinoActionSheetDescription(),
+      category: [WidgetCategoy.Cupertino, WidgetCategoy.Material]),
   WidgetModel(
     name: "AnimatedIcon",
     link: "https://api.flutter.dev/flutter/material/AnimatedIcon-class.html",
@@ -412,7 +413,6 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
   ),
   WidgetModel(
-
     category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
     name: "Sliver Grid",
     link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
@@ -427,5 +427,11 @@ const List<WidgetModel> widgets = [
     description: ScrollBarDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
   ),
-
+  WidgetModel(
+    name: "Glassmorphism Effect",
+    link: "https://uxdesign.cc/glassmorphism-in-user-interfaces-1f39bb1308c9",
+    implementation: GlassmorphismImplementation(),
+    description: GlassmorphismDescription(),
+    category: [WidgetCategoy.Styling, WidgetCategoy.Effects],
+  ),
 ];
