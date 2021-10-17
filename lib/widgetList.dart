@@ -16,6 +16,7 @@ import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/clipOval.dart';
 import 'package:fludget/routes/clipRect.dart';
 import 'package:fludget/routes/clip_path.dart';
+import 'package:fludget/routes/coloredBox.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
@@ -543,5 +544,12 @@ const List<WidgetModel> widgets = [
     implementation: SingleChildScrollViewImplementation(),
     description:SingleChildScrollViewDescription(),
     category: [ WidgetCategoy.Scrolling ]
+  ),
+  WidgetModel(
+      name: "ColoredBox",
+      link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
+      implementation: ColoredBoxImplementation(),
+      description: ColoredBoxDescription(),
+      category: [ WidgetCategoy.Layout, WidgetCategoy.Basics ]
   )
 ];
