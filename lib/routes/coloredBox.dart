@@ -15,7 +15,7 @@ class ColoredBoxImplementation extends StatelessWidget {
             child: SizedBox.fromSize(size: Size.fromRadius(100)),
           ),
           SizedBox(height: 10),
-          Text("Red Colored Box"),
+          Text("Orange Colored Box"),
           SizedBox(height: 20),
           ColoredBox(
             color: Colors.grey,
