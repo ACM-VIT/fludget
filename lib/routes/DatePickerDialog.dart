@@ -15,8 +15,6 @@ class _DatePickerDialogImplementationState
 
   TextEditingController date = TextEditingController();
 
-  //final _formKey = GlobalKey<FormState>();
-
   DateTime? datee ;
 
   selectDate(BuildContext context) async {
@@ -57,7 +55,6 @@ class _DatePickerDialogImplementationState
               height: MediaQuery.of(context).size.height * 0.04,
             ),
             Container(
-              //height: MediaQuery.of(context).size.height / 5 - 100,
               height: 50,
               child: Text(
                 'Below Implementation is a basic use case of DatePicker Widget',
@@ -77,14 +74,6 @@ class _DatePickerDialogImplementationState
               padding: const EdgeInsets.only(top: 8, left: 30, right: 30),
               child: TextFormField(
                 keyboardType: TextInputType.number,
-                // validator: (value) {
-                  // if (value.isEmpty) {
-                  //   return 'This Field is Mandatory';
-                  // } else if (value.length != 6) {
-                  //   return 'Enter a Valid Pincode';
-                  // }
-                  // return null;
-                // },
                 controller: pin,
                 decoration: InputDecoration(
                   hintText: 'Enter Area Pincode',
@@ -93,21 +82,6 @@ class _DatePickerDialogImplementationState
             ),
             Padding(
               padding: const EdgeInsets.only(top: 16, left: 30, right: 30),
-              // child: TextFormField(
-              //   validator: (value) {
-              //     if (value.isEmpty) {
-              //       return 'This Field is Mandatory';
-              //     } else if (value.length != 10) {
-              //       return 'Enter a Valid Date';
-              //     }
-
-              //     return null;
-              //   },
-              //   controller: date,
-              //   decoration: InputDecoration(
-              //     hintText: 'Enter Date (DD-MM-YYYY)',
-              //   ),
-              // ),
               child: InkWell(
                 onTap: () {
                   setState(() {
@@ -130,18 +104,6 @@ class _DatePickerDialogImplementationState
                     primary: Theme.of(context).primaryColor,
                   ),
                   onPressed: () {
-                    // if (!(datee == null)) {
-                    //   Navigator.push(
-                    //       context,
-                    //       MaterialPageRoute(
-                    //           builder: (context) => Details(
-                    //                 pin: pin.text,
-                    //                 date: (DateFormat('dd-MM-yyyy')
-                    //                     .format(datee)),
-                    //               )));
-                    // } else {
-                    //   print('Not okay');
-                    // }
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
