@@ -16,6 +16,7 @@ import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/clipOval.dart';
 import 'package:fludget/routes/clipRect.dart';
 import 'package:fludget/routes/clip_path.dart';
+import 'package:fludget/routes/coloredBox.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
@@ -66,7 +67,9 @@ import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'Models/widgetModel.dart';
+import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
+
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -436,6 +439,14 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
   ),
   WidgetModel(
+    name: "Cupertino Widgets",
+    subtitle: "Implementation of Cupertino Widgets (iOS style widgets)",
+    link: "https://flutter.dev/docs/development/ui/widgets/cupertino",
+    implementation: CupertinoWidgets(),
+    description: CupertinoWidgetsDescription(),
+    category: [WidgetCategoy.Cupertino],
+  ),
+  WidgetModel(
     name: "SliverAppBar",
     subtitle: "Implementation of SliverAppBar Widget",
     link: "https://api.flutter.dev/flutter/material/SliverAppBar-class.html",
@@ -550,5 +561,13 @@ const List<WidgetModel> widgets = [
       implementation: ErrorWidgetImplementation(),
       description: ErrorWidgetDescription(),
       link: "https://api.flutter.dev/flutter/widgets/ErrorWidget-class.html",
-      category: [WidgetCategoy.Assets, WidgetCategoy.Basics]),
+      category: [WidgetCategoy.Assets, WidgetCategoy.Basics]
+  ),
+  WidgetModel(
+      name: "ColoredBox",
+      link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
+      implementation: ColoredBoxImplementation(),
+      description: ColoredBoxDescription(),
+      category: [ WidgetCategoy.Layout, WidgetCategoy.Basics ]
+  ),
 ];
