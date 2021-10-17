@@ -151,7 +151,8 @@ const List<WidgetModel> widgets = [
       category: [
         WidgetCategoy.Input,
         WidgetCategoy.Interaction,
-      ]),
+      ],
+      codeStringName: "datePickerDialog"),
   WidgetModel(
       name: "Icon",
       implementation: IconImplementation(),
@@ -458,18 +459,16 @@ const List<WidgetModel> widgets = [
     implementation: CupertinoActivityIndicatorSample(),
     description: CupertinoActivityIndicatorDescription(),
     category: [WidgetCategoy.Cupertino],
-    codeStringName : "cupertinoActivityIndicator",
+    codeStringName: "cupertinoActivityIndicator",
   ),
-
   WidgetModel(
       name: "AbsorbPointer",
       subtitle: "Implementation of AbsorbPointer Widget",
       link: "https://api.flutter.dev/flutter/widgets/AbsorbPointer-class.html",
       implementation: AbsorbPointerWidget(),
       description: AbsorbPointerWidgetDescription(),
-    category: [WidgetCategoy.Interaction],
+      category: [WidgetCategoy.Interaction],
       codeStringName: "absorbPointer"),
-      
   WidgetModel(
       name: "ListWheelScrollView",
       subtitle: "Implementation of ListWheelScrollView Widget",
@@ -575,28 +574,22 @@ const List<WidgetModel> widgets = [
       description: ClipRectDescription(),
       category: [WidgetCategoy.Painting],
       codeStringName: "clipRect"),
-
-      
- 
-  
   WidgetModel(
-    name: "Cupertino Widgets",
-    subtitle: "Implementation of Cupertino Widgets (iOS style widgets)",
-    link: "https://flutter.dev/docs/development/ui/widgets/cupertino",
-    implementation: CupertinoWidgets(),
-    description: CupertinoWidgetsDescription(),
-    category: [WidgetCategoy.Cupertino],
-    codeStringName: "cupertinoWidgets"
-  ),
+      name: "Cupertino Widgets",
+      subtitle: "Implementation of Cupertino Widgets (iOS style widgets)",
+      link: "https://flutter.dev/docs/development/ui/widgets/cupertino",
+      implementation: CupertinoWidgets(),
+      description: CupertinoWidgetsDescription(),
+      category: [WidgetCategoy.Cupertino],
+      codeStringName: "cupertinoWidgets"),
   WidgetModel(
-    name: "AutoComplete",
-    subtitle: "Implementation of Autocomplete Widget",
-    link: "https://api.flutter.dev/flutter/material/Autocomplete-class.html",
-    implementation: AutoCompleteImplemention(),
-    description: AutoCompleteWidgetDescription(),
-    category: [WidgetCategoy.Input, WidgetCategoy.Interaction],
-    codeStringName: "autoComplete"
-  ),
+      name: "AutoComplete",
+      subtitle: "Implementation of Autocomplete Widget",
+      link: "https://api.flutter.dev/flutter/material/Autocomplete-class.html",
+      implementation: AutoCompleteImplemention(),
+      description: AutoCompleteWidgetDescription(),
+      category: [WidgetCategoy.Input, WidgetCategoy.Interaction],
+      codeStringName: "autoComplete"),
   WidgetModel(
       name: "DecoratedBox",
       link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
@@ -605,18 +598,17 @@ const List<WidgetModel> widgets = [
       category: [WidgetCategoy.Painting],
       codeStringName: "decoratedBox"),
   WidgetModel(
-    name: "Clip Path",
-    link:
-        "https://api.flutter.dev/flutter/widgets/ClipPath-class.html#:~:text=ClipPath%20class%20Null%20safety,from%20painting%20outside%20the%20path.",
-    subtitle: "Implementation of Clip Path widget",
-    implementation: ClipPathImplementation(),
-    description: ClipPathDescription(),
-    category: [
-      WidgetCategoy.Painting,
-      WidgetCategoy.Styling,
-    ],
-    codeStringName: "clipPath"
-  ),
+      name: "Clip Path",
+      link:
+          "https://api.flutter.dev/flutter/widgets/ClipPath-class.html#:~:text=ClipPath%20class%20Null%20safety,from%20painting%20outside%20the%20path.",
+      subtitle: "Implementation of Clip Path widget",
+      implementation: ClipPathImplementation(),
+      description: ClipPathDescription(),
+      category: [
+        WidgetCategoy.Painting,
+        WidgetCategoy.Styling,
+      ],
+      codeStringName: "clipPath"),
   WidgetModel(
       name: "SingleChildScrollView",
       link:
@@ -639,5 +631,4 @@ const List<WidgetModel> widgets = [
       description: ColoredBoxDescription(),
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
       codeStringName: "coloredBox"),
-
 ];

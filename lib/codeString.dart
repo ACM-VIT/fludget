@@ -1585,4 +1585,127 @@ Map<String, String> code_string = {
                 }),
               ),
             )""",
+  "cupertinoWidgets": """""",
+  "autoComplete": """Autocomplete<String>(
+            optionsBuilder: (TextEditingValue textEditingValue) {
+              if (textEditingValue.text == '') {
+                return const Iterable<String>.empty();
+              }
+              return _kOptions.where((String option) {
+                return option.contains(textEditingValue.text.toLowerCase());
+              });
+            },
+            onSelected: (String selection) {
+              print('You just selected \$selection');
+            },
+          ),""",
+  "decoratedBox": """DecoratedBox(
+                      position: DecorationPosition.background,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFFFFF),
+                        border: Border.all(
+                          color: const Color(0xFF04D719),
+                          style: BorderStyle.solid,
+                          width: 50.0
+                        )
+                      ),
+                    child: FlutterLogo()
+                  )""",
+  "clipPath": """ClipPath(
+                  clipper: ClipPathClass(),
+                  child: Container(
+                    width: double.infinity,
+                    height: 250,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ),""",
+  "singleChildScrollView": """SingleChildScrollView(
+        padding: EdgeInsets.all(5.0),
+        child: Center(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("With SingleChildScrollView"),
+                SizedBox(height: 10),
+                Container(
+                    color: const Color(0xffeeee00),
+                    width: 150.0,
+                    height: 300.0,
+                    child: Center(child: Text('Item 1'))),
+                SizedBox(height: 10.0),
+                Container(
+                    color: const Color(0xffee0000),
+                    width: 200.0,
+                    height: 300.0,
+                    child: Center(child: Text('Item 2'))),
+                SizedBox(height: 10.0),
+                Container(
+                    color: const Color(0xff3fee00),
+                    width: 100.0,
+                    height: 400.0,
+                    child: Center(child: Text('Item 3'))),
+              ]),
+        ),
+      ),""",
+  "error": """void Error() {
+  ErrorWidget.builder = (FlutterErrorDetails details) {
+    bool inDebug = false;
+    assert(() { inDebug = true; return true; }());
+    // In debug mode, use the normal error widget which shows
+    // the error message:
+    if (inDebug) {
+      return ErrorWidget(details.exception);
+    }
+    // In release builds, show a yellow-on-blue message instead:
+    return Container(
+      alignment: Alignment.center,
+      child: const Text(
+        'Error!',
+        style: const TextStyle(color: Colors.yellow),
+        textDirection: TextDirection.ltr,
+      ),
+    );
+  };
+  // Here we would normally runApp() the root widget, but to demonstrate
+  // the error handling we artificially fail:
+  return runApp(ErrorWidgetImplementation());
+}""",
+  "coloredBox": """ ColoredBox(
+              color: Colors.green,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text("Green Colored Box with Text"),
+              )
+          )""",
+  "cupertinoActivityIndicator": """CupertinoActivityIndicator(
+                radius: _radius,
+                animating: _animating,
+              ),""",
+  "datePickerDialog": """selectDate(BuildContext context) async {
+    DateTime? datePicker = await showDatePicker(
+        context: context,
+        initialDate: (datee==null) ? DateTime.now() : datee!,
+        firstDate: DateTime(2001),
+        lastDate: DateTime(2050)
+        builder: (BuildContext context, Widget? child)
+        {
+            return Theme(data: ThemeData(
+              primaryColor: Theme.of(context).primaryColor,
+              primarySwatch: Colors.blueGrey,
+            ), child: child!)
+        }
+        );   
+
+         if (datePicker != null && datePicker != datee) {
+      setState(() {
+        datee = datePicker;
+        ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text('Date Picked',
+                                  style: TextStyle(fontSize: 20)),
+                            ));
+      });
+
+    } 
+  }""",
 };
