@@ -5,6 +5,7 @@ import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
 import 'package:fludget/routes/IgnorePointer.dart';
+import 'package:fludget/routes/Root/cliprrect.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
@@ -549,6 +550,12 @@ const List<WidgetModel> widgets = [
       name: "Error",
       implementation: ErrorWidgetImplementation(),
       description: ErrorWidgetDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/ErrorWidget-class.html",
+      category: [WidgetCategoy.Assets, WidgetCategoy.Basics]),
+  WidgetModel(
+      name: "ClipRRect",
+      implementation: ClipRRectImplementation(),
+      description: ClipRRectDescription(),
       link: "https://api.flutter.dev/flutter/widgets/ErrorWidget-class.html",
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics]),
 ];
