@@ -21,9 +21,7 @@ class _SwitchImplementationState extends State<SwitchImplementation> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "Tap on the switch to toggle"
-            ),
+            Text("Tap on the switch to toggle"),
             Switch(value: _isOn, onChanged: _toggleSwitch),
           ],
         ),
@@ -54,23 +52,9 @@ It has two major arguments:
 => bool value:  Used to show current state of the switch. true for ON and false for OFF.
 
 => void Function onChange(bool):  Function used to change the state of the switch when user taps on the widget. It gives one parameter which is the new value for the switch.""",
-
           ),
           SizedBox(
             height: 20,
-          ),
-          Text(
-            """
-            Switch(
-              value: _isOn, 
-               onChanged: (bool val)
-               {
-                setState((){
-                  _isOn = val;
-                });  
-               },
-            )
-            """,
           ),
         ],
       ),

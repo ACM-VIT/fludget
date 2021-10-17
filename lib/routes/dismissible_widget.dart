@@ -134,34 +134,6 @@ class DismissibleDescription extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.15,
         ),
-        Container(
-            child: Text("Example :",
-                style: TextStyle(fontSize: 18))),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.05,
-        ),
-        Container(
-          child: Text(''' Dismissible(
-              key: UniqueKey(),
-              background: Container(
-                color: Colors.orange,
-              ),
-              direction: DismissDirection.vertical,
-              child: Column(
-                children: [
-                  ListTile(
-                    title: Text(
-                      "Your Title Text",
-                      style: TextStyle(fontSize: 24),
-                    ),
-                    subtitle:
-                        Text("Your Text"),
-                  ),
-                  Divider()
-                ],
-              ),
-            ) ''', style: TextStyle(fontSize: 18)),
-        ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.45,
         ),

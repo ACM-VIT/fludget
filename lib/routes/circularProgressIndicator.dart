@@ -71,7 +71,6 @@ class _CircularProgressIndicatorSampleState
               width: 50,
               child: CircularProgressIndicator(
                 color: Colors.red,
-                // backgroundColor: Colors.white,
                 value: _value / 100,
               ),
             ),
