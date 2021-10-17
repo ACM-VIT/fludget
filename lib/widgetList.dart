@@ -30,7 +30,6 @@ import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
-import 'package:fludget/routes/glassmorphism.dart';
 import 'package:fludget/routes/gestureDetector.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
@@ -474,13 +473,6 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
   ),
   WidgetModel(
-    name: "Glassmorphism Effect",
-    link: "https://uxdesign.cc/glassmorphism-in-user-interfaces-1f39bb1308c9",
-    implementation: GlassmorphismImplementation(),
-    description: GlassmorphismDescription(),
-    category: [WidgetCategoy.Styling, WidgetCategoy.Effects],
-  ),
-  WidgetModel(
     name: "Gesture Detector",
     link: "https://api.flutter.dev/flutter/widgets/GestureDetector-class.html",
     implementation: GestureDetectorSample(),
@@ -531,8 +523,7 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
       implementation: DecoratedBoxImplementation(),
       description: DecoratedBoxDescription(),
-      category: [WidgetCategoy.Painting]
-  ),
+      category: [WidgetCategoy.Painting]),
   WidgetModel(
     name: "Clip Path",
     link:

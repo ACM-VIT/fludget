@@ -8,7 +8,7 @@ class Constants {
   static const double avatarRadius = 45;
 }
 
-class CustomDialogBox extends StatefulWidget {
+class CustomDialogBox extends StatelessWidget {
   final String avatar = 'assets/images/logo.png';
   final String title = 'FLUDGET';
   final String description = """
@@ -16,30 +16,6 @@ Browse through a variety of widgets used in flutter
 
 This application is developed to learn Flutter using Flutter. Different widgets used in flutter can be viewed in this app along with their implementation.  
 """;
-
-  @override
-  _CustomDialogBoxState createState() => _CustomDialogBoxState();
-}
-
-class _CustomDialogBoxState extends State<CustomDialogBox>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController controller;
-  late final Animation<double> scaleAnimation;
-
-  @override
-  void initState() {
-    super.initState();
-
-    controller =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
-    scaleAnimation = CurvedAnimation(parent: controller, curve: Curves.easeOut);
-
-    controller.addListener(() {
-      setState(() {});
-    });
-
-    controller.forward();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,93 +30,91 @@ class _CustomDialogBoxState extends State<CustomDialogBox>
   }
 
   contentBox(context) {
-    return ScaleTransition(
-      scale: scaleAnimation,
-      child: Stack(
-        children: <Widget>[
-          Container(
-            padding: EdgeInsets.only(
-                left: Constants.padding,
-                top: Constants.padding,
-                right: Constants.padding,
-                bottom: Constants.padding),
-            margin: EdgeInsets.only(top: Constants.avatarRadius),
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(Constants.padding),
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.black, offset: Offset(0, 10), blurRadius: 10),
-              ],
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                Align(
-                  alignment: Alignment.topRight,
-                  child: IconButton(
-                    icon: Icon(Icons.close),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ),
-                Text(
-                  widget.title,
-                  style: Theme.of(context).textTheme.headline5?.copyWith(
-                        fontWeight: FontWeight.w700,
-                      ),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  widget.description,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                        fontWeight: FontWeight.w300,
-                      ),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    KeyValueInfo(
-                      "MADE BY",
-                      "ACM VIT",
-                      color: Colors.blue,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    KeyValueInfo(
-                      "LICENSE",
-                      "MIT",
-                      color: Colors.green,
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-          Positioned(
+    return Stack(
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.only(
             left: Constants.padding,
+            top: Constants.padding,
             right: Constants.padding,
-            child: CircleAvatar(
-              backgroundColor: Colors.transparent,
-              radius: Constants.avatarRadius,
-              child: ClipRRect(
-                borderRadius:
-                    BorderRadius.all(Radius.circular(Constants.avatarRadius)),
-                child: Image.asset(widget.avatar),
+            bottom: Constants.padding,
+          ),
+          margin: EdgeInsets.only(top: Constants.avatarRadius),
+          decoration: BoxDecoration(
+            shape: BoxShape.rectangle,
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(Constants.padding),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.black, offset: Offset(0, 10), blurRadius: 10),
+            ],
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Align(
+                alignment: Alignment.topRight,
+                child: IconButton(
+                  icon: Icon(Icons.close),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
               ),
+              Text(
+                title,
+                style: Theme.of(context).textTheme.headline5?.copyWith(
+                      fontWeight: FontWeight.w700,
+                    ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                description,
+                style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                      fontWeight: FontWeight.w300,
+                    ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  KeyValueInfo(
+                    "MADE BY",
+                    "ACM VIT",
+                    color: Colors.blue,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  KeyValueInfo(
+                    "LICENSE",
+                    "MIT",
+                    color: Colors.green,
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+        Positioned(
+          left: Constants.padding,
+          right: Constants.padding,
+          child: CircleAvatar(
+            backgroundColor: Colors.transparent,
+            radius: Constants.avatarRadius,
+            child: ClipRRect(
+              borderRadius:
+                  BorderRadius.all(Radius.circular(Constants.avatarRadius)),
+              child: Image.asset(avatar),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
