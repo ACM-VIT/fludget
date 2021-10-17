@@ -68,7 +68,7 @@ class _CupertinoWidgetsState extends State<CupertinoWidgets> {
           ? showSearchBar(context)
           : AppBar(
               backgroundColor: Theme.of(context).primaryColor,
-              title: Text("Widget Catalog"),
+              title: Text("Cupertino Widget Catalog"),
               actions: [
                 IconButton(
                   onPressed: () {
