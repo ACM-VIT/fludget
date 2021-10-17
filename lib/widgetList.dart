@@ -524,8 +524,7 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
       implementation: DecoratedBoxImplementation(),
       description: DecoratedBoxDescription(),
-      category: [WidgetCategoy.Painting]
-  ),
+      category: [WidgetCategoy.Painting]),
   WidgetModel(
     name: "Clip Path",
     link:
