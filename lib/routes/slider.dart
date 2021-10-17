@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -180,5 +181,25 @@ class SliderDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class SliderCode extends CodeString {
+  const SliderCode();
+  @override
+  String buildCodeString() {
+    return """Slider(
+                value: _sliderWithDivisionsValue,
+                min: SLIDER_MIN,
+                max: SLIDER_MAX,
+                divisions: SLIDER_DIVISIONS,
+                label: _sliderWithDivisionsValue.round().toString(),
+                onChanged: (double value) {
+                  setState(() {
+                    _sliderWithDivisionsValue = value;
+                  });
+                },
+              ),
+""";
   }
 }

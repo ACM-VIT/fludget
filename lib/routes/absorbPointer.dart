@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class AbsorbPointerWidget extends StatefulWidget {
@@ -57,9 +58,7 @@ class _AbsorbPointerWidgetState extends State<AbsorbPointerWidget> {
                   onPressed: () {
                     _incrementCounter();
                     final snackbar = SnackBar(
-                      content: Text(
-                        'Button is Pressed.'
-                      ),
+                      content: Text('Button is Pressed.'),
                       duration: Duration(seconds: 1),
                       action: SnackBarAction(
                         label: "Close",
@@ -156,5 +155,36 @@ class AbsorbPointerWidgetDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class AbsorbPointerCode extends CodeString {
+  const AbsorbPointerCode();
+  @override
+  String buildCodeString() {
+    return """ AbsorbPointer(
+              absorbing: _absorbingOfIncrement,
+              child: ElevatedButton(
+                  onPressed: () {
+                    _incrementCounter();
+                    final snackbar = SnackBar(
+                      content: Text(
+                        'Button is Pressed.'
+                      ),
+                      duration: Duration(seconds: 1),
+                      action: SnackBarAction(
+                        label: "Close",
+                        onPressed: () {},
+                      ),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                  },
+                  style: ElevatedButton.styleFrom(
+                      shape: CircleBorder(), padding: EdgeInsets.all(16)),
+                  child: Icon(
+                    Icons.plus_one,
+                    size: 30,
+                  )),
+            ),""";
   }
 }

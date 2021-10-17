@@ -1,7 +1,6 @@
 // import 'dart:js';
 
 import 'package:fludget/Models/widgetModel.dart';
-import 'package:fludget/codeString.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:syntax_highlighter/syntax_highlighter.dart';
@@ -53,7 +52,7 @@ class _RootScreenState extends State<RootScreen> {
                           fontFamily: 'monospace', fontSize: 15),
                       children: <TextSpan>[
                         DartSyntaxHighlighter(style)
-                            .format(code_string[widget.item.codeStringName]!),
+                            .format(widget.item.codeString.buildCodeString()),
                       ],
                     ),
                   ),

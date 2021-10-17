@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ReOrderableListViewImplementation extends StatelessWidget {
@@ -27,8 +28,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final Color oddItemColor =
-        Theme.of(context).primaryColor.withOpacity(0.05);
+    final Color oddItemColor = Theme.of(context).primaryColor.withOpacity(0.05);
     final Color evenItemColor =
         Theme.of(context).primaryColor.withOpacity(0.15);
 
@@ -76,5 +76,34 @@ class ReOrderableListViewDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ReOrdListviewCode extends CodeString {
+  const ReOrdListviewCode();
+  @override
+  String buildCodeString() {
+    return """ ReorderableListView(
+      children: <Widget>[
+        for (int i = 0; i < _items.length; i++)
+          ListTile(
+            key: Key('\$i'),
+            tileColor: _items[i].isOdd ? oddItemColor : evenItemColor,
+            title: Text('Item \${_items[i]}'),
+          )
+      ],
+      onReorder: (int oldIndex, int newIndex) {
+        setState(
+          () {
+            if (oldIndex < newIndex) {
+              newIndex -= 1;
+            }
+            final int item = _items.removeAt(oldIndex);
+            _items.insert(newIndex, item);
+          },
+        );
+      },
+    );
+""";
   }
 }

@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -88,5 +89,33 @@ class AnimatedIconDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class AnimatedIconCode extends CodeString {
+  const AnimatedIconCode();
+  @override
+  String buildCodeString() {
+    return """Widget _mountAnimatedIcon(AnimatedIconData icon) {
+    AnimationController controller = AnimationController(
+      vsync: this, 
+      duration: Duration(seconds: 1)
+    );
+    return GestureDetector(
+      onTap: () {
+        if (controller.status == AnimationStatus.completed) {
+          controller.reverse();
+        } else {
+          controller.forward();
+        }
+      },
+      child: AnimatedIcon(
+        icon: icon,
+        size: 75.0,
+        progress: controller,
+      ),
+    );
+  }
+}""";
   }
 }

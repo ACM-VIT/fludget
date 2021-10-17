@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class DismissibleSample extends StatefulWidget {
@@ -144,5 +145,28 @@ class DismissibleDescription extends StatelessWidget {
         ),
       ]),
     );
+  }
+}
+
+class DismissibleCode extends CodeString {
+  const DismissibleCode();
+  @override
+  String buildCodeString() {
+    return """Dismissible(
+            key: UniqueKey(),
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text(
+                    "Swipe left or right to delete!",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  trailing: Icon(Icons.keyboard_arrow_right),
+                  leading: Icon(Icons.keyboard_arrow_left),
+                  subtitle: Text("Dismiss without background color"),
+                ),
+              ],
+            ),
+          ),""";
   }
 }

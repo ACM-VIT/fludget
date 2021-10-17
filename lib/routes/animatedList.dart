@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedListWidget extends StatefulWidget {
@@ -17,25 +18,27 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
     return Scaffold(
       body: Column(
         children: [
-           Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  ans==false?'Switch to Size Animation.':'Switch to Scale Animation.',
-                  style: TextStyle(fontSize: 19),
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                Switch(
-                    value: ans,
-                    onChanged: (value) {
-                      setState(() {
-                        ans = value;
-                      });
-                    }),
-              ],
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                ans == false
+                    ? 'Switch to Size Animation.'
+                    : 'Switch to Scale Animation.',
+                style: TextStyle(fontSize: 19),
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Switch(
+                  value: ans,
+                  onChanged: (value) {
+                    setState(() {
+                      ans = value;
+                    });
+                  }),
+            ],
+          ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -254,5 +257,21 @@ class AnimatedListDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class AnimatedListCode extends CodeString {
+  const AnimatedListCode();
+  @override
+  String buildCodeString() {
+    return """AnimatedList(
+                        key: ans == true ? key1 : key2,
+                        initialItemCount: items.length,
+                        itemBuilder: (context, index, animation) => ans == true
+                            ? buildSizeItemWidget(
+                                items[index], index, animation)
+                            : buildScaleItemWidget(
+                                items[index], index, animation),
+                      ),""";
   }
 }

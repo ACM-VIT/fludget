@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class TableImplementation extends StatelessWidget {
@@ -173,5 +174,78 @@ class TableDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class TableCode extends CodeString {
+  const TableCode();
+  @override
+  String buildCodeString() {
+    return """ Table(
+      columnWidths: <int, TableColumnWidth>{
+        0: FlexColumnWidth(flex[0]),
+        1: FlexColumnWidth(flex[1]),
+        2: FlexColumnWidth(flex[2]),
+      },
+      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      border: TableBorder.all(
+        color: borderColor,
+        width: borderWidth,
+      ),
+      children: [
+        TableRow(children: [
+          Text(
+            "A",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "B",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "C",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+        ]),
+        TableRow(children: [
+          Text(
+            "D",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "E",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "F",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+        ]),
+        TableRow(children: [
+          Text(
+            "G",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "H",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "I",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+        ])
+      ],
+    );
+""";
   }
 }

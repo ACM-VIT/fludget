@@ -41,8 +41,8 @@ import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
+import 'package:fludget/routes/listTile.dart';
 import 'package:fludget/routes/listWheelScrollView.dart';
-import 'package:fludget/routes/listtile.dart';
 import 'package:fludget/routes/nested_scroll_view.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
@@ -79,49 +79,49 @@ const List<WidgetModel> widgets = [
       description: ContainerDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Container-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
-      codeStringName: "container"),
+      codeString: ContainerCode()),
   WidgetModel(
       name: "Column",
       implementation: ColumnImplementation(),
       description: ColumnDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Column-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
-      codeStringName: "column"),
+      codeString: ColumnCode()),
   WidgetModel(
       name: "Row",
       implementation: RowImplementation(),
       description: RowDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Row-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
-      codeStringName: "row"),
+      codeString: RowCode()),
   WidgetModel(
       name: "Stack",
       implementation: StackImplementation(),
       description: StackDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Stack-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
-      codeStringName: "stack"),
+      codeString: StackCode()),
   WidgetModel(
       name: "Text",
       implementation: TextImplementation(),
       description: TextDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Text-class.html",
       category: [WidgetCategoy.Text, WidgetCategoy.Basics],
-      codeStringName: "text"),
+      codeString: TextCode()),
   WidgetModel(
       name: "Sized Box",
       implementation: SizedboxImplementation(),
       description: SizedboxDescription(),
       link: "https://api.flutter.dev/flutter/widgets/SizedBox-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
-      codeStringName: "sizedBox"),
+      codeString: SizedBoxCode()),
   WidgetModel(
       name: "Future Builder",
       implementation: FutureBuilderImplementation(),
       description: FutureBuilderDescription(),
       link: "https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Async],
-      codeStringName: "FutureBuilder"),
+      codeString: FutureBuilderCode()),
   WidgetModel(
       name: "FormField",
       implementation: FormFieldImplementation(),
@@ -132,7 +132,7 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Interaction,
         WidgetCategoy.Text
       ],
-      codeStringName: "formField"),
+      codeString: FormFieldCode()),
   WidgetModel(
       name: "IgnorePointer",
       implementation: IgnorePointerImplementation(),
@@ -142,7 +142,7 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Input,
         WidgetCategoy.Interaction,
       ],
-      codeStringName: "ignorePointer"),
+      codeString: IgnorePointerCode()),
   WidgetModel(
       name: "DatePickerDialog",
       implementation: DatePickerDialogImplementation(),
@@ -153,14 +153,14 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Input,
         WidgetCategoy.Interaction,
       ],
-      codeStringName: "datePickerDialog"),
+      codeString: DatePickerCode()),
   WidgetModel(
       name: "Icon",
       implementation: IconImplementation(),
       description: IconDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Icon-class.html",
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
-      codeStringName: "icon"),
+      codeString: IconCode()),
   WidgetModel(
       name: "Image",
       subtitle: "Asset Image, Network Image, File Image and Memory Image",
@@ -168,7 +168,7 @@ const List<WidgetModel> widgets = [
       description: ImageDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
-      codeStringName: "image"),
+      codeString: ImageCode()),
   WidgetModel(
       name: "Outlined Button",
       implementation: OutlinedButtonImplimentation(),
@@ -176,7 +176,7 @@ const List<WidgetModel> widgets = [
       link:
           "https://api.flutter.dev/flutter/material/OutlinedButton-class.html",
       category: [WidgetCategoy.Input, WidgetCategoy.Basics],
-      codeStringName: "outlinedButton"),
+      codeString: OutlinedButtonCode()),
   WidgetModel(
       name: "Elevated Button",
       implementation: ElevatedButtonImplimentation(),
@@ -184,14 +184,14 @@ const List<WidgetModel> widgets = [
       link:
           "https://api.flutter.dev/flutter/material/ElevatedButton-class.html",
       category: [WidgetCategoy.Input, WidgetCategoy.Basics],
-      codeStringName: "elevatedButton"),
+      codeString: ElevatedButtonCode()),
   WidgetModel(
       name: "Text Button",
       implementation: TextButtonImplimentation(),
       description: TextButtonDescription(),
       link: "https://api.flutter.dev/flutter/material/TextButton-class.html",
       category: [WidgetCategoy.Input, WidgetCategoy.Basics],
-      codeStringName: "textButton"),
+      codeString: TextButtonCode()),
   WidgetModel(
       name: "Floating Action Button",
       implementation: FloatingActionButtonImplimentation(),
@@ -199,14 +199,14 @@ const List<WidgetModel> widgets = [
       link:
           "https://api.flutter.dev/flutter/material/FloatingActionButton-class.html",
       category: [WidgetCategoy.Input, WidgetCategoy.Basics],
-      codeStringName: "floatingActionButton"),
+      codeString: FABCode()),
   WidgetModel(
       name: "Toggle Button",
       implementation: ToggleButtonImplementation(),
       description: ToggleButtonDescription(),
       link: "https://api.flutter.dev/flutter/material/ToggleButtons-class.html",
       category: [WidgetCategoy.Input, WidgetCategoy.Basics],
-      codeStringName: "toggleButton"),
+      codeString: ToggleButtonCode()),
   WidgetModel(
       name: "DialogBox",
       subtitle: "shows Dialog",
@@ -214,14 +214,14 @@ const List<WidgetModel> widgets = [
       description: DialogBoxDescription(),
       link: "https://api.flutter.dev/flutter/material/AlertDialog-class.html",
       category: [WidgetCategoy.Input],
-      codeStringName: "dialogBox"),
+      codeString: DialogBoxCode()),
   WidgetModel(
       name: "GridList",
       implementation: GridListImplementation(),
       description: GridListDescription(),
       link: "https://api.flutter.dev/flutter/widgets/GridView-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
-      codeStringName: "gridList"),
+      codeString: GridListCode()),
   WidgetModel(
       name: "Switch",
       subtitle: "Toggle Switch",
@@ -229,7 +229,7 @@ const List<WidgetModel> widgets = [
       description: SwitchDescription(),
       link: "https://api.flutter.dev/flutter/material/Switch-class.html",
       category: [WidgetCategoy.Input],
-      codeStringName: "switch"),
+      codeString: SwitchCode()),
   WidgetModel(
       name: "TextField",
       subtitle: "Input field for username and password",
@@ -237,35 +237,35 @@ const List<WidgetModel> widgets = [
       description: TextFielDescription(),
       link: "https://api.flutter.dev/flutter/material/TextField-class.html",
       category: [WidgetCategoy.Text, WidgetCategoy.Input],
-      codeStringName: "textField"),
+      codeString: TextFieldCode()),
   WidgetModel(
       name: "Card",
       implementation: CardImplementation(),
       description: CardDescription(),
       link: "https://api.flutter.dev/flutter/material/Card-class.html",
       category: [WidgetCategoy.Material, WidgetCategoy.Basics],
-      codeStringName: "card"),
+      codeString: CardCode()),
   WidgetModel(
       name: "Opacity",
       implementation: OpacityImplementation(),
       description: OpacityDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Opacity-class.html",
       category: [WidgetCategoy.Painting, WidgetCategoy.Effects],
-      codeStringName: "opacity"),
+      codeString: OpacityCode()),
   WidgetModel(
       name: "Table",
       implementation: TableImplementation(),
       description: TableDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Table-class.html",
       category: [WidgetCategoy.Layout],
-      codeStringName: "table"),
+      codeString: TableCode()),
   WidgetModel(
       name: "Expanded",
       implementation: ExpandedImplementation(),
       description: ExpandedDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Expanded-class.html",
       category: [WidgetCategoy.Layout],
-      codeStringName: "expanded"),
+      codeString: ExpandedCode()),
   WidgetModel(
       name: "ReOrderableListView",
       subtitle: "A Reorderable List",
@@ -274,7 +274,7 @@ const List<WidgetModel> widgets = [
       link:
           "https://api.flutter.dev/flutter/material/ReorderableListView-class.html",
       category: [WidgetCategoy.Layout],
-      codeStringName: "reOrderableListView"),
+      codeString: ReOrdListviewCode()),
   WidgetModel(
       name: "DropDownButton",
       implementation: DropDownButtonSample(),
@@ -282,7 +282,7 @@ const List<WidgetModel> widgets = [
       link:
           "https://api.flutter.dev/flutter/material/DropdownButton -class.html",
       category: [WidgetCategoy.Input],
-      codeStringName: "dropDownButton"),
+      codeString: DropDownCode()),
   WidgetModel(
       name: "Wrap",
       subtitle: "Wrap Widget",
@@ -290,7 +290,7 @@ const List<WidgetModel> widgets = [
       description: WrapWidgetDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Wrap-class.html",
       category: [WidgetCategoy.Layout],
-      codeStringName: "wrap"),
+      codeString: WrapCode()),
   WidgetModel(
       name: "Hero",
       subtitle: "Hero Animation between widgets",
@@ -298,7 +298,7 @@ const List<WidgetModel> widgets = [
       description: HeroWidgetDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Hero-class.html",
       category: [WidgetCategoy.Animation],
-      codeStringName: "hero"),
+      codeString: HeroCode()),
   WidgetModel(
       name: "SnackBar",
       subtitle: "SnackBar Widget",
@@ -306,7 +306,7 @@ const List<WidgetModel> widgets = [
       description: SnackBarDescription(),
       link: "https://api.flutter.dev/flutter/material/SnackBar-class.html",
       category: [WidgetCategoy.Material],
-      codeStringName: "snackBar"),
+      codeString: SnackBarCode()),
   WidgetModel(
       name: "DataTable",
       subtitle: "Data Table  widgets",
@@ -314,7 +314,7 @@ const List<WidgetModel> widgets = [
       description: DataTableWidgetDescription(),
       link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
       category: [WidgetCategoy.Layout],
-      codeStringName: "dataTable"),
+      codeString: DataTableCode()),
   WidgetModel(
       name: "CheckboxListTile",
       subtitle: "A ListTile with a Checkbox",
@@ -323,14 +323,14 @@ const List<WidgetModel> widgets = [
       link:
           "https://api.flutter.dev/flutter/material/CheckboxListTile-class.html",
       category: [WidgetCategoy.Input],
-      codeStringName: "checkBoxListTile"),
+      codeString: CheckBoxListTileCode()),
   WidgetModel(
       name: "List Tile",
       implementation: ListTileSample(),
       description: ListTileDescription(),
       link: "https://api.flutter.dev/flutter/material/ListTile-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Material],
-      codeStringName: "listTile"),
+      codeString: ListTileCode()),
   WidgetModel(
       name: "RichText",
       subtitle: "Rich Text widget",
@@ -338,14 +338,14 @@ const List<WidgetModel> widgets = [
       description: RichTextWidgetDescription(),
       link: "https://api.flutter.dev/flutter/widgets/RichText-class.html",
       category: [WidgetCategoy.Text],
-      codeStringName: "richText"),
+      codeString: RichTextCode()),
   WidgetModel(
       name: "Slider",
       implementation: SliderSample(),
       description: SliderDescription(),
       link: "https://api.flutter.dev/flutter/material/Slider-class.html",
       category: [WidgetCategoy.Input, WidgetCategoy.Material],
-      codeStringName: "slider"),
+      codeString: SliderCode()),
   WidgetModel(
       name: "AnimatedBuilder Widget",
       subtitle: "Implement Animations",
@@ -354,14 +354,14 @@ const List<WidgetModel> widgets = [
       link:
           "https://api.flutter.dev/flutter/widgets/AnimatedBuilder-class.html",
       category: [WidgetCategoy.Animation],
-      codeStringName: "animatedBuilder"),
+      codeString: AnimatedBuilderCode()),
   WidgetModel(
       name: "Transform",
       link: "https://api.flutter.dev/flutter/widgets/Transform-class.html",
       implementation: TransformImplementation(),
       description: TransformDescription(),
       category: [WidgetCategoy.Painting, WidgetCategoy.Effects],
-      codeStringName: "transform"),
+      codeString: TransformCode()),
   WidgetModel(
       name: "DraggableScrollableSheet Widget",
       subtitle: "Implementation for DraggableScrollableSheet in flutter",
@@ -370,7 +370,7 @@ const List<WidgetModel> widgets = [
       link:
           "https://api.flutter.dev/flutter/widgets/DraggableScrollableSheet-class.html",
       category: [WidgetCategoy.Material],
-      codeStringName: "draggableScrollSheet"),
+      codeString: DraggableCode()),
   WidgetModel(
       name: "Dismissible",
       subtitle: "Remove any List Item",
@@ -378,14 +378,14 @@ const List<WidgetModel> widgets = [
       description: DismissibleDescription(),
       link: "https://api.flutter.dev/flutter/widgets/Dismissible-class.html",
       category: [WidgetCategoy.Basics],
-      codeStringName: "dismissible"),
+      codeString: DismissibleCode()),
   WidgetModel(
       name: "Page View",
       implementation: pageViewSample(),
       description: PageViewDescription(),
       link: "https://api.flutter.dev/flutter/widgets/PageView-class.html",
       category: [WidgetCategoy.Layout],
-      codeStringName: "pageView"),
+      codeString: PageViewCode()),
   WidgetModel(
       name: "Linear Progress Indicator",
       link:
@@ -393,7 +393,7 @@ const List<WidgetModel> widgets = [
       implementation: LinearProgressIndicatorSample(),
       description: LinearProgressIndicatorDescription(),
       category: [WidgetCategoy.Effects],
-      codeStringName: "linearIndicator"),
+      codeString: LinearProgressIndicatorCode()),
   WidgetModel(
       name: "Circular Progress Indicator",
       link:
@@ -401,35 +401,35 @@ const List<WidgetModel> widgets = [
       implementation: CircularProgressIndicatorSample(),
       description: CircularProgressIndicatorDescription(),
       category: [WidgetCategoy.Effects],
-      codeStringName: "circularIndicator"),
+      codeString: CircularProgressIndicatorCode()),
   WidgetModel(
       name: "Draggable Widget",
       link: "https://api.flutter.dev/flutter/widgets/Draggable-class.html",
       implementation: DraggableSample(),
       description: DraggableDescription(),
       category: [WidgetCategoy.Interaction],
-      codeStringName: "draggable"),
+      codeString: DraggableWidgetCode()),
   WidgetModel(
       name: "Flexible",
       link: "https://api.flutter.dev/flutter/widgets/Flexible-class.html",
       implementation: FlexibleWidget(),
       description: FlexibleDescription(),
       category: [WidgetCategoy.Layout],
-      codeStringName: "flexible"),
+      codeString: FlexibleCode()),
   WidgetModel(
       name: "ColorFiltered",
       link: "https://api.flutter.dev/flutter/widgets/ColorFiltered-class.html",
       implementation: ColourFilteredWidget(),
       description: ColourFilteredWidgetDescription(),
       category: [WidgetCategoy.Effects, WidgetCategoy.Painting],
-      codeStringName: "colourFiltered"),
+      codeString: ColorFilteredCode()),
   WidgetModel(
       name: "IndexedStack",
       link: "https://api.flutter.dev/flutter/widgets/IndexedStack-class.html",
       implementation: IndexedStackImplemention(),
       description: IndexedStackDescription(),
       category: [WidgetCategoy.Layout],
-      codeStringName: "indexedStack"),
+      codeString: IndexedStackCode()),
   WidgetModel(
       name: "CupertinoActionSheet",
       link:
@@ -437,14 +437,14 @@ const List<WidgetModel> widgets = [
       implementation: CupertinoActionSheetImplementation(),
       description: CupertinoActionSheetDescription(),
       category: [WidgetCategoy.Cupertino, WidgetCategoy.Material],
-      codeStringName: "cupertinoActionSheet"),
+      codeString: CupertinoActionSheetCode()),
   WidgetModel(
       name: "AnimatedIcon",
       link: "https://api.flutter.dev/flutter/material/AnimatedIcon-class.html",
       implementation: AnimatedIconSample(),
       description: AnimatedIconDescription(),
       category: [WidgetCategoy.Animation],
-      codeStringName: "animatedIcon"),
+      codeString: AnimatedIconCode()),
   WidgetModel(
       name: "About Dialog",
       subtitle: "Implementation of aboutDialog()",
@@ -452,7 +452,7 @@ const List<WidgetModel> widgets = [
       implementation: AboutDialogImp(),
       description: AboutDialogDesc(),
       category: [WidgetCategoy.Basics],
-      codeStringName: "aboutDialog"),
+      codeString: AboutDialogCode()),
   WidgetModel(
     name: "Cupertino Activity Indicator",
     link:
@@ -460,7 +460,7 @@ const List<WidgetModel> widgets = [
     implementation: CupertinoActivityIndicatorSample(),
     description: CupertinoActivityIndicatorDescription(),
     category: [WidgetCategoy.Cupertino],
-    codeStringName: "cupertinoActivityIndicator",
+    codeString: CupertinoActivityCode(),
   ),
   WidgetModel(
       name: "AbsorbPointer",
@@ -469,7 +469,7 @@ const List<WidgetModel> widgets = [
       implementation: AbsorbPointerWidget(),
       description: AbsorbPointerWidgetDescription(),
       category: [WidgetCategoy.Interaction],
-      codeStringName: "absorbPointer"),
+      codeString: AbsorbPointerCode()),
   WidgetModel(
       name: "ListWheelScrollView",
       subtitle: "Implementation of ListWheelScrollView Widget",
@@ -478,7 +478,7 @@ const List<WidgetModel> widgets = [
       implementation: ListWheelScrollViewWidget(),
       description: ListWheelScrollViewDescription(),
       category: [WidgetCategoy.Scrolling],
-      codeStringName: "listWheelScrollView"),
+      codeString: ListWheelCode()),
   WidgetModel(
       name: "RefreshIndicator",
       subtitle: "Implementation of RefreshIndicator Widget",
@@ -487,7 +487,7 @@ const List<WidgetModel> widgets = [
       implementation: MyRefreshIndicator(),
       description: MyRefreshIndicatorDesc(),
       category: [WidgetCategoy.Effects],
-      codeStringName: "refreshIndicator"),
+      codeString: RefreshIndicatorCode()),
   WidgetModel(
       name: "Spacer",
       subtitle: "Implementation of Spacer Widget",
@@ -495,7 +495,7 @@ const List<WidgetModel> widgets = [
       implementation: SpacerImplementation(),
       description: SpacerDescription(),
       category: [WidgetCategoy.Layout],
-      codeStringName: "spacer"),
+      codeString: SpacerCode()),
   WidgetModel(
       name: "SliverAppBar",
       subtitle: "Implementation of SliverAppBar Widget",
@@ -503,7 +503,7 @@ const List<WidgetModel> widgets = [
       implementation: MySliverAppBar(),
       description: MySliverAppBarDescription(),
       category: [WidgetCategoy.Scrolling, WidgetCategoy.Accessibility],
-      codeStringName: "sliverAppBar"),
+      codeString: SliverAppBarCode()),
   WidgetModel(
       name: "AppBar",
       subtitle: "Implementation of AppBar Widget",
@@ -511,7 +511,7 @@ const List<WidgetModel> widgets = [
       implementation: appbarsample(),
       description: appbardescription(),
       category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
-      codeStringName: "appBar"),
+      codeString: AppBarCode()),
   WidgetModel(
       name: "Animated List",
       subtitle: "Implementation of Animated List Widget",
@@ -519,14 +519,14 @@ const List<WidgetModel> widgets = [
       implementation: AnimatedListWidget(),
       description: AnimatedListDescription(),
       category: [WidgetCategoy.Animation],
-      codeStringName: "animatedList"),
+      codeString: AnimatedListCode()),
   WidgetModel(
       category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
       name: "Sliver Grid",
       link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
       implementation: SliverGridSample(),
       description: SliverGridDescription(),
-      codeStringName: "sliverGrid"),
+      codeString: SliverGridCode()),
   WidgetModel(
       name: "ScrollBar",
       subtitle: "Implementation of ScrollBar Widget",
@@ -534,7 +534,7 @@ const List<WidgetModel> widgets = [
       implementation: ScrollBarImplementation(),
       description: ScrollBarDescription(),
       category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
-      codeStringName: "scrollbar"),
+      codeString: ScrollbarCode()),
   WidgetModel(
       name: "Gesture Detector",
       link:
@@ -542,7 +542,7 @@ const List<WidgetModel> widgets = [
       implementation: GestureDetectorSample(),
       description: GestureDetectorDescription(),
       category: [WidgetCategoy.Input, WidgetCategoy.Interaction],
-      codeStringName: "gestureDetector"),
+      codeString: GestureDetectorCode()),
   WidgetModel(
       name: "NestedScrollView",
       subtitle: "Implementation of NestedScrollView widget",
@@ -551,7 +551,7 @@ const List<WidgetModel> widgets = [
       implementation: NestedScrollViewImplementation(),
       description: NestedScrollViewDescription(),
       category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
-      codeStringName: "nestedScrollView"),
+      codeString: NestedScrollViewCode()),
   WidgetModel(
       name: "Stream Builder",
       subtitle: "Implementation of StreamBuilder widget",
@@ -559,7 +559,7 @@ const List<WidgetModel> widgets = [
       implementation: StreamBuilderWidget(),
       description: StreamBuilderDescription(),
       category: [WidgetCategoy.Interaction, WidgetCategoy.Async],
-      codeStringName: "streamBuilder"),
+      codeString: StreamBuilderCode()),
   WidgetModel(
       name: "ClipOval",
       subtitle: "Implementation of ClipOval widget",
@@ -567,14 +567,14 @@ const List<WidgetModel> widgets = [
       implementation: ClipOvalSample(),
       description: ClipOvalDescription(),
       category: [WidgetCategoy.Effects, WidgetCategoy.Painting],
-      codeStringName: "clipOval"),
+      codeString: ClipOvalCode()),
   WidgetModel(
       name: "ClipRect",
       link: "https://api.flutter.dev/flutter/widgets/ClipRect-class.html",
       implementation: ClipRectImplementation(),
       description: ClipRectDescription(),
       category: [WidgetCategoy.Painting],
-      codeStringName: "clipRect"),
+      codeString: ClipRectCode()),
   WidgetModel(
       name: "Cupertino Widgets",
       subtitle: "Implementation of Cupertino Widgets (iOS style widgets)",
@@ -582,7 +582,7 @@ const List<WidgetModel> widgets = [
       implementation: CupertinoWidgets(),
       description: CupertinoWidgetsDescription(),
       category: [WidgetCategoy.Cupertino],
-      codeStringName: "cupertinoWidgets"),
+      codeString: CupertinoWidgetsCode()),
   WidgetModel(
       name: "AutoComplete",
       subtitle: "Implementation of Autocomplete Widget",
@@ -590,14 +590,14 @@ const List<WidgetModel> widgets = [
       implementation: AutoCompleteImplemention(),
       description: AutoCompleteWidgetDescription(),
       category: [WidgetCategoy.Input, WidgetCategoy.Interaction],
-      codeStringName: "autoComplete"),
+      codeString: AutoCompleteCode()),
   WidgetModel(
       name: "DecoratedBox",
       link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
       implementation: DecoratedBoxImplementation(),
       description: DecoratedBoxDescription(),
       category: [WidgetCategoy.Painting],
-      codeStringName: "decoratedBox"),
+      codeString: DecoratedBoxCode()),
   WidgetModel(
       name: "Clip Path",
       link:
@@ -609,7 +609,7 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Painting,
         WidgetCategoy.Styling,
       ],
-      codeStringName: "clipPath"),
+      codeString: ClipPathCode()),
   WidgetModel(
       name: "SingleChildScrollView",
       link:
@@ -617,21 +617,21 @@ const List<WidgetModel> widgets = [
       implementation: SingleChildScrollViewImplementation(),
       description: SingleChildScrollViewDescription(),
       category: [WidgetCategoy.Scrolling],
-      codeStringName: "singleChildScrollView"),
+      codeString: SinglechildScrollViewCode()),
   WidgetModel(
       name: "Error",
       implementation: ErrorWidgetImplementation(),
       description: ErrorWidgetDescription(),
       link: "https://api.flutter.dev/flutter/widgets/ErrorWidget-class.html",
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
-      codeStringName: "error"),
+      codeString: ErrorCode()),
   WidgetModel(
       name: "ColoredBox",
       link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
       implementation: ColoredBoxImplementation(),
       description: ColoredBoxDescription(),
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
-      codeStringName: "coloredBox"),
+      codeString: ColoredBoxCode()),
   WidgetModel(
       name: "Fade in Image",
       link: "https://flutter.dev/docs/cookbook/images/fading-in-images",
@@ -642,5 +642,5 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Interaction,
         WidgetCategoy.Animation,
       ],
-      codeStringName: "fadeInImage"),
+      codeString: FadeInImgCode()),
 ];

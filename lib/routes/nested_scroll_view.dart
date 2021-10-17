@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class NestedScrollViewImplementation extends StatelessWidget {
@@ -152,5 +153,80 @@ class NestedScrollViewDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class NestedScrollViewCode extends CodeString {
+  const NestedScrollViewCode();
+  @override
+  String buildCodeString() {
+    return """ NestedScrollView(
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+            return <Widget>[
+              SliverOverlapAbsorber(
+                handle:
+                    NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                sliver: SliverToBoxAdapter(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Text("Here goes your top header"),
+                      ),
+                      Placeholder(
+                        fallbackHeight: 200,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TabBar(
+                        tabs: _tabs
+                            .map((String name) => Tab(text: name))
+                            .toList(),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ];
+          },
+          body: TabBarView(
+            children: _tabs.map((String name) {
+              return SafeArea(
+                top: false,
+                bottom: false,
+                child: Builder(
+                  builder: (BuildContext context) {
+                    return CustomScrollView(
+                      key: PageStorageKey<String>(name),
+                      slivers: <Widget>[
+                        SliverOverlapInjector(
+                          handle:
+                              NestedScrollView.sliverOverlapAbsorberHandleFor(
+                                  context),
+                        ),
+                        SliverPadding(
+                          padding: const EdgeInsets.all(8.0),
+                          sliver: SliverFixedExtentList(
+                            itemExtent: 48.0,
+                            delegate: SliverChildBuilderDelegate(
+                              (BuildContext context, int index) {
+                                return ListTile(
+                                  title: Text('Item \$index'),
+                                );
+                              },
+                              childCount: 30,
+                            ),
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              );
+            }).toList(),
+          ),
+        ),
+""";
   }
 }

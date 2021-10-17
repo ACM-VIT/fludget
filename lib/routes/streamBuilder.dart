@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class StreamBuilderWidget extends StatefulWidget {
@@ -174,5 +175,83 @@ class StreamBuilderDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class StreamBuilderCode extends CodeString {
+  const StreamBuilderCode();
+  @override
+  String buildCodeString() {
+    return """ StreamBuilder<double> buildSecondBuilder() => StreamBuilder<double>(
+        initialData: amountOfMoney,
+        stream: _controller.stream,
+        builder: (context, snapshot) {
+          final money = snapshot.data!.toStringAsFixed(2);
+          return Padding(
+            padding: EdgeInsets.all(16),
+            child: Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Column(
+                  children: [
+                    ListTile(
+                      leading: Icon(Icons.fiber_manual_record),
+                      title: Transform.translate(
+                        offset: Offset(-20, 5),
+                        child: Text(
+                          "Changing the data using StreamCotroller.",
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.attach_money,
+                          size: 50,
+                          color: Colors.blue,
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Text(
+                          '\$' + money,
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.w600),
+                        )
+                      ],
+                    ),
+                    ElevatedButton(
+                      onPressed: () async {
+                        amountOfMoney = amountOfMoney + 50;
+                        _controller.sink.add(amountOfMoney);
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        primary: Theme.of(context).primaryColor,
+                      ),
+                      child: Text('Increment Money',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          )),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          );
+        },
+      );
+""";
   }
 }

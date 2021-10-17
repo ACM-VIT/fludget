@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class SwitchImplementation extends StatefulWidget {
@@ -59,5 +60,14 @@ It has two major arguments:
         ],
       ),
     );
+  }
+}
+
+class SwitchCode extends CodeString {
+  const SwitchCode();
+  @override
+  String buildCodeString() {
+    return """ Switch(value: _isOn, onChanged: _toggleSwitch),
+""";
   }
 }

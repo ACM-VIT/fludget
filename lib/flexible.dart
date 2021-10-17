@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Models/codeString.dart';
+
 class FlexibleWidget extends StatefulWidget {
   const FlexibleWidget({Key? key}) : super(key: key);
 
@@ -266,5 +268,40 @@ A Flexible widget must be a descendant of a Row, Column, or Flex, and the path f
         ),
       )),
     );
+  }
+}
+
+class FlexibleCode extends CodeString {
+  const FlexibleCode();
+  @override
+  String buildCodeString() {
+    return """ Row(
+                  children: [
+                    Flexible(
+                        child: Container(
+                      color: Colors.yellow,
+                      height: 80,
+                      width: 80,
+                    )),
+                    Flexible(
+                        flex: 2,
+                        fit: FlexFit.tight,
+                        child: Container(
+                          color: Colors.blueAccent,
+                          height: 80,
+                          width: 80,
+                        )),
+                    Flexible(
+                      flex: 2,
+                      fit: FlexFit.tight,
+                      child: Container(
+                        color: Colors.green,
+                        height: 80,
+                        width: 80,
+                      ),
+                    ),
+                  ],
+                ),
+""";
   }
 }

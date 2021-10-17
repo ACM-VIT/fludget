@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class AboutDialogImp extends StatelessWidget {
@@ -67,5 +68,39 @@ class AboutDialogDesc extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class AboutDialogCode extends CodeString {
+  const AboutDialogCode();
+  @override
+  String buildCodeString() {
+    return """void showAboutDialog({
+        required BuildContext context,
+        String? applicationName,
+        String? applicationVersion,
+        Widget? applicationIcon,
+        String? applicationLegalese,
+        List<Widget>? children,
+        bool useRootNavigator = true,
+        RouteSettings? routeSettings,
+      }) {
+        assert(context != null);
+        assert(useRootNavigator != null);
+        showDialog<void>(
+          context: context,
+          useRootNavigator: useRootNavigator,
+          builder: (BuildContext context) {
+        return AboutDialog(
+          applicationName: applicationName,
+          applicationVersion: applicationVersion,
+          applicationIcon: applicationIcon,
+          applicationLegalese: applicationLegalese,
+          children: children,
+        );
+          },
+          routeSettings: routeSettings,
+        );
+      }""";
   }
 }

@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class DecoratedBoxImplementation extends StatelessWidget {
@@ -7,43 +8,35 @@ class DecoratedBoxImplementation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-          child: Column(
-            children: [
-              SizedBox(height: 50),
-              Container(
-                  child: DecoratedBox(
-                      position: DecorationPosition.background,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFFFFFFF),
-                        border: Border.all(
+      child: Column(
+        children: [
+          SizedBox(height: 50),
+          Container(
+              child: DecoratedBox(
+                  position: DecorationPosition.background,
+                  decoration: BoxDecoration(
+                      color: const Color(0xFFFFFFFF),
+                      border: Border.all(
                           color: const Color(0xFF04D719),
                           style: BorderStyle.solid,
-                          width: 50.0
-                        )
-                      ),
-                    child: FlutterLogo()
-                  )
-              ),
-              SizedBox(height: 30),
-              Text("Simple DecoratedBox"),
-              SizedBox(height: 30),
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  gradient: RadialGradient(
-                    center: Alignment(-0.5, -0.6),
-                    radius: 0.15,
-                    colors: <Color>[
-                      Color(0xFFFCEABB),
-                      Color(0xFFF8B500)
-                    ],
-                    stops: <double>[0.9, 1.0],
-                  ),
+                          width: 50.0)),
+                  child: FlutterLogo())),
+          SizedBox(height: 30),
+          Text("Simple DecoratedBox"),
+          SizedBox(height: 30),
+          DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: RadialGradient(
+                  center: Alignment(-0.5, -0.6),
+                  radius: 0.15,
+                  colors: <Color>[Color(0xFFFCEABB), Color(0xFFF8B500)],
+                  stops: <double>[0.9, 1.0],
                 ),
-                position: DecorationPosition.background,
-                child: FlutterLogo(size: 150)
               ),
-              SizedBox(height: 10),
-              Text("DecoratedBox with all properties")
+              position: DecorationPosition.background,
+              child: FlutterLogo(size: 150)),
+          SizedBox(height: 10),
+          Text("DecoratedBox with all properties")
         ],
       ),
     ));
@@ -72,8 +65,15 @@ class DecoratedBoxDescription extends StatelessWidget {
       Text('Source Code DecoratedBox with all properties',
           style: TextStyle(fontWeight: FontWeight.w800)),
       SizedBox(height: 10),
-      Text(
-        """
+    ]);
+  }
+}
+
+class DecoratedBoxCode extends CodeString {
+  const DecoratedBoxCode();
+  @override
+  String buildCodeString() {
+    return """
         DecoratedBox(
                 decoration: BoxDecoration(
                   gradient: RadialGradient(
@@ -89,8 +89,6 @@ class DecoratedBoxDescription extends StatelessWidget {
                 position: DecorationPosition.background,
                 child: FlutterLogo(size: 150)
               )
-        """
-      )
-    ]);
+        """;
   }
 }

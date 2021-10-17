@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -134,5 +135,39 @@ class DatePickerDialogDescription extends StatelessWidget {
         style: TextStyle(fontSize: 20),
       ),
     );
+  }
+}
+
+class DatePickerCode extends CodeString {
+  const DatePickerCode();
+  @override
+  String buildCodeString() {
+    return """selectDate(BuildContext context) async {
+    DateTime? datePicker = await showDatePicker(
+        context: context,
+        initialDate: (datee==null) ? DateTime.now() : datee!,
+        firstDate: DateTime(2001),
+        lastDate: DateTime(2050)
+        builder: (BuildContext context, Widget? child)
+        {
+            return Theme(data: ThemeData(
+              primaryColor: Theme.of(context).primaryColor,
+              primarySwatch: Colors.blueGrey,
+            ), child: child!)
+        }
+        );   
+
+         if (datePicker != null && datePicker != datee) {
+      setState(() {
+        datee = datePicker;
+        ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text('Date Picked',
+                                  style: TextStyle(fontSize: 20)),
+                            ));
+      });
+
+    } 
+  }""";
   }
 }

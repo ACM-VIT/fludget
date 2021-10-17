@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class LinearProgressIndicatorSample extends StatefulWidget {
@@ -129,5 +130,18 @@ class LinearProgressIndicatorDescription extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+class LinearProgressIndicatorCode extends CodeString {
+  const LinearProgressIndicatorCode();
+  @override
+  String buildCodeString() {
+    return """ LinearProgressIndicator(
+            color: Colors.red,
+            //backgroundColor: Colors.white,
+            value: _value / 100,
+          ),
+""";
   }
 }
