@@ -12,17 +12,22 @@ class FadeInImageImplementation extends StatelessWidget {
           padding: const EdgeInsets.only(top: 20.0, left: 20, right: 20),
           child: Column(
             children: [
-              Text(
-                "Fade in image can be used when you have to smoothly animate you images, after image is chached from internet",
-                style: TextStyle(height: 1.5),
+              ListTile(
+                title: Text(
+                  "Fade in image can be used when you have to smoothly animate you images, after image is chached from internet",
+                  style: TextStyle(height: 1.5),
+                ),
+                leading: FadeInImage.assetNetwork(
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                  placeholder: "assets/images/acm_logo.png",
+                  image:
+                      "https://images.pexels.com/photos/4974920/pexels-photo-4974920.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+                ),
               ),
               const SizedBox(
                 height: 20,
-              ),
-              FadeInImage.assetNetwork(
-                placeholder: "assets/images/acm_logo.png",
-                image:
-                    "https://images.pexels.com/photos/4974920/pexels-photo-4974920.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
               ),
               const SizedBox(
                 height: 20,
@@ -45,6 +50,8 @@ class FadeInImageImplementation extends StatelessWidget {
                 child: FadeInImage.assetNetwork(
                   fadeOutDuration: const Duration(milliseconds: 700),
                   fadeInDuration: const Duration(seconds: 1),
+                  fadeInCurve: Curves.bounceIn,
+                  fadeOutCurve: Curves.bounceOut,
                   placeholder: "assets/gif/loading_gif.gif",
                   image:
                       'https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
