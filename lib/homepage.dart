@@ -32,9 +32,7 @@ Widget build(BuildContext context) {
     body: PageView(
       controller:pageController,
       onPageChanged:(int index){
-
         setState(() {
-
           _selectedIndex=index;
         });
 
@@ -57,8 +55,8 @@ Widget build(BuildContext context) {
 
     ],
       currentIndex: _selectedIndex,
-      selectedItemColor: Colors.purple,
-      unselectedItemColor: Colors.grey,
+      selectedItemColor: Theme.of(context).primaryColor,
+      unselectedItemColor: Theme.of(context).shadowColor,
       onTap: onTapped,),
   );
 }
