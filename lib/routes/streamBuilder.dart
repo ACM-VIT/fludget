@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class StreamBuilderWidget extends StatefulWidget {
@@ -140,7 +139,7 @@ class _StreamBuilderWidgetState extends State<StreamBuilderWidget> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        primary: Colors.deepOrangeAccent,
+                        primary: Theme.of(context).primaryColor,
                       ),
                       child: Text('Increment Money',
                           style: TextStyle(
@@ -171,7 +170,7 @@ class StreamBuilderDescription extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Text(
           'StreamBuilder is a widget that builds itself based on the latest snapshot of interaction with a stream.The Stream is like a pipe. When you enter a value from one side and a listener from the other side, the listener will get that value.',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );

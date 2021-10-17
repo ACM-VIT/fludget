@@ -2,18 +2,27 @@ import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/IgnorePointer.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
 import 'package:fludget/routes/animatedIcon.dart';
+import 'package:fludget/routes/animatedList.dart';
 import 'package:fludget/routes/appbar.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
+import 'package:fludget/routes/clipOval.dart';
+import 'package:fludget/routes/clipRect.dart';
+import 'package:fludget/routes/clip_path.dart';
+import 'package:fludget/routes/coloredBox.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
 import 'package:fludget/routes/container.dart';
+import 'package:fludget/routes/decoratedBox.dart';
+import 'package:fludget/routes/cupertino_activity_indicator.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggableWidget.dart';
@@ -22,6 +31,7 @@ import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
+import 'package:fludget/routes/gestureDetector.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
@@ -30,6 +40,7 @@ import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listWheelScrollView.dart';
 import 'package:fludget/routes/listtile.dart';
+import 'package:fludget/routes/nested_scroll_view.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/pageview.dart';
@@ -38,12 +49,14 @@ import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/scrollbar.dart';
-
+import 'package:fludget/routes/singleChildScrollView.dart';
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
+import 'package:fludget/routes/sliver_grid.dart';
 import 'package:fludget/routes/snackbar.dart';
 import 'package:fludget/routes/spacer.dart';
 import 'package:fludget/routes/stack.dart';
+import 'package:fludget/routes/streamBuilder.dart';
 import 'package:fludget/routes/switch.dart';
 import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
@@ -52,9 +65,10 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
-import 'package:flutter/material.dart';
 import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
+import 'routes/autoComplete.dart';
+
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -99,6 +113,25 @@ const List<WidgetModel> widgets = [
       description: FutureBuilderDescription(),
       link: "https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Async]),
+  WidgetModel(
+      name: "FormField",
+      implementation: FormFieldImplementation(),
+      description: FormFieldDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/FormField-class.html",
+      category: [
+        WidgetCategoy.Input,
+        WidgetCategoy.Interaction,
+        WidgetCategoy.Text
+      ]),
+  WidgetModel(
+      name: "IgnorePointer",
+      implementation: IgnorePointerImplementation(),
+      description: IgnorePointerDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/IgnorePointer-class.html",
+      category: [
+        WidgetCategoy.Input,
+        WidgetCategoy.Interaction,
+      ]),
   WidgetModel(
       name: "Icon",
       implementation: IconImplementation(),
@@ -342,10 +375,19 @@ const List<WidgetModel> widgets = [
   ),
   WidgetModel(
     name: "CupertinoActionSheet",
-    link: "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
     implementation: CupertinoActionSheetImplementation(),
     description: CupertinoActionSheetDescription(),
-    category: [WidgetCategoy.Cupertino,WidgetCategoy.Material]
+    category: [WidgetCategoy.Cupertino, WidgetCategoy.Material],
+  ),
+  WidgetModel(
+    name: "Cupertino Activity Indicator",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoActivityIndicator-class.html",
+    implementation: CupertinoActivityIndicatorSample(),
+    description: CupertinoActivityIndicatorDescription(),
+    category: [WidgetCategoy.Cupertino],
   ),
   WidgetModel(
     name: "AnimatedIcon",
@@ -420,6 +462,21 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
   ),
   WidgetModel(
+    name: "Animated List",
+    subtitle: "Implementation of Animated List Widget",
+    link: "https://api.flutter.dev/flutter/widgets/AnimatedList-class.html",
+    implementation: AnimatedListWidget(),
+    description: AnimatedListDescription(),
+    category: [WidgetCategoy.Animation],
+  ),
+  WidgetModel(
+    category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
+    name: "Sliver Grid",
+    link: "https://api.flutter.dev/flutter/widgets/SliverGrid-class.html",
+    implementation: SliverGridSample(),
+    description: SliverGridDescription(),
+  ),
+  WidgetModel(
     name: "ScrollBar",
     subtitle: "Implementation of ScrollBar Widget",
     link: "https://api.flutter.dev/flutter/material/Scrollbar-class.html",
@@ -427,4 +484,82 @@ const List<WidgetModel> widgets = [
     description: ScrollBarDescription(),
     category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
   ),
+  WidgetModel(
+    name: "Gesture Detector",
+    link: "https://api.flutter.dev/flutter/widgets/GestureDetector-class.html",
+    implementation: GestureDetectorSample(),
+    description: GestureDetectorDescription(),
+    category: [WidgetCategoy.Input, WidgetCategoy.Interaction],
+  ),
+  WidgetModel(
+    name: "NestedScrollView",
+    subtitle: "Implementation of NestedScrollView widget",
+    link: "https://api.flutter.dev/flutter/widgets/NestedScrollView-class.html",
+    implementation: NestedScrollViewImplementation(),
+    description: NestedScrollViewDescription(),
+    category: [WidgetCategoy.Scrolling, WidgetCategoy.Interaction],
+  ),
+  WidgetModel(
+    name: "Stream Builder",
+    subtitle: "Implementation of StreamBuilder widget",
+    link: "https://api.flutter.dev/flutter/widgets/StreamBuilder-class.html",
+    implementation: StreamBuilderWidget(),
+    description: StreamBuilderDescription(),
+    category: [WidgetCategoy.Interaction, WidgetCategoy.Async],
+  ),
+  WidgetModel(
+    name: "AutoComplete",
+    subtitle: "Implementation of Autocomplete Widget",
+    link: "https://api.flutter.dev/flutter/material/Autocomplete-class.html",
+    implementation: AutoCompleteImplemention(),
+    description: AutoCompleteWidgetDescription(),
+    category: [WidgetCategoy.Input, WidgetCategoy.Interaction],
+  ),
+  WidgetModel(
+    name: "ClipOval",
+    subtitle: "Implementation of ClipOval widget",
+    link: "https://api.flutter.dev/flutter/widgets/ClipOval-class.html",
+    implementation: ClipOvalSample(),
+    description: ClipOvalDescription(),
+    category: [WidgetCategoy.Effects, WidgetCategoy.Painting],
+  ),
+  WidgetModel(
+    name: "ClipRect",
+    link: "https://api.flutter.dev/flutter/widgets/ClipRect-class.html",
+    implementation: ClipRectImplementation(),
+    description: ClipRectDescription(),
+    category: [WidgetCategoy.Painting],
+  ),
+  WidgetModel(
+      name: "DecoratedBox",
+      link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
+      implementation: DecoratedBoxImplementation(),
+      description: DecoratedBoxDescription(),
+      category: [WidgetCategoy.Painting]),
+  WidgetModel(
+    name: "Clip Path",
+    link:
+        "https://api.flutter.dev/flutter/widgets/ClipPath-class.html#:~:text=ClipPath%20class%20Null%20safety,from%20painting%20outside%20the%20path.",
+    subtitle: "Implementation of Clip Path widget",
+    implementation: ClipPathImplementation(),
+    description: ClipPathDescription(),
+    category: [
+      WidgetCategoy.Painting,
+      WidgetCategoy.Styling,
+    ],
+  ),
+  WidgetModel(
+    name: "SingleChildScrollView",
+    link: "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
+    implementation: SingleChildScrollViewImplementation(),
+    description:SingleChildScrollViewDescription(),
+    category: [ WidgetCategoy.Scrolling ]
+  ),
+  WidgetModel(
+      name: "ColoredBox",
+      link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
+      implementation: ColoredBoxImplementation(),
+      description: ColoredBoxDescription(),
+      category: [ WidgetCategoy.Layout, WidgetCategoy.Basics ]
+  )
 ];

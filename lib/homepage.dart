@@ -16,6 +16,7 @@ class HomePageState extends State<HomePage> {
   String searchString = '';
   WidgetCategoy? _selectedCategory;
   bool _isExpanded = false;
+  var _controller = TextEditingController();
 
   AppBar showSearchBar(BuildContext context) {
     return AppBar(
@@ -24,6 +25,7 @@ class HomePageState extends State<HomePage> {
       title: TextField(
         keyboardType: TextInputType.text,
         autofocus: true,
+        controller: _controller,
         decoration: InputDecoration(
           hintStyle: TextStyle(color: Colors.grey),
           prefixIcon: IconButton(
@@ -34,6 +36,15 @@ class HomePageState extends State<HomePage> {
                 searchString = '';
               });
             },
+          ),
+          suffixIcon: IconButton(
+            onPressed: (){
+              _controller.clear();
+              setState(() {
+                searchString = '';
+              });
+            },
+            icon: Icon(Icons.clear),
           ),
           hintText: 'Search....',
           border: UnderlineInputBorder(borderSide: BorderSide.none),
@@ -171,7 +182,6 @@ class HomePageState extends State<HomePage> {
   }
 
   ListView getWidgetList(String filter, BuildContext context) {
-
     List<WidgetModel> widgetList = List.from(widgets);
     widgetList.sort((a, b) => a.name.compareTo(b.name));
 
