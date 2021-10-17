@@ -48,6 +48,7 @@ import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/scrollbar.dart';
+import 'package:fludget/routes/singleChildScrollView.dart';
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
 import 'package:fludget/routes/sliver_grid.dart';
@@ -536,5 +537,12 @@ const List<WidgetModel> widgets = [
       WidgetCategoy.Painting,
       WidgetCategoy.Styling,
     ],
+  ),
+  WidgetModel(
+    name: "SingleChildScrollView",
+    link: "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
+    implementation: SingleChildScrollViewImplementation(),
+    description:SingleChildScrollViewDescription(),
+    category: [ WidgetCategoy.Scrolling ]
   )
 ];
