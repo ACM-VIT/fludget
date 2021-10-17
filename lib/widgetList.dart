@@ -29,6 +29,7 @@ import 'package:fludget/routes/draggableWidget.dart';
 import 'package:fludget/routes/draggable_scrollable_sheet.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
+import 'package:fludget/routes/errorWidget.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
 import 'package:fludget/routes/gestureDetector.dart';
@@ -556,10 +557,17 @@ const List<WidgetModel> widgets = [
     category: [ WidgetCategoy.Scrolling ]
   ),
   WidgetModel(
+      name: "Error",
+      implementation: ErrorWidgetImplementation(),
+      description: ErrorWidgetDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/ErrorWidget-class.html",
+      category: [WidgetCategoy.Assets, WidgetCategoy.Basics]
+  ),
+  WidgetModel(
       name: "ColoredBox",
       link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
       implementation: ColoredBoxImplementation(),
       description: ColoredBoxDescription(),
       category: [ WidgetCategoy.Layout, WidgetCategoy.Basics ]
-  )
+  ),
 ];
