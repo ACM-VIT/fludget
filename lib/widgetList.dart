@@ -32,6 +32,7 @@ import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/errorWidget.dart';
 import 'package:fludget/routes/expanded.dart';
+import 'package:fludget/routes/fade_in_image.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
 import 'package:fludget/routes/gestureDetector.dart';
 import 'package:fludget/routes/gridList.dart';
@@ -629,6 +630,23 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
       implementation: ColoredBoxImplementation(),
       description: ColoredBoxDescription(),
+
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
       codeStringName: "coloredBox"),
+
+      category: [WidgetCategoy.Layout, WidgetCategoy.Basics]),
+  WidgetModel(
+    name: "Fade in Image",
+    link: "https://flutter.dev/docs/cookbook/images/fading-in-images",
+    subtitle: "Implementation of FadeInImage widget",
+    implementation: FadeInImageImplementation(),
+    description: FadeInImageDescription(),
+    category: [
+      WidgetCategoy.Interaction,
+      WidgetCategoy.Animation,
+    ],
+    codeStringName: "fadeInImage"
+    
+  ),
+
 ];
