@@ -66,7 +66,9 @@ import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'Models/widgetModel.dart';
+import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
+
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -434,6 +436,14 @@ const List<WidgetModel> widgets = [
     implementation: SpacerImplementation(),
     description: SpacerDescription(),
     category: [WidgetCategoy.Layout],
+  ),
+  WidgetModel(
+    name: "Cupertino Widgets",
+    subtitle: "Implementation of Cupertino Widgets (iOS style widgets)",
+    link: "https://flutter.dev/docs/development/ui/widgets/cupertino",
+    implementation: CupertinoWidgets(),
+    description: CupertinoWidgetsDescription(),
+    category: [WidgetCategoy.Cupertino],
   ),
   WidgetModel(
     name: "SliverAppBar",
