@@ -556,6 +556,6 @@ const List<WidgetModel> widgets = [
       name: "ClipRRect",
       implementation: ClipRRectImplementation(),
       description: ClipRRectDescription(),
-      link: "https://api.flutter.dev/flutter/widgets/ErrorWidget-class.html",
+      link: "hhttps://api.flutter.dev/flutter/widgets/ClipRRect-class.html",
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics]),
 ];
