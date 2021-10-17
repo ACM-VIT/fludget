@@ -630,23 +630,17 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
       implementation: ColoredBoxImplementation(),
       description: ColoredBoxDescription(),
-
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
       codeStringName: "coloredBox"),
-
-      category: [WidgetCategoy.Layout, WidgetCategoy.Basics]),
   WidgetModel(
-    name: "Fade in Image",
-    link: "https://flutter.dev/docs/cookbook/images/fading-in-images",
-    subtitle: "Implementation of FadeInImage widget",
-    implementation: FadeInImageImplementation(),
-    description: FadeInImageDescription(),
-    category: [
-      WidgetCategoy.Interaction,
-      WidgetCategoy.Animation,
-    ],
-    codeStringName: "fadeInImage"
-    
-  ),
-
+      name: "Fade in Image",
+      link: "https://flutter.dev/docs/cookbook/images/fading-in-images",
+      subtitle: "Implementation of FadeInImage widget",
+      implementation: FadeInImageImplementation(),
+      description: FadeInImageDescription(),
+      category: [
+        WidgetCategoy.Interaction,
+        WidgetCategoy.Animation,
+      ],
+      codeStringName: "fadeInImage"),
 ];
