@@ -1,6 +1,3 @@
-// import 'dart:js';
-
-import 'package:fludget/routes/sizedbox.dart';
 import 'package:flutter/material.dart';
 
 class SpacerImplementation extends StatelessWidget {
@@ -16,7 +13,7 @@ class SpacerImplementation extends StatelessWidget {
             children: [
               Text(
                 "When you have align some widget to the corners:",
-                style: TextStyle( fontSize: 16),
+                style: TextStyle(fontSize: 16),
               ),
               const SizedBox(
                 height: 20,
@@ -279,7 +276,8 @@ class SpacerDescription extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: DefaultTextStyle(
-          style: Theme.of(context).textTheme.bodyText1 ?? TextStyle(color: Colors.white, height: 1.5),
+          style: Theme.of(context).textTheme.bodyText1 ??
+              TextStyle(color: Colors.white, height: 1.5),
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(
