@@ -27,22 +27,6 @@ class _FutureBuilderImplementationState
     return url;
   }
 
-  // @override
-  // void initState() {
-  //   callApi();
-  //   super.initState();
-  // }
-
-  // getData() {
-  //   return url;
-  // }
-
-  // Future<String> getData() {
-  //   return Future.delayed(Duration(seconds: 4), () {
-  //     return "Hey There!! I am data.";
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -118,11 +102,11 @@ class _FutureBuilderImplementationState
                   padding: const EdgeInsets.all(10.0),
                   child: Text(
                     'Reload Meme',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(fontSize: 20),
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.red,
+                    primary: Theme.of(context).primaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     )),

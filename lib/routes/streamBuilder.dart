@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class StreamBuilderWidget extends StatefulWidget {
