@@ -2,6 +2,7 @@ import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
 import 'package:fludget/routes/IgnorePointer.dart';
@@ -125,6 +126,16 @@ const List<WidgetModel> widgets = [
       implementation: IgnorePointerImplementation(),
       description: IgnorePointerDescription(),
       link: "https://api.flutter.dev/flutter/widgets/IgnorePointer-class.html",
+      category: [
+        WidgetCategoy.Input,
+        WidgetCategoy.Interaction,
+      ]),
+  WidgetModel(
+      name: "DatePicker Dialog",
+      implementation: DatePickerDialogImplementation(),
+      description: DatePickerDialogDescription(),
+      link:
+          "https://api.flutter.dev/flutter/material/DatePickerDialog-class.html",
       category: [
         WidgetCategoy.Input,
         WidgetCategoy.Interaction,
@@ -538,10 +549,10 @@ const List<WidgetModel> widgets = [
     ],
   ),
   WidgetModel(
-    name: "SingleChildScrollView",
-    link: "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
-    implementation: SingleChildScrollViewImplementation(),
-    description:SingleChildScrollViewDescription(),
-    category: [ WidgetCategoy.Scrolling ]
-  )
+      name: "SingleChildScrollView",
+      link:
+          "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
+      implementation: SingleChildScrollViewImplementation(),
+      description: SingleChildScrollViewDescription(),
+      category: [WidgetCategoy.Scrolling])
 ];
