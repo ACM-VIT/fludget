@@ -2,6 +2,7 @@ import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
 import 'package:fludget/routes/IgnorePointer.dart';
@@ -16,6 +17,7 @@ import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/clipOval.dart';
 import 'package:fludget/routes/clipRect.dart';
 import 'package:fludget/routes/clip_path.dart';
+import 'package:fludget/routes/coloredBox.dart';
 import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
@@ -29,7 +31,9 @@ import 'package:fludget/routes/draggableWidget.dart';
 import 'package:fludget/routes/draggable_scrollable_sheet.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
+import 'package:fludget/routes/errorWidget.dart';
 import 'package:fludget/routes/expanded.dart';
+import 'package:fludget/routes/fade_in_image.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
 import 'package:fludget/routes/gestureDetector.dart';
 import 'package:fludget/routes/gridList.dart';
@@ -66,6 +70,7 @@ import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'Models/widgetModel.dart';
+import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
 
 const List<WidgetModel> widgets = [
@@ -126,6 +131,16 @@ const List<WidgetModel> widgets = [
       implementation: IgnorePointerImplementation(),
       description: IgnorePointerDescription(),
       link: "https://api.flutter.dev/flutter/widgets/IgnorePointer-class.html",
+      category: [
+        WidgetCategoy.Input,
+        WidgetCategoy.Interaction,
+      ]),
+  WidgetModel(
+      name: "DatePickerDialog",
+      implementation: DatePickerDialogImplementation(),
+      description: DatePickerDialogDescription(),
+      link:
+          "https://api.flutter.dev/flutter/material/DatePickerDialog-class.html",
       category: [
         WidgetCategoy.Input,
         WidgetCategoy.Interaction,
@@ -436,6 +451,14 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
   ),
   WidgetModel(
+    name: "Cupertino Widgets",
+    subtitle: "Implementation of Cupertino Widgets (iOS style widgets)",
+    link: "https://flutter.dev/docs/development/ui/widgets/cupertino",
+    implementation: CupertinoWidgets(),
+    description: CupertinoWidgetsDescription(),
+    category: [WidgetCategoy.Cupertino],
+  ),
+  WidgetModel(
     name: "SliverAppBar",
     subtitle: "Implementation of SliverAppBar Widget",
     link: "https://api.flutter.dev/flutter/material/SliverAppBar-class.html",
@@ -553,5 +576,35 @@ const List<WidgetModel> widgets = [
     implementation: CustomPaintWidget(),
     description: CustomPaintDescription(),
     category: [WidgetCategoy.Painting],
+  ),
+  WidgetModel(
+      name: "SingleChildScrollView",
+      link:
+          "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
+      implementation: SingleChildScrollViewImplementation(),
+      description: SingleChildScrollViewDescription(),
+      category: [WidgetCategoy.Scrolling]),
+  WidgetModel(
+      name: "Error",
+      implementation: ErrorWidgetImplementation(),
+      description: ErrorWidgetDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/ErrorWidget-class.html",
+      category: [WidgetCategoy.Assets, WidgetCategoy.Basics]),
+  WidgetModel(
+      name: "ColoredBox",
+      link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
+      implementation: ColoredBoxImplementation(),
+      description: ColoredBoxDescription(),
+      category: [WidgetCategoy.Layout, WidgetCategoy.Basics]),
+  WidgetModel(
+    name: "Fade in Image",
+    link: "https://flutter.dev/docs/cookbook/images/fading-in-images",
+    subtitle: "Implementation of FadeInImage widget",
+    implementation: FadeInImageImplementation(),
+    description: FadeInImageDescription(),
+    category: [
+      WidgetCategoy.Interaction,
+      WidgetCategoy.Animation,
+    ],
   ),
 ];
