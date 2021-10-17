@@ -18,7 +18,6 @@ class ElevatedButtonImplimentation extends StatelessWidget {
     );
   }
 }
-
 void _message(BuildContext context) =>
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text("ElevatedButton was pressed"),
