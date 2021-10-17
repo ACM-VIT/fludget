@@ -20,6 +20,7 @@ import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
 import 'package:fludget/routes/container.dart';
+import 'package:fludget/routes/customPaint.dart';
 import 'package:fludget/routes/decoratedBox.dart';
 import 'package:fludget/routes/cupertino_activity_indicator.dart';
 import 'package:fludget/routes/dialogBox.dart';
@@ -524,8 +525,7 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/DecoratedBox-class.html",
       implementation: DecoratedBoxImplementation(),
       description: DecoratedBoxDescription(),
-      category: [WidgetCategoy.Painting]
-  ),
+      category: [WidgetCategoy.Painting]),
   WidgetModel(
     name: "Clip Path",
     link:
@@ -540,9 +540,18 @@ const List<WidgetModel> widgets = [
   ),
   WidgetModel(
     name: "SingleChildScrollView",
-    link: "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
+    link:
+        "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
     implementation: SingleChildScrollViewImplementation(),
-    description:SingleChildScrollViewDescription(),
-    category: [ WidgetCategoy.Scrolling ]
-  )
+    description: SingleChildScrollViewDescription(),
+    category: [WidgetCategoy.Scrolling],
+  ),
+  WidgetModel(
+    name: "CustomPaint",
+    link: "https://api.flutter.dev/flutter/widgets/CustomPaint-class.html",
+    subtitle: "Implementation of CustomPaint widget",
+    implementation: CustomPaintWidget(),
+    description: CustomPaintDescription(),
+    category: [WidgetCategoy.Painting],
+  ),
 ];
