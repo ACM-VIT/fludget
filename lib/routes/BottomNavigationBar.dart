@@ -65,7 +65,6 @@ class _BottomNavigationBarImplementationState extends State<BottomNavigationBarI
 }
 
 
-
 class BottomNavigationBarDescription extends StatelessWidget {
   const BottomNavigationBarDescription({Key? key}) : super(key: key);
   @override
@@ -102,7 +101,7 @@ class BottomNavigationBarCode extends CodeString {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.purpleAccent[800],
+        selectedItemColor: Theme.of(context).primaryColor,
         onTap: _onItemTapped,
       )""";
   }
