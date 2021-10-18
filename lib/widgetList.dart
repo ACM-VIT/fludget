@@ -1,5 +1,6 @@
 import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
+import 'package:fludget/routes/BackdropFilter.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
@@ -71,6 +72,7 @@ import 'package:fludget/routes/wrap.dart';
 import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
+import 'routes/BottomNavigationBar.dart';
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -643,4 +645,13 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Animation,
       ],
       codeString: FadeInImgCode()),
+  WidgetModel(
+      name: "BottomNavigationBar",
+      subtitle: "Implementation of BottomNavigationBar Widget",
+      implementation: BottomNavigationBarImplementation(),
+      description: BottomNavigationBarDescription(),
+      link:
+      "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
+      category: [WidgetCategoy.Animation],
+      codeString: BottomNavigationBarCode()),
 ];
