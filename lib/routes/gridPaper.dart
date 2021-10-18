@@ -13,7 +13,7 @@ class GridPaperImplementation extends StatelessWidget {
             width: 300,
             height: 500,
           ),
-          color: Colors.deepOrangeAccent,
+          color: Theme.of(context).primaryColor,
           interval: 500,
           divisions: 50,
           subdivisions: 10,

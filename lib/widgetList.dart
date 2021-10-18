@@ -648,7 +648,7 @@ const List<WidgetModel> widgets = [
       name: "Grid Paper",
       implementation: GridPaperDescription(),
       description: GridPaperDescription(),
-      link: "https://api.flutter.dev/flutter/widgets/Text-class.html",
+      link: "https://api.flutter.dev/flutter/widgets/GridPaper-class.html",
       category: [WidgetCategoy.Layout],
       codeString: GridPaperCode()),
 ];
