@@ -57,7 +57,7 @@ class _BottomNavigationBarImplementationState extends State<BottomNavigationBarI
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.purpleAccent[800],
+        selectedItemColor: Theme.of(context).primaryColor,
         onTap: _onItemTapped,
       ),
     );
