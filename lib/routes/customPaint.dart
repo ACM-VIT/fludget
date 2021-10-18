@@ -3,6 +3,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'package:fludget/Models/codeString.dart';
+
 class CustomPaintWidget extends StatefulWidget {
   const CustomPaintWidget({Key? key}) : super(key: key);
   @override
@@ -15,7 +17,7 @@ class _CustomPaintWidgetState extends State<CustomPaintWidget> {
     Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {});
     });
-    super.initState(); 
+    super.initState();
   }
 
   @override
@@ -23,19 +25,19 @@ class _CustomPaintWidgetState extends State<CustomPaintWidget> {
     return Scaffold(
       body: ListView(
         children: [
-          buildCanvas("Triangle using CustomPainter", TrianglePainter()),
+          buildCanvas("Triangle using CustomPainter", TrianglePainter(context: context)),
           SizedBox(
             height: 15,
           ),
-          buildCanvas("Rounded Rectangle using CustomPainter", RRectPainter()),
+          buildCanvas("Rounded Rectangle using CustomPainter", RRectPainter(context: context)),
           SizedBox(
             height: 15,
           ),
-          buildCanvas("Circle using CustomPainter", CirclePainter()),
+          buildCanvas("Circle using CustomPainter", CirclePainter(context: context)),
           SizedBox(
             height: 15,
           ),
-          buildClockCanvas("AnimatedClock using CustomPainter", ClockPainter()),
+          buildClockCanvas("AnimatedClock using CustomPainter", ClockPainter(context: context)),
         ],
       ),
     );
@@ -95,11 +97,15 @@ class _CustomPaintWidgetState extends State<CustomPaintWidget> {
 }
 
 class TrianglePainter extends CustomPainter {
+  BuildContext context;
+  TrianglePainter({
+    required this.context,
+  });
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
       ..strokeWidth = 10
-      ..color = Colors.deepOrangeAccent
+      ..color = Theme.of(context).primaryColor
       ..style = PaintingStyle.stroke;
 
     final path = Path();
@@ -115,11 +121,15 @@ class TrianglePainter extends CustomPainter {
 }
 
 class RRectPainter extends CustomPainter {
+  BuildContext context;
+  RRectPainter({
+    required this.context,
+  });
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
       ..strokeWidth = 10
-      ..color = Colors.deepOrangeAccent
+      ..color = Theme.of(context).primaryColor
       ..style = PaintingStyle.stroke;
     final a = Offset(size.width * 1 / 6, size.height * 1 / 4);
     final b = Offset(size.width * 5 / 6, size.height * 3 / 4);
@@ -134,11 +144,16 @@ class RRectPainter extends CustomPainter {
 }
 
 class CirclePainter extends CustomPainter {
+   BuildContext context;
+  CirclePainter({
+    required this.context,
+  });
+  
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
       ..strokeWidth = 10
-      ..color = Colors.deepOrangeAccent
+      ..color = Theme.of(context).primaryColor
       ..style = PaintingStyle.stroke;
 
     canvas.drawCircle(
@@ -150,6 +165,11 @@ class CirclePainter extends CustomPainter {
 }
 
 class ClockPainter extends CustomPainter {
+  BuildContext context;
+  ClockPainter({
+    required this.context,
+  });
+  
   var dateTime = DateTime.now();
   @override
   void paint(Canvas canvas, Size size) {
@@ -158,45 +178,47 @@ class ClockPainter extends CustomPainter {
     var center = Offset(centerX, centerY);
     var radius = size.width * 1 / 4;
 
-    var fillBrush = Paint()..color = Color(0xFF444964);
+    var fillBrush = Paint()..color = Theme.of(context).backgroundColor;
 
     var outlineBrush = Paint()
       ..strokeWidth = 16
-      ..color = Colors.deepOrangeAccent
+      ..color = Theme.of(context).primaryColor
       ..style = PaintingStyle.stroke;
     var dashBrush = Paint()
       ..strokeWidth = 2
       ..strokeCap = StrokeCap.round
-      ..color = Colors.deepOrangeAccent
+      ..color = Theme.of(context).primaryColor
       ..style = PaintingStyle.stroke;
 
-    var centrefillBrush = Paint()..color = Color(0xFFEACEAFF);
+    var centrefillBrush = Paint()..color =Theme.of(context).primaryColorLight;
 
     var secBrush = Paint()
       ..strokeWidth = 5
-      ..color = Colors.orange.shade300
+      ..color = Theme.of(context).primaryColorDark.withGreen(180)
       ..strokeCap = StrokeCap.round
       ..style = PaintingStyle.stroke;
 
     var minuteBrush = Paint()
       ..strokeWidth = 8
       ..strokeCap = StrokeCap.round
-      ..shader = RadialGradient(colors: [Colors.lightBlue, Colors.pink])
+      ..shader = RadialGradient(colors: [Theme.of(context).primaryColorLight,Theme.of(context).primaryColorLight.withBlue(100)])
           .createShader(Rect.fromCircle(center: center, radius: radius))
       ..style = PaintingStyle.stroke;
 
     var hourBrush = Paint()
       ..strokeWidth = 12
       ..strokeCap = StrokeCap.round
-      ..shader = RadialGradient(colors: [Colors.blue, Colors.pink])
+      ..shader = RadialGradient(colors: [Theme.of(context).primaryColorLight,Theme.of(context).primaryColorLight.withBlue(100)])
           .createShader(Rect.fromCircle(center: center, radius: radius))
       ..style = PaintingStyle.stroke;
 
     canvas.drawCircle(center, radius, fillBrush);
     canvas.drawCircle(center, radius, outlineBrush);
 
-    var hourX = centerX + 60 * cos((dateTime.hour * 60 + dateTime.minute ) * pi / 360);
-    var hourY = centerY + 60 * sin((dateTime.hour * 60 + dateTime.minute ) * pi / 360);
+    var hourX =
+        centerX + 60 * cos((dateTime.hour * 60 + dateTime.minute) * pi / 360);
+    var hourY =
+        centerY + 60 * sin((dateTime.hour * 60 + dateTime.minute) * pi / 360);
     canvas.drawLine(center, Offset(hourX, hourY), hourBrush);
 
     var minuteX = centerX + 80 * cos(dateTime.minute * 12 * pi / 360);
@@ -208,14 +230,14 @@ class ClockPainter extends CustomPainter {
     canvas.drawLine(center, Offset(secondX, secondY), secBrush);
 
     canvas.drawCircle(center, 12, centrefillBrush);
-    var outerCircleRadius = radius+24;
-    var innerCircleRadius = radius+16;
+    var outerCircleRadius = radius + 24;
+    var innerCircleRadius = radius + 16;
     for (double i = 0; i < 360; i += 30) {
       var x1 = centerX + outerCircleRadius * cos(i * pi / 180);
-      var y1 = centerX + outerCircleRadius * sin(i * pi / 180)-40;
+      var y1 = centerX + outerCircleRadius * sin(i * pi / 180) - 40;
 
       var x2 = centerX + innerCircleRadius * cos(i * pi / 180);
-      var y2 = centerX + innerCircleRadius * sin(i * pi / 180)-40;
+      var y2 = centerX + innerCircleRadius * sin(i * pi / 180) - 40;
       canvas.drawLine(Offset(x1, y1), Offset(x2, y2), dashBrush);
     }
   }
@@ -238,5 +260,23 @@ class CustomPaintDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class CustomPaintCode extends CodeString {
+  const CustomPaintCode();
+  @override
+  String buildCodeString() {
+    return """CustomPaint(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                text,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.black, fontSize: 20),
+              ),
+            ),
+            painter: paintThis,
+          ),""";
   }
 }

@@ -617,7 +617,7 @@ const List<WidgetModel> widgets = [
         "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
     implementation: SingleChildScrollViewImplementation(),
     description: SingleChildScrollViewDescription(),
-    category: [WidgetCategoy.Scrolling],
+    category: [WidgetCategoy.Scrolling], codeString: SinglechildScrollViewCode(),
   ),
   WidgetModel(
     name: "CustomPaint",
@@ -626,6 +626,7 @@ const List<WidgetModel> widgets = [
     implementation: CustomPaintWidget(),
     description: CustomPaintDescription(),
     category: [WidgetCategoy.Painting],
+    codeString:CustomPaintCode() ,
   ),
   WidgetModel(
       name: "SingleChildScrollView",
