@@ -6,6 +6,7 @@ import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/gridPaper.dart';
 import 'package:fludget/routes/IgnorePointer.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
@@ -656,6 +657,13 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Animation,
       ],
       codeString: FadeInImgCode()),
+  WidgetModel(
+      name: "Grid Paper",
+      implementation: GridPaperImplementation(),
+      description: GridPaperDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/GridPaper-class.html",
+      category: [WidgetCategoy.Layout],
+      codeString: GridPaperCode()),
   WidgetModel(
       name: "BottomNavigationBar",
       subtitle: "Implementation of BottomNavigationBar Widget",
