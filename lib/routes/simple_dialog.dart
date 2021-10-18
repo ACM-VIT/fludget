@@ -12,19 +12,19 @@ class SimpleDialogImp extends StatelessWidget {
               return await showDialog(
                 context: context,
                 builder: (BuildContext ctx) => SimpleDialog(
-                  title: Text('Choose food'),
+                  title: Text('Option List'),
                   children: [
                     SimpleDialogOption(
                       onPressed: () {
-                        Navigator.pop(context, "Pizza");
+                        Navigator.pop(context, "Dart");
                       },
-                      child: const Text('Pizza'),
+                      child: const Text('Dart'),
                     ),
                     SimpleDialogOption(
                       onPressed: () {
-                        Navigator.pop(context, "Burger");
+                        Navigator.pop(context, "Flutter");
                       },
-                      child: const Text('Burger'),
+                      child: const Text('Flutter'),
                     ),
                   ],
                   elevation: 10,
@@ -71,19 +71,19 @@ class SimpleDialodDesc extends StatelessWidget {
                 Text("""showDialog(
                 context: context,
                 builder: (BuildContext ctx) => SimpleDialog(
-                  title: Text('Choose food'),
+                  title: Text('Option List'),
                   children: [
                     SimpleDialogOption(
                       onPressed: () {
-                        Navigator.pop(context, "Pizza");
+                        Navigator.pop(context, "Dart");
                       },
-                      child: const Text('Pizza'),
+                      child: const Text('Dart'),
                     ),
                     SimpleDialogOption(
                       onPressed: () {
-                        Navigator.pop(context, "Burger");
+                        Navigator.pop(context, "Flutter");
                       },
-                      child: const Text('Burger'),
+                      child: const Text('Flutter'),
                     ),
                   ],
                   elevation: 10,
