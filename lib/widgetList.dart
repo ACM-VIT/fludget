@@ -29,6 +29,7 @@ import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggableWidget.dart';
 import 'package:fludget/routes/draggable_scrollable_sheet.dart';
+import 'package:fludget/routes/drawer_widget.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/errorWidget.dart';
@@ -677,5 +678,16 @@ const List<WidgetModel> widgets = [
       WidgetCategoy.Styling,
     ],
     codeString: PlaceHolderCode(),
+  ),
+  WidgetModel(
+    name: "Drawer Widget",
+    link: "https://api.flutter.dev/flutter/material/Drawer-class.html",
+    subtitle: "Implementation of Drawer widget",
+    implementation: DrawerImplementation(),
+    description: DrawerDescription(),
+    category: [
+      WidgetCategoy.Material,
+    ],
+    codeString: DrawerCode(),
   ),
 ];
