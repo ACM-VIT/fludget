@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class SizedboxImplementation extends StatefulWidget {
@@ -138,5 +139,25 @@ class SizedboxDescription extends StatelessWidget {
         style: TextStyle(fontSize: 20),
       ),
     );
+  }
+}
+
+class SizedBoxCode extends CodeString {
+  const SizedBoxCode();
+  @override
+  String buildCodeString() {
+    return """SizedBox(
+                        height: (x == 0)
+                            ? 400
+                            : (x == 1)
+                                ? 300
+                                : 200,
+                        width: (x == 0)
+                            ? 400
+                            : (x == 1)
+                                ? 300
+                                : 200,
+                        child: Image.asset('assets/images/logo.png')),
+""";
   }
 }

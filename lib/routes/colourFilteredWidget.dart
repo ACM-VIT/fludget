@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ColourFilteredWidget extends StatefulWidget {
@@ -84,7 +85,9 @@ class _ColourFilteredWidgetState extends State<ColourFilteredWidget> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 70),
               child: Row(
-                children: [for (var i = 0; i < 6; i++) buildIconBtn(myColors[i])],
+                children: [
+                  for (var i = 0; i < 6; i++) buildIconBtn(myColors[i])
+                ],
               ),
             )
           ],
@@ -133,5 +136,27 @@ class ColourFilteredWidgetDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ColorFilteredCode extends CodeString {
+  const ColorFilteredCode();
+  @override
+  String buildCodeString() {
+    return """ColorFiltered(
+          colorFilter: ColorFilter.mode(primaryColor, mode),
+          child: Container(
+            child: Transform.translate(
+              offset: Offset(35, -25),
+              child: Transform.rotate(
+                angle: -pi / 0.55,
+                child: Image.asset(
+                  "assets/images/_product.png",
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ),
+        ),""";
   }
 }

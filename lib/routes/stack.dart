@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class StackImplementation extends StatelessWidget {
@@ -53,5 +54,41 @@ class StackDescription extends StatelessWidget {
         'Stack Description Here',
       ),
     );
+  }
+}
+
+class StackCode extends CodeString {
+  const StackCode();
+  @override
+  String buildCodeString() {
+    return """ Stack(
+            children: [
+              Container(
+                color: Colors.red,
+                child: FlutterLogo(
+                  size: 400.0,
+                ),
+              ),
+              Container(
+                color: Colors.green,
+                child: FlutterLogo(
+                  size: 300.0,
+                ),
+              ),
+              Container(
+                color: Colors.blue,
+                child: FlutterLogo(
+                  size: 200.0,
+                ),
+              ),
+              Container(
+                color: Colors.yellow,
+                child: FlutterLogo(
+                  size: 100.0,
+                ),
+              ),
+            ],
+          ),
+""";
   }
 }

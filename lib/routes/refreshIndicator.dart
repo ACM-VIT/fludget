@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class MyRefreshIndicator extends StatefulWidget {
@@ -32,7 +33,7 @@ class _MyRefreshIndicatorState extends State<MyRefreshIndicator> {
                             title: Text(
                               _data[index],
                               style: TextStyle(
-                                fontWeight : FontWeight.bold,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
@@ -69,5 +70,33 @@ class MyRefreshIndicatorDesc extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class RefreshIndicatorCode extends CodeString {
+  const RefreshIndicatorCode();
+  @override
+  String buildCodeString() {
+    return """ RefreshIndicator(
+                child: ListView.builder(
+                    itemCount: _data.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: Card(
+                          child: ListTile(
+                            title: Text(
+                              _data[index],
+                              style: TextStyle(
+                                fontWeight : FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
+                    }),
+                onRefresh: _refresh,
+              ),
+""";
   }
 }

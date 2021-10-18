@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class pageViewSample extends StatefulWidget {
@@ -57,8 +58,7 @@ class _pageViewSampleState extends State<pageViewSample> {
           ),
           Center(
             child: Text("This is the Third Page",
-                style: TextStyle(fontSize: 20),
-                textAlign: TextAlign.center),
+                style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
           ),
         ],
       ),
@@ -81,5 +81,36 @@ class _PageViewDescriptionState extends State<PageViewDescription> {
             child: Text(
       "A scrollable list that works page by page.Each child of a page view is forced to be the same size as the viewport.",
     )));
+  }
+}
+
+class PageViewCode extends CodeString {
+  const PageViewCode();
+  @override
+  String buildCodeString() {
+    return """ PageView(
+        scrollDirection: Axis.vertical,
+        controller: controller,
+        children: <Widget>[
+          Center(
+            child: Text(
+                "This is the First Page. Please Swipe UP to see more pages",
+                style: TextStyle(fontSize: 20),
+                textAlign: TextAlign.center),
+          ),
+          Center(
+            child: Text(
+                "This is the Second Page. Please Swipe UP to see more pages",
+                style: TextStyle(fontSize: 20),
+                textAlign: TextAlign.center),
+          ),
+          Center(
+            child: Text("This is the Third Page",
+                style: TextStyle(fontSize: 20),
+                textAlign: TextAlign.center),
+          ),
+        ],
+      ),
+""";
   }
 }

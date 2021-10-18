@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ClipPathImplementation extends StatelessWidget {
@@ -130,5 +131,20 @@ class ClipPathDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ClipPathCode extends CodeString {
+  const ClipPathCode();
+  @override
+  String buildCodeString() {
+    return """ClipPath(
+                  clipper: ClipPathClass(),
+                  child: Container(
+                    width: double.infinity,
+                    height: 250,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ),""";
   }
 }

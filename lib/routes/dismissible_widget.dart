@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class DismissibleSample extends StatefulWidget {
@@ -134,34 +135,6 @@ class DismissibleDescription extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.15,
         ),
-        Container(
-            child: Text("Example :",
-                style: TextStyle(fontSize: 18))),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.05,
-        ),
-        Container(
-          child: Text(''' Dismissible(
-              key: UniqueKey(),
-              background: Container(
-                color: Colors.orange,
-              ),
-              direction: DismissDirection.vertical,
-              child: Column(
-                children: [
-                  ListTile(
-                    title: Text(
-                      "Your Title Text",
-                      style: TextStyle(fontSize: 24),
-                    ),
-                    subtitle:
-                        Text("Your Text"),
-                  ),
-                  Divider()
-                ],
-              ),
-            ) ''', style: TextStyle(fontSize: 18)),
-        ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.45,
         ),
@@ -172,5 +145,28 @@ class DismissibleDescription extends StatelessWidget {
         ),
       ]),
     );
+  }
+}
+
+class DismissibleCode extends CodeString {
+  const DismissibleCode();
+  @override
+  String buildCodeString() {
+    return """Dismissible(
+            key: UniqueKey(),
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text(
+                    "Swipe left or right to delete!",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  trailing: Icon(Icons.keyboard_arrow_right),
+                  leading: Icon(Icons.keyboard_arrow_left),
+                  subtitle: Text("Dismiss without background color"),
+                ),
+              ],
+            ),
+          ),""";
   }
 }

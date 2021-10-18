@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class IndexedStackImplemention extends StatefulWidget {
@@ -169,5 +170,46 @@ class IndexedStackDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class IndexedStackCode extends CodeString {
+  const IndexedStackCode();
+  @override
+  String buildCodeString() {
+    return """IndexedStack(
+        alignment: Alignment.center,
+        index: index,
+        children: <Widget>[
+          Container(
+              height: MediaQuery.of(context).size.height * 0.5,
+              color: Colors.red,
+              child: Center(
+                child: Text(
+                  'Index:0',
+                  style: TextStyle(fontSize: 16),
+                ),
+              )),
+          Container(
+              height: MediaQuery.of(context).size.height * 0.5,
+              color: Colors.amber,
+              child: Center(
+                child: Text(
+                  'Index:1',
+                  style: TextStyle(fontSize: 16),
+                ),
+              )),
+          Container(
+              height: MediaQuery.of(context).size.height * 0.5,
+              color: Colors.blue,
+              child: Center(
+                child: Text(
+                  'Index:2',
+                  style: TextStyle(fontSize: 16),
+                ),
+              )),
+        ],
+      ),
+""";
   }
 }

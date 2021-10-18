@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class AutoCompleteImplemention extends StatefulWidget {
@@ -196,5 +197,25 @@ class AutoCompleteWidgetDescription extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class AutoCompleteCode extends CodeString {
+  const AutoCompleteCode();
+  @override
+  String buildCodeString() {
+    return """Autocomplete<String>(
+            optionsBuilder: (TextEditingValue textEditingValue) {
+              if (textEditingValue.text == '') {
+                return const Iterable<String>.empty();
+              }
+              return _kOptions.where((String option) {
+                return option.contains(textEditingValue.text.toLowerCase());
+              });
+            },
+            onSelected: (String selection) {
+              print('You just selected \$selection');
+            },
+          ),""";
   }
 }

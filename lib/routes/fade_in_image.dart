@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:flutter/material.dart';
 
@@ -143,5 +144,21 @@ class FadeInImageDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class FadeInImgCode extends CodeString {
+  const FadeInImgCode();
+  @override
+  String buildCodeString() {
+    return """FadeInImage.assetNetwork(
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                  placeholder: "assets/images/acm_logo.png",
+                  image:
+                      "https://images.pexels.com/photos/4974920/pexels-photo-4974920.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+                ),
+""";
   }
 }

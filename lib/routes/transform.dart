@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -155,5 +156,25 @@ class TransformDescription extends StatelessWidget {
         ),
       )),
     );
+  }
+}
+
+class TransformCode extends CodeString {
+  const TransformCode();
+  @override
+  String buildCodeString() {
+    return """ Transform.rotate(
+        angle: sliderVal / pi,
+        origin: const Offset(0, 0),
+        child: Container(
+          height: 75,
+          width: 75,
+          color: Colors.red,
+          child: Center(
+            child: Text("Rotate"),
+          ),
+        ),
+      ),
+""";
   }
 }

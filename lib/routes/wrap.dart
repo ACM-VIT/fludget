@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class WrapWidget extends StatelessWidget {
@@ -215,5 +216,23 @@ class WrapWidgetDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class WrapCode extends CodeString {
+  const WrapCode();
+  @override
+  String buildCodeString() {
+    return """ Wrap(
+              spacing: 20,
+              children: [
+                buildButton(context, '1'),
+                buildButton(context, '2'),
+                buildButton(context, '3'),
+                buildButton(context, '4'),
+                buildButton(context, '5'),
+              ],
+            ),
+""";
   }
 }

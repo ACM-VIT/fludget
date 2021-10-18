@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -590,5 +591,49 @@ class CupertinoWidgetsDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class CupertinoWidgetsCode extends CodeString {
+  const CupertinoWidgetsCode();
+  @override
+  String buildCodeString() {
+    return """ CupertinoButton(
+          child: Text('Show modal popup'),
+          onPressed: () {
+            showCupertinoModalPopup(
+                context: context,
+                builder: (context) {
+                  return CupertinoActionSheet(
+                    title: Text("Hobbies"),
+                    message: Text("Select your hobby"),
+                    actions: <Widget>[
+                      CupertinoActionSheetAction(
+                        child: Text("Coding"),
+                        onPressed: () {
+                          Navigator.pop(context); //Dismissing modal popup
+                          showSnackBarMessage(context,
+                              'Happy Coding!'); //displaying snackbar message
+                        },
+                      ),
+                      CupertinoActionSheetAction(
+                        child: Text("Gaming"),
+                        onPressed: () {
+                          Navigator.pop(context);
+                          showSnackBarMessage(context, 'Happy Gaming!');
+                        },
+                      ),
+                      CupertinoActionSheetAction(
+                        child: Text("Writing"),
+                        onPressed: () {
+                          Navigator.pop(context);
+                          showSnackBarMessage(context, 'Happy Writing!');
+                        },
+                      ),
+                    ],
+                  );
+                });
+          }),
+""";
   }
 }

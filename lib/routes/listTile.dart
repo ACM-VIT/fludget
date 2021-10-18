@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ListTileSample extends StatefulWidget {
@@ -110,5 +111,29 @@ class _ListTileDescriptionState extends State<ListTileDescription> {
         ),
       ),
     );
+  }
+}
+
+class ListTileCode extends CodeString {
+  const ListTileCode();
+  @override
+  String buildCodeString() {
+    return """ ListTile(
+                enabled: true,
+                onTap: () {
+                  showAlertDialog(context, "You have tapped the list Tile");
+                },
+                onLongPress: () {
+                  showAlertDialog(
+                      context, "You have Long Pressed the list Tile");
+                },
+                trailing: Icon(Icons.drag_indicator_sharp),
+                subtitle: Text("this is the subtitle"),
+                title: Text("This is the title"),
+                // focusColor: Colors.white,
+                // tileColor: Colors.white,
+                leading: Icon(Icons.supervised_user_circle),
+              ),
+""";
   }
 }

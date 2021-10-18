@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class SliverGridSample extends StatelessWidget {
@@ -63,5 +64,38 @@ class SliverGridDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class SliverGridCode extends CodeString {
+  const SliverGridCode();
+  @override
+  String buildCodeString() {
+    return """ CustomScrollView(
+        slivers: [
+          SliverList(
+              delegate: SliverChildListDelegate([
+            Text(
+              "Sliver Grid",
+              style: TextStyle(fontSize: 100),
+            )
+          ])),
+          SliverGrid(
+              delegate: SliverChildBuilderDelegate((context, ind) {
+                return Container(
+                  alignment: Alignment.center,
+                  color: Colors.teal[100 * (ind % 9)],
+                  child: Text('grid item \$ind'),
+                );
+              }),
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 200.0,
+                mainAxisSpacing: 10.0,
+                crossAxisSpacing: 10.0,
+                childAspectRatio: 4.0,
+              ))
+        ],
+      ),
+""";
   }
 }

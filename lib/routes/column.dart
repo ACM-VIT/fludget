@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ColumnImplementation extends StatefulWidget {
@@ -119,5 +120,47 @@ class ColumnDescription extends StatelessWidget {
         'Column Description Here',
       ),
     );
+  }
+}
+
+class ColumnCode extends CodeString {
+  const ColumnCode();
+  @override
+  String buildCodeString() {
+    return """Column(
+                  mainAxisAlignment: _mainAxisAlignment!,
+                  crossAxisAlignment: _crossAxisAlignment!,
+                  textBaseline: TextBaseline.ideographic,
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      child: FlutterLogo(
+                        size: 100.0,
+                      ),
+                    ),
+                    Container(
+                      color: Colors.green,
+                      child: FlutterLogo(
+                        size: 100.0,
+                      ),
+                    ),
+                    Container(
+                      color: Colors.blue,
+                      child: FlutterLogo(
+                        size: 100.0,
+                      ),
+                    ),
+                    Container(
+                      color: Colors.yellow,
+                      child: FlutterLogo(
+                        size: 100.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),""";
   }
 }
