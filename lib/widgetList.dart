@@ -12,6 +12,7 @@ import 'package:fludget/routes/absorbPointer.dart';
 import 'package:fludget/routes/animatedIcon.dart';
 import 'package:fludget/routes/animatedList.dart';
 import 'package:fludget/routes/appbar.dart';
+import 'package:fludget/routes/banner.dart';
 import 'package:fludget/routes/checkboxListTile.dart';
 import 'package:fludget/routes/circularProgressIndicator.dart';
 import 'package:fludget/routes/clipOval.dart';
@@ -634,7 +635,7 @@ const List<WidgetModel> widgets = [
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
       codeString: ColoredBoxCode()),
   WidgetModel(
-      name: "Fade in Image",
+      name: "FadeInImage",
       link: "https://flutter.dev/docs/cookbook/images/fading-in-images",
       subtitle: "Implementation of FadeInImage widget",
       implementation: FadeInImageImplementation(),
@@ -653,4 +654,15 @@ const List<WidgetModel> widgets = [
       "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
       category: [WidgetCategoy.Animation],
       codeString: BottomNavigationBarCode()),
+  WidgetModel(
+      name: "Banner Widget",
+      link: "https://api.flutter.dev/flutter/widgets/Banner-class.html",
+      subtitle: "Implementation of Banner widget",
+      implementation: BannerImplementation(),
+      description: BannerDescription(),
+      category: [
+        WidgetCategoy.Styling,
+      ],
+      codeString: BannerCode(),
+  ),
 ];

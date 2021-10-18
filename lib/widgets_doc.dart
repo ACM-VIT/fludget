@@ -3,14 +3,15 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 //Documentaion of FLutter Widgets
 class WidgetsDoc extends StatefulWidget {
-  const WidgetsDoc({Key? key}) : super(key: key);
+  const WidgetsDoc({Key? key, required this.url}) : super(key: key);
+
+  final String url;
 
   @override
   _WidgetsDocState createState() => _WidgetsDocState();
 }
 
 class _WidgetsDocState extends State<WidgetsDoc> {
-
   WebViewController? _controller;
   bool isLoading = true;
 
@@ -21,22 +22,25 @@ class _WidgetsDocState extends State<WidgetsDoc> {
         backgroundColor: Theme.of(context).primaryColor,
         title: Text("Widget Library"),
       ),
-      body: Stack(
-        children: [
+      body: Stack(children: [
         WebView(
-        initialUrl: 'https://api.flutter.dev/flutter/widgets/widgets-library.html',
-        javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (WebViewController webViewController) {
-          _controller = webViewController;
-        },
-        onPageFinished: (finish) {
-          setState(() {
-            isLoading = false;
-          });
-        },
-      ),
-      isLoading ? Center( child: CircularProgressIndicator(),) : SizedBox()
-    ]),
+          initialUrl: widget.url,
+          javascriptMode: JavascriptMode.unrestricted,
+          onWebViewCreated: (WebViewController webViewController) {
+            _controller = webViewController;
+          },
+          onPageFinished: (finish) {
+            setState(() {
+              isLoading = false;
+            });
+          },
+        ),
+        isLoading
+            ? Center(
+                child: CircularProgressIndicator(),
+              )
+            : SizedBox()
+      ]),
     );
   }
 }
