@@ -72,6 +72,7 @@ import 'package:fludget/routes/wrap.dart';
 import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
+import 'routes/BottomNavigationBar.dart';
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -634,7 +635,7 @@ const List<WidgetModel> widgets = [
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
       codeString: ColoredBoxCode()),
   WidgetModel(
-      name: "Fade in Image",
+      name: "FadeInImage",
       link: "https://flutter.dev/docs/cookbook/images/fading-in-images",
       subtitle: "Implementation of FadeInImage widget",
       implementation: FadeInImageImplementation(),
@@ -645,14 +646,23 @@ const List<WidgetModel> widgets = [
       ],
       codeString: FadeInImgCode()),
   WidgetModel(
-    name: "Banner Widget",
-    link: "https://api.flutter.dev/flutter/widgets/Banner-class.html",
-    subtitle: "Implementation of Banner widget",
-    implementation: BannerImplementation(),
-    description: BannerDescription(),
-    category: [
-      WidgetCategoy.Styling,
-    ],
-    codeString: BannerCode(),
+      name: "BottomNavigationBar",
+      subtitle: "Implementation of BottomNavigationBar Widget",
+      implementation: BottomNavigationBarImplementation(),
+      description: BottomNavigationBarDescription(),
+      link:
+      "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
+      category: [WidgetCategoy.Animation],
+      codeString: BottomNavigationBarCode()),
+  WidgetModel(
+      name: "Banner Widget",
+      link: "https://api.flutter.dev/flutter/widgets/Banner-class.html",
+      subtitle: "Implementation of Banner widget",
+      implementation: BannerImplementation(),
+      description: BannerDescription(),
+      category: [
+        WidgetCategoy.Styling,
+      ],
+      codeString: BannerCode(),
   ),
 ];
