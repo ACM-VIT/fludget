@@ -7,10 +7,29 @@ class ClipRRectImplementation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-          child: ClipRRect(
-            borderRadius:
-            BorderRadius.circular(20),
-            child: Image.network('https://picsum.photos/250?image=9'),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: [
+                  Image.network('https://picsum.photos/250?image=9',scale: 3),
+                  Text('Without ClipRRect')
+                ],
+              ),
+              SizedBox(
+                width: 50,
+              ),
+              Column(
+                children: [
+                  ClipRRect(
+                    borderRadius:
+                    BorderRadius.circular(20),
+                    child: Image.network('https://picsum.photos/250?image=9',scale: 3 ,),
+                  ),
+                  Text('With ClipRRect')
+                ],
+              ),
+            ],
           ),
         )
     );
