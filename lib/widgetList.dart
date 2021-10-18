@@ -632,7 +632,7 @@ const List<WidgetModel> widgets = [
       implementation: ClipRRectImplementation(),
       description: ClipRRectDescription(),
       link: "hhttps://api.flutter.dev/flutter/widgets/ClipRRect-class.html",
-      category: [WidgetCategoy.Assets, WidgetCategoy.Basics]
+      category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
       codeString: BannerCode(),),
 WidgetModel(
       name: "ColoredBox",
