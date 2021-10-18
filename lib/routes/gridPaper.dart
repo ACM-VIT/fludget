@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fludget/Models/codeString.dart';
 
 class GridPaperImplementation extends StatelessWidget {
-  const GridPaperImplementation();
+  const GridPaperImplementation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +24,7 @@ class GridPaperImplementation extends StatelessWidget {
 }
 
 class GridPaperDescription extends StatelessWidget {
-  const GridPaperDescription();
+  const GridPaperDescription({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -46,7 +46,7 @@ class GridPaperCode extends CodeString {
             width: 300,
             height: 500,
           ),
-          color: Colors.deepOrangeAccent,
+          color: Theme.of(context).primaryColor,
           interval: 500,
           divisions: 50,
           subdivisions: 10,

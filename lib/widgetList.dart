@@ -646,7 +646,7 @@ const List<WidgetModel> widgets = [
       codeString: FadeInImgCode()),
   WidgetModel(
       name: "Grid Paper",
-      implementation: GridPaperDescription(),
+      implementation: GridPaperImplementation(),
       description: GridPaperDescription(),
       link: "https://api.flutter.dev/flutter/widgets/GridPaper-class.html",
       category: [WidgetCategoy.Layout],
