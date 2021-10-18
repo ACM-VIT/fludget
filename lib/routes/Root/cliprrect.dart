@@ -29,6 +29,20 @@ class ClipRRectImplementation extends StatelessWidget {
                   Text('With ClipRRect')
                 ],
               ),
+              SizedBox(
+                width: 50,
+              ),
+              Column(
+                children: [
+                  ClipRRect(
+                    clipBehavior: Clip.antiAlias,
+                    borderRadius:
+                    BorderRadius.circular(20),
+                    child: Image.network('https://picsum.photos/250?image=9',scale: 3 ,),
+                  ),
+                  Text('With clipBehaviour')
+                ],
+              ),
             ],
           ),
         )
