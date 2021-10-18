@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class SliverListImp extends StatefulWidget {
@@ -63,5 +64,46 @@ class SliverListDesc extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class SLiverListCode extends CodeString {
+  const SLiverListCode();
+  @override
+  String buildCodeString() {
+    return """ CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            title: Text("Sliver Appbar"),
+            flexibleSpace: FlutterLogo(
+              size: 500,
+            ),
+            expandedHeight: 300,
+            backgroundColor: Theme.of(context).primaryColor,
+            automaticallyImplyLeading: false,
+            floating: true,
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                return Card(
+                  child: Container(
+                    color: Colors
+                        .primaries[Random().nextInt(Colors.primaries.length)],
+                    height: 50,
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Sliver List Item \$index",
+                      style: const TextStyle(fontSize: 15, color: Colors.black),
+                    ),
+                  ),
+                );
+              },
+              childCount: 10, // 1000 list items
+            ),
+          ),
+        ],
+      ),
+""";
   }
 }

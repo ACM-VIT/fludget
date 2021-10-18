@@ -70,7 +70,7 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
           ? showSearchBar(context)
           : AppBar(
               backgroundColor: Theme.of(context).primaryColor,
-              title: Text("Widget Catalog"),
+              title: Text("Material Widget Catalog"),
               actions: [
                 IconButton(
                   onPressed: () {
@@ -264,5 +264,3 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
     );
   }
 }
-
-

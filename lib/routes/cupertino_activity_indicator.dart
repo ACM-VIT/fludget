@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -87,5 +88,16 @@ class CupertinoActivityIndicatorDescription extends StatelessWidget {
         'An iOS-style activity indicator that spins clockwise.',
       ),
     );
+  }
+}
+
+class CupertinoActivityCode extends CodeString {
+  const CupertinoActivityCode();
+  @override
+  String buildCodeString() {
+    return """CupertinoActivityIndicator(
+                radius: _radius,
+                animating: _animating,
+              ),""";
   }
 }

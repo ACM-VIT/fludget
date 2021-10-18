@@ -14,12 +14,13 @@ class SettingsWidget extends StatefulWidget {
 class _SettingsWidgetState extends State<SettingsWidget> {
   final padding = EdgeInsets.symmetric(horizontal: 20);
 
-  String _url = 'https://api.flutter.dev/flutter/widgets/widgets-library.html';
+  String _docUrl =
+      'https://api.flutter.dev/flutter/widgets/widgets-library.html';
+  String _repoUrl = "https://github.com/ACM-VIT/fludget";
   PackageInfo? packageInfo = null;
 
-  void _launchURL() async => await canLaunch(_url)
-      ? await launch(_url)
-      : throw 'Could not launch $_url';
+  void _launchURL(String url) async =>
+      await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
 
   @override
   void initState() {
@@ -83,14 +84,42 @@ SOFTWARE.
                 ),
                 onTap: () {
                   Navigator.pop(context);
-                  _launchURL();
+                  _launchURL(_docUrl);
                 },
               ),
               title: Text("Official Documentation"),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => WidgetsDoc()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => WidgetsDoc(url: _docUrl)));
+              },
+            ),
+            ListTile(
+              leading: SizedBox(
+                  width: 23,
+                  height: 23,
+                  child: (Theme.of(context).brightness == Brightness.light)
+                      ? Image.asset('assets/icon/GitHub-Mark-64px.png')
+                      : Image.asset('assets/icon/GitHub-Mark-Light-64px.png')),
+              trailing: InkWell(
+                child: Icon(
+                  Icons.link,
+                  size: 24.0,
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  _launchURL(_repoUrl);
+                },
+              ),
+              title: Text("Fludget Repository"),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => WidgetsDoc(url: _repoUrl)));
               },
             ),
             ListTile(

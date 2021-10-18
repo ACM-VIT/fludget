@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class CheckboxListTileWidget extends StatefulWidget {
@@ -88,5 +89,32 @@ class CheckboxListTileWidgetDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class CheckBoxListTileCode extends CodeString {
+  const CheckBoxListTileCode();
+  @override
+  String buildCodeString() {
+    return """ CheckboxListTile(
+          activeColor: Colors.blue,
+          checkColor: Colors.white,
+          tileColor: Colors.grey[700],
+          title: const Text(
+            'Flutter Awesome',
+            style: TextStyle(color: Colors.white),
+          ),
+          onChanged: (bool? newValue) {
+            setState(() {
+              _isSelected = newValue;
+            });
+          },
+          secondary: const FlutterLogo(),
+          value: _isSelected,
+          subtitle: Text(
+            "I Love Flutter",
+            style: TextStyle(color: Colors.white),
+          ),
+        ),""";
   }
 }

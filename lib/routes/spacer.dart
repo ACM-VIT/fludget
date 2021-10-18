@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class SpacerImplementation extends StatelessWidget {
@@ -314,5 +315,28 @@ class SpacerDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class SpacerCode extends CodeString {
+  const SpacerCode();
+  @override
+  String buildCodeString() {
+    return """ Row(
+        children: [
+          Container(
+            width: 50,
+            height: 30,
+            color: Colors.red,
+          ),
+          Spacer(),
+          Container(
+            width: 50,
+            height: 30,
+            color: Colors.red,
+          ),
+        ],
+      ),
+""";
   }
 }

@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ContainerImplementation extends StatelessWidget {
@@ -71,5 +72,17 @@ class ContainerDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ContainerCode extends CodeString {
+  const ContainerCode();
+  @override
+  String buildCodeString() {
+    return """Container(
+                width: 100.0,
+                height: 100.0,
+                color: Theme.of(context).primaryColor,
+              ),""";
   }
 }

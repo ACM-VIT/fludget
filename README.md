@@ -38,18 +38,21 @@ This application is developed to learn Flutter using Flutter. Different widgets 
 
 Note: Make sure you are always up to date with sync and pull upstream. Sync and pull before you start and before you push your work.
 
-### How to contribute to the widget catalog
+### How to contribute to the Widget Catalog
 
-1. Create a new dart file named `*Widget*.dart` for the widget being added under `lib/routes/`
+1. Create a new dart file named `*widget*.dart` for the widget being added under `lib/routes/`
 2. Create a class named **_Widget_**_Implementation_ and implement the widget
-3. Add description of the widget using **_Widget_**_Description_ class in the widget dart file
-4. Add a new ListTile using the model `WidgetModel` in `lib/widgetList.dart` for the widget
-5. In the `WidgetModel` 
+3. Add description of the widget using **_Widget_**_Description_ class in the `*widget*.dart` file
+4. Add the code written for the widget in String format using **_Widget_**_Code_ class in the same file
+5. Add a new ListTile using the model `WidgetModel` in `lib/widgetList.dart` for the widget
+6. In the `WidgetModel` 
     - Add an argument `name` and pass the name of the Widget
     - Add an argument `implementaion` and add `*Widget*Implementation()` as the parameter 
     - Add an argument `description` and add `*Widget*Description()` as the parameter 
     - Add an argument `link` and include link to the official documentation of the widget as the parameter
     - Add an argument `category` and include category of the widget as the parameter
+    - Add an argument `codeString` and add `*Widget*Code()` as the parameter
+   
 
 # Authors
 

@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class RowImplementation extends StatelessWidget {
@@ -54,5 +55,42 @@ class RowDescription extends StatelessWidget {
         'Row Description Here',
       ),
     );
+  }
+}
+
+class RowCode extends CodeString {
+  const RowCode();
+  @override
+  String buildCodeString() {
+    return """Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                color: Colors.red,
+                child: FlutterLogo(
+                  size: 85.0,
+                ),
+              ),
+              Container(
+                color: Colors.green,
+                child: FlutterLogo(
+                  size: 85.0,
+                ),
+              ),
+              Container(
+                color: Colors.blue,
+                child: FlutterLogo(
+                  size: 85.0,
+                ),
+              ),
+              Container(
+                color: Colors.yellow,
+                child: FlutterLogo(
+                  size: 85.0,
+                ),
+              ),
+            ],
+          ),
+""";
   }
 }

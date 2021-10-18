@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -201,5 +202,32 @@ class ScrollBarDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ScrollbarCode extends CodeString {
+  const ScrollbarCode();
+  @override
+  String buildCodeString() {
+    return """ Scrollbar(
+                  controller: list1,
+                  isAlwaysShown: true,
+                  child: ListView(
+                    controller: list1,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    children: List.generate(
+                      10,
+                      (index) => Container(
+                        height: 30,
+                        width: 50,
+                        color: Theme.of(context).colorScheme.primary,
+                        margin:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                      ),
+                    ),
+                  ),
+                ),
+""";
   }
 }

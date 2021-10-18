@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class SingleChildScrollViewImplementation extends StatelessWidget {
@@ -83,5 +84,41 @@ class SingleChildScrollViewDescription extends StatelessWidget {
         ),
       )
     ]);
+  }
+}
+
+class SinglechildScrollViewCode extends CodeString {
+  const SinglechildScrollViewCode();
+  @override
+  String buildCodeString() {
+    return """ SingleChildScrollView(
+        padding: EdgeInsets.all(5.0),
+        child: Center(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("With SingleChildScrollView"),
+                SizedBox(height: 10),
+                Container(
+                    color: const Color(0xffeeee00),
+                    width: 150.0,
+                    height: 300.0,
+                    child: Center(child: Text('Item 1'))),
+                SizedBox(height: 10.0),
+                Container(
+                    color: const Color(0xffee0000),
+                    width: 200.0,
+                    height: 300.0,
+                    child: Center(child: Text('Item 2'))),
+                SizedBox(height: 10.0),
+                Container(
+                    color: const Color(0xff3fee00),
+                    width: 100.0,
+                    height: 400.0,
+                    child: Center(child: Text('Item 3'))),
+              ]),
+        ),
+      ),
+""";
   }
 }
