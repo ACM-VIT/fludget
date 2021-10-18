@@ -5,19 +5,16 @@ class GridPaperImplementation extends StatelessWidget {
   const GridPaperImplementation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text("Grid Paper ")),
-        body: GridPaper(
-          child: Container(
-            width: 300,
-            height: 500,
-          ),
-          color: Theme.of(context).primaryColor,
-          interval: 500,
-          divisions: 50,
-          subdivisions: 10,
+    return Scaffold(
+      body: GridPaper(
+        child: Container(
+          width: 300,
+          height: 500,
         ),
+        color: Theme.of(context).primaryColor,
+        interval: 500,
+        divisions: 50,
+        subdivisions: 10,
       ),
     );
   }
