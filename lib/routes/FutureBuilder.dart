@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -131,5 +132,55 @@ class FutureBuilderDescription extends StatelessWidget {
         style: TextStyle(fontSize: 20),
       ),
     );
+  }
+}
+
+class FutureBuilderCode extends CodeString {
+  const FutureBuilderCode();
+  @override
+  String buildCodeString() {
+    return """FutureBuilder(
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  if (snapshot.hasError) {
+                    return Center(
+                      child: Text(
+                        '\${snapshot.error} occured',
+                        style: TextStyle(
+                          fontSize: 28,
+                        ),
+                      ),
+                    );
+                  } else if (snapshot.hasData) {
+                    return Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.4,
+                        width: MediaQuery.of(context).size.width,
+                        child: Image.network(url),
+                        // child: Text(
+                        //   '\$data',
+                        //   style: TextStyle(
+                        //     fontSize: 28,
+                        //   ),
+                        // ),
+                      ),
+                    );
+                  }
+                }
+                return Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    width: MediaQuery.of(context).size.width,
+                    child: Center(
+                      child: CircularProgressIndicator(),
+                    ),
+                  ),
+                );
+              },
+              future: callApi(),
+            ),
+""";
   }
 }

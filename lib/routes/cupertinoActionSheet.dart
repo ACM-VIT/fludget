@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -26,22 +27,24 @@ class CupertinoActionSheetImplementation extends StatelessWidget {
                 showCupertinoModalPopup(
                     context: context,
                     builder: (BuildContext context) => CupertinoActionSheet(
-                      actions: [
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text1')),
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text2')),
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text3'))
-                      ],
-
-                    ));
+                          actions: [
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text1')),
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text2')),
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text3'))
+                          ],
+                        ));
               },
             ),
             GestureDetector(
@@ -56,24 +59,26 @@ class CupertinoActionSheetImplementation extends StatelessWidget {
                 showCupertinoModalPopup(
                     context: context,
                     builder: (BuildContext context) => CupertinoActionSheet(
-                      actions: [
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text1')),
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text2')),
-                        CupertinoActionSheetAction(
-                           onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: Text('Text3'),
-                          isDestructiveAction: true,
-                        )
-                      ],
-                    ));
+                          actions: [
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text1')),
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text2')),
+                            CupertinoActionSheetAction(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('Text3'),
+                              isDestructiveAction: true,
+                            )
+                          ],
+                        ));
               },
             ),
             GestureDetector(
@@ -88,26 +93,29 @@ class CupertinoActionSheetImplementation extends StatelessWidget {
                 showCupertinoModalPopup(
                     context: context,
                     builder: (BuildContext context) => CupertinoActionSheet(
-                      actions: [
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text1')),
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text2')),
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text3'))
-                      ],
-                      cancelButton: CupertinoActionSheetAction(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: Text('Cancel Button')),
-                    ));
+                          actions: [
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text1')),
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text2')),
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text3'))
+                          ],
+                          cancelButton: CupertinoActionSheetAction(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('Cancel Button')),
+                        ));
               },
             ),
             GestureDetector(
@@ -122,31 +130,34 @@ class CupertinoActionSheetImplementation extends StatelessWidget {
                 showCupertinoModalPopup(
                     context: context,
                     builder: (BuildContext context) => CupertinoActionSheet(
-                      title: Text(
-                        'Title of the Action Sheet',
-                        style: TextStyle(color: Colors.black),
-                      ),
-                      actions: [
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text1')),
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text2')),
-                        CupertinoActionSheetAction(
-                             onPressed: () {
-                            Navigator.pop(context);
-                          }, child: Text('Text3'))
-                      ],
-                      message: Text("Message of Action sheet"),
-                      cancelButton: CupertinoActionSheetAction(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: Text('Cancel Button')),
-                    ));
+                          title: Text(
+                            'Title of the Action Sheet',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                          actions: [
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text1')),
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text2')),
+                            CupertinoActionSheetAction(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Text3'))
+                          ],
+                          message: Text("Message of Action sheet"),
+                          cancelButton: CupertinoActionSheetAction(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('Cancel Button')),
+                        ));
               },
             ),
           ],
@@ -169,5 +180,32 @@ class CupertinoActionSheetDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class CupertinoActionSheetCode extends CodeString {
+  const CupertinoActionSheetCode();
+  @override
+  String buildCodeString() {
+    return """showCupertinoModalPopup(
+                    context: context,
+                    builder: (BuildContext context) => CupertinoActionSheet(
+                      actions: [
+                        CupertinoActionSheetAction(
+                             onPressed: () {
+                            Navigator.pop(context);
+                          }, child: Text('Text1')),
+                        CupertinoActionSheetAction(
+                             onPressed: () {
+                            Navigator.pop(context);
+                          }, child: Text('Text2')),
+                        CupertinoActionSheetAction(
+                             onPressed: () {
+                            Navigator.pop(context);
+                          }, child: Text('Text3'))
+                      ],
+
+                    ));
+              },""";
   }
 }

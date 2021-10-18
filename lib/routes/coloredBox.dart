@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ColoredBoxImplementation extends StatelessWidget {
@@ -29,8 +30,7 @@ class ColoredBoxImplementation extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Text("Green Colored Box with Text"),
-              )
-          )
+              ))
         ],
       ),
     ));
@@ -55,7 +55,8 @@ class ColoredBoxDescription extends StatelessWidget {
         ),
       ),
       SizedBox(height: 20),
-      Text('Syntax for ColoredBox Widget', style: TextStyle(fontWeight: FontWeight.w800)),
+      Text('Syntax for ColoredBox Widget',
+          style: TextStyle(fontWeight: FontWeight.w800)),
       SizedBox(height: 10),
       Padding(
         padding: const EdgeInsets.all(10.0),
@@ -70,7 +71,20 @@ ColoredBox(
           ),
         ),
       ),
-
     ]);
+  }
+}
+
+class ColoredBoxCode extends CodeString {
+  const ColoredBoxCode();
+  @override
+  String buildCodeString() {
+    return """ ColoredBox(
+              color: Colors.green,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text("Green Colored Box with Text"),
+              )
+          )""";
   }
 }

@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class MySliverAppBar extends StatefulWidget {
@@ -136,5 +137,53 @@ class MySliverAppBarDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class SliverAppBarCode extends CodeString {
+  const SliverAppBarCode();
+  @override
+  String buildCodeString() {
+    return """CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            backgroundColor: Theme.of(context).primaryColor,
+            pinned: _pinned,
+            snap: _snap,
+            floating: _floating,
+            expandedHeight: 160.0,
+            flexibleSpace: const FlexibleSpaceBar(
+              title: Text('SliverAppBar'),
+              background: FlutterLogo(),
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 20,
+              child: Center(
+                child: Text('Scroll to see the SliverAppBar in effect.'),
+              ),
+            ),
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                return Container(
+                  color: index.isOdd ? Colors.grey[600] : Colors.grey[500],
+                  height: 70.0,
+                  child: Center(
+                    child: Text(
+                      '\$index',
+                      textScaleFactor: 3,
+                    ),
+                  ),
+                );
+              },
+              childCount: 20,
+            ),
+          ),
+        ],
+      ),
+""";
   }
 }

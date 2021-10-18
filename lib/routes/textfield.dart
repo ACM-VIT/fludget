@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -144,5 +145,27 @@ class TextFielDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class TextFieldCode extends CodeString {
+  const TextFieldCode();
+  @override
+  String buildCodeString() {
+    return """ TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius:
+                        const BorderRadius.all(const Radius.circular(30.0))),
+                prefixIcon: Icon(Icons.lock),
+                hintText: 'Password',
+              ),
+            )
+""";
   }
 }

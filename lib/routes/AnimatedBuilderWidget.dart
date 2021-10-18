@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedBuilderWidget extends StatefulWidget {
@@ -89,8 +90,9 @@ class _AnimatedBuilderWidgetState extends State<AnimatedBuilderWidget>
           AnimatedBuilder(
               animation: rotateAnimation,
               child: Container(
-                decoration:
-                    BoxDecoration(shape: BoxShape.circle, color: Theme.of(context).primaryColor),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Theme.of(context).primaryColor),
                 width: 150,
                 height: 150,
                 alignment: Alignment.center,
@@ -107,8 +109,6 @@ class _AnimatedBuilderWidgetState extends State<AnimatedBuilderWidget>
       ),
     );
   }
-
- 
 }
 
 class AnimatedBuilderDescription extends StatelessWidget {
@@ -125,5 +125,28 @@ class AnimatedBuilderDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class AnimatedBuilderCode extends CodeString {
+  const AnimatedBuilderCode();
+  @override
+  String buildCodeString() {
+    return """AnimatedBuilder(
+            animation: rotateAnimation,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 120.0, vertical: 20.0),
+              child: Container(
+                color: Theme.of(context).primaryColor,
+                width: 125,
+                height: 125,
+                alignment: Alignment.center,
+              ),
+            ),
+            builder: (context, child) => Transform.rotate(
+              angle: rotateAnimation.value,
+              child: child,
+            ),
+          ),""";
   }
 }

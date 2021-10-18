@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class IconImplementation extends StatelessWidget {
@@ -39,5 +40,30 @@ class IconDescription extends StatelessWidget {
         'Icon Description Here',
       ),
     );
+  }
+}
+
+class IconCode extends CodeString {
+  const IconCode();
+  @override
+  String buildCodeString() {
+    return """Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          Icon(
+            Icons.ac_unit,
+            color: Colors.blue[100],
+            size: 50.0,
+          ),
+          Icon(
+            Icons.wb_sunny,
+            color: Colors.yellow,
+            size: 100.0,
+          ),
+          Icon(
+            Icons.cloud,
+            color: Colors.blue[500],
+            size: 75.0,
+          )
+        ]),
+""";
   }
 }

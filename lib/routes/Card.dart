@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class CardImplementation extends StatefulWidget {
@@ -207,5 +208,37 @@ class CardDescription extends StatelessWidget {
         ' Card Description Here',
       ),
     );
+  }
+}
+
+class CardCode extends CodeString {
+  const CardCode();
+  @override
+  String buildCodeString() {
+    return """Widget buildRoundedCard() => Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Container(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Rounded card',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                'This card is rounded',
+                style: TextStyle(fontSize: 20),
+              ),
+            ],
+          ),
+        ),
+      );""";
   }
 }

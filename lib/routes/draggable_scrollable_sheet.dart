@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -74,10 +75,11 @@ class DraggableScrollSheetDesc extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: DefaultTextStyle(
-            style: Theme.of(context).textTheme.bodyText1 ?? TextStyle(
-              color: Colors.white,
-              height: 1.3,
-            ),
+            style: Theme.of(context).textTheme.bodyText1 ??
+                TextStyle(
+                  color: Colors.white,
+                  height: 1.3,
+                ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -134,5 +136,19 @@ class DraggableScrollSheetDesc extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class DraggableCode extends CodeString {
+  const DraggableCode();
+  @override
+  String buildCodeString() {
+    return """DraggableScrollableSheet(
+              maxChildSize: 0.7,
+              minChildSize: 0.3,
+              initialChildSize: 0.3,
+              builder: (context, controller) {
+                return _houseListView(controller);
+              })""";
   }
 }

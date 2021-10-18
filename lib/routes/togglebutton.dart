@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ToggleButtonImplementation extends StatefulWidget {
@@ -140,5 +141,35 @@ class _ToggleButtonDescriptionState extends State<ToggleButtonDescription> {
                 ),
               ]);
         }).toList()));
+  }
+}
+
+class ToggleButtonCode extends CodeString {
+  const ToggleButtonCode();
+  @override
+  String buildCodeString() {
+    return """ Padding(
+            padding: const EdgeInsets.only(top: 20, left: 80),
+            child: ToggleButtons(
+              children: <Widget>[
+                Icon(Icons.bluetooth),
+                Icon(Icons.wifi),
+                Icon(Icons.flash_on),
+              ],
+              isSelected: _isSelected,
+              onPressed: (int index) {
+                setState(() {
+                  _isSelected[index] = !_isSelected[index];
+                });
+              },
+              color: Colors.grey,
+              selectedColor: Colors.red,
+              fillColor: Colors.lightBlueAccent,
+              borderColor: Colors.lightBlueAccent,
+              selectedBorderColor: Colors.red,
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
+          ),
+""";
   }
 }
