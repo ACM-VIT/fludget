@@ -73,6 +73,7 @@ import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
 import 'routes/BottomNavigationBar.dart';
+import 'routes/BackdropFilter.dart';
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -665,4 +666,13 @@ const List<WidgetModel> widgets = [
       ],
       codeString: BannerCode(),
   ),
+  WidgetModel(
+      name: "BackdropFilter",
+      subtitle: "Implementation of BackdropFilter Widget",
+      implementation: BackdropFilterImplementation(),
+      description: BackdropFilterDescription(),
+      link:
+      "https://api.flutter.dev/flutter/widgets/BackdropFilter-class.html",
+      category: [WidgetCategoy.Animation],
+      codeString: BackdropFilterCode()),
 ];
