@@ -5,6 +5,7 @@ import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/gridPaper.dart';
 import 'package:fludget/routes/IgnorePointer.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
@@ -643,4 +644,11 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Animation,
       ],
       codeString: FadeInImgCode()),
+  WidgetModel(
+      name: "Grid Paper",
+      implementation: GridPaperDescription(),
+      description: GridPaperDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/Text-class.html",
+      category: [WidgetCategoy.Layout],
+      codeString: GridPaperCode()),
 ];
