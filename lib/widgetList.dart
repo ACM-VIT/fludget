@@ -48,6 +48,7 @@ import 'package:fludget/routes/nested_scroll_view.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/pageview.dart';
+import 'package:fludget/routes/place_holder.dart';
 import 'package:fludget/routes/refreshIndicator.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
@@ -651,18 +652,30 @@ const List<WidgetModel> widgets = [
       implementation: BottomNavigationBarImplementation(),
       description: BottomNavigationBarDescription(),
       link:
-      "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
+          "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
       category: [WidgetCategoy.Animation],
       codeString: BottomNavigationBarCode()),
   WidgetModel(
-      name: "Banner Widget",
-      link: "https://api.flutter.dev/flutter/widgets/Banner-class.html",
-      subtitle: "Implementation of Banner widget",
-      implementation: BannerImplementation(),
-      description: BannerDescription(),
-      category: [
-        WidgetCategoy.Styling,
-      ],
-      codeString: BannerCode(),
+    name: "Banner Widget",
+    link: "https://api.flutter.dev/flutter/widgets/Banner-class.html",
+    subtitle: "Implementation of Banner widget",
+    implementation: BannerImplementation(),
+    description: BannerDescription(),
+    category: [
+      WidgetCategoy.Styling,
+    ],
+    codeString: BannerCode(),
+  ),
+  WidgetModel(
+    name: "Placeholder Widget",
+    link:
+        "https://api.flutter.dev/flutter/widgets/Placeholder-class.html#:~:text=Placeholder%20class%20Null%20safety,sized%20to%20fit%20its%20container.",
+    subtitle: "Implementation of Placeholder widget",
+    implementation: PlaceHolderImplementation(),
+    description: PlaceHolderDescription(),
+    category: [
+      WidgetCategoy.Styling,
+    ],
+    codeString: PlaceHolderCode(),
   ),
 ];
