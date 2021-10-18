@@ -2,6 +2,7 @@ import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
@@ -204,6 +205,14 @@ const List<WidgetModel> widgets = [
           "https://api.flutter.dev/flutter/material/FloatingActionButton-class.html",
       category: [WidgetCategoy.Input, WidgetCategoy.Basics],
       codeString: FABCode()),
+  WidgetModel(
+      name: "TabBar",
+      implementation: TabBarImplementation(),
+      description: TabBarDescription(),
+      link:
+          "https://api.flutter.dev/flutter/material/TabBar-class.html",
+      category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
+      codeString: TabBarCode()),
   WidgetModel(
       name: "Toggle Button",
       implementation: ToggleButtonImplementation(),
