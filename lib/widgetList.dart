@@ -1,6 +1,7 @@
 import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
+import 'package:fludget/routes/OverflowBox.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
@@ -153,6 +154,15 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Interaction,
       ],
       codeString: IgnorePointerCode()),
+  WidgetModel(
+      name: "OverFlowBox",
+      implementation: OverflowBoxImplementation(),
+      description: OverflowBoxDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/OverflowBox-class.html",
+      category: [
+        WidgetCategoy.Layout,
+      ],
+      codeString: OverflowBoxCode()),
   WidgetModel(
       name: "DatePickerDialog",
       implementation: DatePickerDialogImplementation(),
