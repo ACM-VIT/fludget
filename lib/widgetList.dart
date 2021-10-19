@@ -2,9 +2,11 @@ import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/gridPaper.dart';
 import 'package:fludget/routes/IgnorePointer.dart';
 import 'package:fludget/routes/Root/cliprrect.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
@@ -24,12 +26,14 @@ import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
 import 'package:fludget/routes/container.dart';
+import 'package:fludget/routes/customPaint.dart';
 import 'package:fludget/routes/decoratedBox.dart';
 import 'package:fludget/routes/cupertino_activity_indicator.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggableWidget.dart';
 import 'package:fludget/routes/draggable_scrollable_sheet.dart';
+import 'package:fludget/routes/drawer_widget.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/errorWidget.dart';
@@ -49,6 +53,7 @@ import 'package:fludget/routes/nested_scroll_view.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/pageview.dart';
+import 'package:fludget/routes/place_holder.dart';
 import 'package:fludget/routes/refreshIndicator.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
@@ -73,6 +78,7 @@ import 'package:fludget/routes/wrap.dart';
 import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
+import 'routes/BottomNavigationBar.dart';
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -202,6 +208,14 @@ const List<WidgetModel> widgets = [
           "https://api.flutter.dev/flutter/material/FloatingActionButton-class.html",
       category: [WidgetCategoy.Input, WidgetCategoy.Basics],
       codeString: FABCode()),
+  WidgetModel(
+      name: "TabBar",
+      implementation: TabBarImplementation(),
+      description: TabBarDescription(),
+      link:
+          "https://api.flutter.dev/flutter/material/TabBar-class.html",
+      category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
+      codeString: TabBarCode()),
   WidgetModel(
       name: "Toggle Button",
       implementation: ToggleButtonImplementation(),
@@ -613,6 +627,23 @@ const List<WidgetModel> widgets = [
       ],
       codeString: ClipPathCode()),
   WidgetModel(
+    name: "SingleChildScrollView",
+    link:
+        "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
+    implementation: SingleChildScrollViewImplementation(),
+    description: SingleChildScrollViewDescription(),
+    category: [WidgetCategoy.Scrolling], codeString: SinglechildScrollViewCode(),
+  ),
+  WidgetModel(
+    name: "CustomPaint",
+    link: "https://api.flutter.dev/flutter/widgets/CustomPaint-class.html",
+    subtitle: "Implementation of CustomPaint widget",
+    implementation: CustomPaintWidget(),
+    description: CustomPaintDescription(),
+    category: [WidgetCategoy.Painting],
+    codeString:CustomPaintCode() ,
+  ),
+  WidgetModel(
       name: "SingleChildScrollView",
       link:
           "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
@@ -642,7 +673,7 @@ WidgetModel(
       category: [WidgetCategoy.Layout, WidgetCategoy.Basics],
       codeString: ColoredBoxCode()),
   WidgetModel(
-      name: "Fade in Image",
+      name: "FadeInImage",
       link: "https://flutter.dev/docs/cookbook/images/fading-in-images",
       subtitle: "Implementation of FadeInImage widget",
       implementation: FadeInImageImplementation(),
@@ -652,6 +683,22 @@ WidgetModel(
         WidgetCategoy.Animation,
       ],
       codeString: FadeInImgCode()),
+  WidgetModel(
+      name: "Grid Paper",
+      implementation: GridPaperImplementation(),
+      description: GridPaperDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/GridPaper-class.html",
+      category: [WidgetCategoy.Layout],
+      codeString: GridPaperCode()),
+  WidgetModel(
+      name: "BottomNavigationBar",
+      subtitle: "Implementation of BottomNavigationBar Widget",
+      implementation: BottomNavigationBarImplementation(),
+      description: BottomNavigationBarDescription(),
+      link:
+          "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
+      category: [WidgetCategoy.Animation],
+      codeString: BottomNavigationBarCode()),
   WidgetModel(
     name: "Banner Widget",
     link: "https://api.flutter.dev/flutter/widgets/Banner-class.html",
@@ -665,5 +712,27 @@ WidgetModel(
     ],
     codeString: BannerCode(),
   ),
-
+  WidgetModel(
+    name: "Placeholder Widget",
+    link:
+        "https://api.flutter.dev/flutter/widgets/Placeholder-class.html#:~:text=Placeholder%20class%20Null%20safety,sized%20to%20fit%20its%20container.",
+    subtitle: "Implementation of Placeholder widget",
+    implementation: PlaceHolderImplementation(),
+    description: PlaceHolderDescription(),
+    category: [
+      WidgetCategoy.Styling,
+    ],
+    codeString: PlaceHolderCode(),
+  ),
+  WidgetModel(
+    name: "Drawer Widget",
+    link: "https://api.flutter.dev/flutter/material/Drawer-class.html",
+    subtitle: "Implementation of Drawer widget",
+    implementation: DrawerImplementation(),
+    description: DrawerDescription(),
+    category: [
+      WidgetCategoy.Material,
+    ],
+    codeString: DrawerCode(),
+  ),
 ];
