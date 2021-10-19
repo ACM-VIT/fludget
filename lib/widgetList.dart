@@ -50,6 +50,7 @@ import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listTile.dart';
 import 'package:fludget/routes/listWheelScrollView.dart';
 import 'package:fludget/routes/nested_scroll_view.dart';
+import 'package:fludget/routes/offStage.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/pageview.dart';
@@ -756,5 +757,14 @@ WidgetModel(
       description: RotatedBoxDescription(),
       category: [WidgetCategoy.Basics, WidgetCategoy.Styling],
       codeString: RotatedBoxCode()
+  ),
+  WidgetModel(
+      name: "OffStage",
+      link: "https://api.flutter.dev/flutter/widgets/Offstage-class.html",
+      subtitle: "Implementation of OffStage widget",
+      implementation: OffStageImplementation(),
+      description: OffStageDescription(),
+      category: [WidgetCategoy.Layout],
+      codeString: OffStageCode()
   )
 ];
