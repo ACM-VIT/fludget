@@ -8,6 +8,7 @@ import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
 import 'package:fludget/routes/gridPaper.dart';
 import 'package:fludget/routes/IgnorePointer.dart';
+import 'package:fludget/routes/Root/cliprrect.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
@@ -658,6 +659,13 @@ const List<WidgetModel> widgets = [
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
       codeString: ErrorCode()),
   WidgetModel(
+      name: "ClipRRect",
+      implementation: ClipRRectImplementation(),
+      description: ClipRRectDescription(),
+      link: "hhttps://api.flutter.dev/flutter/widgets/ClipRRect-class.html",
+      category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
+      codeString: BannerCode(),),
+WidgetModel(
       name: "ColoredBox",
       link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
       implementation: ColoredBoxImplementation(),
@@ -698,6 +706,8 @@ const List<WidgetModel> widgets = [
     implementation: BannerImplementation(),
     description: BannerDescription(),
     category: [
+      WidgetCategoy.Interaction,
+      WidgetCategoy.Animation,
       WidgetCategoy.Styling,
     ],
     codeString: BannerCode(),
