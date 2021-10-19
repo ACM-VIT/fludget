@@ -76,6 +76,7 @@ import 'package:fludget/routes/timePickerDialog.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
+import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
@@ -747,4 +748,13 @@ WidgetModel(
     ],
     codeString: TimePickerDialogCode(),
   ),
+  WidgetModel(
+      name: "Rotated Box",
+      link: "https://api.flutter.dev/flutter/widgets/RotatedBox-class.html",
+      subtitle: "Implementation of RotatedBox widget",
+      implementation: RotatedBoxImplementation(),
+      description: RotatedBoxDescription(),
+      category: [WidgetCategoy.Basics, WidgetCategoy.Styling],
+      codeString: RotatedBoxCode()
+  )
 ];
