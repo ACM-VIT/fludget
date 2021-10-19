@@ -710,7 +710,7 @@ const List<WidgetModel> widgets = [
   ),
   WidgetModel(
     name: "Time Picker Dialog",
-    link: "https://api.flutter.dev/flutter/material/showTimePicker.html",
+    link: "https://api.flutter.dev/flutter/material/TimePickerDialog-class.html",
     subtitle: "Implementation of Time Picker Dialog",
     implementation: TimePickerDialogImplementation(),
     description: TimePickerDialogDescription(),
