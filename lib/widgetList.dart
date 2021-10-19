@@ -41,6 +41,7 @@ import 'package:fludget/routes/errorWidget.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/fade_in_image.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
+import 'package:fludget/routes/fractionTranslation.dart';
 import 'package:fludget/routes/gestureDetector.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
@@ -224,8 +225,7 @@ const List<WidgetModel> widgets = [
       name: "TabBar",
       implementation: TabBarImplementation(),
       description: TabBarDescription(),
-      link:
-          "https://api.flutter.dev/flutter/material/TabBar-class.html",
+      link: "https://api.flutter.dev/flutter/material/TabBar-class.html",
       category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
       codeString: TabBarCode()),
   WidgetModel(
@@ -747,6 +747,15 @@ WidgetModel(
     ],
     codeString: DrawerCode(),
   ),
+  WidgetModel(
+      name: "Fractional Translation",
+      implementation: FractionalTranslationImplementation(),
+      description: FractionalTranslationDescription(),
+      link:
+          "https://api.flutter.dev/flutter/widgets/FractionalTranslation-class.html",
+      subtitle: 'Implementation of Fractional Translation',
+      category: [WidgetCategoy.Layout],
+      codeString: FractionalTranslationCode()),
   WidgetModel(
     name: "Time Picker Dialog",
     link: "https://api.flutter.dev/flutter/material/TimePickerDialog-class.html",
