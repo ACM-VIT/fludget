@@ -10,15 +10,8 @@ class OffStageImplementation extends StatefulWidget {
 }
 
 class _OffStageImplementationState extends State<OffStageImplementation> {
-  final GlobalKey _key = GlobalKey();
 
-  bool _offstage = true;
-
-  Size _getFlutterLogoSize() {
-    final RenderBox renderLogo =
-    _key.currentContext!.findRenderObject()! as RenderBox;
-    return renderLogo.size;
-  }
+  bool _imgOffstage = true;
 
   @override
   Widget build(BuildContext context) {
@@ -26,32 +19,24 @@ class _OffStageImplementationState extends State<OffStageImplementation> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Offstage(
-          offstage: _offstage,
-          child: FlutterLogo(
-            key: _key,
-            size: 150.0,
+          offstage: _imgOffstage,
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: Image.asset(
+              "assets/images/logo.png",
+              height: 200,
+            ),
           ),
         ),
-        Text('Flutter logo is offstage: $_offstage'),
+        Text('Image Widget is offstage: $_imgOffstage'),
         ElevatedButton(
-          child: const Text('Toggle Offstage Value'),
+          child: const Text('Toggle Widget'),
           onPressed: () {
             setState(() {
-              _offstage = !_offstage;
+              _imgOffstage = !_imgOffstage;
             });
           },
         ),
-        if (_offstage)
-          ElevatedButton(
-              child: const Text('Get Flutter Logo size'),
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content:
-                    Text('Flutter Logo size is ${_getFlutterLogoSize()}'),
-                  ),
-                );
-              }),
       ],
     );
   }
@@ -77,7 +62,7 @@ class OffStageDescription extends StatelessWidget {
                     fontSize: 16.0,
                   ),
                   text:
-                  'A widget that lays the child out as if it was in the tree, but without painting anything, without making the child available for hit testing, and without taking any room in the parent.\n'
+                  'Hide a widget from view.\n'
               ),
               TextSpan(
                   style: TextStyle(
@@ -91,9 +76,8 @@ class OffStageDescription extends StatelessWidget {
                     fontSize: 16.0,
                   ),
                   text:
-                  'Offstage can be used to measure the dimensions of a widget without bringing it on screen (yet).\n'
+                  'Offstage is a widget that lays the child out as if it was in the tree, but without painting anything, without making the child available for hit testing, and without taking any room in the parent.\n'
               ),
-
             ],
           ),
         ),
@@ -110,7 +94,6 @@ class OffStageCode extends CodeString {
     return """Offstage(
           offstage: _offstage,
           child: FlutterLogo(
-            key: _key,
             size: 150.0,
           ),
         ),""";
