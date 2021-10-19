@@ -25,6 +25,7 @@ import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
 import 'package:fludget/routes/container.dart';
+import 'package:fludget/routes/customPaint.dart';
 import 'package:fludget/routes/decoratedBox.dart';
 import 'package:fludget/routes/cupertino_activity_indicator.dart';
 import 'package:fludget/routes/dialogBox.dart';
@@ -624,6 +625,23 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Styling,
       ],
       codeString: ClipPathCode()),
+  WidgetModel(
+    name: "SingleChildScrollView",
+    link:
+        "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
+    implementation: SingleChildScrollViewImplementation(),
+    description: SingleChildScrollViewDescription(),
+    category: [WidgetCategoy.Scrolling], codeString: SinglechildScrollViewCode(),
+  ),
+  WidgetModel(
+    name: "CustomPaint",
+    link: "https://api.flutter.dev/flutter/widgets/CustomPaint-class.html",
+    subtitle: "Implementation of CustomPaint widget",
+    implementation: CustomPaintWidget(),
+    description: CustomPaintDescription(),
+    category: [WidgetCategoy.Painting],
+    codeString:CustomPaintCode() ,
+  ),
   WidgetModel(
       name: "SingleChildScrollView",
       link:
