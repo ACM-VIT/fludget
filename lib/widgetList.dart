@@ -72,6 +72,7 @@ import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textButton.dart';
 import 'package:fludget/routes/textfield.dart';
+import 'package:fludget/routes/timePickerDialog.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
@@ -734,5 +735,16 @@ WidgetModel(
       WidgetCategoy.Material,
     ],
     codeString: DrawerCode(),
+  ),
+  WidgetModel(
+    name: "Time Picker Dialog",
+    link: "https://api.flutter.dev/flutter/material/TimePickerDialog-class.html",
+    subtitle: "Implementation of Time Picker Dialog",
+    implementation: TimePickerDialogImplementation(),
+    description: TimePickerDialogDescription(),
+    category: [
+      WidgetCategoy.Input,
+    ],
+    codeString: TimePickerDialogCode(),
   ),
 ];
