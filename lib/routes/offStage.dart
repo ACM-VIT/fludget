@@ -75,7 +75,6 @@ class OffStageDescription extends StatelessWidget {
               TextSpan(
                   style: TextStyle(
                     fontSize: 16.0,
-                    color: Colors.black54,
                   ),
                   text:
                   'A widget that lays the child out as if it was in the tree, but without painting anything, without making the child available for hit testing, and without taking any room in the parent.\n'
@@ -83,7 +82,6 @@ class OffStageDescription extends StatelessWidget {
               TextSpan(
                   style: TextStyle(
                     fontSize: 16.0,
-                    color: Colors.black54,
                   ),
                   text:
                   ' \n'
@@ -91,7 +89,6 @@ class OffStageDescription extends StatelessWidget {
               TextSpan(
                   style: TextStyle(
                     fontSize: 16.0,
-                    color: Colors.black54,
                   ),
                   text:
                   'Offstage can be used to measure the dimensions of a widget without bringing it on screen (yet).\n'
