@@ -1,11 +1,15 @@
 import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
+import 'package:fludget/routes/OverflowBox.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/gridPaper.dart';
 import 'package:fludget/routes/IgnorePointer.dart';
+import 'package:fludget/routes/Root/cliprrect.dart';
 import 'package:fludget/routes/SliverAppBar.dart';
 import 'package:fludget/routes/about_dialog.dart';
 import 'package:fludget/routes/absorbPointer.dart';
@@ -23,31 +27,37 @@ import 'package:fludget/routes/colourFilteredWidget.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/cupertinoActionSheet.dart';
 import 'package:fludget/routes/container.dart';
+import 'package:fludget/routes/customPaint.dart';
 import 'package:fludget/routes/decoratedBox.dart';
 import 'package:fludget/routes/cupertino_activity_indicator.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggableWidget.dart';
 import 'package:fludget/routes/draggable_scrollable_sheet.dart';
+import 'package:fludget/routes/drawer_widget.dart';
 import 'package:fludget/routes/dropDownButton.dart';
 import 'package:fludget/routes/elevatedButton.dart';
 import 'package:fludget/routes/errorWidget.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/fade_in_image.dart';
 import 'package:fludget/routes/floatingActionButton.dart';
+import 'package:fludget/routes/fractionTranslation.dart';
 import 'package:fludget/routes/gestureDetector.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/indexedStack.dart';
+import 'package:fludget/routes/limited_box.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listTile.dart';
 import 'package:fludget/routes/listWheelScrollView.dart';
 import 'package:fludget/routes/nested_scroll_view.dart';
+import 'package:fludget/routes/offStage.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/pageview.dart';
+import 'package:fludget/routes/place_holder.dart';
 import 'package:fludget/routes/refreshIndicator.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
@@ -66,9 +76,11 @@ import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textButton.dart';
 import 'package:fludget/routes/textfield.dart';
+import 'package:fludget/routes/timePickerDialog.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
+import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
@@ -147,6 +159,15 @@ const List<WidgetModel> widgets = [
       ],
       codeString: IgnorePointerCode()),
   WidgetModel(
+      name: "OverFlowBox",
+      implementation: OverflowBoxImplementation(),
+      description: OverflowBoxDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/OverflowBox-class.html",
+      category: [
+        WidgetCategoy.Layout,
+      ],
+      codeString: OverflowBoxCode()),
+  WidgetModel(
       name: "DatePickerDialog",
       implementation: DatePickerDialogImplementation(),
       description: DatePickerDialogDescription(),
@@ -203,6 +224,13 @@ const List<WidgetModel> widgets = [
           "https://api.flutter.dev/flutter/material/FloatingActionButton-class.html",
       category: [WidgetCategoy.Input, WidgetCategoy.Basics],
       codeString: FABCode()),
+  WidgetModel(
+      name: "TabBar",
+      implementation: TabBarImplementation(),
+      description: TabBarDescription(),
+      link: "https://api.flutter.dev/flutter/material/TabBar-class.html",
+      category: [WidgetCategoy.Layout, WidgetCategoy.Scrolling],
+      codeString: TabBarCode()),
   WidgetModel(
       name: "Toggle Button",
       implementation: ToggleButtonImplementation(),
@@ -614,6 +642,24 @@ const List<WidgetModel> widgets = [
       ],
       codeString: ClipPathCode()),
   WidgetModel(
+    name: "SingleChildScrollView",
+    link:
+        "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
+    implementation: SingleChildScrollViewImplementation(),
+    description: SingleChildScrollViewDescription(),
+    category: [WidgetCategoy.Scrolling],
+    codeString: SinglechildScrollViewCode(),
+  ),
+  WidgetModel(
+    name: "CustomPaint",
+    link: "https://api.flutter.dev/flutter/widgets/CustomPaint-class.html",
+    subtitle: "Implementation of CustomPaint widget",
+    implementation: CustomPaintWidget(),
+    description: CustomPaintDescription(),
+    category: [WidgetCategoy.Painting],
+    codeString: CustomPaintCode(),
+  ),
+  WidgetModel(
       name: "SingleChildScrollView",
       link:
           "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
@@ -628,6 +674,14 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/ErrorWidget-class.html",
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
       codeString: ErrorCode()),
+  WidgetModel(
+    name: "ClipRRect",
+    implementation: ClipRRectImplementation(),
+    description: ClipRRectDescription(),
+    link: "hhttps://api.flutter.dev/flutter/widgets/ClipRRect-class.html",
+    category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
+    codeString: BannerCode(),
+  ),
   WidgetModel(
       name: "ColoredBox",
       link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
@@ -647,24 +701,33 @@ const List<WidgetModel> widgets = [
       ],
       codeString: FadeInImgCode()),
   WidgetModel(
+      name: "Grid Paper",
+      implementation: GridPaperImplementation(),
+      description: GridPaperDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/GridPaper-class.html",
+      category: [WidgetCategoy.Layout],
+      codeString: GridPaperCode()),
+  WidgetModel(
       name: "BottomNavigationBar",
       subtitle: "Implementation of BottomNavigationBar Widget",
       implementation: BottomNavigationBarImplementation(),
       description: BottomNavigationBarDescription(),
       link:
-      "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
+          "https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html",
       category: [WidgetCategoy.Animation],
       codeString: BottomNavigationBarCode()),
   WidgetModel(
-      name: "Banner Widget",
-      link: "https://api.flutter.dev/flutter/widgets/Banner-class.html",
-      subtitle: "Implementation of Banner widget",
-      implementation: BannerImplementation(),
-      description: BannerDescription(),
-      category: [
-        WidgetCategoy.Styling,
-      ],
-      codeString: BannerCode(),
+    name: "Banner Widget",
+    link: "https://api.flutter.dev/flutter/widgets/Banner-class.html",
+    subtitle: "Implementation of Banner widget",
+    implementation: BannerImplementation(),
+    description: BannerDescription(),
+    category: [
+      WidgetCategoy.Interaction,
+      WidgetCategoy.Animation,
+      WidgetCategoy.Styling,
+    ],
+    codeString: BannerCode(),
   ),
   WidgetModel(
       name: "BackdropFilter",
@@ -675,4 +738,77 @@ const List<WidgetModel> widgets = [
       "https://api.flutter.dev/flutter/widgets/BackdropFilter-class.html",
       category: [WidgetCategoy.Animation],
       codeString: BackdropFilterCode()),
+WidgetModel(
+    name: "Placeholder Widget",
+    link:
+        "https://api.flutter.dev/flutter/widgets/Placeholder-class.html#:~:text=Placeholder%20class%20Null%20safety,sized%20to%20fit%20its%20container.",
+    subtitle: "Implementation of Placeholder widget",
+    implementation: PlaceHolderImplementation(),
+    description: PlaceHolderDescription(),
+    category: [
+      WidgetCategoy.Styling,
+    ],
+    codeString: PlaceHolderCode(),
+  ),
+  WidgetModel(
+    name: "Drawer Widget",
+    link: "https://api.flutter.dev/flutter/material/Drawer-class.html",
+    subtitle: "Implementation of Drawer widget",
+    implementation: DrawerImplementation(),
+    description: DrawerDescription(),
+    category: [
+      WidgetCategoy.Material,
+    ],
+    codeString: DrawerCode(),
+  ),
+  WidgetModel(
+      name: "Fractional Translation",
+      implementation: FractionalTranslationImplementation(),
+      description: FractionalTranslationDescription(),
+      link:
+          "https://api.flutter.dev/flutter/widgets/FractionalTranslation-class.html",
+      subtitle: 'Implementation of Fractional Translation',
+      category: [WidgetCategoy.Layout],
+      codeString: FractionalTranslationCode()),
+  WidgetModel(
+    name: "Time Picker Dialog",
+    link:
+        "https://api.flutter.dev/flutter/material/TimePickerDialog-class.html",
+    subtitle: "Implementation of Time Picker Dialog",
+    implementation: TimePickerDialogImplementation(),
+    description: TimePickerDialogDescription(),
+    category: [
+      WidgetCategoy.Input,
+    ],
+    codeString: TimePickerDialogCode(),
+  ),
+  WidgetModel(
+      name: "Rotated Box",
+      link: "https://api.flutter.dev/flutter/widgets/RotatedBox-class.html",
+      subtitle: "Implementation of RotatedBox widget",
+      implementation: RotatedBoxImplementation(),
+      description: RotatedBoxDescription(),
+      category: [WidgetCategoy.Basics, WidgetCategoy.Styling],
+      codeString: RotatedBoxCode(),
+  ),
+   WidgetModel(
+    name: "LimitedBox Widget",
+    link: "https://api.flutter.dev/flutter/widgets/LimitedBox-class.html",
+    subtitle: "Implementation of LimitedBox widget",
+    implementation: LimitedBoxImplementation(),
+    description: LimitedBoxDescription(),
+    category: [
+      WidgetCategoy.Layout,
+    ],
+    codeString: LimitedBoxCode(),
+  ),
+  WidgetModel(
+      name: "OffStage",
+      link: "https://api.flutter.dev/flutter/widgets/Offstage-class.html",
+      subtitle: "Implementation of OffStage widget",
+      implementation: OffStageImplementation(),
+      description: OffStageDescription(),
+      category: [WidgetCategoy.Layout],
+      codeString: OffStageCode()
+  )
 ];
