@@ -48,6 +48,7 @@ import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/indexedStack.dart';
+import 'package:fludget/routes/limited_box.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listTile.dart';
 import 'package:fludget/routes/listWheelScrollView.dart';
@@ -645,7 +646,8 @@ const List<WidgetModel> widgets = [
         "https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html",
     implementation: SingleChildScrollViewImplementation(),
     description: SingleChildScrollViewDescription(),
-    category: [WidgetCategoy.Scrolling], codeString: SinglechildScrollViewCode(),
+    category: [WidgetCategoy.Scrolling],
+    codeString: SinglechildScrollViewCode(),
   ),
   WidgetModel(
     name: "CustomPaint",
@@ -654,7 +656,7 @@ const List<WidgetModel> widgets = [
     implementation: CustomPaintWidget(),
     description: CustomPaintDescription(),
     category: [WidgetCategoy.Painting],
-    codeString:CustomPaintCode() ,
+    codeString: CustomPaintCode(),
   ),
   WidgetModel(
       name: "SingleChildScrollView",
@@ -672,13 +674,14 @@ const List<WidgetModel> widgets = [
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
       codeString: ErrorCode()),
   WidgetModel(
-      name: "ClipRRect",
-      implementation: ClipRRectImplementation(),
-      description: ClipRRectDescription(),
-      link: "hhttps://api.flutter.dev/flutter/widgets/ClipRRect-class.html",
-      category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
-      codeString: BannerCode(),),
-WidgetModel(
+    name: "ClipRRect",
+    implementation: ClipRRectImplementation(),
+    description: ClipRRectDescription(),
+    link: "hhttps://api.flutter.dev/flutter/widgets/ClipRRect-class.html",
+    category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
+    codeString: BannerCode(),
+  ),
+  WidgetModel(
       name: "ColoredBox",
       link: "https://api.flutter.dev/flutter/widgets/ColoredBox-class.html",
       implementation: ColoredBoxImplementation(),
@@ -759,7 +762,8 @@ WidgetModel(
       codeString: FractionalTranslationCode()),
   WidgetModel(
     name: "Time Picker Dialog",
-    link: "https://api.flutter.dev/flutter/material/TimePickerDialog-class.html",
+    link:
+        "https://api.flutter.dev/flutter/material/TimePickerDialog-class.html",
     subtitle: "Implementation of Time Picker Dialog",
     implementation: TimePickerDialogImplementation(),
     description: TimePickerDialogDescription(),
@@ -775,7 +779,18 @@ WidgetModel(
       implementation: RotatedBoxImplementation(),
       description: RotatedBoxDescription(),
       category: [WidgetCategoy.Basics, WidgetCategoy.Styling],
-      codeString: RotatedBoxCode()
+      codeString: RotatedBoxCode(),
+  ),
+   WidgetModel(
+    name: "LimitedBox Widget",
+    link: "https://api.flutter.dev/flutter/widgets/LimitedBox-class.html",
+    subtitle: "Implementation of LimitedBox widget",
+    implementation: LimitedBoxImplementation(),
+    description: LimitedBoxDescription(),
+    category: [
+      WidgetCategoy.Layout,
+    ],
+    codeString: LimitedBoxCode(),
   ),
   WidgetModel(
       name: "OffStage",
