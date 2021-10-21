@@ -1,6 +1,7 @@
 import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
+import 'package:fludget/routes/ExpansionPanel.dart';
 import 'package:fludget/routes/OverflowBox.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/TabBar.dart';
@@ -810,7 +811,17 @@ WidgetModel(
       implementation: OffStageImplementation(),
       description: OffStageDescription(),
       category: [WidgetCategoy.Layout],
-      codeString: OffStageCode()),
+      codeString: OffStageCode()
+  ),
+    WidgetModel(
+        name: "Expansion Panel",
+        link: "https://api.flutter.dev/flutter/material/ExpansionPanel-class.html",
+        subtitle: "Implementation of ExpansionPanel and ExpansionPanelList",
+        implementation: ExpansionPanelImplementation(),
+        description: ExpansionPanelDescription(),
+        category: [WidgetCategoy.Layout],
+        codeString: ExpansionPanelCode()
+    ),
   WidgetModel(
     name: "Fractionally SizedBox",
     link:
