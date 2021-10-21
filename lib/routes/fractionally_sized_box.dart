@@ -10,7 +10,6 @@ class FractionallySizedBoxImp extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
@@ -20,15 +19,66 @@ class FractionallySizedBoxImp extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            Text("Height Factor: 0.6 , WidthFactor: 0.7"),
+            const SizedBox(
+              height: 10,
+            ),
             Flexible(
               child: FractionallySizedBox(
                 alignment: Alignment.center,
-                heightFactor: 0.8,
+                heightFactor: 0.5,
                 widthFactor: 0.8,
                 child: Container(
                   color: Theme.of(context).primaryColor,
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Text(
+                "1) Height Factor: 0.6 , Width Factor: 0.3\n 2) Height Factor: 0.6 , Width Factor: 0.3"),
+            const SizedBox(
+              height: 10,
+            ),
+            Flexible(
+              child: FractionallySizedBox(
+                alignment: Alignment.center,
+                heightFactor: 0.8,
+                widthFactor: 0.9,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Flexible(
+                      child: FractionallySizedBox(
+                        alignment: Alignment.center,
+                        heightFactor: 0.6,
+                        widthFactor: 0.7,
+                        child: Container(
+                          color: Theme.of(context).primaryColor,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    Flexible(
+                      child: FractionallySizedBox(
+                        alignment: Alignment.center,
+                        heightFactor: 0.6,
+                        widthFactor: 0.3,
+                        child: Container(
+                          color: Theme.of(context).primaryColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
           ],
         ),
