@@ -25,7 +25,7 @@ This application is developed to learn Flutter using Flutter. Different widgets 
   
 
 </p>
-<h1 align="center"> Screenshots of the app </h1>
+<h1 align="left"> Screenshots of the app </h1>
 <p>
 
   
