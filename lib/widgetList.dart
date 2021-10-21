@@ -75,6 +75,7 @@ import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
 import 'routes/BottomNavigationBar.dart';
+import 'routes/fitted_box.dart';
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -685,5 +686,18 @@ const List<WidgetModel> widgets = [
       WidgetCategoy.Styling,
     ],
     codeString: PlaceHolderCode(),
+  ),
+  WidgetModel(
+    name: "Fitted Box Widget",
+    link:
+        "https://api.flutter.dev/flutter/widgets/Placeholder-class.html#:~:text=Placeholder%20class%20Null%20safety,sized%20to%20fit%20its%20container.",
+    subtitle: "Implementation of Fitted Box widget",
+    implementation: FittedBoxImplementation(),
+    description: FittedBoxDescription(),
+    category: [
+      WidgetCategoy.Styling,
+      WidgetCategoy.Layout,
+    ],
+    codeString: FittedBoxCode(),
   ),
 ];
