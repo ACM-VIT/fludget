@@ -4,6 +4,7 @@ import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/ExpansionPanel.dart';
 import 'package:fludget/routes/OverflowBox.dart';
 import 'package:fludget/routes/DataTable.dart';
+import 'package:fludget/routes/SizedOverflowBox.dart';
 import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
@@ -831,5 +832,16 @@ WidgetModel(
     description: FractioanllySizedBoxDesc(),
     category: [WidgetCategoy.Layout],
     codeString: FractioanallySizedBoxCode(),
-  )
+  ),
+    WidgetModel(
+        name: "SizedOverflowBox",
+        link: "https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html",
+        subtitle: "Implementation of SizedOverflowBox Widget",
+        implementation: SizedOverflowBoxImplementation(),
+        description: SizedOverflowBoxDescription(),
+        category: [WidgetCategoy.Layout],
+        codeString: SizedOverflowBoxCode()
+    ),
 ];
+
+
