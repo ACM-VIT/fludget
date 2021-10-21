@@ -25,9 +25,10 @@ This application is developed to learn Flutter using Flutter. Different widgets 
   
 
 </p>
+<h1 align="center"> Screenshots of the app </h1>
 <p>
 
-  <img src="https://user-images.githubusercontent.com/52633729/135446856-ed1de284-c21a-4932-bd70-b4eae149c49c.png">
+  
   
 
 </p>
