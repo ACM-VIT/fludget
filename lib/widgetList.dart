@@ -814,8 +814,8 @@ WidgetModel(
   ),
     WidgetModel(
         name: "Expansion Panel",
-        link: "https://api.flutter.dev/flutter/material/ExpansionPanelList-class.html",
-        subtitle: "Implementation of Expansion Panel widget",
+        link: "https://api.flutter.dev/flutter/material/ExpansionPanel-class.html",
+        subtitle: "Implementation of ExpansionPanel and ExpansionPanelList",
         implementation: ExpansionPanelImplementation(),
         description: ExpansionPanelDescription(),
         category: [WidgetCategoy.Layout],
