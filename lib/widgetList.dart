@@ -8,6 +8,7 @@ import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/fractionally_sized_box.dart';
 import 'package:fludget/routes/gridPaper.dart';
 import 'package:fludget/routes/IgnorePointer.dart';
 import 'package:fludget/routes/Root/cliprrect.dart';
@@ -784,15 +785,15 @@ WidgetModel(
     codeString: TimePickerDialogCode(),
   ),
   WidgetModel(
-      name: "Rotated Box",
-      link: "https://api.flutter.dev/flutter/widgets/RotatedBox-class.html",
-      subtitle: "Implementation of RotatedBox widget",
-      implementation: RotatedBoxImplementation(),
-      description: RotatedBoxDescription(),
-      category: [WidgetCategoy.Basics, WidgetCategoy.Styling],
-      codeString: RotatedBoxCode(),
+    name: "Rotated Box",
+    link: "https://api.flutter.dev/flutter/widgets/RotatedBox-class.html",
+    subtitle: "Implementation of RotatedBox widget",
+    implementation: RotatedBoxImplementation(),
+    description: RotatedBoxDescription(),
+    category: [WidgetCategoy.Basics, WidgetCategoy.Styling],
+    codeString: RotatedBoxCode(),
   ),
-   WidgetModel(
+  WidgetModel(
     name: "LimitedBox Widget",
     link: "https://api.flutter.dev/flutter/widgets/LimitedBox-class.html",
     subtitle: "Implementation of LimitedBox widget",
@@ -820,5 +821,15 @@ WidgetModel(
         description: ExpansionPanelDescription(),
         category: [WidgetCategoy.Layout],
         codeString: ExpansionPanelCode()
-    )
+    ),
+  WidgetModel(
+    name: "Fractionally SizedBox",
+    link:
+        "https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html",
+    subtitle: "Implementation of Fractionally SizedBox widget",
+    implementation: FractionallySizedBoxImp(),
+    description: FractioanllySizedBoxDesc(),
+    category: [WidgetCategoy.Layout],
+    codeString: FractioanallySizedBoxCode(),
+  )
 ];
