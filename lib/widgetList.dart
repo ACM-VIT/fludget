@@ -58,6 +58,7 @@ import 'package:fludget/routes/nested_scroll_view.dart';
 import 'package:fludget/routes/offStage.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
+import 'package:fludget/routes/padding.dart';
 import 'package:fludget/routes/pageview.dart';
 import 'package:fludget/routes/place_holder.dart';
 import 'package:fludget/routes/refreshIndicator.dart';
@@ -831,5 +832,15 @@ WidgetModel(
     description: FractioanllySizedBoxDesc(),
     category: [WidgetCategoy.Layout],
     codeString: FractioanallySizedBoxCode(),
+  ),
+  WidgetModel(
+    name: "Padding",
+    link:
+    "https://api.flutter.dev/flutter/widgets/Padding-class.html",
+    subtitle: "Implementation of Padding widget",
+    implementation: PaddingImplementation(),
+    description: PaddingDescription(),
+    category: [WidgetCategoy.Layout],
+    codeString: PaddingCode(),
   )
 ];
