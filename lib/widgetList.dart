@@ -1,6 +1,7 @@
 import 'package:fludget/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
+import 'package:fludget/routes/ExpansionPanel.dart';
 import 'package:fludget/routes/OverflowBox.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/TabBar.dart';
@@ -810,5 +811,14 @@ WidgetModel(
       description: OffStageDescription(),
       category: [WidgetCategoy.Layout],
       codeString: OffStageCode()
-  )
+  ),
+    WidgetModel(
+        name: "Expansion Panel",
+        link: "https://api.flutter.dev/flutter/material/ExpansionPanelList-class.html",
+        subtitle: "Implementation of Expansion Panel widget",
+        implementation: ExpansionPanelImplementation(),
+        description: ExpansionPanelDescription(),
+        category: [WidgetCategoy.Layout],
+        codeString: ExpansionPanelCode()
+    )
 ];
