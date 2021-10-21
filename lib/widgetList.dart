@@ -3,6 +3,7 @@ import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/ExpansionPanel.dart';
 import 'package:fludget/routes/OverflowBox.dart';
+import 'package:fludget/routes/SelectableText.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
@@ -160,6 +161,15 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Interaction,
       ],
       codeString: IgnorePointerCode()),
+   WidgetModel(
+      name: "SelectableText",
+      implementation: SelectableTextImplementation(),
+      description: SelectableTextDescription(),
+      link: "https://api.flutter.dev/flutter/material/SelectableText-class.html",
+      category: [
+        WidgetCategoy.Interaction,
+      ],
+      codeString: SelectableTextCode()),
   WidgetModel(
       name: "OverFlowBox",
       implementation: OverflowBoxImplementation(),
