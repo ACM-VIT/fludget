@@ -14,7 +14,21 @@ Browse through a variety of widgets used in flutter and learn how to use them
   </a>
   <img alt="license" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" />
   <img alt="Awesome Flutter" src="https://img.shields.io/badge/Awesome-Flutter-9cf.svg?style=for-the-badge" />
+</p>
 
+<p align="center">Project Status</p>
+
+<p align = "center">
+  <img alt="stars" src="https://img.shields.io/github/stars/ACM-VIT/fludget.svg" />
+  <img alt="forks" src="https://img.shields.io/github/forks/ACM-VIT/fludget.svg" />
+  <img alt="issuses" src="https://img.shields.io/github/issues/ACM-VIT/fludget.svg" />
+  <img alt="prs" src="https://img.shields.io/github/issues-pr-closed/ACM-VIT/fludget.svg" />
+</p>
+
+<p align="center">Project Contributors</p>
+
+<p align = "center">
+  <img alt="contributors" src="https://badges.pufler.dev/contributors/ACM-VIT/fludget?size=50&padding=10&bots=False" />
 </p>
 
 ---
