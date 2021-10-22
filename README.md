@@ -22,8 +22,49 @@ Browse through a variety of widgets used in flutter and learn how to use them
 <p>
 This application is developed to learn Flutter using Flutter. Different widgets used in Flutter can be viewed in this app along with their implementation, description and code. If you like our work, ⭐ the repository to show support.
   
-  
 
+</p>
+
+<h1 align="left"> Screenshots of the application </h1>
+
+
+<p align="left">
+  <h2 align="left">Splash Screen</h2>
+   <img src="https://user-images.githubusercontent.com/63790391/138469199-a30e8fc7-489b-4f72-9b97-671b6740b3fa.jpeg" width="200">
+  <h2 align="left">Home Screen </h2>
+  <h3 align="left">Light Mode </h3>
+  <div <table><tr>
+  <img src="https://user-images.githubusercontent.com/63790391/138469344-2ac9642e-1127-4219-9cc7-70cd85b50035.jpeg"width="200">
+  <img src="https://user-images.githubusercontent.com/63790391/138469346-2559e5aa-5ed6-422e-9958-3e312c95e0ea.jpeg"width="200">
+  <img src="https://user-images.githubusercontent.com/63790391/138469348-8181fb28-8d5f-49cb-b08f-45726f169c93.jpeg"width="200">
+
+   
+   
+  </tr></table></div>
+   <h3 align="left">Dark Mode </h3>
+  <div <table><tr1>
+   <img src="https://user-images.githubusercontent.com/63790391/138469446-ee690a32-45b1-4048-8dde-8f5b21a60764.jpeg"width="200">
+    <img src="https://user-images.githubusercontent.com/63790391/138469453-954b941d-edc9-4690-8862-9e166ea54ea9.jpeg"width="200">
+   <img src="https://user-images.githubusercontent.com/63790391/138469458-932d2896-10ad-4ecb-b024-e1a024c52010.jpeg"width="200">
+   
+
+
+  </tr1></table></div>
+  
+   <h2 align="left">Implementation Example</h2>
+     <div <table><tr1>
+   <img src="https://user-images.githubusercontent.com/63790391/138469641-a1579bc7-d6ce-4bff-b409-b2811edf8951.jpeg"width="200">
+   <img src="https://user-images.githubusercontent.com/63790391/138469645-08d733e7-f030-4903-96b5-97a1e4a898d8.jpeg"width="200">
+   <img src="https://user-images.githubusercontent.com/63790391/138469650-fb49ea9e-5af9-4080-9642-3c7976329dd9.jpeg"width="200">
+   
+  
+    
+
+   <div <table><tr1>
+         <img src="https://user-images.githubusercontent.com/63790391/138469895-6800e91f-a9f2-44be-ab64-d2c0243f6dee.jpeg"width="200">
+         <img src="https://user-images.githubusercontent.com/63790391/138469903-2a6817ef-3252-4675-b674-f331d579d73d.jpeg"width="200">
+         <img src="https://user-images.githubusercontent.com/63790391/138469909-2268007e-3069-42ef-8831-86ae328d9e26.jpeg"width="200">
+  </tr1></table></div>
 </p>
 
 # How to contribute to this project
