@@ -10,6 +10,18 @@ class SizedOverflowBoxImplementation extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: 10,),
+          Text("SizedBox (Here child's size will be constrained to parent)"),
+          Center(
+            child: Container(
+              color: Theme.of(context).secondaryHeaderColor,
+              child: SizedBox(
+                height: 100,
+                width: 100,
+                child: Container(height: 50.0, width: 150.0, color: Theme.of(context).primaryColor),
+              ),
+            ),
+          ),
+          SizedBox(height: 10,),
           Text("CenterLeft"),
           Center(
             child: Container(
