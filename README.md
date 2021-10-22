@@ -5,7 +5,7 @@
 <h1 align="center"> Fludget </h1>
 
 <p align="center"> 
-Browse through a variety of widgets used in flutter 
+Browse through a variety of widgets used in flutter and learn how to use them
 </p>
 
 <p align = "center">
@@ -20,7 +20,9 @@ Browse through a variety of widgets used in flutter
 ---
 
 <p>
-This application is developed to learn Flutter using Flutter. Different widgets used in flutter can be viewed in this app along with their implementation.
+This application is developed to learn Flutter using Flutter. Different widgets used in Flutter can be viewed in this app along with their implementation, description and code. If you like our work, ⭐ the repository to show support.
+  
+  
 
 </p>
 
@@ -33,7 +35,7 @@ This application is developed to learn Flutter using Flutter. Different widgets 
 - Make a new `branch`, preferably with the feature name.
 - Checkout to the new branch with `git checkout <new_branch_name>`
 - Do the desired changes and `commit` them with `git commit -m '<a nice commit message here>'`.
-- `push` the change to your fork on GitHub with `git push origin <your_branch_name>`
+- `Push` the change to your fork on GitHub with `git push origin <your_branch_name>`
 - Make a `Pull Request` to the master branch in the original repository, i.e. this one.
 
 Note: Make sure you are always up to date with sync and pull upstream. Sync and pull before you start and before you push your work.
@@ -48,12 +50,14 @@ Note: Make sure you are always up to date with sync and pull upstream. Sync and 
 6. In the `WidgetModel` 
     - Add an argument `name` and pass the name of the Widget
     - Add an argument `implementaion` and add `*Widget*Implementation()` as the parameter 
-    - Add an argument `description` and add `*Widget*Description()` as the parameter 
+    - Add an argument `description` and add `*Widget*Description()` as the parameter
+    - Add an argument `codeString` and add `*Widget*Code()` as the parameter
     - Add an argument `link` and include link to the official documentation of the widget as the parameter
     - Add an argument `category` and include category of the widget as the parameter
-    - Add an argument `codeString` and add `*Widget*Code()` as the parameter
    
 
 # Authors
 
 - [Aryan Khubchandani](https://github.com/AryanKhubchandani)
+
+
