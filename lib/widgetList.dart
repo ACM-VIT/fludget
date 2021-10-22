@@ -9,6 +9,7 @@ import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/animated_padding.dart';
 import 'package:fludget/routes/focus_node.dart';
 import 'package:fludget/routes/fractionally_sized_box.dart';
 import 'package:fludget/routes/gridPaper.dart';
@@ -94,6 +95,7 @@ import 'package:fludget/routes/timePickerDialog.dart';
 import 'package:fludget/routes/cupertino_text_field.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
+import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
@@ -952,6 +954,16 @@ const List<WidgetModel> widgets = [
         codeString: SizedOverflowBoxCode()
   ),
   WidgetModel(
+      name: "SizedOverflowBox",
+      link:
+          "https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html",
+      subtitle: "Implementation of SizedOverflowBox Widget",
+      implementation: SizedOverflowBoxImplementation(),
+      description: SizedOverflowBoxDescription(),
+      category: [WidgetCategoy.Layout],
+      codeString: SizedOverflowBoxCode()),
+  ),
+  WidgetModel(
     name: "Focus Node",
     link: "https://api.flutter.dev/flutter/widgets/FocusNode-class.html",
     subtitle: "Implementation of FocuNode widget",
@@ -959,7 +971,23 @@ const List<WidgetModel> widgets = [
     description: FocuNodeDesc(),
     category: [WidgetCategoy.Accessibility],
     codeString: FocusNodeCode(),
-  )
+  ),
+  WidgetModel(
+    name: "Visibility",
+    link: "https://api.flutter.dev/flutter/widgets/FocusNode-class.html",
+    subtitle: "Implementation of FocuNode widget",
+    implementation: VisibilityWidget(),
+    description: VisbilityWidgetDescription(),
+    category: [WidgetCategoy.Accessibility],
+    codeString: VisibilityWidgetCode(),
+  ),
+  WidgetModel(
+    name: "Animated Padding",
+    link: "https://api.flutter.dev/flutter/widgets/AnimatedPadding-class.html",
+    subtitle: "Implementation of AnimatedPadding widget",
+    implementation: AnimatedPaddingImp(),
+    description: AnimatedPaddingDesc(),
+    category: [WidgetCategoy.Animation],
+    codeString: AnimatedPaddingCode(),
+  ),
 ];
-
-
