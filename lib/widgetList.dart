@@ -8,6 +8,7 @@ import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/focus_node.dart';
 import 'package:fludget/routes/fractionally_sized_box.dart';
 import 'package:fludget/routes/gridPaper.dart';
 import 'package:fludget/routes/IgnorePointer.dart';
@@ -736,11 +737,10 @@ const List<WidgetModel> widgets = [
       subtitle: "Implementation of BackdropFilter Widget",
       implementation: BackdropFilterImplementation(),
       description: BackdropFilterDescription(),
-      link:
-      "https://api.flutter.dev/flutter/widgets/BackdropFilter-class.html",
+      link: "https://api.flutter.dev/flutter/widgets/BackdropFilter-class.html",
       category: [WidgetCategoy.Animation],
       codeString: BackdropFilterCode()),
-WidgetModel(
+  WidgetModel(
     name: "Placeholder Widget",
     link:
         "https://api.flutter.dev/flutter/widgets/Placeholder-class.html#:~:text=Placeholder%20class%20Null%20safety,sized%20to%20fit%20its%20container.",
@@ -831,5 +831,14 @@ WidgetModel(
     description: FractioanllySizedBoxDesc(),
     category: [WidgetCategoy.Layout],
     codeString: FractioanallySizedBoxCode(),
+  ),
+  WidgetModel(
+    name: "Focus Node",
+    link: "https://api.flutter.dev/flutter/widgets/FocusNode-class.html",
+    subtitle: "Implementation of FocuNode widget",
+    implementation: FocusNodeImp(),
+    description: FocuNodeDesc(),
+    category: [WidgetCategoy.Accessibility],
+    codeString: FocusNodeCode(),
   )
 ];
