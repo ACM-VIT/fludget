@@ -32,6 +32,16 @@ import 'package:fludget/routes/container.dart';
 import 'package:fludget/routes/customPaint.dart';
 import 'package:fludget/routes/decoratedBox.dart';
 import 'package:fludget/routes/cupertino_activity_indicator.dart';
+import 'package:fludget/routes/cupertino_button.dart';
+import 'package:fludget/routes/cupertino_modal_popup.dart';
+import 'package:fludget/routes/cupertino_alert_dialog.dart';
+import 'package:fludget/routes/cupertino_date_picker.dart';
+import 'package:fludget/routes/cupertino_time_picker.dart';
+import 'package:fludget/routes/cupertino_sliding_segment_control.dart';
+import 'package:fludget/routes/cupertino_popup_surface.dart';
+import 'package:fludget/routes/cupertino_search_field.dart';
+import 'package:fludget/routes/cupertino_context_menu.dart';
+import 'package:fludget/routes/cupertino_switch.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dismissible_widget.dart';
 import 'package:fludget/routes/draggableWidget.dart';
@@ -79,6 +89,7 @@ import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textButton.dart';
 import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/timePickerDialog.dart';
+import 'package:fludget/routes/cupertino_text_field.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
@@ -736,11 +747,10 @@ const List<WidgetModel> widgets = [
       subtitle: "Implementation of BackdropFilter Widget",
       implementation: BackdropFilterImplementation(),
       description: BackdropFilterDescription(),
-      link:
-      "https://api.flutter.dev/flutter/widgets/BackdropFilter-class.html",
+      link: "https://api.flutter.dev/flutter/widgets/BackdropFilter-class.html",
       category: [WidgetCategoy.Animation],
       codeString: BackdropFilterCode()),
-WidgetModel(
+  WidgetModel(
     name: "Placeholder Widget",
     link:
         "https://api.flutter.dev/flutter/widgets/Placeholder-class.html#:~:text=Placeholder%20class%20Null%20safety,sized%20to%20fit%20its%20container.",
@@ -811,17 +821,16 @@ WidgetModel(
       implementation: OffStageImplementation(),
       description: OffStageDescription(),
       category: [WidgetCategoy.Layout],
-      codeString: OffStageCode()
-  ),
-    WidgetModel(
-        name: "Expansion Panel",
-        link: "https://api.flutter.dev/flutter/material/ExpansionPanel-class.html",
-        subtitle: "Implementation of ExpansionPanel and ExpansionPanelList",
-        implementation: ExpansionPanelImplementation(),
-        description: ExpansionPanelDescription(),
-        category: [WidgetCategoy.Layout],
-        codeString: ExpansionPanelCode()
-    ),
+      codeString: OffStageCode()),
+  WidgetModel(
+      name: "Expansion Panel",
+      link:
+          "https://api.flutter.dev/flutter/material/ExpansionPanel-class.html",
+      subtitle: "Implementation of ExpansionPanel and ExpansionPanelList",
+      implementation: ExpansionPanelImplementation(),
+      description: ExpansionPanelDescription(),
+      category: [WidgetCategoy.Layout],
+      codeString: ExpansionPanelCode()),
   WidgetModel(
     name: "Fractionally SizedBox",
     link:
@@ -831,5 +840,104 @@ WidgetModel(
     description: FractioanllySizedBoxDesc(),
     category: [WidgetCategoy.Layout],
     codeString: FractioanallySizedBoxCode(),
-  )
+  ),
+  WidgetModel(
+    name: "Cupertino Button",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoButton-class.html",
+    implementation: CupertinoButtonSample(),
+    description: CupertinoButtonDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoButtonCode(),
+  ),
+  WidgetModel(
+    name: "Cupertino Modal Popup",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html",
+    implementation: CupertinoModalPopUpSample(),
+    description: CupertinoModalPopUpDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoModalPopUpCode(),
+  ),
+  WidgetModel(
+    name: "Cupertino Alert Dialog",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html",
+    implementation: CupertinoAlertDialogSample(),
+    description: CupertinoAlertDialogDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoAlertDialogCode(),
+  ),
+  WidgetModel(
+    name: "Cupertino Date Picker",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoDatePicker-class.html",
+    implementation: CupertinoDatePickerSample(),
+    description: CupertinoDatePickerDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoDatePickerCode(),
+  ),
+  WidgetModel(
+    name: "Cupertino Timer Picker",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoTimerPicker-class.html",
+    implementation: CupertinoTimePickerSample(),
+    description: CupertinoTimePickerDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoTimePickerCode(),
+  ),
+  WidgetModel(
+    name: "Cupertino Text Field",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoTextField-class.html",
+    implementation: CupertinoTextFieldSample(),
+    description: CupertinoTextFieldDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoTextFieldCode(),
+  ),
+  WidgetModel(
+    name: "Cupertino Sliding Segmented Control",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoSlidingSegmentedControl-class.html",
+    implementation: CupertinoSlidingSegmentControlSample(),
+    description: CupertinoSlidingSegmentControlDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoSlidingSegmentControlCode(),
+  ),
+  WidgetModel(
+    name: "Cupertino Popup Surface",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoPopupSurface-class.html",
+    implementation: CupertinoPopUpSurfaceSample(),
+    description: CupertinoPopUpSurfaceDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoPopUpSurfaceCode(),
+  ),
+  WidgetModel(
+    name: "Cupertino Search Field",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoSearchTextField-class.html",
+    implementation: CupertinoSearchFieldSample(),
+    description: CupertinoSearchFieldDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoSearchFieldCode(),
+  ),
+  WidgetModel(
+    name: "Cupertino Context Menu",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoContextMenu-class.html",
+    implementation: CupertinoContextMenuSample(),
+    description: CupertinoContextMenuDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoContextMenuCode(),
+  ),
+  WidgetModel(
+    name: "Cupertino Switch",
+    link:
+        "https://api.flutter.dev/flutter/cupertino/CupertinoSwitch-class.html",
+    implementation: CupertinoSwitchSample(),
+    description: CupertinoSwitchDescription(),
+    category: [WidgetCategoy.Cupertino],
+    codeString: CupertinoSwitchCode(),
+  ),
 ];
