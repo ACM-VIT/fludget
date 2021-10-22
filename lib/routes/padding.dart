@@ -11,9 +11,62 @@ class PaddingImplementation extends StatefulWidget {
 class _PaddingImplementationState extends State<PaddingImplementation> {
   final String eAll = 'Same padding value for all sides';
 
+  final String eNothing = 'No padding';
+
   final String eFromLTRB = 'Specific padding values for each side';
 
-  bool isEdgeInsetsAll = true;
+  int paddingType = 0;
+
+  Widget getCustomWidgets(){
+    switch(paddingType){
+      case 0:
+        return Container(
+          child: Center(
+              child: Text(
+                eNothing,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 30),
+              )),
+          height: 320,
+          width: 320,
+          color: Theme.of(context).primaryColor,
+        );
+      case 1:
+        return Padding(
+          padding:
+          EdgeInsets.all(30),
+          child: Container(
+            child: Center(
+                child: Text(
+                  eAll,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 30),
+                )),
+            height: 320,
+            width: 320,
+            color: Theme.of(context).primaryColor,
+          ),
+        );
+      case 2:
+        return Padding(
+          padding:
+          EdgeInsets.fromLTRB(60, 15, 5, 30),
+          child: Container(
+            child: Center(
+                child: Text(
+                  eFromLTRB,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 30),
+                )),
+            height: 320,
+            width: 320,
+            color: Theme.of(context).primaryColor,
+          ),
+        );
+      default:
+        return Padding(padding: EdgeInsets.all(9),);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,33 +74,29 @@ class _PaddingImplementationState extends State<PaddingImplementation> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Padding(
-            padding: isEdgeInsetsAll == true
-                ? EdgeInsets.all(30)
-                : EdgeInsets.fromLTRB(60, 15, 5, 30),
-            child: Container(
-              child: Center(
-                  child: Text(
-                isEdgeInsetsAll == true ? eAll : eFromLTRB,
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 30),
-              )),
-              height: 320,
-              width: 320,
-              color: Theme.of(context).primaryColor,
-            ),
-          ),
+          getCustomWidgets()
+          ,
           Flexible(
             fit: FlexFit.tight,
             child: Container(
               color: Colors.grey[300],
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: Wrap(
+                spacing: 15,
+                runAlignment: WrapAlignment.spaceEvenly,
+                alignment: WrapAlignment.center,
                 children: [
                   ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        isEdgeInsetsAll = true;
+                        paddingType = 0;
+                      });
+                    },
+                    child: Text('No padding'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        paddingType = 1;
                       });
                     },
                     child: Text('Apply EdgeInsets.all'),
@@ -55,7 +104,7 @@ class _PaddingImplementationState extends State<PaddingImplementation> {
                   ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        isEdgeInsetsAll = false;
+                        paddingType = 2;
                       });
                     },
                     child: Text('Apply EdgeInsets.LTRB'),
