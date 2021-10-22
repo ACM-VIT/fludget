@@ -30,7 +30,7 @@ Browse through a variety of widgets used in flutter and learn how to use them
 <p>
 This application is developed to learn Flutter using Flutter. Different widgets used in Flutter can be viewed in this app along with their implementation, description and code. If you like our work, ⭐   the repository to show support.
   
-  
+
 
 </p>
 
