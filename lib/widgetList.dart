@@ -689,8 +689,7 @@ const List<WidgetModel> widgets = [
   ),
   WidgetModel(
     name: "Fitted Box Widget",
-    link:
-        "https://api.flutter.dev/flutter/widgets/Placeholder-class.html#:~:text=Placeholder%20class%20Null%20safety,sized%20to%20fit%20its%20container.",
+    link: "https://api.flutter.dev/flutter/widgets/FittedBox-class.html",
     subtitle: "Implementation of Fitted Box widget",
     implementation: FittedBoxImplementation(),
     description: FittedBoxDescription(),
