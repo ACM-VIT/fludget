@@ -689,7 +689,7 @@ const List<WidgetModel> widgets = [
   ),
   WidgetModel(
     name: "Fitted Box Widget",
-    link: "https://api.flutter.dev/flutter/widgets/FittedBox-class.html",
+    link: "https://api.flutter.dev/flutter/widgets/FittedBox/FittedBox.html",
     subtitle: "Implementation of Fitted Box widget",
     implementation: FittedBoxImplementation(),
     description: FittedBoxDescription(),
