@@ -83,6 +83,7 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/timePickerDialog.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
+import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
@@ -850,7 +851,16 @@ const List<WidgetModel> widgets = [
     description: FocuNodeDesc(),
     category: [WidgetCategoy.Accessibility],
     codeString: FocusNodeCode(),
-  )
+  ),
+  WidgetModel(
+    name: "Visibility",
+    link: "https://api.flutter.dev/flutter/widgets/FocusNode-class.html",
+    subtitle: "Implementation of FocuNode widget",
+    implementation: VisibilityWidget(),
+    description: VisbilityWidgetDescription(),
+    category: [WidgetCategoy.Accessibility],
+    codeString: VisibilityWidgetCode(),
+  ),
 ];
 
 
