@@ -3,12 +3,14 @@ import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/ExpansionPanel.dart';
 import 'package:fludget/routes/OverflowBox.dart';
+import 'package:fludget/routes/SelectableText.dart';
 import 'package:fludget/routes/DataTable.dart';
 import 'package:fludget/routes/SizedOverflowBox.dart';
 import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/animated_padding.dart';
 import 'package:fludget/routes/focus_node.dart';
 import 'package:fludget/routes/fractionally_sized_box.dart';
 import 'package:fludget/routes/gridPaper.dart';
@@ -60,6 +62,7 @@ import 'package:fludget/routes/nested_scroll_view.dart';
 import 'package:fludget/routes/offStage.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
+import 'package:fludget/routes/padding.dart';
 import 'package:fludget/routes/pageview.dart';
 import 'package:fludget/routes/place_holder.dart';
 import 'package:fludget/routes/refreshIndicator.dart';
@@ -83,6 +86,7 @@ import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/timePickerDialog.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
+import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
@@ -162,6 +166,15 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Interaction,
       ],
       codeString: IgnorePointerCode()),
+   WidgetModel(
+      name: "SelectableText",
+      implementation: SelectableTextImplementation(),
+      description: SelectableTextDescription(),
+      link: "https://api.flutter.dev/flutter/material/SelectableText-class.html",
+      category: [
+        WidgetCategoy.Interaction,
+      ],
+      codeString: SelectableTextCode()),
   WidgetModel(
       name: "OverFlowBox",
       implementation: OverflowBoxImplementation(),
@@ -811,17 +824,16 @@ const List<WidgetModel> widgets = [
       implementation: OffStageImplementation(),
       description: OffStageDescription(),
       category: [WidgetCategoy.Layout],
-      codeString: OffStageCode()
-  ),
-    WidgetModel(
-        name: "Expansion Panel",
-        link: "https://api.flutter.dev/flutter/material/ExpansionPanel-class.html",
-        subtitle: "Implementation of ExpansionPanel and ExpansionPanelList",
-        implementation: ExpansionPanelImplementation(),
-        description: ExpansionPanelDescription(),
-        category: [WidgetCategoy.Layout],
-        codeString: ExpansionPanelCode()
-    ),
+      codeString: OffStageCode()),
+  WidgetModel(
+      name: "Expansion Panel",
+      link:
+          "https://api.flutter.dev/flutter/material/ExpansionPanel-class.html",
+      subtitle: "Implementation of ExpansionPanel and ExpansionPanelList",
+      implementation: ExpansionPanelImplementation(),
+      description: ExpansionPanelDescription(),
+      category: [WidgetCategoy.Layout],
+      codeString: ExpansionPanelCode()),
   WidgetModel(
     name: "Fractionally SizedBox",
     link:
@@ -832,15 +844,15 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
     codeString: FractioanallySizedBoxCode(),
   ),
-    WidgetModel(
-        name: "SizedOverflowBox",
-        link: "https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html",
-        subtitle: "Implementation of SizedOverflowBox Widget",
-        implementation: SizedOverflowBoxImplementation(),
-        description: SizedOverflowBoxDescription(),
-        category: [WidgetCategoy.Layout],
-        codeString: SizedOverflowBoxCode()
-    ),
+  WidgetModel(
+      name: "SizedOverflowBox",
+      link:
+          "https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html",
+      subtitle: "Implementation of SizedOverflowBox Widget",
+      implementation: SizedOverflowBoxImplementation(),
+      description: SizedOverflowBoxDescription(),
+      category: [WidgetCategoy.Layout],
+      codeString: SizedOverflowBoxCode()),
   WidgetModel(
     name: "Focus Node",
     link: "https://api.flutter.dev/flutter/widgets/FocusNode-class.html",
@@ -862,6 +874,32 @@ const List<WidgetModel> widgets = [
     ],
     codeString: FittedBoxCode(),
   ),
+  WidgetModel(
+    name: "Visibility",
+    link: "https://api.flutter.dev/flutter/widgets/FocusNode-class.html",
+    subtitle: "Implementation of FocuNode widget",
+    implementation: VisibilityWidget(),
+    description: VisbilityWidgetDescription(),
+    category: [WidgetCategoy.Accessibility],
+    codeString: VisibilityWidgetCode(),
+  ),
+  WidgetModel(
+    name: "Animated Padding",
+    link: "https://api.flutter.dev/flutter/widgets/AnimatedPadding-class.html",
+    subtitle: "Implementation of AnimatedPadding widget",
+    implementation: AnimatedPaddingImp(),
+    description: AnimatedPaddingDesc(),
+    category: [WidgetCategoy.Animation],
+    codeString: AnimatedPaddingCode(),
+  ),  
+  WidgetModel(
+    name: "Padding",
+    link:
+    "https://api.flutter.dev/flutter/widgets/Padding-class.html",
+    subtitle: "Implementation of Padding widget",
+    implementation: PaddingImplementation(),
+    description: PaddingDescription(),
+    category: [WidgetCategoy.Layout],
+    codeString: PaddingCode(),
+  ),
 ];
-
-
