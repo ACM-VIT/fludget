@@ -93,8 +93,8 @@ import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
 import 'routes/BottomNavigationBar.dart';
+import 'routes/fitted_box.dart';
 import 'routes/BackdropFilter.dart';
-
 const List<WidgetModel> widgets = [
   WidgetModel(
       name: "Container",
@@ -765,8 +765,7 @@ const List<WidgetModel> widgets = [
       WidgetCategoy.Styling,
     ],
     codeString: PlaceHolderCode(),
-  ),
-  WidgetModel(
+  ),WidgetModel(
     name: "Drawer Widget",
     link: "https://api.flutter.dev/flutter/material/Drawer-class.html",
     subtitle: "Implementation of Drawer widget",
@@ -863,6 +862,18 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Accessibility],
     codeString: FocusNodeCode(),
   ),
+   WidgetModel(
+    name: "Fitted Box Widget",
+    link: "https://api.flutter.dev/flutter/widgets/FittedBox/FittedBox.html",
+    subtitle: "Implementation of Fitted Box widget",
+    implementation: FittedBoxImplementation(),
+    description: FittedBoxDescription(),
+    category: [
+      WidgetCategoy.Styling,
+      WidgetCategoy.Layout,
+    ],
+    codeString: FittedBoxCode(),
+  ),
   WidgetModel(
     name: "Visibility",
     link: "https://api.flutter.dev/flutter/widgets/FocusNode-class.html",
@@ -891,5 +902,4 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
     codeString: PaddingCode(),
   ),
-
 ];
