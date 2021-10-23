@@ -61,6 +61,7 @@ import 'package:fludget/routes/nested_scroll_view.dart';
 import 'package:fludget/routes/offStage.dart';
 import 'package:fludget/routes/opacity.dart';
 import 'package:fludget/routes/outlinedButton.dart';
+import 'package:fludget/routes/padding.dart';
 import 'package:fludget/routes/pageview.dart';
 import 'package:fludget/routes/place_holder.dart';
 import 'package:fludget/routes/refreshIndicator.dart';
@@ -861,6 +862,7 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Accessibility],
     codeString: VisibilityWidgetCode(),
   ),
+  WidgetModel(
     name: "Animated Padding",
     link: "https://api.flutter.dev/flutter/widgets/AnimatedPadding-class.html",
     subtitle: "Implementation of AnimatedPadding widget",
@@ -868,5 +870,16 @@ const List<WidgetModel> widgets = [
     description: AnimatedPaddingDesc(),
     category: [WidgetCategoy.Animation],
     codeString: AnimatedPaddingCode(),
+  ),  
+  WidgetModel(
+    name: "Padding",
+    link:
+    "https://api.flutter.dev/flutter/widgets/Padding-class.html",
+    subtitle: "Implementation of Padding widget",
+    implementation: PaddingImplementation(),
+    description: PaddingDescription(),
+    category: [WidgetCategoy.Layout],
+    codeString: PaddingCode(),
   ),
+
 ];
