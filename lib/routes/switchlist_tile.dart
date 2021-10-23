@@ -73,7 +73,7 @@ class SwitchListTileCode extends CodeString {
   const SwitchListTileCode();
   @override
   String buildCodeString() {
-    return """  SwitchListTile(
+    return """   SwitchListTile(
           title: Text('Fludget',style: TextStyle(
               color: Colors.blue,
               fontWeight: FontWeight.w800,
