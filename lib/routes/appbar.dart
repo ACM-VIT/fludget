@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -45,5 +46,23 @@ class _appbardescriptionState extends State<appbardescription> {
                 style: TextStyle(
                   fontSize: 20,
                 ))));
+  }
+}
+
+class AppBarCode extends CodeString {
+  const AppBarCode();
+  @override
+  String buildCodeString() {
+    return """AppBar(
+        leading: Icon(Icons.info_sharp),
+        title: Text("AppBar Widget Demo"),
+        actions: [
+          Icon(Icons.edit),
+          Padding(
+            padding: const EdgeInsets.only(left: 18.0, right: 8),
+            child: Icon(Icons.delete),
+          )
+        ],
+      ),""";
   }
 }

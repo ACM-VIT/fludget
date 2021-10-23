@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class DialogBoxImplementation extends StatelessWidget {
@@ -72,5 +73,34 @@ class DialogBoxDescription extends StatelessWidget {
         'Dialog Box Description Here',
       ),
     );
+  }
+}
+
+class DialogBoxCode extends CodeString {
+  const DialogBoxCode();
+  @override
+  String buildCodeString() {
+    return """AlertDialog(
+      title: const Text('This is title'),
+      actions: <Widget>[
+        new FlatButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          textColor: Theme.of(context).primaryColor,
+          child: const Icon(Icons.arrow_back),
+        ),
+        new FlatButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          textColor: Theme.of(context).primaryColor,
+          child: const Icon(
+            Icons.done,
+            color: Colors.green,
+          ),
+        ),
+      ],
+    );""";
   }
 }

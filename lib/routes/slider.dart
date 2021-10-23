@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -73,10 +74,10 @@ class _SliderSampleState extends State<SliderSample> {
                 ),
               ),
               CupertinoSlider(
-                value: _cupertinoSliderValue, 
+                value: _cupertinoSliderValue,
                 min: SLIDER_MIN,
                 max: SLIDER_MAX,
-                onChanged:  (double value) {
+                onChanged: (double value) {
                   setState(() {
                     _cupertinoSliderValue = value;
                   });
@@ -89,11 +90,11 @@ class _SliderSampleState extends State<SliderSample> {
                 ),
               ),
               CupertinoSlider(
-                value: _cupertinoSliderWithDivisionsValue, 
+                value: _cupertinoSliderWithDivisionsValue,
                 min: SLIDER_MIN,
                 max: SLIDER_MAX,
                 divisions: SLIDER_DIVISIONS,
-                onChanged:  (double value) {
+                onChanged: (double value) {
                   setState(() {
                     _cupertinoSliderWithDivisionsValue = value;
                   });
@@ -123,7 +124,8 @@ class _SliderSampleState extends State<SliderSample> {
                 ),
               ),
               RangeSlider(
-                values: RangeValues(_rangeSliderWithDivisionsStart, _rangeSliderWithDivisionsEnd),
+                values: RangeValues(_rangeSliderWithDivisionsStart,
+                    _rangeSliderWithDivisionsEnd),
                 min: 0,
                 max: 100,
                 divisions: 10,
@@ -165,31 +167,13 @@ class SliderDescription extends StatelessWidget {
                 style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
                   TextSpan(
-                    text: 'A slider is a stateful widget used to select a value from a range of possible values by dragging the "thumb" of the slider across the "track" of the slider. '
-                    'The default behavior of a slider is to provide a continuous range of values from a minimum to a maximum, but can be limited to values '
-                    'in certain increments by specifying the division value. Including the division value also applies a label to the slider. '
-                    'The RangeSlider is a special slider widget with a range value consisting of a minimum '
-                    'and maximum. This slider also supports incremental values by specifying a division value. There is also a label option to label both the '
-                    'minimum and maximum thumbs with a constant value.'
-                  ),
-                  TextSpan(
-                      text: '\n\nExample \n\n',
-                      style: TextStyle(
-                        fontSize: 22.0,
-                      )),
-                  TextSpan(
-                      text: 'Slider(\n'
-                          '     value: _statefulSliderValue,\n'
-                          '     min: 0,\n'
-                          '     max: 100,\n'
-                          '     divisions: 10,\n'
-                          '     label: _sliderWithDivisionsValue.round().toString(),\n'
-                          '     onChanged: (double value) {\n'
-                          '       setState(() {\n'
-                          '         _sliderWithDivisionsValue = value;\n'
-                          '       });\n'
-                          '     },\n'
-                          '  ),\n\n'),
+                      text:
+                          'A slider is a stateful widget used to select a value from a range of possible values by dragging the "thumb" of the slider across the "track" of the slider. '
+                          'The default behavior of a slider is to provide a continuous range of values from a minimum to a maximum, but can be limited to values '
+                          'in certain increments by specifying the division value. Including the division value also applies a label to the slider. '
+                          'The RangeSlider is a special slider widget with a range value consisting of a minimum '
+                          'and maximum. This slider also supports incremental values by specifying a division value. There is also a label option to label both the '
+                          'minimum and maximum thumbs with a constant value.'),
                 ],
               ),
             ),
@@ -197,5 +181,25 @@ class SliderDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class SliderCode extends CodeString {
+  const SliderCode();
+  @override
+  String buildCodeString() {
+    return """Slider(
+                value: _sliderWithDivisionsValue,
+                min: SLIDER_MIN,
+                max: SLIDER_MAX,
+                divisions: SLIDER_DIVISIONS,
+                label: _sliderWithDivisionsValue.round().toString(),
+                onChanged: (double value) {
+                  setState(() {
+                    _sliderWithDivisionsValue = value;
+                  });
+                },
+              ),
+""";
   }
 }

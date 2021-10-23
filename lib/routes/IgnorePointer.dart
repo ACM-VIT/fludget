@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class IgnorePointerImplementation extends StatefulWidget {
@@ -169,5 +170,35 @@ class IgnorePointerDescription extends StatelessWidget {
         style: TextStyle(fontSize: 20),
       ),
     );
+  }
+}
+
+class IgnorePointerCode extends CodeString {
+  const IgnorePointerCode();
+  @override
+  String buildCodeString() {
+    return """IgnorePointer(
+                    ignoring: (ignore == false) ? false : true,
+                    child: Container(
+                      child: Material(
+                        child: InkWell(
+                          onTap: () {
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text('Red Box Tapped',
+                                  style: TextStyle(fontSize: 20)),
+                            ));
+                          },
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            height: MediaQuery.of(context).size.width * 0.8,
+                          ),
+                        ),
+                        color: Colors.transparent,
+                      ),
+                      color: Colors.red,
+                    ),
+                  ),
+""";
   }
 }

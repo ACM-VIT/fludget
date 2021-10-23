@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,31 +12,24 @@ void main() {
 class SnackBarImplementation extends StatelessWidget {
   const SnackBarImplementation({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: Text("This is the Snackbar Widget"),
-              ),
-              SizedBox(height:20.0),
-              ElevatedButton(
-                  child: Text("Open Snackbar"),
-                  onPressed:(){
-                    final snackBarDemo = SnackBar(
-                        content:  Text("This is a SnackBar Demo !"),
-                        duration: Duration(seconds:3),
-                        action: SnackBarAction(label:"CLOSE",onPressed:(){})
-                    );
-                    ScaffoldMessenger.of(context).showSnackBar(snackBarDemo);
-                  }
-              ),
-            ]
-        )
-    );
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Center(
+        child: Text("This is the Snackbar Widget"),
+      ),
+      SizedBox(height: 20.0),
+      ElevatedButton(
+          child: Text("Open Snackbar"),
+          onPressed: () {
+            final snackBarDemo = SnackBar(
+                content: Text("This is a SnackBar Demo !"),
+                duration: Duration(seconds: 3),
+                action: SnackBarAction(label: "CLOSE", onPressed: () {}));
+            ScaffoldMessenger.of(context).showSnackBar(snackBarDemo);
+          }),
+    ]));
   }
 }
 
@@ -63,7 +57,8 @@ class SnackBarDescription extends StatelessWidget {
                 style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
                   TextSpan(
-                    text: 'Snackbar in Flutter is a widget showing the lightweight message that briefly '
+                    text:
+                        'Snackbar in Flutter is a widget showing the lightweight message that briefly '
                         'informs the user when certain actions occur. It displays the message for a very short '
                         'period, and when the specified time completed, it will be '
                         'disappeared from the screen. By default, snack bar displays '
@@ -78,5 +73,24 @@ class SnackBarDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class SnackBarCode extends CodeString {
+  const SnackBarCode();
+  @override
+  String buildCodeString() {
+    return """ ElevatedButton(
+                  child: Text("Open Snackbar"),
+                  onPressed:(){
+                    final snackBarDemo = SnackBar(
+                        content:  Text("This is a SnackBar Demo !"),
+                        duration: Duration(seconds:3),
+                        action: SnackBarAction(label:"CLOSE",onPressed:(){})
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBarDemo);
+                  }
+              ),
+""";
   }
 }

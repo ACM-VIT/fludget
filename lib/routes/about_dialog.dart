@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class AboutDialogImp extends StatelessWidget {
@@ -47,11 +48,13 @@ class AboutDialogDesc extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: DefaultTextStyle(
-          style: Theme.of(context).textTheme.bodyText1 ?? const TextStyle(height: 1.5),
+          style: Theme.of(context).textTheme.bodyText1 ??
+              const TextStyle(height: 1.5),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "An about box. This is a dialog box with the application's icon, name, version number, and copyright, plus a button to show licenses for software used by the application.",
@@ -59,15 +62,20 @@ class AboutDialogDesc extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "Class Definition / Syntax: ",
-                  style: TextStyle(fontSize: 20),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  """void showAboutDialog({
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class AboutDialogCode extends CodeString {
+  const AboutDialogCode();
+  @override
+  String buildCodeString() {
+    return """void showAboutDialog({
         required BuildContext context,
         String? applicationName,
         String? applicationVersion,
@@ -93,13 +101,6 @@ class AboutDialogDesc extends StatelessWidget {
           },
           routeSettings: routeSettings,
         );
-      }""",
-                )
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+      }""";
   }
 }

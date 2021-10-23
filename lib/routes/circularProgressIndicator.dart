@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class CircularProgressIndicatorSample extends StatefulWidget {
@@ -71,7 +72,6 @@ class _CircularProgressIndicatorSampleState
               width: 50,
               child: CircularProgressIndicator(
                 color: Colors.red,
-                // backgroundColor: Colors.white,
                 value: _value / 100,
               ),
             ),
@@ -149,5 +149,16 @@ class CircularProgressIndicatorDescription extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+class CircularProgressIndicatorCode extends CodeString {
+  const CircularProgressIndicatorCode();
+  @override
+  String buildCodeString() {
+    return """CircularProgressIndicator(
+                color: Colors.red,
+                value: _value / 100,
+              ),""";
   }
 }

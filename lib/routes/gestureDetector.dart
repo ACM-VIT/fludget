@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class GestureDetectorSample extends StatefulWidget {
@@ -105,5 +106,65 @@ class GestureDetectorDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class GestureDetectorCode extends CodeString {
+  const GestureDetectorCode();
+  @override
+  String buildCodeString() {
+    return """GestureDetector(
+              onTapUp: (details) => setState(() {
+                _point = details.localPosition;
+              }),
+              onHorizontalDragUpdate: (details) => setState(() {
+                if (details.delta.dx < 0) _size -= 5;
+                if (details.delta.dx > 0) _size += 5;
+                if (_size < 30) _size = 30;
+                if (_size > 200) _size = 50;
+              }),
+              onVerticalDragUpdate: (details) => setState(() {
+                if (details.delta.dy > 0.5) {
+                  _colorShade += 100;
+                }
+                if (details.delta.dy < -0.5) {
+                  _colorShade -= 100;
+                }
+                if (_colorShade <= 0) {
+                  _colorShade = 900;
+                  _colorIndex -= 1;
+                  if (_colorIndex == -1) _colorIndex = widget.colors.length - 1;
+                }
+
+                if (_colorShade > 900) {
+                  _colorShade = 100;
+                  _colorIndex += 1;
+                  _colorIndex %= widget.colors.length;
+                }
+                print("\$_colorShade || \$_colorIndex");
+              }),
+              onDoubleTap: () => setState(() {
+                _turns += 1;
+              }),
+              child: Stack(
+                children: [
+                  Container(
+                    height: 400,
+                    color: widget.colors[_colorIndex][_colorShade],
+                  ),
+                  Positioned(
+                    child: RotatedBox(
+                      quarterTurns: _turns,
+                      child: FlutterLogo(
+                        size: _size,
+                      ),
+                    ),
+                    left: _point.dx,
+                    top: _point.dy,
+                  )
+                ],
+              ),
+            ),
+""";
   }
 }

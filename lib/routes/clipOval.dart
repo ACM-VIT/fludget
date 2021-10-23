@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ClipOvalSample extends StatelessWidget {
@@ -88,5 +89,18 @@ class MyClipper extends CustomClipper<Rect> {
 
   bool shouldReclip(oldClipper) {
     return false;
+  }
+}
+
+class ClipOvalCode extends CodeString {
+  const ClipOvalCode();
+  @override
+  String buildCodeString() {
+    return """ClipOval(
+                clipper: MyClipper(),
+                child: ElevatedButton(
+                  child: Text("Clipped Button "),
+                  onPressed: () {},
+                ),""";
   }
 }

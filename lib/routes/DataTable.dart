@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class DatatableWidget extends StatefulWidget {
@@ -18,8 +19,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
         DataColumn(
           label: Text(
             "First Name",
-            style:
-                new TextStyle(fontSize: 14.0, height: 1.2),
+            style: new TextStyle(fontSize: 14.0, height: 1.2),
           ),
           numeric: false,
           onSort: (i, b) {
@@ -33,8 +33,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
         DataColumn(
           label: Text(
             "Last Name",
-            style:
-                new TextStyle(fontSize: 14.0, height: 1.2),
+            style: new TextStyle(fontSize: 14.0, height: 1.2),
           ),
           numeric: false,
           onSort: (i, b) {
@@ -53,8 +52,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
                 DataCell(
                   Text(
                     name.firstName,
-                    style: new TextStyle(
-                        fontSize: 14.0, height: 1.2),
+                    style: new TextStyle(fontSize: 14.0, height: 1.2),
                   ),
                   showEditIcon: false,
                   placeholder: false,
@@ -62,8 +60,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
                 DataCell(
                   Text(
                     name.lastName,
-                    style: new TextStyle(
-                        fontSize: 14.0, height: 1.2),
+                    style: new TextStyle(fontSize: 14.0, height: 1.2),
                   ),
                   showEditIcon: false,
                   placeholder: false,
@@ -143,5 +140,74 @@ class DataTableWidgetDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class DataTableCode extends CodeString {
+  const DataTableCode();
+  @override
+  String buildCodeString() {
+    return """DataTable(
+      onSelectAll: (b) {},
+      sortColumnIndex: 1,
+      sortAscending: true,
+      columns: <DataColumn>[
+        DataColumn(
+          label: Text(
+            "First Name",
+            style:
+                new TextStyle(fontSize: 14.0, height: 1.2),
+          ),
+          numeric: false,
+          onSort: (i, b) {
+            print("\$i \$b");
+            setState(() {
+              names.sort((a, b) => a.firstName.compareTo(b.firstName));
+            });
+          },
+          tooltip: "To display first name of the Name",
+        ),
+        DataColumn(
+          label: Text(
+            "Last Name",
+            style:
+                new TextStyle(fontSize: 14.0, height: 1.2),
+          ),
+          numeric: false,
+          onSort: (i, b) {
+            print("\$i \$b");
+            setState(() {
+              names.sort((a, b) => a.lastName.compareTo(b.lastName));
+            });
+          },
+          tooltip: "To display last name of the Name",
+        ),
+      ],
+      rows: names
+          .map(
+            (name) => DataRow(
+              cells: [
+                DataCell(
+                  Text(
+                    name.firstName,
+                    style: new TextStyle(
+                        fontSize: 14.0, height: 1.2),
+                  ),
+                  showEditIcon: false,
+                  placeholder: false,
+                ),
+                DataCell(
+                  Text(
+                    name.lastName,
+                    style: new TextStyle(
+                        fontSize: 14.0, height: 1.2),
+                  ),
+                  showEditIcon: false,
+                  placeholder: false,
+                )
+              ],
+            ),
+          )
+          .toList());""";
   }
 }

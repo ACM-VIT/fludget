@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -189,5 +190,32 @@ class DropDownButtonDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class DropDownCode extends CodeString {
+  const DropDownCode();
+  @override
+  String buildCodeString() {
+    return """DropdownButtonHideUnderline(
+                    child: DropdownButton<String>(
+                        hint: Text("Select any Item"),
+                        value: valueChoose,
+                        iconSize: 36,
+                        icon: Icon(
+                          Icons.arrow_drop_down,
+                          color: Colors.black,
+                        ),
+                        isExpanded: true,
+                        onChanged: (newValue) {
+                          if (newValue == 'Unselect') {
+                            newValue = null;
+                          }
+                          setState(() {
+                            valueChoose = newValue;
+                          });
+                        },
+                        items: listItem.map(buildMenuItem).toList()),
+                  ),""";
   }
 }

@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class HeroWidget extends StatelessWidget {
@@ -137,5 +138,25 @@ class SampleScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class HeroCode extends CodeString {
+  const HeroCode();
+  @override
+  String buildCodeString() {
+    return """Hero(
+              tag: hashCode,
+              child: CircleAvatar(
+                radius: 50,
+                backgroundColor: Theme.of(context).primaryColor,
+                child: Icon(
+                  Icons.person,
+                  size: 50,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+""";
   }
 }

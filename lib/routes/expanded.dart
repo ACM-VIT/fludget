@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ExpandedImplementation extends StatelessWidget {
@@ -182,5 +183,41 @@ class ExpandedDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ExpandedCode extends CodeString {
+  const ExpandedCode();
+  @override
+  String buildCodeString() {
+    return """Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Expanded widget in Column',
+                    ),
+                    Container(
+                      color: Colors.blue,
+                      height: 80,
+                      width: 100,
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.amber,
+                        width: 100,
+                        child: Center(
+                          child: Text("Expanded"),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      color: Colors.blue,
+                      height: 80,
+                      width: 100,
+                    ),
+                  ],
+                ),
+""";
   }
 }

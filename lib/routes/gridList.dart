@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class GridListImplementation extends StatelessWidget {
@@ -59,5 +60,47 @@ class GridListDescription extends StatelessWidget {
         'Grid List Description Here',
       ),
     );
+  }
+}
+
+class GridListCode extends CodeString {
+  const GridListCode();
+  @override
+  String buildCodeString() {
+    return """GridView(
+            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 200,
+              childAspectRatio: 3 / 2.3,
+              crossAxisSpacing: 30,
+              mainAxisSpacing: 30,
+            ),
+            children: [
+              Container(
+                color: Colors.red,
+                child: FlutterLogo(
+                  size: 100.0,
+                ),
+              ),
+              Container(
+                color: Colors.green,
+                child: FlutterLogo(
+                  size: 100.0,
+                ),
+              ),
+              Container(
+                color: Colors.blue,
+                child: FlutterLogo(
+                  size: 100.0,
+                ),
+              ),
+              Container(
+                color: Colors.yellow,
+                child: FlutterLogo(
+                  size: 100.0,
+                ),
+              ),
+            ],
+          ),
+""";
   }
 }
