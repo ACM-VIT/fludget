@@ -1,7 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CupertinoSlidingSegmentControlSample extends StatefulWidget {
   const CupertinoSlidingSegmentControlSample({Key? key}) : super(key: key);
@@ -35,15 +34,6 @@ void showSnackBarMessage(
       ),
     ),
   );
-}
-
-_launchURL(String url) async {
-  // const url = 'https://github.com/Shah-Aayush';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
 }
 
 class _CupertinoSlidingSegmentControlSampleState
@@ -136,14 +126,6 @@ The children will be displayed in the order of the keys in the Map, along the cu
 
 A segmented control may optionally be created with custom colors. The thumbColor, backgroundColor arguments can be used to override the segmented control's colors from its defaults.
         """,
-            ),
-            SizedBox(height: 30),
-            ElevatedButton(
-              child: Text("Watch video tutorial"),
-              onPressed: () {
-                var url = 'https://www.youtube.com/watch?v=J2vqfoX7cDo';
-                _launchURL(url);
-              },
             ),
           ],
         ),

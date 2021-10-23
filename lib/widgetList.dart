@@ -95,7 +95,6 @@ import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
-import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
 import 'routes/BottomNavigationBar.dart';
 import 'routes/BackdropFilter.dart';
@@ -613,20 +612,13 @@ const List<WidgetModel> widgets = [
       category: [WidgetCategoy.Effects, WidgetCategoy.Painting],
       codeString: ClipOvalCode()),
   WidgetModel(
-      name: "ClipRect",
-      link: "https://api.flutter.dev/flutter/widgets/ClipRect-class.html",
-      implementation: ClipRectImplementation(),
-      description: ClipRectDescription(),
-      category: [WidgetCategoy.Painting],
-      codeString: ClipRectCode()),
-  WidgetModel(
-      name: "Cupertino Widgets",
-      subtitle: "Implementation of Cupertino Widgets (iOS style widgets)",
-      link: "https://flutter.dev/docs/development/ui/widgets/cupertino",
-      implementation: CupertinoWidgets(),
-      description: CupertinoWidgetsDescription(),
-      category: [WidgetCategoy.Cupertino],
-      codeString: CupertinoWidgetsCode()),
+    name: "ClipRect",
+    link: "https://api.flutter.dev/flutter/widgets/ClipRect-class.html",
+    implementation: ClipRectImplementation(),
+    description: ClipRectDescription(),
+    category: [WidgetCategoy.Painting],
+    codeString: ClipRectCode(),
+  ),
   WidgetModel(
       name: "AutoComplete",
       subtitle: "Implementation of Autocomplete Widget",

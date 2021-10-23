@@ -1,7 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CupertinoActivityIndicatorSample extends StatefulWidget {
   const CupertinoActivityIndicatorSample({Key? key}) : super(key: key);
@@ -81,15 +80,6 @@ class _CupertinoActivityIndicatorSampleState
 class CupertinoActivityIndicatorDescription extends StatelessWidget {
   const CupertinoActivityIndicatorDescription({Key? key}) : super(key: key);
 
-  _launchURL(String url) async {
-    // const url = 'https://github.com/Shah-Aayush';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -102,14 +92,6 @@ class CupertinoActivityIndicatorDescription extends StatelessWidget {
       
       CupertinoActivityIndicator is the Cupertino version of the material circular progress indicator. It animates in a clockwise circle. Flutter possesses in its store a widget to perform this task with ease & perfection Using CupertinoActivityIndicator.
       """,
-          ),
-          SizedBox(height: 30),
-          ElevatedButton(
-            child: Text("Watch video tutorial"),
-            onPressed: () {
-              var url = 'https://youtu.be/AENVH-ZqKDQ';
-              _launchURL(url);
-            },
           ),
         ],
       ),

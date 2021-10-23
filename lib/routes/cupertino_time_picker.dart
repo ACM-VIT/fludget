@@ -1,7 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CupertinoTimePickerSample extends StatefulWidget {
   const CupertinoTimePickerSample({Key? key}) : super(key: key);
@@ -35,15 +34,6 @@ void showSnackBarMessage(
       ),
     ),
   );
-}
-
-_launchURL(String url) async {
-  // const url = 'https://github.com/Shah-Aayush';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
 }
 
 class _CupertinoTimePickerSampleState extends State<CupertinoTimePickerSample> {
@@ -115,15 +105,6 @@ There are several modes of the timer picker listed in CupertinoTimerPickerMode.
 
 The picker has a fixed size of 320 x 216, in logical pixels, with the exception of CupertinoTimerPickerMode.hms, which is 330 x 216. If the parent widget provides more space than it needs, the picker will position itself according to its alignment property.
       """,
-          ),
-          SizedBox(height: 30),
-          ElevatedButton(
-            child: Text("Watch video tutorial"),
-            onPressed: () {
-              var url =
-                  'https://www.youtube.com/watch?v=qYHfI4br0ww&ab_channel=TheTechDesigner';
-              _launchURL(url);
-            },
           ),
         ],
       ),

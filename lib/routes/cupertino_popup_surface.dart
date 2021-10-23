@@ -1,7 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CupertinoPopUpSurfaceSample extends StatefulWidget {
   const CupertinoPopUpSurfaceSample({Key? key}) : super(key: key);
@@ -69,15 +68,6 @@ class _CupertinoPopUpSurfaceSampleState
 class CupertinoPopUpSurfaceDescription extends StatelessWidget {
   const CupertinoPopUpSurfaceDescription({Key? key}) : super(key: key);
 
-  _launchURL(String url) async {
-    // const url = 'https://github.com/Shah-Aayush';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -94,13 +84,6 @@ A CupertinoPopupSurface can be configured to paint or not paint a white color on
         """,
             ),
             SizedBox(height: 30),
-            ElevatedButton(
-              child: Text("Watch video tutorial"),
-              onPressed: () {
-                var url = 'https://www.youtube.com/watch?v=2_y5YYkZoWM';
-                _launchURL(url);
-              },
-            ),
           ],
         ),
       ),

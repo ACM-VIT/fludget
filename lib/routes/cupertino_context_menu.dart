@@ -1,7 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CupertinoContextMenuSample extends StatefulWidget {
   const CupertinoContextMenuSample({Key? key}) : super(key: key);
@@ -35,15 +34,6 @@ void showSnackBarMessage(
       ),
     ),
   );
-}
-
-_launchURL(String url) async {
-  // const url = 'https://github.com/Shah-Aayush';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
 }
 
 class _CupertinoContextMenuSampleState
@@ -114,15 +104,6 @@ When closed, the CupertinoContextMenu simply displays the child as if the Cupert
 
 The previewBuilder parameter is most commonly used to display a slight variation of child. See previewBuilder for an example of rounding the child's corners and allowing its aspect ratio to expand, similar to the Photos app on iOS.
         """,
-            ),
-            SizedBox(height: 30),
-            ElevatedButton(
-              child: Text("Watch video tutorial"),
-              onPressed: () {
-                var url =
-                    'https://www.youtube.com/watch?v=Re9xDXDi3H8&ab_channel=JohannesMilke';
-                _launchURL(url);
-              },
             ),
           ],
         ),

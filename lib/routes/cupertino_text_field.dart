@@ -1,7 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CupertinoTextFieldSample extends StatefulWidget {
   const CupertinoTextFieldSample({Key? key}) : super(key: key);
@@ -37,14 +36,6 @@ void showSnackBarMessage(
   );
 }
 
-_launchURL(String url) async {
-  // const url = 'https://github.com/Shah-Aayush';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
 
 class _CupertinoTextFieldSampleState extends State<CupertinoTextFieldSample> {
   late TextEditingController _textController; //for search text field
@@ -106,14 +97,6 @@ class CupertinoTextFieldDescription extends StatelessWidget {
     
     To control the text that is displayed in the text field, use the controller. For example, to set the initial value of the text field, use a controller that already contains some text
         """,
-            ),
-            SizedBox(height: 30),
-            ElevatedButton(
-              child: Text("Watch video tutorial"),
-              onPressed: () {
-                var url = 'https://www.youtube.com/watch?v=0wZjyoIACLE';
-                _launchURL(url);
-              },
             ),
           ],
         ),

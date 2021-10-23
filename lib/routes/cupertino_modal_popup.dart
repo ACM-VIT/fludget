@@ -1,7 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CupertinoModalPopUpSample extends StatefulWidget {
   const CupertinoModalPopUpSample({Key? key}) : super(key: key);
@@ -35,15 +34,6 @@ void showSnackBarMessage(
       ),
     ),
   );
-}
-
-_launchURL(String url) async {
-  // const url = 'https://github.com/Shah-Aayush';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
 }
 
 class _CupertinoModalPopUpSampleState extends State<CupertinoModalPopUpSample> {
@@ -129,14 +119,6 @@ To include a iOS-style cancel button separate from the other buttons, provide an
 
 An action sheet is typically passed as the child widget to showCupertinoModalPopup, which displays the action sheet by sliding it up from the bottom of the screen.
             """,
-          ),
-          SizedBox(height: 30),
-          ElevatedButton(
-            child: Text("Watch video tutorial"),
-            onPressed: () {
-              var url = 'https://youtu.be/U-ao8p4A82k';
-              _launchURL(url);
-            },
           ),
         ],
       ),

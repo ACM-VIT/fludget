@@ -123,14 +123,6 @@ To display action buttons that look like standard iOS dialog buttons, provide Cu
 Typically passed as the child widget to showDialog, which displays the dialog.
       """,
           ),
-          SizedBox(height: 30),
-          ElevatedButton(
-            child: Text("Watch video tutorial"),
-            onPressed: () {
-              var url = 'Navigator.pop(context);';
-              _launchURL(url);
-            },
-          ),
         ],
       ),
     );

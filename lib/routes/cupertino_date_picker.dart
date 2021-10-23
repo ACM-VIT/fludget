@@ -1,7 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CupertinoDatePickerSample extends StatefulWidget {
   const CupertinoDatePickerSample({Key? key}) : super(key: key);
@@ -35,15 +34,6 @@ void showSnackBarMessage(
       ),
     ),
   );
-}
-
-_launchURL(String url) async {
-  // const url = 'https://github.com/Shah-Aayush';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
 }
 
 class _CupertinoDatePickerSampleState extends State<CupertinoDatePickerSample> {
@@ -119,14 +109,6 @@ Can be used with showCupertinoModalPopup to display the picker modally at the bo
 
 Sizes itself to its parent and may not render correctly if not given the full screen width. Content texts are shown with CupertinoTextThemeData.dateTimePickerTextStyle.
       """,
-          ),
-          SizedBox(height: 30),
-          ElevatedButton(
-            child: Text("Watch video tutorial"),
-            onPressed: () {
-              var url = 'https://www.youtube.com/watch?v=snpKbe3yZmI';
-              _launchURL(url);
-            },
           ),
         ],
       ),

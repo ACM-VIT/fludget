@@ -1,7 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CupertinoButtonSample extends StatefulWidget {
   const CupertinoButtonSample({Key? key}) : super(key: key);
@@ -34,15 +33,6 @@ void showSnackBarMessage(
       ),
     ),
   );
-}
-
-_launchURL(String url) async {
-  // const url = 'https://github.com/Shah-Aayush';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
 }
 
 class _CupertinoButtonSampleState extends State<CupertinoButtonSample> {
@@ -90,14 +80,6 @@ class CupertinoButtonDescription extends StatelessWidget {
       Takes in a text or an icon that fades out and in on touch. May optionally have a background.
       
       The padding defaults to 16.0 pixels. When using a CupertinoButton within a fixed height parent, like a CupertinoNavigationBar, a smaller, or even EdgeInsets.zero, should be used to prevent clipping larger child widgets.""",
-          ),
-          SizedBox(height: 30),
-          ElevatedButton(
-            child: Text("Watch video tutorial"),
-            onPressed: () {
-              var url = 'https://www.youtube.com/watch?v=EQtXWemnMoQ';
-              _launchURL(url);
-            },
           ),
         ],
       ),
