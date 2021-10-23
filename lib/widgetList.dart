@@ -70,6 +70,7 @@ import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
 import 'package:fludget/routes/row.dart';
 import 'package:fludget/routes/scrollbar.dart';
+import 'package:fludget/routes/simple_dialog.dart';
 import 'package:fludget/routes/singleChildScrollView.dart';
 import 'package:fludget/routes/sizedbox.dart';
 import 'package:fludget/routes/slider.dart';
@@ -88,6 +89,8 @@ import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
+import 'package:fludget/routes/simple_dialog.dart';
+import 'package:flutter/material.dart';
 import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
@@ -902,4 +905,11 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
     codeString: PaddingCode(),
   ),
+  WidgetModel(
+    name: "Simple Dialog",
+    link: "https://api.flutter.dev/flutter/material/SimpleDialog-class.html",
+    implementation: const SimpleDialogImp(),
+    description: SimpleDialogDesc(),
+    category: [WidgetCategoy.Material, WidgetCategoy.Basics],
+  )
 ];
