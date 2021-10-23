@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 
 class SimpleDialogImp extends StatelessWidget {
   const SimpleDialogImp({Key? key}) : super(key: key);
+  SnackBar _showSnakBar(String title) {
+    return SnackBar(
+      content: Text("${title} option selected."),
+      duration: Duration(seconds: 1),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,18 +24,21 @@ class SimpleDialogImp extends StatelessWidget {
                     SimpleDialogOption(
                       onPressed: () {
                         Navigator.pop(context, "Dart");
+                        ScaffoldMessenger.of(context)
+                            .showSnackBar(_showSnakBar("Dart"));
                       },
                       child: const Text('Dart'),
                     ),
                     SimpleDialogOption(
                       onPressed: () {
                         Navigator.pop(context, "Flutter");
+                        ScaffoldMessenger.of(context)
+                            .showSnackBar(_showSnakBar("Flutter"));
                       },
                       child: const Text('Flutter'),
                     ),
                   ],
                   elevation: 10,
-                  //backgroundColor: Colors.green,
                 ),
               );
             },
@@ -40,8 +50,8 @@ class SimpleDialogImp extends StatelessWidget {
   }
 }
 
-class SimpleDialodDesc extends StatelessWidget {
-  const SimpleDialodDesc({Key? key}) : super(key: key);
+class SimpleDialogDesc extends StatelessWidget {
+  const SimpleDialogDesc({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

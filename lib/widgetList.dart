@@ -597,7 +597,7 @@ const List<WidgetModel> widgets = [
     name: "Simple Dialog",
     link: "https://api.flutter.dev/flutter/material/SimpleDialog-class.html",
     implementation: const SimpleDialogImp(),
-    description: SimpleDialodDesc(),
+    description: SimpleDialogDesc(),
     category: [WidgetCategoy.Material, WidgetCategoy.Basics],
   )
 ];
