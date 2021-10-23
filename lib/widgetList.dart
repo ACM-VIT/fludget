@@ -74,6 +74,7 @@ import 'package:fludget/routes/spacer.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/streamBuilder.dart';
 import 'package:fludget/routes/switch.dart';
+import 'package:fludget/routes/switchlist_tile.dart';
 import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textButton.dart';
@@ -83,6 +84,7 @@ import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/rotatedBox.dart';
+import 'package:flutter/material.dart';
 import 'Models/widgetModel.dart';
 import 'package:fludget/routes/cupertino_widgets.dart';
 import 'routes/autoComplete.dart';
@@ -324,6 +326,14 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/Wrap-class.html",
       category: [WidgetCategoy.Layout],
       codeString: WrapCode()),
+  WidgetModel(
+      name: "SwitchList Tile Widget",
+      subtitle: "SwitchList Tile Widget",
+      implementation: SwitchListTileWidget(),
+      description: SwitchListTileDescription(),
+      link: "https://api.flutter.dev/flutter/material/SwitchListTile-class.html",
+      category: [WidgetCategoy.Layout],
+      codeString:SwitchListTileCode()),
   WidgetModel(
       name: "Hero",
       subtitle: "Hero Animation between widgets",
@@ -833,3 +843,5 @@ WidgetModel(
     codeString: FractioanallySizedBoxCode(),
   )
 ];
+
+

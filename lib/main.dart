@@ -11,11 +11,11 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _MyAppState();
+
 }
 
 class _MyAppState extends State<MyApp> {
   ThemeProvider themeChangeProvider = new ThemeProvider();
-
   @override
   void initState() {
     super.initState();
@@ -36,6 +36,7 @@ class _MyAppState extends State<MyApp> {
       child: Consumer<ThemeProvider>(
           builder: (BuildContext context, value, Widget? child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Fludget',
           theme: ThemeFactory.getTheme(themeChangeProvider.themeMode),
           home: SplashScreen(),
