@@ -97,7 +97,6 @@ class SimpleDialogDesc extends StatelessWidget {
                     ),
                   ],
                   elevation: 10,
-                  //backgroundColor: Colors.green,
                 ),
               );""")
               ],
