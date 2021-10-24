@@ -69,17 +69,21 @@ class SimpleDialogDesc extends StatelessWidget {
                 Text(
                   "A simple material design dialog.A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.Choices are normally represented using SimpleDialogOption widgets.",
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  "Class Definition / Syntax: ",
-                  style: TextStyle(fontSize: 20),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text("""showDialog(
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SimpleDialogCode extends CodeString {
+  const SimpleDialogCode();
+  @override
+  String buildCodeString() {
+    return """
+    showDialog(
                 context: context,
                 builder: (BuildContext ctx) => SimpleDialog(
                   title: Text('Option List'),
@@ -99,58 +103,7 @@ class SimpleDialogDesc extends StatelessWidget {
                   ],
                   elevation: 10,
                 ),
-              );""")
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class SimpleDialogCode extends CodeString {
-  const SimpleDialogCode();
-  @override
-  String buildCodeString() {
-    return """Future<TimeOfDay?> showTimePicker({
-    required BuildContext context,
-    required TimeOfDay initialTime,
-    TransitionBuilder? builder,
-    bool useRootNavigator = true,
-    TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial,
-    String? cancelText,
-    String? confirmText,
-    String? helpText,
-    String? errorInvalidText,
-    String? hourLabelText,
-    String? minuteLabelText,
-    RouteSettings? routeSettings,
-  }) async {
-    assert(context != null);
-    assert(initialTime != null);
-    assert(useRootNavigator != null);
-    assert(initialEntryMode != null);
-    assert(debugCheckHasMaterialLocalizations(context));
-
-    final Widget dialog = TimePickerDialog(
-      initialTime: initialTime,
-      initialEntryMode: initialEntryMode,
-      cancelText: cancelText,
-      confirmText: confirmText,
-      helpText: helpText,
-      errorInvalidText: errorInvalidText,
-      hourLabelText: hourLabelText,
-      minuteLabelText: minuteLabelText,
-    );
-    return showDialog<TimeOfDay>(
-      context: context,
-      useRootNavigator: useRootNavigator,
-      builder: (BuildContext context) {
-        return builder == null ? dialog : builder(context, dialog);
-      },
-      routeSettings: routeSettings,
-    );
-  }""";
+              );
+    """;
   }
 }

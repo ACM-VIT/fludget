@@ -90,6 +90,7 @@ import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/simple_dialog.dart';
+import 'package:fludget/tooltip.dart';
 import 'package:flutter/material.dart';
 import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
@@ -912,5 +913,13 @@ const List<WidgetModel> widgets = [
     description: SimpleDialogDesc(),
     category: [WidgetCategoy.Material, WidgetCategoy.Basics],
     codeString: SimpleDialogCode(),
+  ),
+  WidgetModel(
+    name: "Tooltip",
+    link: "https://api.flutter.dev/flutter/material/Tooltip-class.html",
+    implementation: const TooltipImplementation(),
+    description: TooltipDescription(),
+    category: [WidgetCategoy.Accessibility],
+    codeString: TooltipCode(),
   )
 ];
