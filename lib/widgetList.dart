@@ -945,15 +945,7 @@ const List<WidgetModel> widgets = [
       description: SizedOverflowBoxDescription(),
       category: [WidgetCategoy.Layout],
       codeString: SizedOverflowBoxCode()),
-  WidgetModel(
-      name: "SizedOverflowBox",
-      link:
-          "https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html",
-      subtitle: "Implementation of SizedOverflowBox Widget",
-      implementation: SizedOverflowBoxImplementation(),
-      description: SizedOverflowBoxDescription(),
-      category: [WidgetCategoy.Layout],
-      codeString: SizedOverflowBoxCode()),
+  ),
   WidgetModel(
     name: "Focus Node",
     link: "https://api.flutter.dev/flutter/widgets/FocusNode-class.html",
