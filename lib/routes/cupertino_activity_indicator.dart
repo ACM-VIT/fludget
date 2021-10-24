@@ -83,9 +83,17 @@ class CupertinoActivityIndicatorDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
-      child: Text(
-        'An iOS-style activity indicator that spins clockwise.',
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        children: [
+          Text(
+            """
+      An iOS-style activity indicator that spins clockwise.
+      
+      CupertinoActivityIndicator is the Cupertino version of the material circular progress indicator. It animates in a clockwise circle. Flutter possesses in its store a widget to perform this task with ease & perfection Using CupertinoActivityIndicator.
+      """,
+          ),
+        ],
       ),
     );
   }
