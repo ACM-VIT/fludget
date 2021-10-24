@@ -67,7 +67,7 @@ class TooltipImplementation extends StatelessWidget {
                         'inside a tooltip\n'
                         'but, its recommended to display short info\n',
                     child: Image.asset(
-                      'assets/images/bitcoin.png',
+                      'assets/images/acm_logo.png',
                       height: 100,
                     )),
                 Text('Click the image to tooltip'),
