@@ -53,6 +53,7 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/image_filtered.dart';
 import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/limited_box.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
@@ -213,6 +214,14 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
       codeString: ImageCode()),
+  WidgetModel(
+      name: "ImageFilter",
+      subtitle: "Implementation of Image Filter widget",
+      implementation: ImageFilterImplementation(),
+      description: ImageFilterDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/ImageFiltered-class.html",
+      category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
+      codeString: ImageFilterCode()),
   WidgetModel(
       name: "Outlined Button",
       implementation: OutlinedButtonImplimentation(),
@@ -911,6 +920,6 @@ const List<WidgetModel> widgets = [
     implementation: const SimpleDialogImp(),
     description: SimpleDialogDesc(),
     category: [WidgetCategoy.Material, WidgetCategoy.Basics],
-    codeString: SimpleDialogDesc()
+    codeString: SimpleDialogCode(),
   )
 ];
