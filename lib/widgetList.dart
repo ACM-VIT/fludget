@@ -54,6 +54,7 @@ import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/indexedStack.dart';
+import 'package:fludget/routes/intreactiveViewer.dart';
 import 'package:fludget/routes/limited_box.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listTile.dart';
@@ -913,6 +914,7 @@ const List<WidgetModel> widgets = [
     implementation: const SimpleDialogImp(),
     description: SimpleDialogDesc(),
     category: [WidgetCategoy.Material, WidgetCategoy.Basics],
+    codeString: SimpleDialogCode(),
   ),
   WidgetModel(
     name: 'IntInteractiveViewer',
@@ -921,5 +923,6 @@ const List<WidgetModel> widgets = [
     implementation: TntractiveViewerImp(),
     description: IntInteractiveViewerDesc(),
     category: [WidgetCategoy.Interaction],
+    codeString: IntrectiveViewerCode(),
   ),
 ];
