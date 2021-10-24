@@ -911,5 +911,6 @@ const List<WidgetModel> widgets = [
     implementation: const SimpleDialogImp(),
     description: SimpleDialogDesc(),
     category: [WidgetCategoy.Material, WidgetCategoy.Basics],
+    codeString: SimpleDialogDesc()
   )
 ];
