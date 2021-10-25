@@ -3,7 +3,9 @@
 </p>
 
 <h1 align="center"> Fludget </h1>
-
+<p align ="center">
+<img alt="code" width="250" height:"250" src="https://raw.githubusercontent.com/ACM-VIT/fludget/master/assets/images/logo.png">
+  </p>
 <p align="center"> 
 Browse through a variety of widgets used in flutter and learn how to use them
 </p>
