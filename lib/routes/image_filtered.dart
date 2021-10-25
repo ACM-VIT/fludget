@@ -81,12 +81,9 @@ class ImageFilterDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
+    return
         """Flutter provides an ImageFiltered, a low-level class that takes pixels and rearranges them. It applies an ImageFilter to its child. A filter operation to apply to a raster image.
-        ImageFiltered will blur the images, text, and anything will be blurry. It also works on any matrix for transformation like scaling, translating, skewing, rotating, etc.""",
-      ),
-    );
+        ImageFiltered will blur the images, text, and anything will be blurry. It also works on any matrix for transformation like scaling, translating, skewing, rotating, etc.""";
   }
 }
 
@@ -94,14 +91,59 @@ class ImageFilterCode extends CodeString {
   const ImageFilterCode();
   @override
   String buildCodeString() {
-    return """body: Container(
-          child: Center(
+    return """body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Text(
+                  "Blur Image filtered demo",
+                  style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  ),
+                ),
                 ImageFiltered(
-                    imageFilter: ImageFilter.blur( sigmaY: 4,sigmaX: 4),
-                    child: Image.asset("https://cdn.dribbble.com/users/1622791/screenshots/11174104/flutter_intro.png")
+                  imageFilter: ImageFilter.blur(sigmaX: 4),
+                  child: FlutterLogo(
+                    size: 220,
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                Text(
+                  "Floating Image filtered demo:",
+                  style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ImageFiltered(
+                  imageFilter: ImageFilter.matrix(
+                  Float64List.fromList([
+                    1,0,0,0,
+                    0,1,0,0,
+                    0,1,1,1,
+                    1,0,0,1
+                    ]),
+                  ),
+                  child: FlutterLogo(
+                    size: 220,
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                Text(
+                  "Rotation Image filtered demo:",
+                  style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ImageFiltered(
+                  imageFilter: ImageFilter.matrix(
+                    Matrix4.rotationZ(0.10).storage,
+                  ),
+                  child: FlutterLogo(
+                    size: 220,
+                  ),
                 ),
               ],
             ),
