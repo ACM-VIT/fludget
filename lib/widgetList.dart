@@ -10,11 +10,8 @@ import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
-<<<<<<< HEAD
 import 'package:fludget/routes/aspect_ratio.dart';
-=======
 import 'package:fludget/routes/animated_padding.dart';
->>>>>>> c0cdacc9e86f361727223e8339772a552cdbf817
 import 'package:fludget/routes/focus_node.dart';
 import 'package:fludget/routes/fractionally_sized_box.dart';
 import 'package:fludget/routes/gridPaper.dart';
@@ -171,11 +168,12 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Interaction,
       ],
       codeString: IgnorePointerCode()),
-   WidgetModel(
+  WidgetModel(
       name: "SelectableText",
       implementation: SelectableTextImplementation(),
       description: SelectableTextDescription(),
-      link: "https://api.flutter.dev/flutter/material/SelectableText-class.html",
+      link:
+          "https://api.flutter.dev/flutter/material/SelectableText-class.html",
       category: [
         WidgetCategoy.Interaction,
       ],
@@ -881,7 +879,6 @@ const List<WidgetModel> widgets = [
     codeString: FittedBoxCode(),
   ),
   WidgetModel(
-<<<<<<< HEAD
     name: "Aspect Ratio",
     link: "https://api.flutter.dev/flutter/widgets/AspectRatio-class.html",
     subtitle: "Implementation of Aspect Ratio widget",
@@ -889,7 +886,8 @@ const List<WidgetModel> widgets = [
     description: AspectRatioDescription(),
     category: [WidgetCategoy.Layout],
     codeString: AspectRatioCode(),
-=======
+  ),
+  WidgetModel(
     name: "Visibility",
     link: "https://api.flutter.dev/flutter/widgets/FocusNode-class.html",
     subtitle: "Implementation of FocuNode widget",
@@ -906,16 +904,14 @@ const List<WidgetModel> widgets = [
     description: AnimatedPaddingDesc(),
     category: [WidgetCategoy.Animation],
     codeString: AnimatedPaddingCode(),
-  ),  
+  ),
   WidgetModel(
     name: "Padding",
-    link:
-    "https://api.flutter.dev/flutter/widgets/Padding-class.html",
+    link: "https://api.flutter.dev/flutter/widgets/Padding-class.html",
     subtitle: "Implementation of Padding widget",
     implementation: PaddingImplementation(),
     description: PaddingDescription(),
     category: [WidgetCategoy.Layout],
     codeString: PaddingCode(),
->>>>>>> c0cdacc9e86f361727223e8339772a552cdbf817
   ),
 ];
