@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'dart:typed_data';
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
@@ -13,23 +14,60 @@ class _ImageFilterImplementationState extends State<ImageFilterImplementation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Text("ImageFiltered Demo"),
-          centerTitle: true,
-        ),
-        body: Container(
-          child: Center(
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Text(
+                  "Blur Image filtered demo",
+                  style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  ),
+                ),
                 ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 4),
-                    child: FlutterLogo(
-                        size: 220,
-                    ),
-                )
+                  imageFilter: ImageFilter.blur(sigmaX: 4),
+                  child: FlutterLogo(
+                    size: 220,
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                Text(
+                  "Floating Image filtered demo:",
+                  style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ImageFiltered(
+                  imageFilter: ImageFilter.matrix(
+                  Float64List.fromList([
+                    1,0,0,0,
+                    0,1,0,0,
+                    0,1,1,1,
+                    1,0,0,1
+                    ]),
+                  ),
+                  child: FlutterLogo(
+                    size: 220,
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                Text(
+                  "Rotation Image filtered demo:",
+                  style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ImageFiltered(
+                  imageFilter: ImageFilter.matrix(
+                    Matrix4.rotationZ(0.10).storage,
+                  ),
+                  child: FlutterLogo(
+                    size: 220,
+                  ),
+                ),
               ],
             ),
           ),
