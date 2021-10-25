@@ -62,7 +62,7 @@ class TooltipImplementation extends StatelessWidget {
                     verticalOffset: 60,
                     padding: EdgeInsets.all(10),
                     triggerMode: TooltipTriggerMode.tap,
-                    message: 'This is a bitcoin image!\n'
+                    message: 'This is an image!\n'
                         'We can have a lot of information\n'
                         'inside a tooltip\n'
                         'but, its recommended to display short info\n',
