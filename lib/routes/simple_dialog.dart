@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 import 'package:fludget/Models/codeString.dart';
 
@@ -97,17 +98,21 @@ class SimpleDialogDesc extends StatelessWidget {
                 Text(
                   "A simple material design dialog.A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.Choices are normally represented using SimpleDialogOption widgets.",
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  "Class Definition / Syntax: ",
-                  style: TextStyle(fontSize: 20),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text("""showDialog(
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SimpleDialogCode extends CodeString {
+  const SimpleDialogCode();
+  @override
+  String buildCodeString() {
+    return """
+    showDialog(
                 context: context,
                 builder: (BuildContext ctx) => SimpleDialog(
                   title: Text('Option List'),
@@ -127,12 +132,7 @@ class SimpleDialogDesc extends StatelessWidget {
                   ],
                   elevation: 10,
                 ),
-              );""")
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+              );
+    """;
   }
 }
