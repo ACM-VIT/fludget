@@ -327,7 +327,7 @@ const List<WidgetModel> widgets = [
       category: [WidgetCategoy.Layout],
       codeString: WrapCode()),
   WidgetModel(
-      name: "SwitchList Tile Widget",
+      name: "SwitchList Tile ",
       subtitle: "SwitchList Tile Widget",
       implementation: SwitchListTileWidget(),
       description: SwitchListTileDescription(),
