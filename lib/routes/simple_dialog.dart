@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fludget/Models/codeString.dart';
 
 class SimpleDialogImp extends StatelessWidget {
   const SimpleDialogImp({Key? key}) : super(key: key);
@@ -49,6 +50,34 @@ class SimpleDialogImp extends StatelessWidget {
     );
   }
 }
+class SimpleDialogCode extends CodeString {
+  const SimpleDialogCode();
+  @override
+  String buildCodeString() {
+    return """showDialog(
+                context: context,
+                builder: (BuildContext ctx) => SimpleDialog(
+                  title: Text('Option List'),
+                  children: [
+                    SimpleDialogOption(
+                      onPressed: () {
+                        Navigator.pop(context, "Dart");
+                      },
+                      child: const Text('Dart'),
+                    ),
+                    SimpleDialogOption(
+                      onPressed: () {
+                        Navigator.pop(context, "Flutter");
+                      },
+                      child: const Text('Flutter'),
+                    ),
+                  ],
+                  elevation: 10,
+                ),
+              );""";
+  }
+}
+
 
 class SimpleDialogDesc extends StatelessWidget {
   const SimpleDialogDesc({Key? key}) : super(key: key);
