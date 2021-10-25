@@ -81,9 +81,14 @@ class ImageFilterDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-        """Flutter provides an ImageFiltered, a low-level class that takes pixels and rearranges them. It applies an ImageFilter to its child. A filter operation to apply to a raster image.
-        ImageFiltered will blur the images, text, and anything will be blurry. It also works on any matrix for transformation like scaling, translating, skewing, rotating, etc.""";
+    return Center(
+      child: Text(
+        """Flutter provides an ImageFiltered, a low-level class that takes pixels and rearranges them. It applies an ImageFilter to its child. A filter operation to apply to a raster image. ImageFiltered will blur the images, text, and anything will be blurry. It also works on any matrix for transformation like scaling, translating, skewing, rotating, etc.""",
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
   }
 }
 
