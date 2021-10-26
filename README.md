@@ -34,6 +34,21 @@ This application is developed to learn Flutter using Flutter. Different widgets 
 
 </p>
 
+<h2 align= "left">Tech Stack </h2>
+
+[link to page](https://flutter.dev/)
+
+<h4 align="left"> Languages </h4>
+- Dart
+- C++
+- CMake
+- HTML
+- Ruby
+- C
+
+<h4 align="left"> SDK used </h4>
+- Flutter
+
 <h1 align="left"> Screenshots of the application </h1>
 
 
