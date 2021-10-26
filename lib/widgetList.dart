@@ -12,6 +12,7 @@ import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
 import 'package:fludget/routes/aspect_ratio.dart';
 import 'package:fludget/routes/animated_padding.dart';
+import 'package:fludget/routes/animated_positioned.dart';
 import 'package:fludget/routes/focus_node.dart';
 import 'package:fludget/routes/fractionally_sized_box.dart';
 import 'package:fludget/routes/gridPaper.dart';
@@ -964,14 +965,13 @@ const List<WidgetModel> widgets = [
     codeString: CupertinoSwitchCode(),
   ),
   WidgetModel(
-      name: "SizedOverflowBox",
-      link:
-          "https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html",
-      subtitle: "Implementation of SizedOverflowBox Widget",
-      implementation: SizedOverflowBoxImplementation(),
-      description: SizedOverflowBoxDescription(),
-      category: [WidgetCategoy.Layout],
-      codeString: SizedOverflowBoxCode()),
+    name: "SizedOverflowBox",
+    link: "https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html",
+    subtitle: "Implementation of SizedOverflowBox Widget",
+    implementation: SizedOverflowBoxImplementation(),
+    description: SizedOverflowBoxDescription(),
+    category: [WidgetCategoy.Layout],
+    codeString: SizedOverflowBoxCode(),
   ),
   WidgetModel(
     name: "Focus Node",
@@ -1045,5 +1045,15 @@ const List<WidgetModel> widgets = [
     description: TooltipDescription(),
     category: [WidgetCategoy.Accessibility],
     codeString: TooltipCode(),
+  ),
+  WidgetModel(
+    name: "Animated Positioned",
+    link:
+        "https://api.flutter.dev/flutter/widgets/AnimatedPositioned-class.html",
+    subtitle: "Implementation of Animated Positioned Widget",
+    implementation: AnimatedPositionedImp(),
+    description: AnimatedPositionedDesc(),
+    category: [WidgetCategoy.Animation],
+    codeString: AnimatedPositionedCode(),
   ),
 ];
