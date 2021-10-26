@@ -52,6 +52,33 @@ class SimpleDialogImp extends StatelessWidget {
   }
 }
 
+class SimpleDialogDesc extends StatelessWidget {
+  const SimpleDialogDesc({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: DefaultTextStyle(
+          style: Theme.of(context).textTheme.bodyText1 ??
+              const TextStyle(height: 1.5),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "A simple material design dialog.A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.Choices are normally represented using SimpleDialogOption widgets.",
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class SimpleDialogCode extends CodeString {
   const SimpleDialogCode();
   @override
@@ -77,32 +104,5 @@ class SimpleDialogCode extends CodeString {
                   elevation: 10,
                 ),
               );""";
-  }
-}
-
-class SimpleDialogDesc extends StatelessWidget {
-  const SimpleDialogDesc({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: DefaultTextStyle(
-          style: Theme.of(context).textTheme.bodyText1 ??
-              const TextStyle(height: 1.5),
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "A simple material design dialog.A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.Choices are normally represented using SimpleDialogOption widgets.",
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
   }
 }
