@@ -1,4 +1,4 @@
-import 'package:fludget/flexible.dart';
+import 'package:fludget/routes/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/ExpansionPanel.dart';
@@ -67,6 +67,7 @@ import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/image_filtered.dart';
 import 'package:fludget/routes/indexedStack.dart';
+import 'package:fludget/routes/intreactiveViewer.dart';
 import 'package:fludget/routes/limited_box.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listTile.dart';
@@ -105,7 +106,7 @@ import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/simple_dialog.dart';
-import 'package:fludget/tooltip.dart';
+import 'package:fludget/routes/tooltip.dart';
 import 'package:flutter/material.dart';
 import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
@@ -1038,6 +1039,15 @@ const List<WidgetModel> widgets = [
     description: SimpleDialogDesc(),
     category: [WidgetCategoy.Material, WidgetCategoy.Basics],
     codeString: SimpleDialogCode(),
+  ),
+  WidgetModel(
+    name: 'InteractiveViewer',
+    link:
+        "https://api.flutter.dev/flutter/widgets/InteractiveViewer-class.html",
+    implementation: TntractiveViewerImp(),
+    description: IntInteractiveViewerDesc(),
+    category: [WidgetCategoy.Interaction],
+    codeString: IntrectiveViewerCode(),
   ),
   WidgetModel(
     name: "Tooltip",
