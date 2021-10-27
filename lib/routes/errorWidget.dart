@@ -1,7 +1,7 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
-void Error() {
+void error() {
   ErrorWidget.builder = (FlutterErrorDetails details) {
     bool inDebug = false;
     assert(() {

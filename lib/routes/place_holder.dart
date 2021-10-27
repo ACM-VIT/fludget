@@ -1,5 +1,4 @@
 import 'package:fludget/Models/codeString.dart';
-import 'package:fludget/routes/sizedbox.dart';
 import 'package:flutter/material.dart';
 
 class PlaceHolderImplementation extends StatelessWidget {
@@ -106,7 +105,6 @@ class PlaceHolderCode extends CodeString {
 
   @override
   String buildCodeString() {
-    // TODO: implement buildCodeString
     return """
     Placeholder(
               fallbackHeight: 100,
