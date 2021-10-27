@@ -9,9 +9,14 @@ class ThemeSwitch extends StatelessWidget {
     final themeChange = Provider.of<ThemeProvider>(context);
 
     return SwitchListTile(
-      title: const Text("Dark Mode"),
+      title: const Text(
+        "Dark Mode",
+        style: TextStyle(
+          fontFamily: 'RobotoSlab',
+        ),
+      ),
       secondary: Icon(Icons.dark_mode),
-      value: themeChange.themeMode, 
+      value: themeChange.themeMode,
       onChanged: (bool? value) {
         themeChange.theme = value as bool;
       },

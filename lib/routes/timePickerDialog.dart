@@ -43,9 +43,9 @@ class TimePickerDialogImplementation extends StatelessWidget{
       cancelText: cancelText,
       confirmText: confirmText,
       helpText: helpText,
-      errorInvalidText: errorInvalidText,
-      hourLabelText: hourLabelText,
-      minuteLabelText: minuteLabelText,
+      //errorInvalidText: errorInvalidText,
+      //hourLabelText: hourLabelText,
+      //minuteLabelText: minuteLabelText,
     );
     return showDialog<TimeOfDay>(
       context: context,

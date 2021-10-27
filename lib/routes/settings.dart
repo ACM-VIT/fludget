@@ -3,6 +3,7 @@ import 'package:fludget/widgets_doc.dart';
 import 'package:fludget/themes/theme_switch.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -87,7 +88,12 @@ SOFTWARE.
                   _launchURL(_docUrl);
                 },
               ),
-              title: Text("Official Documentation"),
+              title: Text(
+                "Official Documentation",
+                style: TextStyle(
+                  fontFamily: 'RobotoSlab',
+                ),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
@@ -113,7 +119,12 @@ SOFTWARE.
                   _launchURL(_repoUrl);
                 },
               ),
-              title: Text("Fludget Repository"),
+              title: Text(
+                "Fludget Repository",
+                style: TextStyle(
+                  fontFamily: 'RobotoSlab',
+                ),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
@@ -127,7 +138,12 @@ SOFTWARE.
                 Icons.info_outline_rounded,
                 size: 24.0,
               ),
-              title: Text("About"),
+              title: Text(
+                "About",
+                style: TextStyle(
+                  fontFamily: 'RobotoSlab',
+                ),
+              ),
               onTap: () {
                 showAboutDialog(
                   context: context,

@@ -905,11 +905,11 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Layout],
     codeString: PaddingCode(),
   ),
-  WidgetModel(
-    name: "Simple Dialog",
-    link: "https://api.flutter.dev/flutter/material/SimpleDialog-class.html",
-    implementation: const SimpleDialogImp(),
-    description: SimpleDialogDesc(),
-    category: [WidgetCategoy.Material, WidgetCategoy.Basics],
-  )
+  // WidgetModel(
+  //   name: "Simple Dialog",
+  //   link: "https://api.flutter.dev/flutter/material/SimpleDialog-class.html",
+  //   implementation: const SimpleDialogImp(),
+  //   description: SimpleDialogDesc(),
+  //   category: [WidgetCategoy.Material, WidgetCategoy.Basics], 
+  // )
 ];

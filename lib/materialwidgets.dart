@@ -28,7 +28,8 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
         autofocus: true,
         controller: _controller,
         decoration: InputDecoration(
-          hintStyle: TextStyle(color: Colors.grey),
+          hintStyle: TextStyle(
+              color: Colors.grey, fontFamily: 'RobotoSlab', fontSize: 18),
           prefixIcon: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -39,7 +40,7 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
             },
           ),
           suffixIcon: IconButton(
-            onPressed: (){
+            onPressed: () {
               _controller.clear();
               setState(() {
                 searchString = '';
@@ -47,7 +48,7 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
             },
             icon: Icon(Icons.clear),
           ),
-          hintText: 'Search....',
+          hintText: 'Search...',
           border: UnderlineInputBorder(borderSide: BorderSide.none),
         ),
         onSubmitted: (String text) {
@@ -63,122 +64,144 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
       ),
     );
   }
+
+  Icon actionIcon = new Icon(Icons.search);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: searching
-          ? showSearchBar(context)
-          : AppBar(
-              backgroundColor: Theme.of(context).primaryColor,
-              title: Text("Material Widget Catalog"),
-              actions: [
-                IconButton(
-                  onPressed: () {
-                    setState(() {
-                      searching = true;
-                    });
-                  },
-                  icon: const Icon(Icons.search),
-                )
-              ],
-              centerTitle: true,
-            ),
-      backgroundColor: Theme.of(context).backgroundColor,
-      drawer: SettingsWidget(),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: ExpansionPanelList(
-                expansionCallback: (panelIndex, isExpanded) => setState(() {
-                      _isExpanded = !isExpanded;
-                    }),
-                elevation: 0,
-                expandedHeaderPadding: EdgeInsets.all(1),
-                dividerColor: Colors.white,
-                children: [
-                  ExpansionPanel(
-                    backgroundColor: Theme.of(context).backgroundColor,
-                    isExpanded: _isExpanded,
-                    headerBuilder: (context, isExpanded) {
-                      if (isExpanded)
-                        return Container();
-                      else
-                        return SizedBox(
-                          height: 50,
-                          child: ListView(
-                              scrollDirection: Axis.horizontal,
-                              physics: const AlwaysScrollableScrollPhysics(),
-                              children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 5, vertical: 5),
-                                      child: ChoiceChip(
-                                        label: Text("All Widgets"),
-                                        //selectedColor: Theme.of(context).primaryColor,
-                                        selected: _selectedCategory == null,
-                                        onSelected: (value) => setState(() {
-                                          _selectedCategory = null;
-                                        }),
-                                      ),
-                                    )
-                                  ] +
-                                  WidgetCategoy.values
-                                      .map((e) => Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 5, vertical: 5),
-                                            child: ChoiceChip(
-                                              key: UniqueKey(),
-                                              label: Text(
-                                                  e.toString().split(".")[1]),
-                                              //selectedColor: Theme.of(context).primaryColor,
-                                              selected: _selectedCategory == e,
-                                              onSelected: (value) =>
-                                                  setState(() {
-                                                _selectedCategory = e;
-                                              }),
-                                            ),
-                                          ))
-                                      .toList()),
-                        );
+        appBar: searching
+            ? showSearchBar(context)
+            : AppBar(
+                backgroundColor: Theme.of(context).primaryColor,
+                title: Text(
+                  "Material Widget Catalog",
+                  style: TextStyle(fontFamily: 'RobotoSlab', fontSize: 20),
+                ),
+                actions: [
+                  IconButton(
+                    icon: actionIcon,
+                    onPressed: () {
+                      setState(() {
+                        searching = true;
+                      });
                     },
-                    body: Wrap(
-                        runSpacing: -15,
-                        children: [
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 5),
-                                child: ChoiceChip(
-                                  label: Text("All Widgets"),
-                                  //selectedColor: Theme.of(context).primaryColor,
-                                  selected: _selectedCategory == null,
-                                  onSelected: (value) => setState(() {
-                                    _selectedCategory = null;
-                                  }),
-                                ),
-                              )
-                            ] +
-                            WidgetCategoy.values
-                                .map((e) => Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 5, vertical: 5),
-                                      child: ChoiceChip(
-                                        label: Text(e.toString().split(".")[1]),
-                                        //selectedColor: Theme.of(context).primaryColor,
-                                        selected: _selectedCategory == e,
-                                        onSelected: (value) => setState(() {
-                                          _selectedCategory = e;
-                                        }),
+                  )
+                ],
+                centerTitle: true,
+              ),
+        backgroundColor: Theme.of(context).backgroundColor,
+        drawer: SettingsWidget(),
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: ExpansionPanelList(
+                  expansionCallback: (panelIndex, isExpanded) => setState(() {
+                        _isExpanded = !isExpanded;
+                      }),
+                  elevation: 0,
+                  expandedHeaderPadding: EdgeInsets.all(1),
+                  dividerColor: Colors.white,
+                  children: [
+                    ExpansionPanel(
+                      backgroundColor: Theme.of(context).backgroundColor,
+                      isExpanded: _isExpanded,
+                      headerBuilder: (context, isExpanded) {
+                        if (isExpanded)
+                          return Container();
+                        else
+                          return SizedBox(
+                            height: 50,
+                            child: ListView(
+                                scrollDirection: Axis.horizontal,
+                                physics: const AlwaysScrollableScrollPhysics(),
+                                children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 5, vertical: 5),
+                                        child: ChoiceChip(
+                                          label: Text(
+                                            "All Widgets",
+                                            style: TextStyle(
+                                                fontFamily: 'RobotoSlab'),
+                                          ),
+                                          //selectedColor: Theme.of(context).primaryColor,
+                                          selected: _selectedCategory == null,
+                                          onSelected: (value) => setState(() {
+                                            _selectedCategory = null;
+                                          }),
+                                        ),
+                                      )
+                                    ] +
+                                    WidgetCategoy.values
+                                        .map((e) => Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 5,
+                                                      vertical: 5),
+                                              child: ChoiceChip(
+                                                key: UniqueKey(),
+                                                label: Text(
+                                                    e.toString().split(".")[1]),
+                                                //selectedColor: Theme.of(context).primaryColor,
+                                                selected:
+                                                    _selectedCategory == e,
+                                                onSelected: (value) =>
+                                                    setState(() {
+                                                  _selectedCategory = e;
+                                                }),
+                                              ),
+                                            ))
+                                        .toList()),
+                          );
+                      },
+                      body: Wrap(
+                          runSpacing: -15,
+                          children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 5, vertical: 5),
+                                  child: ChoiceChip(
+                                    label: Text(
+                                      "All Widgets",
+                                      style: TextStyle(
+                                        fontFamily: 'RobotoSlab',
                                       ),
-                                    ))
-                                .toList()),
-                  ),
-                ]),
-          ),
-          Expanded(child: getWidgetList(searchString, context)),
-        ],
-      )
-    );
+                                    ),
+                                    //selectedColor: Theme.of(context).primaryColor,
+                                    selected: _selectedCategory == null,
+                                    onSelected: (value) => setState(() {
+                                      _selectedCategory = null;
+                                    }),
+                                  ),
+                                )
+                              ] +
+                              WidgetCategoy.values
+                                  .map((e) => Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 5, vertical: 5),
+                                        child: ChoiceChip(
+                                          label: Text(
+                                            e.toString().split(".")[1],
+                                            style: TextStyle(
+                                              fontFamily: 'RobotoSlab',
+                                            ),
+                                          ),
+                                          //selectedColor: Theme.of(context).primaryColor,
+                                          selected: _selectedCategory == e,
+                                          onSelected: (value) => setState(() {
+                                            _selectedCategory = e;
+                                          }),
+                                        ),
+                                      ))
+                                  .toList()),
+                    ),
+                  ]),
+            ),
+            Expanded(child: getWidgetList(searchString, context)),
+          ],
+        ));
   }
 
   ListView getWidgetList(String filter, BuildContext context) {
@@ -223,6 +246,7 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
+                  fontFamily: 'RobotoSlab',
                 )),
           ),
         ),
@@ -234,6 +258,7 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
 
   ListTile buildListItem(WidgetModel item, BuildContext context) {
     CircleAvatar arrow = CircleAvatar(
+      radius: 16,
       child: Icon(
         Icons.keyboard_arrow_right,
         color: Colors.white,
@@ -245,13 +270,15 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
       leading: arrow,
       title: Text(
         item.name + " Widget",
-        style: Theme.of(context).textTheme.headline1,
+        style: TextStyle(fontFamily: 'RobotoSlab', fontSize: 17),
+        //style: Theme.of(context).textTheme.headline1,
       ),
       subtitle: item.subtitle.isEmpty
           ? null
           : Text(
               item.subtitle,
-              style: Theme.of(context).textTheme.subtitle1,
+              style: TextStyle(fontFamily: 'RobotoSlab', fontSize: 15),
+              //style: Theme.of(context).textTheme.subtitle1,
             ),
       onTap: () {
         Navigator.push(

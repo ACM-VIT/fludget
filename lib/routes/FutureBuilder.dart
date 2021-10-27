@@ -42,7 +42,8 @@ class _FutureBuilderImplementationState
               child: Text(
                 'Below Meme is being loaded with the help of FutureBuilder Widget.',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 15,
+                  fontFamily: 'RobotoSlab',
                 ),
               ),
             ),
@@ -59,6 +60,7 @@ class _FutureBuilderImplementationState
                         '${snapshot.error} occured',
                         style: TextStyle(
                           fontSize: 28,
+                          fontFamily: 'RobotoSlab',
                         ),
                       ),
                     );
@@ -103,7 +105,10 @@ class _FutureBuilderImplementationState
                   padding: const EdgeInsets.all(10.0),
                   child: Text(
                     'Reload Meme',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontFamily: 'RobotoSlab',
+                    ),
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -129,7 +134,10 @@ class FutureBuilderDescription extends StatelessWidget {
       padding: const EdgeInsets.only(top: 22.0, left: 15, right: 15),
       child: Text(
         'In Flutter, the FutureBuilder Widget is used to create widgets based on the latest snapshot of interaction with a Future.  It is necessary for Future to be obtained earlier either through a change of state or change in dependencies. FutureBuilder is a Widget that will help you to execute some asynchronous function and based on that function’s result your UI will update.',
-        style: TextStyle(fontSize: 20),
+        style: TextStyle(
+          fontSize: 16,
+          fontFamily: 'RobotoSlab',
+        ),
       ),
     );
   }

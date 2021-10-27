@@ -62,7 +62,7 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
         child: Padding(
           padding: const EdgeInsets.all(8),
           child: OverflowBar(
-            alignment: MainAxisAlignment.spaceEvenly,
+           // alignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Row(
                 mainAxisSize: MainAxisSize.min,

@@ -52,11 +52,14 @@ class _AnimatedBuilderWidgetState extends State<AnimatedBuilderWidget>
         children: [
           ListTile(
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0)),
+                borderRadius: BorderRadius.circular(18.0)),
             leading: Icon(Icons.fiber_manual_record),
             title: Text(
               'Rotation using AnimatedBuilder Widget.',
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(
+                fontSize: 16,
+                fontFamily: 'RobotoSlab',
+              ),
             ),
           ),
           const SizedBox(height: 30),
@@ -79,11 +82,14 @@ class _AnimatedBuilderWidgetState extends State<AnimatedBuilderWidget>
           const SizedBox(height: 40),
           ListTile(
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0)),
+                borderRadius: BorderRadius.circular(18.0)),
             leading: Icon(Icons.fiber_manual_record),
             title: Text(
               'Translation using AnimatedBuilder Widget.',
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(
+                fontSize: 16,
+                fontFamily: 'RobotoSlab',
+              ),
             ),
           ),
           const SizedBox(height: 20),
@@ -116,12 +122,13 @@ class AnimatedBuilderDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        padding: EdgeInsets.all(16.0),
-        child: Text(
-          'A general-purpose widget for building animations. AnimatedBuilder is useful for more complex widgets that wish to include an animation as part of a larger build function. To use AnimatedBuilder, simply construct the widget and pass it a builder function.',
-          style: TextStyle(fontSize: 24),
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      child: Text(
+        'A general-purpose widget for building animations. AnimatedBuilder is useful for more complex widgets that wish to include an animation as part of a larger build function. To use AnimatedBuilder, simply construct the widget and pass it a builder function.',
+        style: TextStyle(
+          fontSize: 16,
+          fontFamily: 'RobotoSlab',
         ),
       ),
     );

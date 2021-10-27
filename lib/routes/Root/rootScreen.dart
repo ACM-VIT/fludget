@@ -29,7 +29,9 @@ class _RootScreenState extends State<RootScreen> {
           title: Text(widget.item.name),
           bottom: TabBar(
             tabs: [
-              Tab(text: 'Implementation'),
+              Tab(
+                text: 'Implementation',
+              ),
               Tab(text: 'Description'),
               Tab(
                 text: "Code",
@@ -49,7 +51,9 @@ class _RootScreenState extends State<RootScreen> {
                   child: RichText(
                     text: TextSpan(
                       style: const TextStyle(
-                          fontFamily: 'monospace', fontSize: 15),
+                        fontSize: 16,
+                        fontFamily: 'RobotoSlab',
+                      ),
                       children: <TextSpan>[
                         DartSyntaxHighlighter(style)
                             .format(widget.item.codeString.buildCodeString()),
