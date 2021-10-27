@@ -67,6 +67,7 @@ import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/image_filtered.dart';
 import 'package:fludget/routes/indexedStack.dart';
+import 'package:fludget/routes/intreactiveViewer.dart';
 import 'package:fludget/routes/limited_box.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listTile.dart';
@@ -1037,6 +1038,15 @@ const List<WidgetModel> widgets = [
     description: SimpleDialogDesc(),
     category: [WidgetCategoy.Material, WidgetCategoy.Basics],
     codeString: SimpleDialogCode(),
+  ),
+  WidgetModel(
+    name: 'InteractiveViewer',
+    link:
+        "https://api.flutter.dev/flutter/widgets/InteractiveViewer-class.html",
+    implementation: TntractiveViewerImp(),
+    description: IntInteractiveViewerDesc(),
+    category: [WidgetCategoy.Interaction],
+    codeString: IntrectiveViewerCode(),
   ),
   WidgetModel(
     name: "Tooltip",

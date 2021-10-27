@@ -70,6 +70,9 @@ class SimpleDialogDesc extends StatelessWidget {
                 Text(
                   "A simple material design dialog.A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.Choices are normally represented using SimpleDialogOption widgets.",
                 ),
+                const SizedBox(
+                  height: 20,
+                ),
               ],
             ),
           ),
