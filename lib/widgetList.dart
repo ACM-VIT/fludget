@@ -65,7 +65,6 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
-import 'package:fludget/routes/image_filtered.dart';
 import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/limited_box.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
@@ -93,6 +92,7 @@ import 'package:fludget/routes/spacer.dart';
 import 'package:fludget/routes/stack.dart';
 import 'package:fludget/routes/streamBuilder.dart';
 import 'package:fludget/routes/switch.dart';
+import 'package:fludget/routes/switchlist_tile.dart';
 import 'package:fludget/routes/table.dart';
 import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textButton.dart';
@@ -104,9 +104,9 @@ import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/simple_dialog.dart';
-import 'package:fludget/tooltip.dart';
 import 'package:flutter/material.dart';
 import 'package:fludget/routes/rotatedBox.dart';
+import 'package:flutter/material.dart';
 import 'Models/widgetModel.dart';
 import 'routes/autoComplete.dart';
 import 'routes/BottomNavigationBar.dart';
@@ -229,14 +229,6 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
       codeString: ImageCode()),
-  WidgetModel(
-      name: "ImageFilter",
-      subtitle: "Implementation of Image Filter widget",
-      implementation: ImageFilterImplementation(),
-      description: ImageFilterDescription(),
-      link: "https://api.flutter.dev/flutter/widgets/ImageFiltered-class.html",
-      category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
-      codeString: ImageFilterCode()),
   WidgetModel(
       name: "Outlined Button",
       implementation: OutlinedButtonImplimentation(),
@@ -366,6 +358,14 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/Wrap-class.html",
       category: [WidgetCategoy.Layout],
       codeString: WrapCode()),
+  WidgetModel(
+      name: "SwitchList Tile ",
+      subtitle: "SwitchList Tile Widget",
+      implementation: SwitchListTileWidget(),
+      description: SwitchListTileDescription(),
+      link: "https://api.flutter.dev/flutter/material/SwitchListTile-class.html",
+      category: [WidgetCategoy.Layout],
+      codeString:SwitchListTileCode()),
   WidgetModel(
       name: "Hero",
       subtitle: "Hero Animation between widgets",
@@ -1057,3 +1057,5 @@ const List<WidgetModel> widgets = [
     codeString: AnimatedPositionedCode(),
   ),
 ];
+
+
