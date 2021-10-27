@@ -1,4 +1,4 @@
-import 'package:fludget/flexible.dart';
+import 'package:fludget/routes/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/ExpansionPanel.dart';
@@ -104,7 +104,7 @@ import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/simple_dialog.dart';
-import 'package:fludget/tooltip.dart';
+import 'package:fludget/routes/tooltip.dart';
 import 'package:flutter/material.dart';
 import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
