@@ -1,5 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
+import 'package:fludget/Models/codeString.dart';
 
 class SimpleDialogImp extends StatelessWidget {
   const SimpleDialogImp({Key? key}) : super(key: key);
@@ -85,8 +86,7 @@ class SimpleDialogCode extends CodeString {
   const SimpleDialogCode();
   @override
   String buildCodeString() {
-    return """ 
-        showDialog(
+    return """showDialog(
                 context: context,
                 builder: (BuildContext ctx) => SimpleDialog(
                   title: Text('Option List'),
@@ -106,6 +106,6 @@ class SimpleDialogCode extends CodeString {
                   ],
                   elevation: 10,
                 ),
-              )""";
+              );""";
   }
 }
