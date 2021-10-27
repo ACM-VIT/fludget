@@ -44,15 +44,16 @@ class _SwitchListTileWidgetState extends State<SwitchListTileWidget>  {
               ),
               child: SwitchListTile(
                 title: Text('Fludget',style: TextStyle(
-                    color: Colors.blue,
+                    color: Theme.of(context).primaryColor,
                     fontWeight: FontWeight.w800,
                     fontSize: 20
                 ),
                 ),
                 value: ss,
                 selectedTileColor: Colors.cyanAccent,
-                activeColor: Colors.greenAccent,
-                inactiveTrackColor: Colors.yellowAccent,
+                activeColor: Theme.of(context).primaryColor,
+                inactiveTrackColor: Colors.red,
+
                 onChanged: (bool value) {
                   setState(() {
                     ss = value;
@@ -91,14 +92,14 @@ class _SwitchListTileWidgetState extends State<SwitchListTileWidget>  {
               ),
               child: SwitchListTile(
                 title: Text('Tap Here',style: TextStyle(
-                    color: Colors.blue,
+                    color: Theme.of(context).primaryColor,
                     fontWeight: FontWeight.w800,
                     fontSize: 20
                 ),
                 ),
                 value: _flutter,
-                activeColor: Colors.red,
-                inactiveTrackColor: Colors.grey,
+                activeColor: Theme.of(context).primaryColor,
+                inactiveTrackColor: Colors.red,
                 onChanged: (bool value) {
                   setState(() {
                     _flutter = value;
@@ -140,21 +141,21 @@ class _SwitchListTileWidgetState extends State<SwitchListTileWidget>  {
               child: SwitchListTile(
 
                 title: Text('Allow BluetTooth',style: TextStyle(
-                    color: Colors.blue,
+                    color: Theme.of(context).primaryColor,
                     fontWeight: FontWeight.w800,
                     fontSize: 20
                 ),
                 ),
                 value: _switched,
-                activeColor: Colors.lightBlue,
-                inactiveTrackColor: Colors.blueGrey,
+                activeColor: Theme.of(context).primaryColor,
+                inactiveTrackColor: Colors.red,
                 onChanged: (bool value) {
                   setState(() {
                    _switched= value;
                   });
                 },
-                secondary: Icon(Icons.bluetooth,color: Colors.blue,),
-                subtitle: Text('Enable Swithch to Access bluetooth',style: TextStyle(
+                secondary: Icon(Icons.bluetooth,color: Theme.of(context).primaryColor,),
+                subtitle: Text('Enable Switch to Access bluetooth',style: TextStyle(
                   color: Colors.blueGrey[600],
                 ),
                 ),
@@ -186,7 +187,7 @@ class SwitchListTileDescription  extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             'SwitchListTile is a widget that wraps a ListTile and a Switch. It iss usually used as a child of a ListView where the content has a Switch widget. A common usage is for displaying an item in a setting page where the user can toggle a particular setting on and off. '
-              ,style: TextStyle(fontSize: 20),
+              ,style: Theme.of(context).textTheme.headline6,
           ),
         ),
       ),
@@ -208,7 +209,7 @@ class SwitchListTileCode extends CodeString {
                 ),
                 ),
                 value: _switched,
-                activeColor: Colors.lightBlue,
+                activeColor: Theme.of(context).primaryColor,
                 inactiveTrackColor: Colors.blueGrey,
                 onChanged: (bool value) {
                   setState(() {
