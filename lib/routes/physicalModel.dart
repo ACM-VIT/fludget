@@ -26,7 +26,7 @@ class PhysicalModelImplementation extends StatelessWidget{
                 Container(
                     height: 120.0,
                     width: 120.0,
-                    color: Colors.blue,
+                    color: Theme.of(context).colorScheme.primary,
                 ),
               ],
             ),
@@ -53,13 +53,13 @@ class PhysicalModelImplementation extends StatelessWidget{
                 PhysicalModel(
                   elevation: 16.0,
                   shape: BoxShape.rectangle,
-                  shadowColor: Colors.orange,
-                  color: Colors.red,
+                  shadowColor: Theme.of(context).colorScheme.secondary,
+                  color: Theme.of(context).colorScheme.onBackground,
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                   child: Container(
                     height: 120.0,
                     width: 120.0,
-                    color: Colors.blue,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
               ],
@@ -78,14 +78,14 @@ class PhysicalModelImplementation extends StatelessWidget{
                 PhysicalModel(
                   elevation: 16.0,
                   shape: BoxShape.circle,
-                  shadowColor: Colors.orange,
-                  color: Colors.red,
+                  shadowColor: Theme.of(context).colorScheme.secondary,
+                  color: Theme.of(context).colorScheme.onBackground,
                   child: Container(
                     height: 120.0,
                     width: 120.0,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.blue,
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                   ),
                 ),
@@ -104,7 +104,7 @@ class PhysicalModelImplementation extends StatelessWidget{
                 ),
                 Center(
                   child: Text(
-                    "Rectangular physical model with green shadow\n",
+                    "Rectangular physical model with another shadow color\n",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -114,13 +114,13 @@ class PhysicalModelImplementation extends StatelessWidget{
                 PhysicalModel(
                   elevation: 16.0,
                   shape: BoxShape.rectangle,
-                  shadowColor: Colors.green,
-                  color: Colors.red,
+                  shadowColor: Theme.of(context).colorScheme.primaryVariant,
+                  color: Theme.of(context).colorScheme.onBackground,
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                   child: Container(
                     height: 120.0,
                     width: 120.0,
-                    color: Colors.blue,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
               ],
@@ -160,14 +160,14 @@ class PhysicalModelImplementation extends StatelessWidget{
                 PhysicalModel(
                   elevation: 16.0,
                   shape: BoxShape.circle,
-                  shadowColor: Colors.green,
-                  color: Colors.red,
+                  shadowColor: Theme.of(context).colorScheme.secondary,
+                  color: Theme.of(context).colorScheme.onBackground,
                   child: Container(
                     height: 120.0,
                     width: 120.0,
                     decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
-                      color: Colors.blue.withOpacity(0.3),
+                      color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
                     ),
                   ),
                 ),
@@ -240,17 +240,17 @@ class PhysicalModelCode extends CodeString{
           PhysicalModel(
             elevation: 16.0,
             shape: BoxShape.circle,
-            shadowColor: Colors.green,
-            color: Colors.red,
+            shadowColor: Theme.of(context).colorScheme.secondary,
+            color: Theme.of(context).colorScheme.onBackground,
             child: Container(
               height: 120.0,
               width: 120.0,
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
-                color: Colors.blue.withOpacity(0.3)
-              )
-            )
-          )
+                color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+              ),
+            ),
+          ),
            """;
   }
 }
