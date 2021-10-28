@@ -9,8 +9,8 @@ class AnimatedPositionedImp extends StatefulWidget {
 }
 
 class _AnimatedPositionedImpState extends State<AnimatedPositionedImp> {
-  var box1left = null;
-  var box2right = null;
+  double? box1left;
+  double? box2right;
   var box1top = 30.0;
   var box2top = 50.0;
   @override

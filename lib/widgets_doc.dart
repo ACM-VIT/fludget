@@ -12,7 +12,6 @@ class WidgetsDoc extends StatefulWidget {
 }
 
 class _WidgetsDocState extends State<WidgetsDoc> {
-  WebViewController? _controller;
   bool isLoading = true;
 
   @override
@@ -26,9 +25,7 @@ class _WidgetsDocState extends State<WidgetsDoc> {
         WebView(
           initialUrl: widget.url,
           javascriptMode: JavascriptMode.unrestricted,
-          onWebViewCreated: (WebViewController webViewController) {
-            _controller = webViewController;
-          },
+          onWebViewCreated: (WebViewController webViewController) {},
           onPageFinished: (finish) {
             setState(() {
               isLoading = false;

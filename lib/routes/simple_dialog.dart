@@ -1,12 +1,11 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
-import 'package:fludget/Models/codeString.dart';
 
 class SimpleDialogImp extends StatelessWidget {
   const SimpleDialogImp({Key? key}) : super(key: key);
   SnackBar _showSnakBar(String title) {
     return SnackBar(
-      content: Text("${title} option selected."),
+      content: Text("$title option selected."),
       duration: Duration(seconds: 1),
     );
   }

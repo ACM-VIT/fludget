@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Models/codeString.dart';
+import 'package:fludget/Models/codeString.dart';
 
 class TooltipImplementation extends StatelessWidget {
   const TooltipImplementation({Key? key}) : super(key: key);
@@ -20,9 +20,8 @@ class TooltipImplementation extends StatelessWidget {
                     margin: EdgeInsets.only(top: 20),
                     padding: EdgeInsets.all(10),
                     showDuration: Duration(seconds: 4),
-                    message:
-                        'This is a "Lorem Ipsum" text widget!\n'
-                            'Disappears after 4 seconds',
+                    message: 'This is a "Lorem Ipsum" text widget!\n'
+                        'Disappears after 4 seconds',
                     child: Text(
                       'Lorem Ipsum',
                       style: TextStyle(

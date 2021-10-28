@@ -105,9 +105,7 @@ import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
-import 'package:fludget/routes/simple_dialog.dart';
 import 'package:fludget/routes/tooltip.dart';
-import 'package:flutter/material.dart';
 import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
 import 'routes/autoComplete.dart';
@@ -458,7 +456,7 @@ const List<WidgetModel> widgets = [
       codeString: DismissibleCode()),
   WidgetModel(
       name: "Page View",
-      implementation: pageViewSample(),
+      implementation: PageViewSample(),
       description: PageViewDescription(),
       link: "https://api.flutter.dev/flutter/widgets/PageView-class.html",
       category: [WidgetCategoy.Layout],
@@ -585,8 +583,8 @@ const List<WidgetModel> widgets = [
       name: "AppBar",
       subtitle: "Implementation of AppBar Widget",
       link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
-      implementation: appbarsample(),
-      description: appbardescription(),
+      implementation: AppBarSample(),
+      description: AppBarDescription(),
       category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
       codeString: AppBarCode()),
   WidgetModel(
