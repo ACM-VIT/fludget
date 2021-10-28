@@ -79,6 +79,7 @@ import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/padding.dart';
 import 'package:fludget/routes/pageview.dart';
 import 'package:fludget/routes/place_holder.dart';
+import 'package:fludget/routes/physicalModel.dart';
 import 'package:fludget/routes/refreshIndicator.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
@@ -1065,5 +1066,14 @@ const List<WidgetModel> widgets = [
     description: AnimatedPositionedDesc(),
     category: [WidgetCategoy.Animation],
     codeString: AnimatedPositionedCode(),
+  ),
+  WidgetModel(
+    name: "Physical Model",
+    link: "https://api.flutter.dev/flutter/widgets/PhysicalModel-class.html",
+    subtitle: "Implementation of Physical Model widget",
+    implementation: PhysicalModelImplementation(),
+    description: PhysicalModelDescription(),
+    category: [WidgetCategoy.Styling],
+    codeString: PhysicalModelCode(),
   ),
 ];
