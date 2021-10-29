@@ -117,3 +117,11 @@ Note: Make sure you are always up to date with sync and pull upstream. Sync and 
 # Authors
 
 - [Aryan Khubchandani](https://github.com/AryanKhubchandani)
+
+# License
+
+Copyright &copy; 2021 ACM-VIT <br><br>
+The source code for the site is licensed under the <b>MIT license</b>. This program is free software and is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+See the [`LICENSE`](./LICENSE) file for more details.
+
