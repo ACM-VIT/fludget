@@ -112,6 +112,7 @@ import 'routes/autoComplete.dart';
 import 'routes/BottomNavigationBar.dart';
 import 'routes/fitted_box.dart';
 import 'routes/BackdropFilter.dart';
+import 'routes/animatedContainer.dart';
 
 const List<WidgetModel> widgets = [
   WidgetModel(
@@ -1073,5 +1074,15 @@ const List<WidgetModel> widgets = [
     description: PhysicalModelDescription(),
     category: [WidgetCategoy.Styling],
     codeString: PhysicalModelCode(),
+  ),
+  WidgetModel(
+    name: "Animated Container",
+    link:
+        "https://api.flutter.dev/flutter/widgets/AnimatedContainer-class.html",
+    subtitle: "Implementation of Animated Container Widget",
+    implementation: AnimatedContainerImplementation(),
+    description: AnimatedContainerDescription(),
+    category: [WidgetCategoy.Animation],
+    codeString: AnimatedContainerCode(),
   ),
 ];
