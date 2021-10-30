@@ -6,6 +6,7 @@ import 'package:fludget/routes/button.dart';
 import 'package:fludget/routes/column.dart';
 import 'package:fludget/routes/dialogBox.dart';
 import 'package:fludget/routes/dropDownButton.dart';
+import 'package:fludget/routes/flow.dart';
 import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/expanded.dart';
 import 'package:fludget/routes/gridList.dart';
@@ -235,6 +236,13 @@ class HomePageState extends State<HomePage> {
         implementation: DatatableWidget(),
         description: DataTableWidgetDescription(),
         link: "https://api.flutter.dev/flutter/material/DataTable-class.html",
+      ),
+      WidgetModel(
+        name: "Flow",
+        subtitle: "Flow  widgets",
+        implementation: FlowWidgetImplementation(),
+        description: FlowWidgetDescription(),
+        link: "https://api.flutter.dev/flutter/widgets/Flow-class.html",
       ),
     ];
 
