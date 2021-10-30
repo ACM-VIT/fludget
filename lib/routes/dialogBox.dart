@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class DialogBoxImplementation extends StatelessWidget {
@@ -32,10 +33,6 @@ class DialogBoxImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Dialog Widget"),
-      // ),
-      backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
@@ -45,7 +42,6 @@ class DialogBoxImplementation extends StatelessWidget {
             Text(
               "Click to show:",
               style: TextStyle(
-                color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -57,7 +53,7 @@ class DialogBoxImplementation extends StatelessWidget {
                           _buildDelDialog(context));
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.orange[900],
+                  primary: Theme.of(context).primaryColor,
                 ),
                 child: Text("Elevated Button")),
           ],
@@ -75,8 +71,36 @@ class DialogBoxDescription extends StatelessWidget {
     return Center(
       child: Text(
         'Dialog Box Description Here',
-        style: TextStyle(color: Colors.white),
       ),
     );
+  }
+}
+
+class DialogBoxCode extends CodeString {
+  const DialogBoxCode();
+  @override
+  String buildCodeString() {
+    return """AlertDialog(
+      title: const Text('This is title'),
+      actions: <Widget>[
+        new FlatButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          textColor: Theme.of(context).primaryColor,
+          child: const Icon(Icons.arrow_back),
+        ),
+        new FlatButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          textColor: Theme.of(context).primaryColor,
+          child: const Icon(
+            Icons.done,
+            color: Colors.green,
+          ),
+        ),
+      ],
+    );""";
   }
 }

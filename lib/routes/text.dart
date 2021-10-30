@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class TextImplementation extends StatelessWidget {
@@ -6,16 +7,11 @@ class TextImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Text"),
-      // ),
-      backgroundColor: Colors.grey[900],
       body: Center(
         heightFactor: 15,
         child: Text(
           "This is sample text.",
-          style: TextStyle(
-              color: Colors.white, fontSize: 36, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
         ),
       ),
     );
@@ -30,8 +26,21 @@ class TextDescription extends StatelessWidget {
     return Center(
       child: Text(
         'Text Description Here',
-        style: TextStyle(color: Colors.white),
       ),
     );
+  }
+}
+
+class TextCode extends CodeString {
+  const TextCode();
+  @override
+  String buildCodeString() {
+    return """ Text(
+          "This is sample text.",
+          style: TextStyle(
+              fontSize: 36, fontWeight: FontWeight.bold),
+        ),
+      ),
+""";
   }
 }

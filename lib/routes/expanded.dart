@@ -1,4 +1,4 @@
-import 'package:fludget/constants/colors.dart';
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class ExpandedImplementation extends StatelessWidget {
@@ -7,7 +7,6 @@ class ExpandedImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(18.0),
@@ -23,7 +22,6 @@ class ExpandedImplementation extends StatelessWidget {
                   children: [
                     Text(
                       'Expanded widget in Column',
-                      style: TextStyle(color: Colors.white),
                     ),
                     Container(
                       color: Colors.blue,
@@ -51,7 +49,6 @@ class ExpandedImplementation extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 50.0),
                 child: Text(
                   'Expanded widget in Row',
-                  style: TextStyle(color: Colors.white),
                 ),
               ),
               Container(
@@ -87,7 +84,6 @@ class ExpandedImplementation extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 50.0),
                 child: Text(
                   'Expanded widget with flex factor',
-                  style: TextStyle(color: Colors.white),
                 ),
               ),
               Container(
@@ -143,15 +139,13 @@ class ExpandedDescription extends StatelessWidget {
               'Expanded Widget \n',
               style: TextStyle(
                 fontSize: 26.0,
-                color: Colors.white,
               ),
             ),
             RichText(
               text: new TextSpan(
                 // Note: Styles for TextSpans must be explicitly defined.
                 // Child text spans will inherit styles from parent
-                style: new TextStyle(
-                    fontSize: 14.0, color: Colors.white, height: 1.2),
+                style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
                   TextSpan(
                     text: 'A widget that expands a child of a Row,'
@@ -167,7 +161,6 @@ class ExpandedDescription extends StatelessWidget {
                       text: '\n\nExample \n\n',
                       style: TextStyle(
                         fontSize: 22.0,
-                        color: Colors.white,
                       )),
                   TextSpan(
                       text: 'Row(\n'
@@ -190,5 +183,41 @@ class ExpandedDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ExpandedCode extends CodeString {
+  const ExpandedCode();
+  @override
+  String buildCodeString() {
+    return """Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Expanded widget in Column',
+                    ),
+                    Container(
+                      color: Colors.blue,
+                      height: 80,
+                      width: 100,
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.amber,
+                        width: 100,
+                        child: Center(
+                          child: Text("Expanded"),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      color: Colors.blue,
+                      height: 80,
+                      width: 100,
+                    ),
+                  ],
+                ),
+""";
   }
 }

@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class TableImplementation extends StatelessWidget {
@@ -6,7 +7,6 @@ class TableImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(top: 20, bottom: 16, left: 16, right: 16),
@@ -18,7 +18,7 @@ class TableImplementation extends StatelessWidget {
                 child: Text(
                   "Table with no border :",
                   textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                  style: TextStyle(fontSize: 16),
                 ),
               ),
               MyTable(
@@ -37,7 +37,7 @@ class TableImplementation extends StatelessWidget {
                 child: Text(
                   "Table with border width 2.0, text alignment center and circular border: ",
                   textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                  style: TextStyle(fontSize: 16),
                 ),
               ),
               MyTable(
@@ -56,7 +56,7 @@ class TableImplementation extends StatelessWidget {
                 child: Text(
                   "Table with different column widths: ",
                   textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                  style: TextStyle(fontSize: 16),
                 ),
               ),
               MyTable(
@@ -108,51 +108,51 @@ class MyTable extends StatelessWidget {
           Text(
             "A",
             textAlign: textAlignment,
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: TextStyle(fontSize: 22),
           ),
           Text(
             "B",
             textAlign: textAlignment,
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: TextStyle(fontSize: 22),
           ),
           Text(
             "C",
             textAlign: textAlignment,
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: TextStyle(fontSize: 22),
           ),
         ]),
         TableRow(children: [
           Text(
             "D",
             textAlign: textAlignment,
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: TextStyle(fontSize: 22),
           ),
           Text(
             "E",
             textAlign: textAlignment,
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: TextStyle(fontSize: 22),
           ),
           Text(
             "F",
             textAlign: textAlignment,
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: TextStyle(fontSize: 22),
           ),
         ]),
         TableRow(children: [
           Text(
             "G",
             textAlign: textAlignment,
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: TextStyle(fontSize: 22),
           ),
           Text(
             "H",
             textAlign: textAlignment,
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: TextStyle(fontSize: 22),
           ),
           Text(
             "I",
             textAlign: textAlignment,
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: TextStyle(fontSize: 22),
           ),
         ])
       ],
@@ -170,9 +170,82 @@ class TableDescription extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Text(
           'A Table Widget displays items in a table layout, the height of table row depends on the content inside them, although width can be set using columnWidth property.',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );
+  }
+}
+
+class TableCode extends CodeString {
+  const TableCode();
+  @override
+  String buildCodeString() {
+    return """ Table(
+      columnWidths: <int, TableColumnWidth>{
+        0: FlexColumnWidth(flex[0]),
+        1: FlexColumnWidth(flex[1]),
+        2: FlexColumnWidth(flex[2]),
+      },
+      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      border: TableBorder.all(
+        color: borderColor,
+        width: borderWidth,
+      ),
+      children: [
+        TableRow(children: [
+          Text(
+            "A",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "B",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "C",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+        ]),
+        TableRow(children: [
+          Text(
+            "D",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "E",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "F",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+        ]),
+        TableRow(children: [
+          Text(
+            "G",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "H",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            "I",
+            textAlign: textAlignment,
+            style: TextStyle(fontSize: 22),
+          ),
+        ])
+      ],
+    );
+""";
   }
 }

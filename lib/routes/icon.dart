@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class IconImplementation extends StatelessWidget {
@@ -6,10 +7,6 @@ class IconImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Icon"),
-      // ),
-      backgroundColor: Colors.grey[900],
       body: Center(
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           Icon(
@@ -24,7 +21,7 @@ class IconImplementation extends StatelessWidget {
           ),
           Icon(
             Icons.cloud,
-            color: Colors.white,
+            color: Colors.blue[500],
             size: 75.0,
           )
         ]),
@@ -41,8 +38,32 @@ class IconDescription extends StatelessWidget {
     return Center(
       child: Text(
         'Icon Description Here',
-        style: TextStyle(color: Colors.white),
       ),
     );
+  }
+}
+
+class IconCode extends CodeString {
+  const IconCode();
+  @override
+  String buildCodeString() {
+    return """Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          Icon(
+            Icons.ac_unit,
+            color: Colors.blue[100],
+            size: 50.0,
+          ),
+          Icon(
+            Icons.wb_sunny,
+            color: Colors.yellow,
+            size: 100.0,
+          ),
+          Icon(
+            Icons.cloud,
+            color: Colors.blue[500],
+            size: 75.0,
+          )
+        ]),
+""";
   }
 }

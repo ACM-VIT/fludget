@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class DatatableWidget extends StatefulWidget {
@@ -18,8 +19,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
         DataColumn(
           label: Text(
             "First Name",
-            style:
-                new TextStyle(fontSize: 14.0, color: Colors.white, height: 1.2),
+            style: new TextStyle(fontSize: 14.0, height: 1.2),
           ),
           numeric: false,
           onSort: (i, b) {
@@ -33,8 +33,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
         DataColumn(
           label: Text(
             "Last Name",
-            style:
-                new TextStyle(fontSize: 14.0, color: Colors.white, height: 1.2),
+            style: new TextStyle(fontSize: 14.0, height: 1.2),
           ),
           numeric: false,
           onSort: (i, b) {
@@ -53,8 +52,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
                 DataCell(
                   Text(
                     name.firstName,
-                    style: new TextStyle(
-                        fontSize: 14.0, color: Colors.white, height: 1.2),
+                    style: new TextStyle(fontSize: 14.0, height: 1.2),
                   ),
                   showEditIcon: false,
                   placeholder: false,
@@ -62,8 +60,7 @@ class DatatableWidgetState extends State<DatatableWidget> {
                 DataCell(
                   Text(
                     name.lastName,
-                    style: new TextStyle(
-                        fontSize: 14.0, color: Colors.white, height: 1.2),
+                    style: new TextStyle(fontSize: 14.0, height: 1.2),
                   ),
                   showEditIcon: false,
                   placeholder: false,
@@ -76,7 +73,6 @@ class DatatableWidgetState extends State<DatatableWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Container(
         child: bodyData(),
       ),
@@ -112,15 +108,13 @@ class DataTableWidgetDescription extends StatelessWidget {
               ' DataTable Widget \n',
               style: TextStyle(
                 fontSize: 26.0,
-                color: Colors.white,
               ),
             ),
             RichText(
               text: new TextSpan(
                 // Note: Styles for TextSpans must be explicitly defined.
                 // Child text spans will inherit styles from parent
-                style: new TextStyle(
-                    fontSize: 14.0, color: Colors.white, height: 1.2),
+                style: Theme.of(context).textTheme.bodyText1,
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -131,7 +125,6 @@ class DataTableWidgetDescription extends StatelessWidget {
                       text: '\n\nSyntax\n\n',
                       style: TextStyle(
                         fontSize: 22.0,
-                        color: Colors.white,
                       )),
                   TextSpan(
                       text: "Add the DataTable() widget \n "
@@ -147,5 +140,74 @@ class DataTableWidgetDescription extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class DataTableCode extends CodeString {
+  const DataTableCode();
+  @override
+  String buildCodeString() {
+    return """DataTable(
+      onSelectAll: (b) {},
+      sortColumnIndex: 1,
+      sortAscending: true,
+      columns: <DataColumn>[
+        DataColumn(
+          label: Text(
+            "First Name",
+            style:
+                new TextStyle(fontSize: 14.0, height: 1.2),
+          ),
+          numeric: false,
+          onSort: (i, b) {
+            print("\$i \$b");
+            setState(() {
+              names.sort((a, b) => a.firstName.compareTo(b.firstName));
+            });
+          },
+          tooltip: "To display first name of the Name",
+        ),
+        DataColumn(
+          label: Text(
+            "Last Name",
+            style:
+                new TextStyle(fontSize: 14.0, height: 1.2),
+          ),
+          numeric: false,
+          onSort: (i, b) {
+            print("\$i \$b");
+            setState(() {
+              names.sort((a, b) => a.lastName.compareTo(b.lastName));
+            });
+          },
+          tooltip: "To display last name of the Name",
+        ),
+      ],
+      rows: names
+          .map(
+            (name) => DataRow(
+              cells: [
+                DataCell(
+                  Text(
+                    name.firstName,
+                    style: new TextStyle(
+                        fontSize: 14.0, height: 1.2),
+                  ),
+                  showEditIcon: false,
+                  placeholder: false,
+                ),
+                DataCell(
+                  Text(
+                    name.lastName,
+                    style: new TextStyle(
+                        fontSize: 14.0, height: 1.2),
+                  ),
+                  showEditIcon: false,
+                  placeholder: false,
+                )
+              ],
+            ),
+          )
+          .toList());""";
   }
 }

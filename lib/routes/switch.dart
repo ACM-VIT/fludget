@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class SwitchImplementation extends StatefulWidget {
@@ -17,15 +18,11 @@ class _SwitchImplementationState extends State<SwitchImplementation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "Tap on the switch to toggle",
-              style: TextStyle(color: Colors.white),
-            ),
+            Text("Tap on the switch to toggle"),
             Switch(value: _isOn, onChanged: _toggleSwitch),
           ],
         ),
@@ -47,8 +44,7 @@ class SwitchDescription extends StatelessWidget {
         children: [
           Text(
             "Switch",
-            style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24),
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
           ),
           Text(
             """Switch widget in Flutter s used to show a toggle state like ON and OFF.
@@ -57,29 +53,21 @@ It has two major arguments:
 => bool value:  Used to show current state of the switch. true for ON and false for OFF.
 
 => void Function onChange(bool):  Function used to change the state of the switch when user taps on the widget. It gives one parameter which is the new value for the switch.""",
-            style: TextStyle(
-              color: Colors.white,
-            ),
           ),
           SizedBox(
             height: 20,
           ),
-          Text(
-            """
-            Switch(
-              value: _isOn, 
-               onChanged: (bool val)
-               {
-                setState((){
-                  _isOn = val;
-                });  
-               },
-            )
-            """,
-            style: TextStyle(color: Colors.white),
-          ),
         ],
       ),
     );
+  }
+}
+
+class SwitchCode extends CodeString {
+  const SwitchCode();
+  @override
+  String buildCodeString() {
+    return """ Switch(value: _isOn, onChanged: _toggleSwitch),
+""";
   }
 }

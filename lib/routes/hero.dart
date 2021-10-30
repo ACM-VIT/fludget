@@ -1,3 +1,4 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class HeroWidget extends StatelessWidget {
@@ -79,7 +80,7 @@ class HeroWidgetDescription extends StatelessWidget {
                 '\n- Create a hero animation using Flutter’s Hero widget.'
                 '\n- The Hero widget in Flutter implements a style of animation commonly'
                 ' known as shared element transitions or shared element animations.',
-            style: TextStyle(color: Colors.white),
+            style: Theme.of(context).textTheme.bodyText1,
           )
         ]),
       ),
@@ -137,5 +138,25 @@ class SampleScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class HeroCode extends CodeString {
+  const HeroCode();
+  @override
+  String buildCodeString() {
+    return """Hero(
+              tag: hashCode,
+              child: CircleAvatar(
+                radius: 50,
+                backgroundColor: Theme.of(context).primaryColor,
+                child: Icon(
+                  Icons.person,
+                  size: 50,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+""";
   }
 }

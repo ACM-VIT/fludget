@@ -24,84 +24,30 @@ import 'package:fludget/routes/text.dart';
 import 'package:fludget/routes/textfield.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/wrap.dart';
+import 'package:fludget/cupertinowidgets.dart';
+import 'package:fludget/materialwidgets.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
-  State<StatefulWidget> createState() {
-    return HomePageState();
-  }
+  State<HomePage> createState() => _HomePageState();
 }
 
-class HomePageState extends State<HomePage> {
-  bool searching = false;
-  String searchString = '';
+class _HomePageState extends State<HomePage> {
+int _selectedIndex=0;
 
-  AppBar showSearchBar() {
-    return AppBar(
-      backgroundColor: Colors.grey[900],
-      title: TextField(
-        keyboardType: TextInputType.text,
-        cursorColor: Colors.white,
-        autofocus: true,
-        decoration: InputDecoration(
-          hintStyle: TextStyle(color: Colors.grey),
-          prefixIcon: IconButton(
-            icon: Icon(Icons.arrow_back),
-            color: Colors.white,
-            onPressed: () {
-              setState(() {
-                searching = false;
-                searchString = '';
-              });
-            },
-          ),
-          hintText: 'Search....',
-          border: UnderlineInputBorder(borderSide: BorderSide.none),
-        ),
-        style: TextStyle(
-          color: Colors.white,
-          decorationColor: Colors.white,
-        ),
-        onSubmitted: (String text) {
-          setState(() {
-            searchString = text;
-          });
-        },
-        onChanged: (String text) {
-          setState(() {
-            searchString = text;
-          });
-        },
-      ),
-    );
-  }
+PageController pageController=PageController();
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: searching
-          ? showSearchBar()
-          : AppBar(
-              backgroundColor: Colors.orange[900],
-              title: Text("Widget Catalog"),
-              actions: [
-                IconButton(
-                  onPressed: () {
-                    setState(() {
-                      searching = true;
-                    });
-                  },
-                  icon: const Icon(Icons.search),
-                )
-              ],
-              centerTitle: true,
-            ),
-      backgroundColor: Colors.grey[900],
-      drawer: SettingsWidget(),
-      body: getWidgetList(searchString),
-    );
-  }
+void onTapped(int index){
+  setState(() {
+    _selectedIndex=index;
+  });
+
+  //To animate the between different pages chage the parameters of the page controller below
+  pageController.animateToPage(index, duration:Duration(milliseconds: 100), curve:Curves.linear);
+}
 
   ListView getWidgetList(String filter) {
     const List<WidgetModel> widgets = [
@@ -245,81 +191,41 @@ class HomePageState extends State<HomePage> {
         link: "https://api.flutter.dev/flutter/widgets/Flow-class.html",
       ),
     ];
+@override
 
-    return ListView(
-      padding: EdgeInsets.symmetric(vertical: 10.0),
-      children: filterWidgets(widgets, filter),
-    );
-  }
+Widget build(BuildContext context) {
+  return Scaffold(
 
-  List<Widget> filterWidgets(List<WidgetModel> widgets, String filter) {
-    List<WidgetModel> filtered = [];
 
-    widgets.forEach((item) {
-      String itemName = item.name.toLowerCase();
-      String subtitle = item.subtitle.toLowerCase();
-      if (itemName.contains(filter.toLowerCase()))
-        filtered.add(item);
-      else if (subtitle.contains(filter.toLowerCase())) filtered.add(item);
-    });
+    body: PageView(
+      controller:pageController,
+      onPageChanged:(int index){
+        setState(() {
+          _selectedIndex=index;
+        });
 
-    if (filtered.isEmpty) {
-      return [
-        Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 15,
-              horizontal: 15,
-            ),
-            child: Text('No widget found with name:\n' + filter,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                )),
-          ),
-        ),
-      ];
-    }
-
-    return filtered.map((item) => buildListItem(item)).toList();
-  }
-
-  ListTile buildListItem(WidgetModel item) {
-    CircleAvatar arrow = CircleAvatar(
-      child: Icon(
-        Icons.keyboard_arrow_right,
-        color: Colors.white,
-      ),
-      backgroundColor: Colors.orange[900],
-    );
-
-    TextStyle titleStyle = TextStyle(
-      color: Colors.white,
-    );
-
-    TextStyle subtitleStyle = TextStyle(color: Colors.white70);
-
-    return ListTile(
-      leading: arrow,
-      title: Text(
-        item.name + " Widget",
-        style: titleStyle,
-      ),
-      subtitle: item.subtitle.isEmpty
-          ? null
-          : Text(
-              item.subtitle,
-              style: subtitleStyle,
-            ),
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (_) => RootScreen(item),
-          ),
-        );
       },
-    );
-  }
+
+
+
+      // Insert your Required Screens Botttom NavBAr
+      children: [
+        MaterialWidgets(),
+        CupertinoWidgets(),
+      ],
+    ),
+
+    //Bottom Navigation Bar
+
+    bottomNavigationBar: BottomNavigationBar(items: const <BottomNavigationBarItem>[
+      BottomNavigationBarItem(icon:Icon(Icons.home),label: 'Material Widgets'),
+      BottomNavigationBarItem(icon:Icon(Icons.menu),label: 'Cupertino Widgets'),
+
+    ],
+      currentIndex: _selectedIndex,
+      selectedItemColor: Theme.of(context).primaryColor,
+      unselectedItemColor: Theme.of(context).shadowColor,
+      onTap: onTapped,),
+  );
+}
 }
