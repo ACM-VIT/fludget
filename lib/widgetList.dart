@@ -69,6 +69,7 @@ import 'package:fludget/routes/image.dart';
 import 'package:fludget/routes/image_filtered.dart';
 import 'package:fludget/routes/indexedStack.dart';
 import 'package:fludget/routes/intreactiveViewer.dart';
+import 'package:fludget/routes/layout_builder_widget.dart';
 import 'package:fludget/routes/limited_box.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listTile.dart';
@@ -1095,5 +1096,15 @@ const List<WidgetModel> widgets = [
     description: FlowWidgetDescription(),
     category: [WidgetCategoy.Animation],
     codeString: FlowCode(),
+  ),
+  WidgetModel(
+    name: "Layout Builder",
+    link:
+        "https://api.flutter.dev/flutter/widgets/AnimatedPositioned-class.html",
+    subtitle: "Implementation of Animated Positioned Widget",
+    implementation: LayoutBuilderImp(),
+    description: LayoutBuilderDesc(),
+    category: [WidgetCategoy.Layout],
+    codeString: LayoutBuilderCode(),
   ),
 ];
