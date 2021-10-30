@@ -1083,7 +1083,7 @@ const List<WidgetModel> widgets = [
     subtitle: "Implementation of Animated Container Widget",
     implementation: AnimatedContainerImplementation(),
     description: AnimatedContainerDescription(),
-    category: [WidgetCategoy.Animation],
+    category: [WidgetCategory.Animation],
     codeString: AnimatedContainerCode(),
   ),
   WidgetModel(
@@ -1093,7 +1093,7 @@ const List<WidgetModel> widgets = [
     subtitle: "Implementation of Animated Positioned Widget",
     implementation: LayoutBuilderImp(),
     description: LayoutBuilderDesc(),
-    category: [WidgetCategoy.Layout],
+    category: [WidgetCategory.Layout],
     codeString: LayoutBuilderCode(),
   ),
 ];
