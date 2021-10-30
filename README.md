@@ -80,12 +80,14 @@ This application is developed to learn Flutter using Flutter. Different widgets 
 
 <h2 align= "left">Tech Stack </h2>
 
-[link to page](https://flutter.dev/)
+
 
 <h4 align="left"> Languages </h4>
+
 - [Dart](https://dart.dev/)
 
 <h4 align="left"> SDK used </h4>
+
 - [Flutter](https://flutter.dev/)
 
 # How to contribute to this project
