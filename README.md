@@ -36,6 +36,7 @@ This application is developed to learn Flutter using Flutter. Different widgets 
 
 </p>
 
+
 <h1 align="left"> Screenshots of the application </h1>
 
 
@@ -78,6 +79,18 @@ This application is developed to learn Flutter using Flutter. Different widgets 
          <img src="https://user-images.githubusercontent.com/63790391/138469909-2268007e-3069-42ef-8831-86ae328d9e26.jpeg"width="200">
   </tr1></table></div>
 </p>
+
+<h2 align= "left">Tech Stack </h2>
+
+
+
+<h4 align="left"> Languages </h4>
+
+- [Dart](https://dart.dev/)
+
+<h4 align="left"> SDK used </h4>
+
+- [Flutter](https://flutter.dev/)
 
 # How to contribute to this project
 
