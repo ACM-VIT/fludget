@@ -1,4 +1,4 @@
-import 'package:fludget/flexible.dart';
+import 'package:fludget/routes/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
 import 'package:fludget/routes/ExpansionPanel.dart';
@@ -10,7 +10,9 @@ import 'package:fludget/routes/TabBar.dart';
 import 'package:fludget/routes/DatePickerDialog.dart';
 import 'package:fludget/routes/FormField.dart';
 import 'package:fludget/routes/FutureBuilder.dart';
+import 'package:fludget/routes/aspect_ratio.dart';
 import 'package:fludget/routes/animated_padding.dart';
+import 'package:fludget/routes/animated_positioned.dart';
 import 'package:fludget/routes/focus_node.dart';
 import 'package:fludget/routes/fractionally_sized_box.dart';
 import 'package:fludget/routes/gridPaper.dart';
@@ -63,7 +65,10 @@ import 'package:fludget/routes/gridList.dart';
 import 'package:fludget/routes/hero.dart';
 import 'package:fludget/routes/icon.dart';
 import 'package:fludget/routes/image.dart';
+import 'package:fludget/routes/image_filtered.dart';
 import 'package:fludget/routes/indexedStack.dart';
+import 'package:fludget/routes/intreactiveViewer.dart';
+import 'package:fludget/routes/layout_builder_widget.dart';
 import 'package:fludget/routes/limited_box.dart';
 import 'package:fludget/routes/linearProgressIndicator.dart';
 import 'package:fludget/routes/listTile.dart';
@@ -75,6 +80,7 @@ import 'package:fludget/routes/outlinedButton.dart';
 import 'package:fludget/routes/padding.dart';
 import 'package:fludget/routes/pageview.dart';
 import 'package:fludget/routes/place_holder.dart';
+import 'package:fludget/routes/physicalModel.dart';
 import 'package:fludget/routes/refreshIndicator.dart';
 import 'package:fludget/routes/reorderableListView.dart';
 import 'package:fludget/routes/richText.dart';
@@ -100,14 +106,15 @@ import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
 import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
-import 'package:fludget/routes/simple_dialog.dart';
-import 'package:flutter/material.dart';
+import 'package:fludget/routes/tooltip.dart';
 import 'package:fludget/routes/rotatedBox.dart';
 import 'Models/widgetModel.dart';
 import 'routes/autoComplete.dart';
 import 'routes/BottomNavigationBar.dart';
 import 'routes/fitted_box.dart';
 import 'routes/BackdropFilter.dart';
+import 'routes/animatedContainer.dart';
+
 const List<WidgetModel> widgets = [
   WidgetModel(
       name: "Container",
@@ -179,11 +186,12 @@ const List<WidgetModel> widgets = [
         WidgetCategoy.Interaction,
       ],
       codeString: IgnorePointerCode()),
-   WidgetModel(
+  WidgetModel(
       name: "SelectableText",
       implementation: SelectableTextImplementation(),
       description: SelectableTextDescription(),
-      link: "https://api.flutter.dev/flutter/material/SelectableText-class.html",
+      link:
+          "https://api.flutter.dev/flutter/material/SelectableText-class.html",
       category: [
         WidgetCategoy.Interaction,
       ],
@@ -223,6 +231,14 @@ const List<WidgetModel> widgets = [
       link: "https://api.flutter.dev/flutter/widgets/Image-class.html",
       category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
       codeString: ImageCode()),
+  WidgetModel(
+      name: "ImageFilter",
+      subtitle: "Implementation of Image Filter widget",
+      implementation: ImageFilterImplementation(),
+      description: ImageFilterDescription(),
+      link: "https://api.flutter.dev/flutter/widgets/ImageFiltered-class.html",
+      category: [WidgetCategoy.Assets, WidgetCategoy.Basics],
+      codeString: ImageFilterCode()),
   WidgetModel(
       name: "Outlined Button",
       implementation: OutlinedButtonImplimentation(),
@@ -442,7 +458,7 @@ const List<WidgetModel> widgets = [
       codeString: DismissibleCode()),
   WidgetModel(
       name: "Page View",
-      implementation: pageViewSample(),
+      implementation: PageViewSample(),
       description: PageViewDescription(),
       link: "https://api.flutter.dev/flutter/widgets/PageView-class.html",
       category: [WidgetCategoy.Layout],
@@ -569,8 +585,8 @@ const List<WidgetModel> widgets = [
       name: "AppBar",
       subtitle: "Implementation of AppBar Widget",
       link: "https://api.flutter.dev/flutter/material/AppBar-class.html",
-      implementation: appbarsample(),
-      description: appbardescription(),
+      implementation: AppBarSample(),
+      description: AppBarDescription(),
       category: [WidgetCategoy.Layout, WidgetCategoy.Interaction],
       codeString: AppBarCode()),
   WidgetModel(
@@ -771,7 +787,8 @@ const List<WidgetModel> widgets = [
       WidgetCategoy.Styling,
     ],
     codeString: PlaceHolderCode(),
-  ),WidgetModel(
+  ),
+  WidgetModel(
     name: "Drawer Widget",
     link: "https://api.flutter.dev/flutter/material/Drawer-class.html",
     subtitle: "Implementation of Drawer widget",
@@ -950,14 +967,13 @@ const List<WidgetModel> widgets = [
     codeString: CupertinoSwitchCode(),
   ),
   WidgetModel(
-      name: "SizedOverflowBox",
-      link:
-          "https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html",
-      subtitle: "Implementation of SizedOverflowBox Widget",
-      implementation: SizedOverflowBoxImplementation(),
-      description: SizedOverflowBoxDescription(),
-      category: [WidgetCategoy.Layout],
-      codeString: SizedOverflowBoxCode()),
+    name: "SizedOverflowBox",
+    link: "https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html",
+    subtitle: "Implementation of SizedOverflowBox Widget",
+    implementation: SizedOverflowBoxImplementation(),
+    description: SizedOverflowBoxDescription(),
+    category: [WidgetCategoy.Layout],
+    codeString: SizedOverflowBoxCode(),
   ),
   WidgetModel(
     name: "Focus Node",
@@ -968,7 +984,7 @@ const List<WidgetModel> widgets = [
     category: [WidgetCategoy.Accessibility],
     codeString: FocusNodeCode(),
   ),
-   WidgetModel(
+  WidgetModel(
     name: "Fitted Box Widget",
     link: "https://api.flutter.dev/flutter/widgets/FittedBox/FittedBox.html",
     subtitle: "Implementation of Fitted Box widget",
@@ -979,6 +995,15 @@ const List<WidgetModel> widgets = [
       WidgetCategoy.Layout,
     ],
     codeString: FittedBoxCode(),
+  ),
+  WidgetModel(
+    name: "Aspect Ratio",
+    link: "https://api.flutter.dev/flutter/widgets/AspectRatio-class.html",
+    subtitle: "Implementation of Aspect Ratio widget",
+    implementation: AspectRatioImplementation(),
+    description: AspectRatioDescription(),
+    category: [WidgetCategoy.Layout],
+    codeString: AspectRatioCode(),
   ),
   WidgetModel(
     name: "Visibility",
@@ -997,11 +1022,10 @@ const List<WidgetModel> widgets = [
     description: AnimatedPaddingDesc(),
     category: [WidgetCategoy.Animation],
     codeString: AnimatedPaddingCode(),
-  ),  
+  ),
   WidgetModel(
     name: "Padding",
-    link:
-    "https://api.flutter.dev/flutter/widgets/Padding-class.html",
+    link: "https://api.flutter.dev/flutter/widgets/Padding-class.html",
     subtitle: "Implementation of Padding widget",
     implementation: PaddingImplementation(),
     description: PaddingDescription(),
@@ -1014,5 +1038,62 @@ const List<WidgetModel> widgets = [
     implementation: const SimpleDialogImp(),
     description: SimpleDialogDesc(),
     category: [WidgetCategoy.Material, WidgetCategoy.Basics],
-  )
+    codeString: SimpleDialogCode(),
+  ),
+  WidgetModel(
+    name: 'InteractiveViewer',
+    link:
+        "https://api.flutter.dev/flutter/widgets/InteractiveViewer-class.html",
+    implementation: TntractiveViewerImp(),
+    description: IntInteractiveViewerDesc(),
+    category: [WidgetCategoy.Interaction],
+    codeString: IntrectiveViewerCode(),
+  ),
+  WidgetModel(
+    name: "Tooltip",
+    link: "https://api.flutter.dev/flutter/material/Tooltip-class.html",
+    implementation: const TooltipImplementation(),
+    description: TooltipDescription(),
+    category: [WidgetCategoy.Accessibility],
+    codeString: TooltipCode(),
+  ),
+  WidgetModel(
+    name: "Animated Positioned",
+    link:
+        "https://api.flutter.dev/flutter/widgets/AnimatedPositioned-class.html",
+    subtitle: "Implementation of Animated Positioned Widget",
+    implementation: AnimatedPositionedImp(),
+    description: AnimatedPositionedDesc(),
+    category: [WidgetCategoy.Animation],
+    codeString: AnimatedPositionedCode(),
+  ),
+  WidgetModel(
+    name: "Physical Model",
+    link: "https://api.flutter.dev/flutter/widgets/PhysicalModel-class.html",
+    subtitle: "Implementation of Physical Model widget",
+    implementation: PhysicalModelImplementation(),
+    description: PhysicalModelDescription(),
+    category: [WidgetCategoy.Styling],
+    codeString: PhysicalModelCode(),
+  ),
+  WidgetModel(
+    name: "Animated Container",
+    link:
+        "https://api.flutter.dev/flutter/widgets/AnimatedContainer-class.html",
+    subtitle: "Implementation of Animated Container Widget",
+    implementation: AnimatedContainerImplementation(),
+    description: AnimatedContainerDescription(),
+    category: [WidgetCategoy.Animation],
+    codeString: AnimatedContainerCode(),
+  ),
+  WidgetModel(
+    name: "Layout Builder",
+    link:
+        "https://api.flutter.dev/flutter/widgets/AnimatedPositioned-class.html",
+    subtitle: "Implementation of Animated Positioned Widget",
+    implementation: LayoutBuilderImp(),
+    description: LayoutBuilderDesc(),
+    category: [WidgetCategoy.Layout],
+    codeString: LayoutBuilderCode(),
+  ),
 ];

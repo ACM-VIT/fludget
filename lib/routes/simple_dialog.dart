@@ -1,10 +1,11 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
 class SimpleDialogImp extends StatelessWidget {
   const SimpleDialogImp({Key? key}) : super(key: key);
   SnackBar _showSnakBar(String title) {
     return SnackBar(
-      content: Text("${title} option selected."),
+      content: Text("$title option selected."),
       duration: Duration(seconds: 1),
     );
   }
@@ -71,14 +72,20 @@ class SimpleDialogDesc extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "Class Definition / Syntax: ",
-                  style: TextStyle(fontSize: 20),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text("""showDialog(
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SimpleDialogCode extends CodeString {
+  const SimpleDialogCode();
+  @override
+  String buildCodeString() {
+    return """showDialog(
                 context: context,
                 builder: (BuildContext ctx) => SimpleDialog(
                   title: Text('Option List'),
@@ -98,12 +105,6 @@ class SimpleDialogDesc extends StatelessWidget {
                   ],
                   elevation: 10,
                 ),
-              );""")
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+              );""";
   }
 }

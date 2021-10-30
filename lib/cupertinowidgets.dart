@@ -1,4 +1,3 @@
-import 'package:fludget/Models/widgetModel.dart';
 import 'package:fludget/routes/settings.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +11,6 @@ class CupertinoWidgets extends StatefulWidget {
 class _CupertinoWidgetsState extends State<CupertinoWidgets> {
   bool searching = false;
   String searchString = '';
-  WidgetCategoy? _selectedCategory;
-  bool _isExpanded = false;
   var _controller = TextEditingController();
 
   AppBar showSearchBar(BuildContext context) {
