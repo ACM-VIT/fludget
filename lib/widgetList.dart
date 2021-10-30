@@ -13,6 +13,7 @@ import 'package:fludget/routes/FutureBuilder.dart';
 import 'package:fludget/routes/aspect_ratio.dart';
 import 'package:fludget/routes/animated_padding.dart';
 import 'package:fludget/routes/animated_positioned.dart';
+import 'package:fludget/routes/flow.dart';
 import 'package:fludget/routes/focus_node.dart';
 import 'package:fludget/routes/fractionally_sized_box.dart';
 import 'package:fludget/routes/gridPaper.dart';
@@ -1084,5 +1085,15 @@ const List<WidgetModel> widgets = [
     description: AnimatedContainerDescription(),
     category: [WidgetCategoy.Animation],
     codeString: AnimatedContainerCode(),
+  ),
+  WidgetModel(
+    name: "Flow",
+    link:
+    "https://api.flutter.dev/flutter/widgets/Flow-class.html",
+    subtitle: "Implementation of Flow Widget",
+    implementation: FlowWidgetImplementation(),
+    description: FlowWidgetDescription(),
+    category: [WidgetCategoy.Animation],
+    codeString: FlowCode(),
   ),
 ];
