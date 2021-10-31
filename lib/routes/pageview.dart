@@ -1,14 +1,14 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
-class pageViewSample extends StatefulWidget {
-  const pageViewSample({Key? key}) : super(key: key);
+class PageViewSample extends StatefulWidget {
+  const PageViewSample({Key? key}) : super(key: key);
 
   @override
-  _pageViewSampleState createState() => _pageViewSampleState();
+  _PageViewSampleState createState() => _PageViewSampleState();
 }
 
-class _pageViewSampleState extends State<pageViewSample> {
+class _PageViewSampleState extends State<PageViewSample> {
   showAlertDialog(BuildContext context, String str) {
     // set up the button
     Widget okButton = TextButton(

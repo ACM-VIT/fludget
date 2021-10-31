@@ -48,8 +48,7 @@ class _RootScreenState extends State<RootScreen> {
                   padding: const EdgeInsets.all(20),
                   child: RichText(
                     text: TextSpan(
-                      style: const TextStyle(
-                          fontFamily: 'monospace', fontSize: 15),
+                      style: const TextStyle(fontFamily: 'menlo', fontSize: 15),
                       children: <TextSpan>[
                         DartSyntaxHighlighter(style)
                             .format(widget.item.codeString.buildCodeString()),

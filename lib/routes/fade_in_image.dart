@@ -1,5 +1,4 @@
 import 'package:fludget/Models/codeString.dart';
-import 'package:fludget/routes/sizedbox.dart';
 import 'package:flutter/material.dart';
 
 class FadeInImageImplementation extends StatelessWidget {
