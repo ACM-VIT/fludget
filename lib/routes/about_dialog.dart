@@ -25,14 +25,17 @@ class AboutDialogImp extends StatelessWidget {
                     horizontal: 25.0,
                     vertical: 20,
                   ),
-                  child:
-                      Text("This is implemenation for about dialog in flutter"),
+                  child: Text(
+                    "This is implemenation for about dialog in flutter",
+                    style: TextStyle(fontFamily: 'RobotoSlab', fontSize: 17),
+                  ),
                 )
               ],
             );
           },
           child: Text(
             "Show about dialog",
+            style: TextStyle(fontFamily: 'RobotoSlab', fontSize: 15),
           ),
         ),
       ),
@@ -58,6 +61,7 @@ class AboutDialogDesc extends StatelessWidget {
               children: [
                 Text(
                   "An about box. This is a dialog box with the application's icon, name, version number, and copyright, plus a button to show licenses for software used by the application.",
+                  style: TextStyle(fontFamily: 'RobotoSlab', fontSize: 15),
                 ),
                 const SizedBox(
                   height: 20,

@@ -15,7 +15,7 @@ class _AppBarSampleState extends State<AppBarSample> {
     return Scaffold(
       appBar: AppBar(
         leading: Icon(Icons.info_sharp),
-        title: Text("AppBar Widget Demo"),
+        title: Text("AppBar Widget Demo", style: TextStyle(fontFamily: 'RobotoSlab',fontSize: 17),),
         actions: [
           Icon(Icons.edit),
           Padding(
@@ -38,14 +38,14 @@ class AppBarDescription extends StatefulWidget {
 class _AppBarDescriptionState extends State<AppBarDescription> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-            child: Text(
-                "An app bar consists of a toolbar and potentially other widgets, such as a TabBar and a FlexibleSpaceBar. App bars typically expose one or more common actions with IconButtons which are optionally followed by a PopupMenuButton for less common operations",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 20,
-                ))));
+    return Container(
+        child: Text(
+            "An app bar consists of a toolbar and potentially other widgets, such as a TabBar and a FlexibleSpaceBar. App bars typically expose one or more common actions with IconButtons which are optionally followed by a PopupMenuButton for less common operations",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 16,
+              fontFamily: 'RobotoSlab',
+            )));
   }
 }
 

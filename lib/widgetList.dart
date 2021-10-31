@@ -1,3 +1,4 @@
+import 'package:fludget/routes/Root/animated_switcher.dart';
 import 'package:fludget/routes/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
@@ -13,6 +14,7 @@ import 'package:fludget/routes/FutureBuilder.dart';
 import 'package:fludget/routes/aspect_ratio.dart';
 import 'package:fludget/routes/animated_padding.dart';
 import 'package:fludget/routes/animated_positioned.dart';
+import 'package:fludget/routes/flow.dart';
 import 'package:fludget/routes/focus_node.dart';
 import 'package:fludget/routes/fractionally_sized_box.dart';
 import 'package:fludget/routes/gridPaper.dart';
@@ -1087,6 +1089,15 @@ const List<WidgetModel> widgets = [
     codeString: AnimatedContainerCode(),
   ),
   WidgetModel(
+    name: "Flow",
+    link: "https://api.flutter.dev/flutter/widgets/Flow-class.html",
+    subtitle: "Implementation of Flow Widget",
+    implementation: FlowWidgetImplementation(),
+    description: FlowWidgetDescription(),
+    category: [WidgetCategory.Animation],
+    codeString: FlowCode(),
+  ),
+  WidgetModel(
     name: "Layout Builder",
     link:
         "https://api.flutter.dev/flutter/widgets/AnimatedPositioned-class.html",
@@ -1095,5 +1106,14 @@ const List<WidgetModel> widgets = [
     description: LayoutBuilderDesc(),
     category: [WidgetCategory.Layout],
     codeString: LayoutBuilderCode(),
+  ),
+  WidgetModel(
+    name: "Animated Switcher",
+    link: "https://api.flutter.dev/flutter/widgets/AnimatedSwitcher-class.html",
+    subtitle: "Implementation of Animated Switcher Widget",
+    implementation: AnimatedSwitcherImplementation(),
+    description: AnimatedSwitcherDescription(),
+    category: [WidgetCategory.Animation],
+    codeString: AnimatedSwitcherCode(),
   ),
 ];

@@ -25,7 +25,10 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
                 ans == false
                     ? 'Switch to Size Animation.'
                     : 'Switch to Scale Animation.',
-                style: TextStyle(fontSize: 19),
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'RobotoSlab',
+                ),
               ),
               SizedBox(
                 width: 5,
@@ -55,9 +58,11 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
                             ? "SizeAnimation is shown."
                             : "ScaleAnimation is shown.",
                         style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 25,
-                            color: Colors.black),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17,
+                          color: Colors.black,
+                          fontFamily: 'RobotoSlab',
+                        ),
                       ),
                     ),
                     Expanded(
@@ -153,6 +158,7 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
                       color: Colors.black,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w600,
+                      fontFamily: 'RobotoSlab',
                       fontSize: 20),
                 ),
               ),
@@ -160,7 +166,7 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
                 icon: Icon(
                   Icons.delete,
                   color: Colors.deepOrangeAccent,
-                  size: 35,
+                  size: 30,
                 ),
                 onPressed: () => removeItem(index),
               ),
@@ -248,12 +254,13 @@ class AnimatedListDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        padding: EdgeInsets.all(16.0),
-        child: Text(
-          'AnimatedList is a built-in widget in Flutter, used to implement a list view that animates its items when they are inserted or removed. This helps the user feel less sudden and more pleasant about the change of the list.',
-          style: TextStyle(fontSize: 24),
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      child: Text(
+        'AnimatedList is a built-in widget in Flutter, used to implement a list view that animates its items when they are inserted or removed. This helps the user feel less sudden and more pleasant about the change of the list.',
+        style: TextStyle(
+          fontSize: 16,
+          fontFamily: 'RobotoSlab',
         ),
       ),
     );

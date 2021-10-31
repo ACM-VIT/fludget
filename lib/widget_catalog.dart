@@ -28,7 +28,8 @@ class _WidgetCatalogState extends State<WidgetCatalog> {
         autofocus: true,
         controller: _controller,
         decoration: InputDecoration(
-          hintStyle: TextStyle(color: Colors.grey),
+          hintStyle: TextStyle(
+              color: Colors.grey, fontFamily: 'RobotoSlab', fontSize: 18),
           prefixIcon: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -47,7 +48,7 @@ class _WidgetCatalogState extends State<WidgetCatalog> {
             },
             icon: Icon(Icons.clear),
           ),
-          hintText: 'Search....',
+          hintText: 'Search...',
           border: UnderlineInputBorder(borderSide: BorderSide.none),
         ),
         onSubmitted: (String text) {
@@ -64,6 +65,8 @@ class _WidgetCatalogState extends State<WidgetCatalog> {
     );
   }
 
+  Icon actionIcon = new Icon(Icons.search);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,15 +74,18 @@ class _WidgetCatalogState extends State<WidgetCatalog> {
             ? showSearchBar(context)
             : AppBar(
                 backgroundColor: Theme.of(context).primaryColor,
-                title: Text("Widget Catalog"),
+                title: Text(
+                  "Material Widget Catalog",
+                  style: TextStyle(fontFamily: 'RobotoSlab', fontSize: 20),
+                ),
                 actions: [
                   IconButton(
+                    icon: actionIcon,
                     onPressed: () {
                       setState(() {
                         searching = true;
                       });
                     },
-                    icon: const Icon(Icons.search),
                   )
                 ],
                 centerTitle: true,
@@ -115,7 +121,11 @@ class _WidgetCatalogState extends State<WidgetCatalog> {
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 5, vertical: 5),
                                         child: ChoiceChip(
-                                          label: Text("All Widgets"),
+                                          label: Text(
+                                            "All Widgets",
+                                            style: TextStyle(
+                                                fontFamily: 'RobotoSlab'),
+                                          ),
                                           //selectedColor: Theme.of(context).primaryColor,
                                           selected: _selectedCategory == null,
                                           onSelected: (value) => setState(() {
@@ -153,7 +163,12 @@ class _WidgetCatalogState extends State<WidgetCatalog> {
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 5, vertical: 5),
                                   child: ChoiceChip(
-                                    label: Text("All Widgets"),
+                                    label: Text(
+                                      "All Widgets",
+                                      style: TextStyle(
+                                        fontFamily: 'RobotoSlab',
+                                      ),
+                                    ),
                                     //selectedColor: Theme.of(context).primaryColor,
                                     selected: _selectedCategory == null,
                                     onSelected: (value) => setState(() {
@@ -167,8 +182,12 @@ class _WidgetCatalogState extends State<WidgetCatalog> {
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 5, vertical: 5),
                                         child: ChoiceChip(
-                                          label:
-                                              Text(e.toString().split(".")[1]),
+                                          label: Text(
+                                            e.toString().split(".")[1],
+                                            style: TextStyle(
+                                              fontFamily: 'RobotoSlab',
+                                            ),
+                                          ),
                                           //selectedColor: Theme.of(context).primaryColor,
                                           selected: _selectedCategory == e,
                                           onSelected: (value) => setState(() {
@@ -227,6 +246,7 @@ class _WidgetCatalogState extends State<WidgetCatalog> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
+                  fontFamily: 'RobotoSlab',
                 )),
           ),
         ),
@@ -238,6 +258,7 @@ class _WidgetCatalogState extends State<WidgetCatalog> {
 
   ListTile buildListItem(WidgetModel item, BuildContext context) {
     CircleAvatar arrow = CircleAvatar(
+      radius: 16,
       child: Icon(
         Icons.keyboard_arrow_right,
         color: Colors.white,
@@ -249,13 +270,15 @@ class _WidgetCatalogState extends State<WidgetCatalog> {
       leading: arrow,
       title: Text(
         item.name + " Widget",
-        style: Theme.of(context).textTheme.headline1,
+        style: TextStyle(fontFamily: 'RobotoSlab', fontSize: 17),
+        //style: Theme.of(context).textTheme.headline1,
       ),
       subtitle: item.subtitle.isEmpty
           ? null
           : Text(
               item.subtitle,
-              style: Theme.of(context).textTheme.subtitle1,
+              style: TextStyle(fontFamily: 'RobotoSlab', fontSize: 15),
+              //style: Theme.of(context).textTheme.subtitle1,
             ),
       onTap: () {
         Navigator.push(
