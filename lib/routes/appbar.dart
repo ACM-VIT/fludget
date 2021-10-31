@@ -2,14 +2,14 @@ import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class appbarsample extends StatefulWidget {
-  const appbarsample({Key? key}) : super(key: key);
+class AppBarSample extends StatefulWidget {
+  const AppBarSample({Key? key}) : super(key: key);
 
   @override
-  _appbarsampleState createState() => _appbarsampleState();
+  _AppBarSampleState createState() => _AppBarSampleState();
 }
 
-class _appbarsampleState extends State<appbarsample> {
+class _AppBarSampleState extends State<AppBarSample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,14 +28,14 @@ class _appbarsampleState extends State<appbarsample> {
   }
 }
 
-class appbardescription extends StatefulWidget {
-  const appbardescription({Key? key}) : super(key: key);
+class AppBarDescription extends StatefulWidget {
+  const AppBarDescription({Key? key}) : super(key: key);
 
   @override
-  _appbardescriptionState createState() => _appbardescriptionState();
+  _AppBarDescriptionState createState() => _AppBarDescriptionState();
 }
 
-class _appbardescriptionState extends State<appbardescription> {
+class _AppBarDescriptionState extends State<AppBarDescription> {
   @override
   Widget build(BuildContext context) {
     return Container(

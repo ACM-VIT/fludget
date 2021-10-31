@@ -2,7 +2,7 @@ import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TimePickerDialogImplementation extends StatelessWidget{
+class TimePickerDialogImplementation extends StatelessWidget {
   const TimePickerDialogImplementation({Key? key}) : super(key: key);
 
   @override
@@ -10,7 +10,8 @@ class TimePickerDialogImplementation extends StatelessWidget{
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          onPressed: () => showTimePicker(context: context, initialTime: TimeOfDay.now()),
+          onPressed: () =>
+              showTimePicker(context: context, initialTime: TimeOfDay.now()),
           child: Text("Show Time Picker"),
         ),
       ),
@@ -31,10 +32,6 @@ class TimePickerDialogImplementation extends StatelessWidget{
     String? minuteLabelText,
     RouteSettings? routeSettings,
   }) async {
-    assert(context != null);
-    assert(initialTime != null);
-    assert(useRootNavigator != null);
-    assert(initialEntryMode != null);
     assert(debugCheckHasMaterialLocalizations(context));
 
     final Widget dialog = TimePickerDialog(
@@ -56,7 +53,6 @@ class TimePickerDialogImplementation extends StatelessWidget{
       routeSettings: routeSettings,
     );
   }
-
 }
 
 class TimePickerDialogDescription extends StatelessWidget {

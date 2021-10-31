@@ -1,6 +1,5 @@
+import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
-
-import 'Models/codeString.dart';
 
 class FlexibleWidget extends StatefulWidget {
   const FlexibleWidget({Key? key}) : super(key: key);

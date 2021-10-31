@@ -18,7 +18,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
   String _docUrl =
       'https://api.flutter.dev/flutter/widgets/widgets-library.html';
   String _repoUrl = "https://github.com/ACM-VIT/fludget";
-  PackageInfo? packageInfo = null;
+  PackageInfo? packageInfo;
 
   void _launchURL(String url) async =>
       await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';

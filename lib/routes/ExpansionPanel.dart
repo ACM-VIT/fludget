@@ -1,7 +1,6 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/material.dart';
 
-
 class Item {
   Item({
     required this.expandedValue,
@@ -27,11 +26,13 @@ class ExpansionPanelImplementation extends StatefulWidget {
   const ExpansionPanelImplementation({Key? key}) : super(key: key);
 
   @override
-  State<ExpansionPanelImplementation> createState() => _ExpansionPanelImplementationState();
+  State<ExpansionPanelImplementation> createState() =>
+      _ExpansionPanelImplementationState();
 }
 
 /// This is the private State class that goes with MyStatefulWidget.
-class _ExpansionPanelImplementationState extends State<ExpansionPanelImplementation> {
+class _ExpansionPanelImplementationState
+    extends State<ExpansionPanelImplementation> {
   final List<Item> _data = generateItems(8);
 
   @override
@@ -60,7 +61,7 @@ class _ExpansionPanelImplementationState extends State<ExpansionPanelImplementat
           body: ListTile(
               title: Text(item.expandedValue),
               subtitle:
-              const Text('To delete this panel, tap the trash can icon'),
+                  const Text('To delete this panel, tap the trash can icon'),
               trailing: const Icon(Icons.delete),
               onTap: () {
                 setState(() {

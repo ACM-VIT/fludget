@@ -31,12 +31,13 @@ dependencies:
   shared_preferences: 
   url_launcher: ^6.0.10
   webview_flutter: ^2.0.1
-  syntax_highlighter: 
+  syntax_highlighter:
     git:
       url: git://github.com/victoreronmosele/syntax_highlighter.git
       ref: c0554996f4ca454a4955c3a3fc68dec2cfa06ea4
 
   intl: ^0.17.0
+  torch_light: ^0.3.0
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,4 @@
 import 'package:fludget/Models/widgetModel.dart';
-import 'package:fludget/cupertinowidgets.dart';
 import 'package:fludget/routes/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:fludget/routes/Root/rootScreen.dart';

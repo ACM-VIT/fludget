@@ -105,7 +105,6 @@ class PlaceHolderCode extends CodeString {
 
   @override
   String buildCodeString() {
-    // TODO: implement buildCodeString
     return """
     Placeholder(
               fallbackHeight: 100,

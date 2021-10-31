@@ -351,6 +351,13 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
+    version: "0.4.2"
+  torch_light:
+    dependency: "direct main"
+    description:
+      name: torch_light
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.3.0"
   typed_data:
     dependency: transitive
