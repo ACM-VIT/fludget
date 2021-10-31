@@ -29,12 +29,24 @@ class _AnimatedPaddingImpState extends State<AnimatedPaddingImp> {
                     }
                   });
                 },
-                child: Text("Change Padding"),
+                child: Text(
+                  "Change Padding",
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontFamily: 'RobotoSlab',
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 10,
               ),
-              Text("Without Animated Padding"),
+              Text(
+                "Without Animated Padding",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  fontFamily: 'RobotoSlab',
+                ),
+              ),
               GridView.builder(
                 itemCount: 2,
                 shrinkWrap: true,
@@ -52,7 +64,13 @@ class _AnimatedPaddingImpState extends State<AnimatedPaddingImp> {
                   );
                 },
               ),
-              Text("With Animated Padding"),
+              Text(
+                "With Animated Padding",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  fontFamily: 'RobotoSlab',
+                ),
+              ),
               GridView.builder(
                 itemCount: 2,
                 shrinkWrap: true,
@@ -96,13 +114,21 @@ class AnimatedPaddingDesc extends StatelessWidget {
               children: [
                 Text(
                   "Animated version of Padding which automatically transitions the indentation over a given duration whenever the given inset changes.",
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontFamily: 'RobotoSlab',
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 Text(
                   "Syntax or Class definition",
-                  style: Theme.of(context).textTheme.headline5,
+                  //style: Theme.of(context).textTheme.headline5,
+                  style: TextStyle(
+                    fontSize: 17.0,
+                    fontFamily: 'RobotoSlab',
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
@@ -118,6 +144,10 @@ required Duration duration,
 VoidCallback? onEnd}
 )
                 """,
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontFamily: 'RobotoSlab',
+                  ),
                 ),
               ],
             ),

@@ -46,7 +46,8 @@ class _AbsorbPointerWidgetState extends State<AbsorbPointerWidget> {
             Text(
               'You have pushed the button this many times: $_counter',
               style: TextStyle(
-                fontSize: 24.0,
+                fontSize: 17.0,
+                fontFamily: 'RobotoSlab',
               ),
             ),
             SizedBox(
@@ -71,7 +72,7 @@ class _AbsorbPointerWidgetState extends State<AbsorbPointerWidget> {
                       shape: CircleBorder(), padding: EdgeInsets.all(16)),
                   child: Icon(
                     Icons.plus_one,
-                    size: 30,
+                    size: 25,
                   )),
             ),
             Row(
@@ -79,7 +80,7 @@ class _AbsorbPointerWidgetState extends State<AbsorbPointerWidget> {
               children: [
                 Text(
                   'Absorbing Pointer?',
-                  style: TextStyle(fontSize: 19),
+                  style: TextStyle(fontSize: 15, fontFamily: 'RobotoSlab'),
                 ),
                 SizedBox(
                   width: 5,
@@ -104,9 +105,7 @@ class _AbsorbPointerWidgetState extends State<AbsorbPointerWidget> {
           children: [
             Text(
               'AbsorbPointer as a parent of TextField.',
-              style: TextStyle(
-                fontSize: 24.0,
-              ),
+              style: TextStyle(fontSize: 17.0, fontFamily: 'RobotoSlab'),
             ),
             SizedBox(
               height: 20,
@@ -122,7 +121,7 @@ class _AbsorbPointerWidgetState extends State<AbsorbPointerWidget> {
               children: [
                 Text(
                   'Absorbing Pointer?',
-                  style: TextStyle(fontSize: 19),
+                  style: TextStyle(fontSize: 15, fontFamily: 'RobotoSlab'),
                 ),
                 SizedBox(
                   width: 5,
@@ -146,13 +145,11 @@ class AbsorbPointerWidgetDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        padding: EdgeInsets.all(16.0),
-        child: Text(
-          'AbsorbPointer is a built-in widget in flutter which absorbs pointer, in other words, it prevents its subtree from being clicked, tapped, scrolled, dragged, and respond to hover. ',
-          style: TextStyle(fontSize: 24),
-        ),
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      child: Text(
+        'AbsorbPointer is a built-in widget in flutter which absorbs pointer, in other words, it prevents its subtree from being clicked, tapped, scrolled, dragged, and respond to hover. ',
+        style: TextStyle(fontSize: 16, fontFamily: 'RobotoSlab'),
       ),
     );
   }
