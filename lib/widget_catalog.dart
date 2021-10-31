@@ -1,20 +1,21 @@
-import 'package:fludget/Models/widgetModel.dart';
-import 'package:fludget/routes/settings.dart';
 import 'package:flutter/material.dart';
-import 'package:fludget/routes/Root/rootScreen.dart';
+
+import 'Models/widgetModel.dart';
+import 'routes/Root/rootScreen.dart';
+import 'routes/settings.dart';
 import 'widgetList.dart';
 
-class MaterialWidgets extends StatefulWidget {
+class WidgetCatalog extends StatefulWidget {
+  const WidgetCatalog({Key? key}) : super(key: key);
+
   @override
-  State<StatefulWidget> createState() {
-    return MaterialWidgetsState();
-  }
+  _WidgetCatalogState createState() => _WidgetCatalogState();
 }
 
-class MaterialWidgetsState extends State<MaterialWidgets> {
+class _WidgetCatalogState extends State<WidgetCatalog> {
   bool searching = false;
   String searchString = '';
-  WidgetCategoy? _selectedCategory;
+  WidgetCategory? _selectedCategory;
   bool _isExpanded = false;
   var _controller = TextEditingController();
 
@@ -133,7 +134,7 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
                                         ),
                                       )
                                     ] +
-                                    WidgetCategoy.values
+                                    WidgetCategory.values
                                         .map((e) => Padding(
                                               padding:
                                                   const EdgeInsets.symmetric(
@@ -176,7 +177,7 @@ class MaterialWidgetsState extends State<MaterialWidgets> {
                                   ),
                                 )
                               ] +
-                              WidgetCategoy.values
+                              WidgetCategory.values
                                   .map((e) => Padding(
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 5, vertical: 5),

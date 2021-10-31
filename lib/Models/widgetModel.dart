@@ -1,7 +1,7 @@
 import 'package:fludget/Models/codeString.dart';
 import 'package:flutter/widgets.dart';
 
-enum WidgetCategoy {
+enum WidgetCategory {
   Layout,
   Async,
   Accessibility,
@@ -23,7 +23,7 @@ class WidgetModel {
   final String name, subtitle, link;
   final Widget implementation;
   final Widget description;
-  final List<WidgetCategoy> category;
+  final List<WidgetCategory> category;
   final CodeString codeString;
   const WidgetModel(
       {required this.name,
