@@ -1,3 +1,4 @@
+import 'package:fludget/routes/Root/animated_switcher.dart';
 import 'package:fludget/routes/flexible.dart';
 import 'package:fludget/routes/AnimatedBuilderWidget.dart';
 import 'package:fludget/routes/Card.dart';
@@ -1095,5 +1096,15 @@ const List<WidgetModel> widgets = [
     description: LayoutBuilderDesc(),
     category: [WidgetCategoy.Layout],
     codeString: LayoutBuilderCode(),
+  ),
+  WidgetModel(
+    name: "Animated Switcher",
+    link:
+    "https://api.flutter.dev/flutter/widgets/AnimatedSwitcher-class.html",
+    subtitle: "Implementation of Animated Switcher Widget",
+    implementation: AnimatedSwitcherImplementation(),
+    description: AnimatedSwitcherDescription(),
+    category: [WidgetCategoy.Animation],
+    codeString: AnimatedSwitcherCode(),
   ),
 ];
