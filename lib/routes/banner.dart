@@ -14,7 +14,7 @@ class BannerImplementation extends StatelessWidget {
             children: [
               Text(
                 "Banner widget can be handy when you need to show a banner on top of any widget.",
-                style: TextStyle(height: 1.5),
+                style: TextStyle(height: 1.5,fontFamily: "RobotoSlab",fontSize: 16.0),
               ),
               const SizedBox(
                 height: 30,
@@ -68,6 +68,7 @@ class BannerDescription extends StatelessWidget {
             children: [
               Text(
                 "Banner widget comes built-in with flutter API. It is somewhat similar to the debug banner what we are used to of seeing on the top-right corner on a flutter app in debug mode. It enables us to show a message or text on top of any other widget. ",
+                
               ),
               const SizedBox(
                 height: 20,

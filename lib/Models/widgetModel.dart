@@ -3,8 +3,8 @@ import 'package:flutter/widgets.dart';
 
 enum WidgetCategory {
   Layout,
-  Accessibility,
   Async,
+  Accessibility,
   Basics,
   Cupertino,
   Input,

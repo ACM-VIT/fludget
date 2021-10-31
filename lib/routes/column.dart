@@ -70,34 +70,38 @@ class _ColumnImplementationState extends State<ColumnImplementation> {
             Expanded(
               child: SizedBox(
                 width: double.infinity,
-                child: Column(
-                  mainAxisAlignment: _mainAxisAlignment!,
-                  crossAxisAlignment: _crossAxisAlignment!,
-                  textBaseline: TextBaseline.ideographic,
-                  children: [
-                    Container(
-                      color: Colors.red,
-                      child: FlutterLogo(
-                        size: 100.0,
-                      ),
-                    ),
-                    Container(
-                      color: Colors.green,
-                      child: FlutterLogo(
-                        size: 100.0,
-                      ),
-                    ),
-                    Container(
-                      color: Colors.blue,
-                      child: FlutterLogo(
-                        size: 100.0,
-                      ),
-                    ),
-                    Container(
-                      color: Colors.yellow,
-                      child: FlutterLogo(
-                        size: 100.0,
-                      ),
+                child: ListView(
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: _mainAxisAlignment!,
+                      crossAxisAlignment: _crossAxisAlignment!,
+                      textBaseline: TextBaseline.ideographic,
+                      children: [
+                        Container(
+                          color: Colors.red,
+                          child: FlutterLogo(
+                            size: 100.0,
+                          ),
+                        ),
+                        Container(
+                          color: Colors.green,
+                          child: FlutterLogo(
+                            size: 100.0,
+                          ),
+                        ),
+                        Container(
+                          color: Colors.blue,
+                          child: FlutterLogo(
+                            size: 100.0,
+                          ),
+                        ),
+                        Container(
+                          color: Colors.yellow,
+                          child: FlutterLogo(
+                            size: 100.0,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
