@@ -106,6 +106,7 @@ import 'package:fludget/routes/timePickerDialog.dart';
 import 'package:fludget/routes/cupertino_text_field.dart';
 import 'package:fludget/routes/transform.dart';
 import 'package:fludget/routes/togglebutton.dart';
+import 'package:fludget/routes/valueListenableBuilder.dart';
 import 'package:fludget/routes/visibilityWidget.dart';
 import 'package:fludget/routes/wrap.dart';
 import 'package:fludget/routes/tooltip.dart';
@@ -1115,5 +1116,15 @@ const List<WidgetModel> widgets = [
     description: AnimatedSwitcherDescription(),
     category: [WidgetCategory.Animation],
     codeString: AnimatedSwitcherCode(),
+  ),
+  WidgetModel(
+    name: "ValueListenableBuilder",
+    link:
+        "https://api.flutter.dev/flutter/widgets/ValueListenableBuilder-class.html",
+    subtitle: "A widget whose content stays synced with a ValueListenable.",
+    implementation: ValueListenableBuilderImplementation(),
+    description: ValueListenableBuilderDescription(),
+    category: [WidgetCategory.Interaction, WidgetCategory.Async],
+    codeString: ValueListenableBuilderCode(),
   ),
 ];
